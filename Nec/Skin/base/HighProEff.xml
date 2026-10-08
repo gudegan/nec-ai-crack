@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,48" size="800,560">
+  <VerticalLayout name="root" >
+    <WebUI name="webHighPro" create="true">
+    </WebUI>
+    <Button name="close" float="true" pos="-41,10,-10,0"  width="30" height="30"  setcursor="true" statusimage="popupwndcloseVir.png"/>
+  </VerticalLayout>
+</Window>

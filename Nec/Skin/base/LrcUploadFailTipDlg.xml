@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,135" caption="0,0,0,50" tabstop="true">
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+
+	<VerticalLayout>
+		<HorizontalLayout height="50">
+			<Label name="MessageBox_Title" text="酷我提示" textpadding="18,13,0,0" textcolor="#ff000000" mouse="false" font="PopUp.Title"/>
+			<Control width="1" enabled="false" mouse="false"/>
+			<Button name="btn_close" width="19" height="20" padding="0,7,7,0" statusimage="Config_CloseBtn.png" userdata="2"/>
+		</HorizontalLayout>
+		<VerticalLayout inset="8,8,8,0" name="ClientRect">
+			<HorizontalLayout name="MsgBox_Content" inset="0,0,0,0">
+				<Text name="MessageBox_TXT_Msg" width="350" maxheight="120" text="亲，歌词上传失败，请重新上传" mouse="false" padding="10,0,0,0" font="MessageBox.Content"/>
+			</HorizontalLayout>
+			<!-- <Control height="2" enabled="false" mouse="false"/> -->
+			<HorizontalLayout name="buttonrow" height="35" userdata="mainbtn.png" padding="0,5,0,0" >
+				<Control />
+				<Button name="btn_uploadagain" padding="0,0,0,0" text="重新上传" theme="MsgBox_Btn_Focus" width="100" height="30"/>
+        <Button name="btn_scan_lrc" padding="10,0,15,0" text="浏览歌词文件" theme="PopUpDefBtn" width="100" height="30"/>
+			</HorizontalLayout>
+		</VerticalLayout>
+		<Control height="5"/>
+	</VerticalLayout>
+</Window>

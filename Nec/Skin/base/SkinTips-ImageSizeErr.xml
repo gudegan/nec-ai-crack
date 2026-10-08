@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,80" roundcorner="6,6">
+  <HorizontalLayout inset="26,0,0,0" bkimage="clouddiskgb.png">
+    <Control bkimage="pop_point.png" padding="6,20,0,20" width="40" height="40"/>
+    <Control width="12" />
+    <VerticalLayout>
+      <Control />
+      <Label textcolor="#ffffffff" align="left" text="图片像素宽高需大于800px*500px" />
+      <Control />
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>
+

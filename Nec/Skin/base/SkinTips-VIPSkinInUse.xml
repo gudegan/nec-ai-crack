@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="260,80" roundcorner="6,6">
+  <HorizontalLayout inset="26,0,0,0" bkimage="clouddiskgb.png">
+    <Control bkimage="logo_supervip.png" padding="6,31,0,0" width="18" height="18"/>
+    <Control width="12" />
+    <VerticalLayout>
+      <Control />
+      <Label textcolor="#ffffffff" align="left" text="豪华VIP专属皮肤使用中" />
+      <Control />
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

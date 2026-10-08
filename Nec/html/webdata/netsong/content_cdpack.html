@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>cd包内容页</title>
+    <link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/to_top.css" rel="stylesheet" />
+	<!-- <link href="css/comm_CD.css" rel="stylesheet" type="text/css" /> -->
+	<link href="css/content_cdpack.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="navBox">
+		<div class="logo">
+			<div class="logo_icon"><i></i></div>
+			<div class="logo_icon_splice"></div>
+		</div>
+		<h1>发烧音乐</h1>
+		<div class="nav">
+			<a href="javascript:commonClick({'source':'9002'});" class="index active"><span>发现音乐<i></i></span></a>
+			<a href="javascript:;" class="jumpLike"><span>我的收藏</span><label></label></a>
+			<a href="javascript:;" class="jumpDown"><span>我的下载</span><label></label></a>
+		</div>
+	</div>
+	<div class="headInfoBox">
+		<div class="headInfo_left">
+			<div class="cdPicBox">
+				<img class="cdHeadPic" src="img/cdpack/second/default.png" onerror="imgOnError(this,'150cd');">
+				<span class="cdCoverBox"></span>
+				<div class="scoreSplice"></div>
+				<div class="cdScore">
+					<div class="starBox">
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+					</div>
+					<span class="score">0分</span>
+				</div>
+				<div class="splice"></div>
+			</div>
+		</div>
+		<div class="cdHeadInfo">
+			<div class="cdNameBox">
+				<div class="cdNameArea">
+					<span class="cdIcon">母带</span>
+					<p class="cdName"></p>
+				</div>
+			</div>
+			<div class="line1">
+				<p class="artist">
+					<lable class="allowSelect">歌手：</lable>
+					<span class="allowSelect"></span>
+				</p>
+			</div>
+			<div class="line line2">
+				<p class="time">
+					<lable class="allowSelect">发行时间：</lable>
+					<span class="allowSelect"></span>
+				</p>
+				<p class="sampling_type">
+					<lable class="allowSelect">采样率：</lable>
+					<span class="allowSelect"></span>
+				</p>
+				<p class="size">
+					<lable class="allowSelect">大小：</lable>
+					<span class="allowSelect"></span>
+				</p>
+				<p class="style allowSelect"></p>
+			</div>
+			<div class="line">
+				<p class="downTimes">
+					下载次数：
+					<span></span>
+				</p>
+				<p class="perNum">少于10次</p>
+			</div>
+			<div class="infoBottom">
+				<div class="btnBox">
+					<a href="javascript:;" class="download">
+						<i class="icon iconfont icon-download"></i>
+						<span>下载</span>
+					</a>
+					<a href="javascript:;" class="likeBtn">
+						<i class="icon iconfont icon-notcollection"></i>
+						<span>收藏</span>
+					</a>
+				</div>
+				<div class="myScore">
+					<div class="myScoreLine">
+						<span>我要评分：</span>
+						<div class="starBox">
+							<div class="star"></div>
+							<div class="star"></div>
+							<div class="star"></div>
+							<div class="star"></div>
+							<div class="star"></div>
+						</div>
+					</div>
+					<p><span>较差</span><a href="javascript:;">删除</a></p>
+				</div>
+			</div>
+		</div>
+        <div class="likePop">
+            <div class="likeBox">
+                <div class="likeBox-title">
+                    <span class="title-text">酷我提示</span>
+                    <span class="iconfont icon-close close closeLikePopBtn"></span>
+                </div>
+                <div class="likeBox-content">
+                    <h3>收藏专辑《<span class="cdName"></span>》</h3>
+                    <div class="myScore">
+                        <div class="myScoreLine">
+                            <span>我要评分：</span>
+                            <div class="starBox">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                        </div>
+                        <p><span>较差</span></p>
+                    </div>
+                </div>
+                <a href="javascript:;" class="likePopBtn">收 藏</a>
+            </div>
+        </div>
+	</div>
+	<div class="controlBox">
+		<a href="javascript:;" class="listBtn active">曲目<i></i></a>
+		<a href="javascript:;" class="infoBtn">详情<i></i></a>
+        <a href="javascript:;" class="commentBtn">评论<span class="tabNum">0</span><i></i></a>
+	</div>
+	<div class="contentBox">
+		<div class="songInfoBox conItem">
+			<div class="musicListBox"></div>
+			<p class="uploaders">
+				上传者：
+				<span></span>
+			</p>
+			<a href="javascript:;" class="uploadBtn">我要上传</a>
+		</div>
+		<div class="detailsBox conItem">
+			<div class="titleBox">
+				<h3>专辑介绍</h3>
+				<!-- <div class="openBtn">
+					<p>展开</p>
+				</div> -->
+			</div>
+			<p class="cdInfo allowSelect"></p>
+		</div>
+		<div id="cdCommentBox" class="cd_commentBox conItem" style="overflow:hidden; zoom:1;"></div>
+	</div>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+
+	<!--model-->
+	<ul id="kw_cdpack_basicInfoListModel" style="display:none;">
+		<li>
+			<p class="{$lenclass}">
+				{$key}
+				<span>：</span>
+			</p>
+			<p title="{$value}" class="describe {$describeclass}">{$value}</p>
+		</li>
+	</ul>
+	<div id="kw_cdpack_musicListModel" style="display:none;">
+		<div class="{$listclass} list">
+			<h4 class="{$h4class}">{$cdnum}</h4>
+			<div class="describe">
+				<p class="t_num">序号</p>
+				<div class="describeMidBox">
+					<p class="t_name">歌名</p>
+					<p class="t_artist">歌手名</p>
+					<div class="describeRightBox">
+						<p class="t_quality">音质</p>
+						<p class="t_long">时长</p>
+					</div>
+				</div>
+
+			</div>
+			<ul class="cdlistBox">
+				{$musiclist}
+			</ul>
+		</div>
+	</div>
+	<ul id="kw_cdpack_musicModel" style="display:none;">
+		<li class="musiclist">
+			<p class="c_num">{$num}</p>
+			<div class="musiclistMidBox">
+				<p class="c_name" title="{$name}"><span class="allowSelect">{$name}</span></p>
+				<p class="c_artist" title="{$artist}"><span class="allowSelect">{$artist}</span></p>
+				<div class="musiclistRightBox">
+					<p class="c_quality">母带</p>
+					<p class="c_long">{$long}</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js" type="text/javascript"></script>
+    <script src="js/commentModel.js" type="text/javascript"></script>
+    <script src="js/content_cdpack.js" type="text/javascript"></script>
+</body>
+</html>

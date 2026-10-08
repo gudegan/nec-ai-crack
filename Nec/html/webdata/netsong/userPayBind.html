@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户付费信息绑定</title>
+<style>
+* {padding:0;margin:0;}
+a{ text-decoration:none;}
+body {font-family: "微软雅黑";overflow: hidden;}
+.popBox {height: 200px;}
+h1 {font-size: 18px;line-height: 60px;text-align: center;}
+p {color:#999;height:70px;margin-left:30px;padding: 0 20px;}
+.controlBox {display:flex;justify-content:center;}
+.cancle {color:#333;display: none;}
+.bind,.login {color:#eb1818;font-weight:600;display: none}
+.tips {position:fixed; left:50%; top:50%; display:none; width:206px; height:70px; line-height:70px; margin-left:-103px; margin-top:-35px; text-align:center; font-size:16px; color:rgba(255,255,255,0.8); background:#282828;z-index:999;box-shadow: 0 0 20px 3px rgba(0,0,0,0.3);border-radius: 4px;}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/comm2.js"></script>
+<script type="text/javascript">
+	var UserStateStr = callClient("UserState?src=user");
+	var nickName = getValue(UserStateStr,"nickname");
+	var isMusicPacket = callClient("IsMusicPacket");
+	$(function(){
+		var VirtualUsrStateStr = callClient("VirtualUsrState");
+		var type = getValue(window.location.href,"type");
+		if(type=="1"){
+			$(".popBox h1").html("购买成功");
+			$(".popBox p").html("为了您更好的使用酷我服务，建议您登录账号后选择绑定，绑定后可播放下载付费歌曲");
+			$(".login").show();
+		}else if(type=="2"){
+			$(".popBox p").html(`您已购买会员服务，确认要绑定到账号：${nickName}上？绑定后可继续享受或延长会员服务`);
+			if(isMusicPacket=="1"){
+        $(".popBox p").html(`您已购买会员服务，确认要绑定到账号：${nickName}上？绑定后可继续享受或延长会员服务`);
+			}
+			$(".bind").show();
+		}else if(type=="3"){
+			$(".popBox p").html("您之前购买过付费服务，建议您登录账号后选择绑定，绑定后可享受更多权益");
+			$(".login").show();
+		}
+		$(".bind").click(function(){
+			$(".bind").html("绑定中...");
+			$.ajax({
+				url:"http://vip1.kuwo.cn/vip/v2/userbase/vip?op=mergeVirtualUserToRealUser",
+				type:"get",
+				timeout : 5000,
+				data:{
+					"uid":getValue(UserStateStr,"uid"),
+					"sid":getValue(UserStateStr,"sid"),
+					"virtualUid":getValue(VirtualUsrStateStr,"viruid"),
+					"virtualSid":getValue(VirtualUsrStateStr,"virsid")
+				},
+				success:function(data){
+					var jsondata = eval("("+data+")")
+					var data = jsondata.data;
+					var meta = jsondata.meta;
+					if(meta.code==200){
+						if(data.result=="SUCCESS"){
+							$(".popBox p").html("绑定成功，您可以继续享受会员服务");
+							$(".login,.bind").hide();
+							$(".cancle").html("确定").show();
+              callClientNoReturn("bindSuc");
+              callClientNoReturn('paySuc');
+						}else{
+							$(".popBox p").html("绑定失败，请重试");
+							$(".login,.bind").hide();
+							$(".bind").html("重试").show();
+						}
+					}else if(meta.code==6004){
+						$(".popBox p").html("已经绑定过了，不允许再次绑定");
+						$(".login,.bind").hide();
+						$(".cancle").html("确定").show();
+						callClientNoReturn("reBind");
+					}else{
+						$(".popBox p").html("绑定失败，请重试");
+						$(".login,.bind").hide();
+						$(".bind").html("重试").show();
+					}
+				},
+			　　error : function(){
+			　　　　$(".bind").html("重试")
+			　　}
+			});
+		});
+		$(".cancle").click(function(){
+			callClientNoReturn("CloseWindow");
+		});
+		$(".login").click(function(){
+			callClientNoReturn('UserLogin?src=login');
+		});
+	});
+	function OnLogin(){
+		UserStateStr = callClient("UserState?src=user");
+		nickName = getValue(UserStateStr,"nickname");
+		isMusicPacket = callClient("IsMusicPacket");
+		$(".login,.bind").hide();
+    $(".popBox p").html(`您已购买会员服务，确认要绑定到账号：${nickName}上？绑定后可继续享受或延长会员服务`);
+		if(isMusicPacket=="1"){
+			$(".popBox p").html(`您已购买会员服务，确认要绑定到账号：${nickName}上？绑定后可继续享受或延长会员服务`);
+		}
+		$(".bind").show();
+	}
+</script>
+</head>
+<body>
+	<div class="popBox">
+		<h1>温馨提示</h1>
+		<p></p>
+		<div class="controlBox">
+			<a href="javascript:;" class="cancle"></a>
+			<a href="javascript:;" class="bind">确认并绑定</a>
+			<a href="javascript:;" class="login">立即登录</a>
+		</div>
+	</div>
+</body>
+</html>

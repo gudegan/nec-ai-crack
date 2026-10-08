@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="702,45" caption="0,0,0,45">
+	<VerticalLayout>
+		<HorizontalLayout name="HorizPlayToolBar" bkimage="DL_ToolBK.png" inset="3,3,3,3" height="36" visible="true">
+			<Button name="DeskLyric_OpenKwMusic" width="22" height="22" tooltip="打开主界面" statusimage="DL_Logo.png" padding="17,4,0,0"/>
+			<Button name="DeskLyric_VertLyric" width="30" height="16" tooltip="竖版歌词" statusimage="DL_VertLyric.png" enabled="false" padding="12,8,0,0"/>			
+			<TabLayout name="hor_prevtab" width="22" height="22" padding="12,5,0,0" >
+				<Button name="DeskLyric_Previous" width="22" height="22" tooltip="上一首（Ctrl+Shift+Left）" statusimage="DL_Pre.png" />
+				<Button name="hor_garbage" width="20" height="24" statusimage="mini_garbage.png" tooltip="不喜欢" padding="0,0,0,2" />
+			</TabLayout>
+			<Option name="DeskLyric_PlayPause" width="26" height="26" tooltip="播放/暂停(Ctrl+F5)" statusimage="DL_Play.png" padding="12,2,0,0"/>
+			<Button name="DeskLyric_Next" width="22" height="22" tooltip="下一首（Ctrl+Shift+Right）" statusimage="DL_Next.png" padding="12,5,0,0"/>
+			<Option name="DeskLyric_ModifyFavor" width="22" height="22" tooltip="收藏" selectedimage="DL_Favor_2.png" statusimage="DL_Favor.png" padding="12,5,0,0"/>
+			<Control enabled="false" mouse="false" width="2" height="33" bkimage="DL_SplitLine.png" padding="14,0,0,0"/>
+			<Button name="DeskLyric_ZoomInFont" width="22" height="22" tooltip="放大歌词" statusimage="DL_ZoomIn.png" padding="14,5,0,0" />
+			<Button name="DeskLyric_ZoomOutFont" width="22" height="22" tooltip="缩小歌词" statusimage="DL_ZoomOut.png" padding="12,5,0,0"/>
+			<Button name="DeskLyric_MoveBackward" width="22" height="22" tooltip="歌词后退0.5秒" statusimage="DL_Backward.png" padding="12,5,0,0"/>
+			<Button name="DeskLyric_MoveForward" width="22" height="22" tooltip="歌词前进0.5秒" statusimage="DL_Forward.png" padding="12,5,0,0"/>			
+			<Option name="DeskLyric_KaraOK" width="22" height="22" tooltip="打开卡拉OK效果" selectedimage="DL_KaraOK_2.png" statusimage="DL_KaraOK.png" padding="12,5,0,0"/>
+			<Button name="DeskLyric_Theme" width="22" height="22" tooltip="设置桌面歌词颜色" statusimage="DL_Themes.png" padding="12,5,0,0"/>
+			<Button name="DeskLyric_Config" width="22" height="22" tooltip="桌面歌词设置" statusimage="DL_Config.png" padding="12,5,0,0"/>
+			<Button name="DeskLyric_SearchLyric" width="84" height="22" tooltip="搜索歌词" statusimage="DL_Search.png" enabled="false" padding="12,5,0,0"/>
+			<Control enabled="false" mouse="false" width="2" height="33" bkimage="DL_SplitLine.png" padding="12,0,0,0"/>
+			<Button name="DeskLyric_Lock" width="22" height="22" tooltip="锁定桌面歌词" statusimage="DL_Lock.png" padding="12,5,0,0"/>
+			<Button name="DeskLyric_OpenLyricWnd" width="22" height="22" tooltip="切换到歌词面板" statusimage="DL_Switch.png" padding="12,5,0,0"/>
+			<Button name="DeskLyric_Close" width="22" height="22" tooltip="关闭桌面歌词" statusimage="DL_Close.png" padding="12,5,0,0"/>
+		</HorizontalLayout>
+		<VerticalLayout name="VertPlayToolBar" bkimage="DL_ToolBK.png" inset="3,3,3,3" visible="false">
+			<Button name="DeskLyric_VertOpenKwMusic" width="22" height="22" tooltip="打开主界面" statusimage="DL_Logo.png" padding="2,17,0,0"/>
+			<Button name="DeskLyric_HorizLyric" width="16" height="31" tooltip="横版歌词" statusimage="DL_HorizLyric.png" enabled="false" padding="5,12,0,0" />
+			<TabLayout name="ver_prevtab" width="22" height="22" padding="2,12,0,0" >
+				<Button name="DeskLyric_VertPrevious" width="22" height="22" tooltip="上一首（Ctrl+Shift+Left）" statusimage="DL_Pre.png" />
+				<Button name="ver_garbage" width="20" height="24" padding="0,1,0,1" statusimage="mini_garbage.png" tooltip="不喜欢"/>
+			</TabLayout>
+			<Option name="DeskLyric_VertPlayPause" width="26" height="26" tooltip="播放/暂停(Ctrl+F5)" statusimage="DL_Play.png" padding="0,12,0,0"/>
+			<Button name="DeskLyric_VertNext" width="22" height="22" tooltip="下一首（Ctrl+Shift+Right）" statusimage="DL_Next.png" padding="2,12,0,0" />
+			<Option name="DeskLyric_VertModifyFavor" width="22" height="22" tooltip="收藏" selectedimage="DL_Favor_2.png" statusimage="DL_Favor.png" padding="2,12,0,0"/>
+			<Control enabled="false" mouse="false" width="20" height="2" bkimage="DL_VertSplitLine.png" padding="3,14,0,0"/>
+			<Button name="DeskLyric_VertZoomInFont" width="22" height="22" tooltip="放大歌词" statusimage="DL_ZoomIn.png" padding="2,14,0,0"/>
+			<Button name="DeskLyric_VertZoomOutFont" width="22" height="22" tooltip="缩小歌词" statusimage="DL_ZoomOut.png" padding="2,12,0,0"/>
+			<Button name="DeskLyric_VertMoveBackward" width="22" height="22" tooltip="歌词后退0.5秒" statusimage="DL_Backward.png" padding="2,12,0,0"/>
+			<Button name="DeskLyric_VertMoveForward" width="22" height="22" tooltip="歌词前进0.5秒" statusimage="DL_Forward.png" padding="2,12,0,0"/>			
+			<Option name="DeskLyric_VertKaraOK" width="22" height="22" tooltip="打开卡拉OK效果" selectedimage="DL_KaraOK_2.png" statusimage="DL_KaraOK.png"padding="2,12,0,0"/>
+			<Button name="DeskLyric_VertTheme" width="22" height="22" tooltip="设置桌面歌词颜色" statusimage="DL_Themes.png" padding="2,12,0,0"/>
+			<Button name="DeskLyric_VertConfig" width="22" height="22" tooltip="桌面歌词设置" statusimage="DL_Config.png" padding="2,12,0,0"/>
+			<Button name="DeskLyric_VertSearchLyric" width="22" height="84" tooltip="搜索歌词" statusimage="DL_VertSearch.png" enabled="false" padding="2,12,0,0"/>
+			<Control enabled="false" mouse="false" width="20" height="2" bkimage="DL_VertSplitLine.png" padding="3,12,0,0"/>
+			<Button name="DeskLyric_VertLock" width="22" height="22" tooltip="锁定桌面歌词" statusimage="DL_Lock.png" padding="2,12,0,0"/>
+			<Button name="DeskLyric_VertOpenLyricWnd" width="22" height="22" tooltip="切换到歌词面板" statusimage="DL_Switch.png" padding="2,12,0,0"/>
+			<Button name="DeskLyric_VertClose" width="22" height="22" tooltip="关闭桌面歌词" statusimage="DL_Close.png" padding="2,12,0,0"/>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>

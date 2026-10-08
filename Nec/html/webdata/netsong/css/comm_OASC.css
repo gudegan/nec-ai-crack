@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+/*酷我专栏、原创、活动用的css*/
+/*原创、专栏、活动*/
+.kw_bwrap {float:left; width:120px; margin-right:37px; margin-bottom:20px;}
+.kw_bwrap .b_pic {display:block; position:relative; width:120px; height:120px;}
+.kw_bwrap .b_pic img {border-radius: 5px;}
+.kw_bwrap .b_pic .b_shade { display:block; position:absolute; width:120px; height:120px; left:0; top:0; z-index:97;}
+.kw_bwrap .b_pic:hover .b_shade { background:#000;border-radius: 5px;  opacity:0.35;}
+.kw_bwrap .b_pic .i_play { z-index:100;}
+.kw_bwrap .b_pic:hover .i_play {  right:5px; bottom:5px;}
+.kw_bwrap .b_name{height:36px; padding-top:6px;}
+.kw_bwrap .b_name a{line-height:18px; color: #666; white-space: normal; text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.kw_bwrap .b_name a:hover{color:#21a0ed;}
+
+/*白领专栏、活动*/
+.musicPeripheryList {padding-bottom: 0px;}
+#kw_wc .kw_bwrap{margin-right:0px;}
+#kw_wc .kw_bwrap .b_pic{display:block; position:relative;width:100%;height: auto}
+#kw_wc .kw_bwrap .b_pic img{width:100%;border-radius:0;}
+#kw_wc .kw_bwrap .b_pic .b_shade {width:100%; height:100%;border-radius: 0}
+#kw_wc .kw_bwrap .b_name a{line-height:20px;}

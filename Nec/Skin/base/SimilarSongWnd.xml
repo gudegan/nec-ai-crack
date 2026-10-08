@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="294,442" roundcorner="4,4">
+  <VerticalLayout padding="1,2,1,2">
+      <HorizontalLayout padding="6,9,6,2" height="24"> 
+	    <HorizontalLayout padding="10,0,0,0">
+	      <Label height="24" align="left" width="30" textcolor="#FF666666" font="PlaylistFindTip" text="喜欢" />
+		  <Label name="SimilarTitle" height="24" width="125" align="center" textcolor="#FFff6600" font="PlaylistFindTip" text="“后会无期”" />        
+		  <Label height="24" width="60" align="left" textcolor="#FF666666" font="PlaylistFindTip" text="的人也听" /> 
+        </HorizontalLayout>		
+        <Button name="SimilarClose" padding="0,8,10,9" width="12" height="12" statusimage="similarsong_close.png" tooltip="关闭"></Button>      
+      </HorizontalLayout>	  	 
+     
+	 <TabLayout name="TabContent">
+	  <TabLayout name="TabTip">
+	     <VerticalLayout padding="6,5,6,15"> 
+	      <Control />
+	      <Label name="SimilarTip" padding="10,0,10,0" height="24" align="center" textcolor="#FF666666" font="PlaylistFindTip" text="正在获取..."/>
+	      <Control />
+	     </VerticalLayout> 
+		 <VerticalLayout padding="6,5,6,15"> 
+	      <Control />
+		  <HorizontalLayout padding="0,0,0,0">
+		  <Control />
+	      <Label name="SimilarFail" padding="10,0,0,0" width="70" align="right" textcolor="#FF666666" font="PlaylistFindTip" text="未获取到，" />
+		  <Button name="SimilarTry" setlink="true" text="再试试" font="PlaylistFindTip" linkfont="PlaylistFindTip" textcolor="#ff0aafe6" width="50"  setcursor="true" align="left"/>
+          <Control />	     
+		 </HorizontalLayout>	
+		  <Control />
+	     </VerticalLayout>
+      </TabLayout>  
+	  <VerticalLayout padding="6,5,6,15">      
+        <HorizontalLayout padding="0,4,0,5" height="24" >
+        <Button name="SimilarAll" padding="10,0,0,0" width="80" height="24" statusimage="similarsong_playall.png" setcursor="true" tooltip="全部播放"></Button>
+		<Control />
+        <Button name="SimilarChange" padding="0,0,10,0" width="54" height="24" statusimage="similarsong_change.png" setcursor="true" tooltip="换一换"></Button>
+       </HorizontalLayout> 
+	   <VerticalLayout>
+	     <HorizontalLayout name="SimilarContainer_1">
+		    <Button name="SimilarNumber_1" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true"  font="PlaylistFindTip" text="01"/>
+		    <Button name="SimilarName_1" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" font="PlaylistFindTip" setcursor="true"  text="晴天娃娃-江语晨"/>
+		    <Button name="SimilarListen_1" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_1" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_2">
+		    <Button name="SimilarNumber_2" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="02"/>
+		    <Button name="SimilarName_2" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="泡沫-G.E.M邓紫棋"/>
+		    <Button name="SimilarListen_2" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_2" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_3">
+		    <Button name="SimilarNumber_3" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="03"/>
+		    <Button name="SimilarName_3" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="回忆的沙漏-G.E.M邓紫棋"/>
+		    <Button name="SimilarListen_3" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_3" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_4">
+		    <Button name="SimilarNumber_4" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="04"/>
+		    <Button name="SimilarName_4" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="流星-陆毅"/>
+		    <Button name="SimilarListen_4" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_4" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_5">
+		    <Button name="SimilarNumber_5" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="05"/>
+		    <Button name="SimilarName_5" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="不存在的存在-G.E.M邓紫棋"/>
+		    <Button name="SimilarListen_5" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_5" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_6">
+		    <Button name="SimilarNumber_6" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="06"/>
+		    <Button name="SimilarName_6" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="囚鸟-江语晨"/>
+		    <Button name="SimilarListen_6" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_6" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_7">
+		    <Button name="SimilarNumber_7" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="07"/>
+		    <Button name="SimilarName_7" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="我的秘密-G.E.M邓紫棋"/>
+		    <Button name="SimilarListen_7" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_7" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_8">
+		    <Button name="SimilarNumber_8" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="08"/>
+		    <Button name="SimilarName_8" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="写不完的温柔-G.E.M邓紫棋"/>
+		    <Button name="SimilarListen_8" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_8" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_9">
+		    <Button name="SimilarNumber_9" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="09"/>
+		    <Button name="SimilarName_9" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="晴天娃娃-江语晨"/>
+		    <Button name="SimilarListen_9" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_9" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+		  <HorizontalLayout name="SimilarContainer_10">
+		    <Button name="SimilarNumber_10" padding="10,5,0,0" width="26" height="24" align="left" textcolor="#FF888999" setcursor="true" font="PlaylistFindTip" text="10"/>
+		    <Button name="SimilarName_10" padding="0,5,0,0" height="24" align="left" textcolor="#FF323c50" setcursor="true" font="PlaylistFindTip" text="一二三四五六七-一二三四五六七"/>
+		    <Button name="SimilarListen_10" padding="0,10,10,5" width="16" height="14" setcursor="true" statusimage="list_similarsong_play.png" tooltip="播放歌曲"></Button>      
+            <Button name="SimilarAdd_10" padding="0,10,10,5" width="14" height="14" setcursor="true" statusimage="list_similarsong_add.png" tooltip="添加歌曲"></Button>     
+		 </HorizontalLayout>
+	   </VerticalLayout>        
+	</VerticalLayout>
+   </TabLayout>
+  </VerticalLayout>
+</Window>
+
+
+
+ <!--List name="SimilarsongList" bkcolor="#FFFAFAFA" rectangleselect="true" itemshowhtml="false" itemalign="left" menu="true" showcheckbox="false">
+          <ListHeader height="25"></ListHeader>
+          <DefChildAttr height="45" menu="true"/>
+       </List-->	

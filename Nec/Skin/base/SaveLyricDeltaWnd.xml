@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,50" roundcorner="0,0" size="360,165">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot;button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ffffffff&quot; pushedtextcolor=&quot;#ffffffff&quot; focusedtextcolor=&quot;#ffffffff&quot;" />
+  <Default name="Option" value="setcursor=&quot;true&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_Radio_1.png&quot; hotimage=&quot;Config_Radio_2.png&quot; selectedimage=&quot;Config_Radio_3.png&quot; disabledimage=&quot;Config_Radio_4.png&quot; height=&quot;16&quot; textpadding=&quot;16,-2,1,0&quot; align=&quot;left&quot; font=&quot;PopUp.DefaultText&quot; " />
+
+  <VerticalLayout  bkcolor="#00000000">
+		<HorizontalLayout name="titlepanel" height="60">
+    	<Label name="title" padding="20,0,0,0" text="您使用鼠标滚轮调整了歌词时序" width="300" height="60" font="PopUp.Title"/>
+    	<Control />
+    	<Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+    <Option width="250" padding="20,0,0,10" name="OPT_SaveAndShowWnd" group="SaveLyricDelta" text=" 保存这次调整，以后依然提示"/>
+    <Option width="250" padding="20,0,0,10" name="OPT_Save" group="SaveLyricDelta" text=" 直接保存，记住我的选择" selected="true"/>
+		<HorizontalLayout padding="0,10,0,0">
+      <Control />
+			<Button name="ok" text="确 定" width="70" height="30"/>
+			<Button name="cancel" padding="10,0,20,0" text="取 消" width="70" height="30"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

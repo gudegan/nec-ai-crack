@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window sizebox="4,4,4,4" mininfo="985,570" roundcorner="4,4" dbclicktofullscreen="true" caption="0,0,0,29">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Button" value="fadetime=&quot;300&quot;"/>
+  <Default name="Option" value="fadetime=&quot;300&quot;"/>
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,16,17'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.DefaultText&quot;" />	
+  <VerticalLayout name="root">
+    <VerticalLayout name="UserOpreationLayer">
+            
+       <!--窗口上方的标签栏-->
+      <!--Control name="TabHeadPlaceHolder" height="65"></Control-->
+        <VerticalLayout name="Head" height="29">
+          <HorizontalLayout name="HeadControl">
+            <Control width="8"></Control>
+            <Label text="酷我秀场直播间" varwidth="true" align="left" font="Main.ChannelTitle" textcolor="#FFFFFFFF"/>
+            <HorizontalLayout name="h1" minwidth="100">
+
+              <HorizontalLayout minwidth="90">
+                <Control></Control>
+                <Button name="refresh" visible="true" statusimage="xarefresh.png" padding="4,4,0,0" width="22" height="21" tooltip="刷新"/>
+                <Button name="min" visible="true" statusimage="min.png" padding="10,6,0,0" width="18" height="18" tooltip="最小化"/>
+                <Button name="max" visible="true" statusimage="maximize.png"  padding="10,6,0,0" width="18" height="18" tooltip="最大化"/>
+                <Button name="close" visible="true" statusimage="close.png" padding="10,6,0,0"  width="18" height="18"  tooltip="关闭"/>
+                <Control width="8"></Control>
+              </HorizontalLayout>
+            </HorizontalLayout>                     
+          </HorizontalLayout>
+        </VerticalLayout>    
+
+      <HorizontalLayout name="WindowBody" inset="1,0,1,1">
+          <!--<HorizontalLayout name="WindowBodyLeft" minwidth="540">-->
+
+              <!--窗口中间的歌词部分和网络曲库-->
+              <TabLayout name="TabMainBody">            
+                
+                <VerticalLayout name="LoadingPage">
+                  <VerticalLayout name="bkBody" sendsizemsg="true" bkcolor="#FFFAFAFA">
+                    <Control />
+                    <HorizontalLayout>
+                      <Control />
+                      <Label name="WebLoading" padding="0,90,0,0" width="40" height="22" bkimage="WebLoading.png" frametime="1170" framenum="13" />
+                      <Label text="精彩直播马上呈现..." width="230" height="200" align="center" font="Default.Font24" textcolor="#FF666666"/>
+                      <Control />
+                    </HorizontalLayout>
+                    <Control />
+                  </VerticalLayout>
+                </VerticalLayout>
+
+                <WindowProxy name="XAnchorWebPage" sendsizemsg="true" bkcolor="#FFFAFAFA">
+                </WindowProxy>
+
+                <VerticalLayout name="ErrorPage" bkcolor="#FFFAFAFA">
+                  <Control />
+                  <HorizontalLayout height="200">
+                    <Control />
+                    <Label height="144" width="162" padding="0,56,0,0" bkimage="jiazai.jpg"/>
+                    <Control />
+                  </HorizontalLayout>
+                  <HorizontalLayout height="200">
+                    <Control />
+                    <Label text="网络似乎有点问题," height="36" varwidth="true" align="center" font="Main.Loading"/>
+                    <Button name="neterr_refreshbtn" text="点此刷新页面" height="36" varwidth="true" align="center" font="Main.Loading.UnderLine" linkfont="Main.Loading.UnderLine" textcolor="#FF46B4E6" setcursor="true"/>
+                    <Control />
+                  </HorizontalLayout>
+                  <Control />
+                </VerticalLayout>
+              </TabLayout>
+          <!--</HorizontalLayout>-->
+
+      </HorizontalLayout>
+        
+
+    </VerticalLayout>
+
+  </VerticalLayout>
+</Window>

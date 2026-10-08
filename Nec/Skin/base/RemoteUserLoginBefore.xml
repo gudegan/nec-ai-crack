@@ -1,0 +1,28 @@
+﻿<Window size="257,142" caption="0,0,0,0" roundcorner="5,5">
+	<VerticalLayout bkcolor="#00000000">
+		<HorizontalLayout name="titlepanel" height="32">
+			<Control bkimage="starlogo.png" width="16" height="16" padding="5,4,0,0"/>
+			<Label name="title" text=" 其它终端登录" width="120" padding="2,-6,0,0" font="Playlist.newlist"/>
+			<Control />
+			<Button name="close" width="19" height="20" padding="0,6,0,0" statusimage="Config_CloseBtn.png"  tooltip="关闭"/>
+			<Control width="6"/>
+		</HorizontalLayout>
+		<Control name="UserPhotoBk" pos="5,38,64,97" float="true" width="59" height="59" bordercolor="#00ff00ff" bkimage="UserPhotoBk.png"/>
+		<HorizontalLayout height="70">
+			<Control name="UserPhoto" padding="7,8,0,0" width="55" height="55" bkimage="btn_userinfo_photo.png"/>
+			<Control width="10" />
+			<VerticalLayout >
+				<Text name="RemoteLoginBefore_UserName" padding="2,5,0,0" font="Minisite.Title"/>
+				<Text name="RemoteLoginBefore_DevClass" padding="2,5,0,0" font="UIPopupWnd.Content"/> 
+				<Text name="RemoteLoginBefore_UserArea" padding="2,5,0,0" font="UIPopupWnd.Content"/> 
+			</VerticalLayout>
+			<Control width="5"/>
+		</HorizontalLayout>
+		<Control bkimage="PopupwndLoginSepline.png" height="1" padding="0,4,0,0"/>
+		<HorizontalLayout>
+			<Label text="若非本人操作，请" padding="10,0,0,0" width="115" font="UIPopupWnd.Content"/>
+			<Button name="RemoteLoginBefore_KickUserDown" padding="0,2,0,0" showhtml="true" text="{u}{c #ff226699}踢Ta下线{/c}{/u}" align="left" setcursor="true"/>
+			<Control />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

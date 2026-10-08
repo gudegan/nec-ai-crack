@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <Container name="root">
+    <VerticalLayout name="LyricWnd" sendsizemsg="true">
+      <VerticalLayout name="LyricContainer">
+        <Control name="LyricPadding"/>
+      </VerticalLayout>
+      <Control name="SoundVisualView" height="72" visible="false" userdata="72"></Control>
+      <Control name="PlayControlStub" height="62" visible="false"></Control>
+    </VerticalLayout>
+  </Container>
+</Window>

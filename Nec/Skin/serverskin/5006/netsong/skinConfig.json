@@ -1,0 +1,8 @@
+{
+	"type":"dark",
+	"skinColor":"#EC4264",
+	"linkColor":"#EC4264",
+	"hifiColor":"#EC4264",
+	"errorColor":"#FF6161",
+	"opqSwitch": false
+}

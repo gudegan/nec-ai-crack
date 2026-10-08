@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="467,200" caption="0,0,0,80" roundcorner="10,10"><!--467,200 --><!--602,422 -->
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.Button&quot;" />	 
+ <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <!--Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" /-->
+  <Default name="Button" value="fadetime=&quot;300&quot;"/>
+ <VerticalLayout > <!-- bkcolor="#FFFF0000"-->
+	<!--1. 升级介绍-->
+	 <VerticalLayout name="update_Introduce" inset="0,0,0,0" visible="false"> 
+			<!--标题栏 -->
+			<HorizontalLayout name="layout_dialog_title" height="330" >
+				<!-- <Control /> -->
+				<!--升级提示也得标题 -->
+				<Label bkimage="update_introduce_bk.png" padding="43,27,0,0" width="210" height="297"/><!--+5,+6 -->
+					
+				<!--升级介绍,最多显示四条-->
+				<VerticalLayout name="check_ok_vlayout" padding="48,0,0,0" visible="false">
+					<HorizontalLayout name="layout_dialog_version_title" padding="0,47,0,0" height="65" >
+						<Label text="发现新版本" textcolor="#FF39374E" font="Def.Label.UpdateTitle" width="170" height="65" />
+						<Label name="update_new_version_split" bkimage="update_new_version_split.png" padding="-16,23,0,0" width="14" height="14" visible="false"/>
+						<Label name="update_new_version" padding="-4,0,0,0" textcolor="#FF39374E" font="Def.Label.UpdateTitle" width="140" height="65" visible="false"/>
+					</HorizontalLayout>
+					<HorizontalLayout name="hl_info_1" padding="-3,4,0,0" visible="false" height="30">
+						<Label bkimage="update_new_version_dot.png" padding="0,0,0,0" width="14" height="14"/>
+						<Label text=""  name="info_1" textcolor="#B239374E" font="Default.FontName" maxwidth="280" maxchar="20" endellipsis="true" padding="-2,-5,0,0"/>
+					</HorizontalLayout>					
+					<HorizontalLayout name="hl_info_2" padding="-3,0,0,0" visible="false" height="30">
+						<Label bkimage="update_new_version_dot.png" padding="0,0,0,0" width="14" height="14"/>
+						<Label text=""  name="info_2" textcolor="#B239374E" font="Default.FontName" maxwidth="280" maxchar="20" endellipsis="true" padding="-2,-5,0,0"/>
+					</HorizontalLayout>					
+					<HorizontalLayout name="hl_info_3" padding="-3,0,0,0" visible="false" height="30">
+						<Label bkimage="update_new_version_dot.png" padding="0,0,0,0" width="14" height="14"/>
+						<Label text=""  name="info_3" textcolor="#B239374E" font="Default.FontName" maxwidth="280" maxchar="20" endellipsis="true" padding="-2,-5,0,0"/>
+					</HorizontalLayout>
+					<HorizontalLayout name="hl_info_4" padding="-3,0,0,0" visible="false" height="30">
+						<Label bkimage="update_new_version_dot.png" padding="0,0,0,0" width="14" height="14"/>
+						<Label text=""  name="info_4" textcolor="#B239374E" font="Default.FontName" maxwidth="280" maxchar="20" endellipsis="true" padding="-2,-5,0,0"/>
+					</HorizontalLayout>					
+					<Button name="button_Update" padding="6,20,0,0" width="160" height="36" normalimage="btn_update_quick_do_nor.png" hotimage="btn_update_quick_do_hot.png" pushedimage="btn_update_quick_do_hot.png" disabledimage="btn_update_quick_do_dis.png"/>
+				</VerticalLayout>
+				<Button name="button_Close" padding="0,15,17,0" width="14" height="14" normalimage="btn_update_close_nor.png" hotimage="btn_update_close_hot.png" pushedimage="btn_update_close_hot.png" disabledimage="btn_update_close_dis.png"/>
+			</HorizontalLayout>
+			
+	</VerticalLayout>
+	<!-- 2.升级下载安装包页面-->
+	<VerticalLayout visible="false" name="update_downPackVlayout">
+		<Label bkimage="Update_Title.png" width="620" height="220"/>
+		<VerticalLayout childpadding="0,0,0,0">
+			<Label name="downloading_pack_desc" text="文件下载中，请稍侯" textcolor="#B239374E" font="Def.Label.NoSongs" height="17" padding="68,24,0,0" />
+			<Progress name="downProgress" padding="66,8,0,0" height="8" width="490" max="100" min="0" value="0" step="1" enabled="false" bkimage="update_progres_bk.png"  fgimage="update_progress.png"/>			
+			<Label text="0%" name="proValusLabel" textcolor="#B239374E" align="center" font="Def.Label.NoSongs" height="17" padding="17,4,0,0" />
+		</VerticalLayout>
+	</VerticalLayout>
+	<!-- 3.无新版或升级完成（成功/失败）-->
+	<VerticalLayout name="update_Complete" visible="false">			
+		<VerticalLayout bkimage="Update_Title.png" width="620" height="220">	
+			<Button name="button_Close" padding="589,15,17,0" width="14" height="14" normalimage="btn_update_close_nor.png" hotimage="btn_update_close_hot.png" pushedimage="btn_update_close_hot.png" disabledimage="btn_update_close_dis.png"/>
+		</VerticalLayout>
+		<VerticalLayout width="620" height="400">
+			<TabLayout name="update_complete_desc" padding="0,3,0,0" height="24" >
+				<Label name="lb_update_unwanted" padding="185,0,0,0" bkimage="update_unwanted.png" width="252" height="24" />
+				<Label name="lb_update_complete" padding="225,0,0,0" bkimage="update_complete.png" width="172" height="24" />
+				<Label name="lb_update_failed" padding="255,0,0,0" bkimage="update_failed.png" width="112" height="24" />
+			</TabLayout>
+			<TabLayout name="update_complete_btn" padding="230,13,0,0">
+				<Button  name="button_ok" width="160" height="36" normalimage="btn_update_ok_nor.png" hotimage="btn_update_ok_hot.png" pushedimage="btn_update_ok_hot.png" disabledimage="btn_update_ok_dis.png"/>
+				<Button name="down_newVer" width="160" height="36" normalimage="btn_update_link_nor.png" hotimage="btn_update_link_hot.png" pushedimage="btn_update_link_hot.png" disabledimage="btn_update_link_dis.png"/>
+			</TabLayout>			
+		</VerticalLayout>
+	</VerticalLayout>
+</VerticalLayout>
+</Window>

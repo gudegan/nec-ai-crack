@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="360,500" caption="0,0,0,35" >
+<VerticalLayout name="root" bkcolor="#ffffffff">
+	<HorizontalLayout height="34">
+	  <Label padding="28,7,0,0" text="手机Wi-Fi连接向导" textcolor="#ff333333" varwidth="true" height="22"/>
+      <Button name="button_Close" padding="130,7,8,0" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+	<Label padding="26,13,0,0" text="手机酷我扫码建立连接" textcolor="#ff333333" varwidth="true" height="22" font="Default.Font16" />
+	<Control name="tran_image1" padding="15,7,0,0" width="322" height="264" bkimage="tran_iphone_wifi1.png" />
+	<Control name="tran_image2" width="322" height="264" bkimage="tran_iphone_wifi2.png" float="true"/>
+	<Button name="finished" padding="20,83,0,0" width="320" height="44" text="知道了" font="Default.Font18" theme="MsgBox_Btn_Focus"/>
+</VerticalLayout>
+</Window>

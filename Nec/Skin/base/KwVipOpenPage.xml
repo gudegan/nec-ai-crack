@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="550,525" caption="0,0,0,60" roundcorner="1,1" >
+  <EventHook event="OnSkinChange">
+    <!--<Attribute control="title" value="textcolor=&quot;Global.DarkGray&quot;" />-->
+  </EventHook>
+
+  <VerticalLayout >
+    <HorizontalLayout name="PopUpTitleHor" >
+      <Label name="title" text="酷我支付" theme="PopUpTitle"/>
+      <Control />
+      <Button name="close" theme="PopUpCloseBtn" />
+    </HorizontalLayout>
+    <Control height="1" theme="#Msg_SepLine"/>
+
+    <VerticalLayout name="webcontrol" padding="5,0,5,5">
+    </VerticalLayout>
+  </VerticalLayout>
+
+</Window>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+  <include name="${base}skin-dark.xml"/>
+  <Color>
+    <!--列表区掩码色，RGB部分表示颜色，A表示透明度阀值-->
+    <Color name="Body.Mask" value="#00000000" />
+    <Color name="Pl.Mask" value="#00ffffff" />
+    <Color name="Pl.PreferedAlpha" value="#DD000000" />
+    <Color name="ListAera.Mask" value="#33000000" />
+    <Color name="Main.Bk" value="#FF445062" />
+
+    <!--主题颜色-->
+    <Color name="Topic.Normal" value="#FF21a0ed" />
+    <!--控制按钮、进度条高亮等-->
+    <Color name="Topic.Alter" value="#FF21a0ed" />
+    <!--主题颜色备选，多同高亮色，白色下用于顶栏、复选框-->
+    <Color name="Topic.LinkText" value="#FF21a0ed" />
+    <Color name="Topic.Menu.Hot" value="#33000000" />
+    <Color name="Topic.Menu.Selected" value="#80000000" />
+  </Color>
+</Skin>

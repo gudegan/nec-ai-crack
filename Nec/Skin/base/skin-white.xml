@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+  <Color>
+    <Color name="Body.Mask" value="#fffcfcfc" />
+    <Color name="Pl.Mask" value="#ffffffff" />
+    <Color name="ListAera.Mask" value="#08000000" />
+    <Color name="Main.Bk" value="#ffffffff" />
+
+    <!--基础固定配置-->
+	<Color name="Global.Golden" value="#FFC77F0E" />
+
+    <!--主题-->
+    <Color name="Topic.Normal" value="#ffffd200" />
+    <Color name="Topic.Alter" value="#ff000000" />
+    <Color name="Topic.LinkText" value="#FFC77F0E" />
+    <Color name="Topic.Menu.Hot" value="#33ffd200" />
+    <Color name="Topic.Menu.Selected" value="#ffffd200" />
+
+    <!--高亮背景色下的前景文字色-->
+    <Color name="Text.UnderTopic" value="#CC000000" />
+    
+    <!--通用字体颜色 begin-->
+    <Color name="Text.Normal" value="#CC000000" />
+    <Color name="Text.Hot" value="#CC000000" />
+    <Color name="Text.Focused" value="#CC000000" />
+    <Color name="Text.Pushed" value="#CC000000" />
+    <Color name="Text.Selected" value="#CC000000" />
+    <Color name="Text.Disabled" value="#CC000000" />
+
+    <!--左侧导航目录级字体颜色-->
+    <Color name="Text.NavFld.Normal" value="#99000000" />
+    <!--左侧导航目录级字体颜色 end-->
+    
+    <!--通用按钮融洽色——不响应曲库透明度变化的，特殊的特殊处理-->
+    <Color name="Comp.Normal" value="#ff000000" />
+	<Color name="Radio.Normal" value="#ff000000" />  <!--免费下载弹框的radio单选按钮-->    
+	    
+	<Color name="CheckBox.Normal" value="#FF000000" />  <!--列表选择弹框的checkbox按钮-->
+	
+    <!--顶栏-->
+    <Color name="Comp.Topbar.Normal" value="#ff333333" />
+    <Color name="topBar.search.textcolor" value="#cc000000" />
+	<Color name="topBar.search.defaultcolor" value="#4d000000" />
+	<Color name="topBar.search" value="#ff000000" />
+	<Color name="topBar.line" value="#28000000" />
+
+    <!--播放栏按钮-->
+    <Color name="TabPlayControlPanel.bkcolor.normal" value="#e50f101f" />
+    <Color name="PlayControlPanel.bkcolor.normal" value="#e90f101f" />
+    <Color name="Comp.Playbar.Normal" value="#ffffffff" />
+    <Color name="pc.playBar.textcolor.normal" value="#B3FFFFFF" />
+    <Color name="pc.playBar.textcolor.hot" value="#FFFFFFFF" />
+    <Color name="pc.playBar.textcolor.push" value="#FFFFFFFF" />
+    <Color name="pc.playBar.totaltime.normal" value="#99FFFFFF" />
+
+    <Color name="playBar.PlayerProgressThumb.Disabled" value="#ff949494" />
+    <Color name="playBar.PlayerProgressBk.Color" value="#ffffffff" />
+    <Color name="playBar.PlayerProgressDownload.Color" value="#ffffffff" />
+    <Color name="playBar.playcontrol.volumnbk" value="#ffe7e7e7" />
+    
+    <!--曲库区域即TabMainBody下所有UI要支在不同的透明度下用不同的颜色，所以该区域下的UI要定义专门的命名颜色值，不能直接写16进制数-->
+    <!--示例：全透明时配色方案name="xyz", 不透明时配色方案为Opq.xyz。规定：TabMainBody下所有的颜色名必须独立于全局颜色名-->
+    <!--规定：TabMainBody下所有的颜色名必须独立于全局颜色名，目的是使它们可独立赋值-->
+    <!--如全局字体颜色为Text.Normal, TabMainBody下的字体颜色必须另起一名，比如叫Body.Text.Normal-->
+    <!--全透明时配色方案-->
+
+    <!--列表标签的颜色-begin-->
+    <Color name="List.Label.Selected" value="#FF555555" />
+    <Color name="List.Label.Disabled" value="#FF999999" />
+    <Color name="List.Label.Tip" value="#FF666666"/>
+    <Color name="List.Label.TipText" value="#ff2db2eb" />
+    
+    <Color name="List.Edit.DefaultTextColor" value="#FFC0C0C0"/>
+    <Color name="List.Progress.bkg" value="#FF000000"/>
+    <Color name="List.Item.Font.Speedup" value="#FF209CFA"/>
+    <Color name="List.Option.Title.BKG" value="#FF000000" />
+    <Color name="List.Option.Title.Selected" value="#FF000000" />
+    <Color name="List.Option.Title.UnSelected" value="#FF999999" />
+    <Color name="List.Option.Title.Underline" value="#FFFFD600"/>
+	
+	<!--New Standard-->
+	<Color name="List.TopAreaBkColor" value="#06000000" /> 		<!--2.1 顶部区 底色-->
+	<Color name="List.HighLightTextColor" value="#FF000000"/> 	<!--2.4 突出文字(大标题 歌手名 歌单名 TAB hover/selected)-->
+	<Color name="List.SubTextColor" value="#99000000" />		<!--2.5 次要文字(TAB未选中 表头文字 图副标题 序号 时长 添加时间 搜索框内文字 小标题)-->
+	<Color name="List.MajorTextColor" value="#CC000000" />		<!--2.6 主要文字(行文字 图表题 普通按钮文字)-->
+	<Color name="List.SplitLineColor" value="#0A000000" />		<!--2.8 分割线框色 列表行hover色-->
+	<Color name="List.TableHeadBkColor" value="#08000000" />	<!--2.9 表头底色-->
+	<Color name="List.HighLightBtnTextColor" value="#CC000000"/><!--2.10 高亮按钮文字色-->
+	<Color name="List.DisableBtnTextColor" value="#4D000000"/>	<!--2.13 置灰文字色-->
+	
+    <!--Option-->
+    <Color name="List.Option.Selected" value="#FF333333" />
+    <Color name="List.Option.Hover" value="#FF333333" />
+    <Color name="List.Option.UnSelected" value="#FF999999" />
+    <!--列表功能区不透明的颜色放这里统一-end-->
+
+    <Color name="LocalLeftList.ItemTextColor" value="#FF888888"/>
+    
+    <!--播放列表区域的普通按钮背景 begin-->
+    <Color name="Global.PlaylistGeneralIcon" value="#FF000000"/>
+	
+	<!--播放列表区域的普通按钮背景 begin-->
+    <Color name="Global.PlaylistSpecialIcon" value="#FFFFFFFF"/>
+	
+	
+    <!--播放列表区域的普通按钮背景 end-->
+
+    <!--列表歌曲的格式相关开始-->
+    <Color name="Global.List.SongFormat" value="#FFA7B3C2"/>
+    <Color name="Global.List.Pause" value="#FF000000"/>
+    <Color name="Global.List.Waiting" value="#FF000000"/>
+    <!--列表歌曲的格式相关结束-->
+
+    <!--滚动条颜色开始-->
+    <Color name="Scrollbar.Nav" value="#FF000000" />
+    <Color name="Scrollbar.List" value="#FF000000" />
+    <!--滚动条颜色结束-->
+
+    <Color name="pp.DisableFocusColor" value="#4dffd200"/>
+  </Color>
+  <imagecompose>
+    <image name="playbtn.png" count="4" mask="" colors="" />
+    <image name="pausebtn.png" count="4" mask="" colors="" />
+  </imagecompose>
+
+  <Variable>
+  </Variable>
+</Skin>

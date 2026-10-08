@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window sizebox="0,0,0,0" dbclicktofullscreen="true" size="100,100">
+  <themes>
+    <theme name="onlistvisible" tooltip="收起" iconstatusimage="mv_unexpand.png"/>
+    <theme name="onlisthide" tooltip="展开" iconstatusimage="mv_expand.png" />
+    <theme name="root_float" bkcolor="#99000000" />
+    <theme name="root_normal" bkcolor="#00000000" />
+    <theme name="pause_puased" statusimage="mv_mini_play.png" tooltip="播放"/>
+    <theme name="pause" statusimage="mv_mini_pause.png" tooltip="暂停"/>
+  </themes>
+  
+  <VerticalLayout name="root" theme="root_normal">
+    <TabLayout name="tab">
+      <VerticalLayout name="expandOpPanel" width="22">
+        <Control />
+        <Button name="mvListExpand" theme="onlistvisible" bkimage="mv_expandbk.png" icondest="1,20,21,40" setcursor="true" width="22" height="60"></Button>
+        <Control />
+      </VerticalLayout>
+      
+      <VerticalLayout name="floatOpPanel">
+        <HorizontalLayout height="30" >
+          <Control />
+          <Button name="close" statusimage="mv_mini_close.png" padding="0,5,5,0"  width="20" height="20" setcursor="true" tooltip="关闭最小化窗口"/>
+        </HorizontalLayout>
+
+        <VerticalLayout>
+          <Control />
+          <HorizontalLayout height="42">
+            <Control />
+            <Button name="pause" width="42" theme="pause" setcursor="true"/>
+            <Control width="43" />
+            <Button name="restore" width="42" statusimage="mv_mini_restore.png" tooltip="还原" setcursor="true"/>
+            <Control />
+          </HorizontalLayout>
+          <Control />
+        </VerticalLayout>
+
+        <HorizontalLayout name="PlayControlPanel" height="30">
+          <PlayProgress name="PlayerProgress" padding="2,8,4,0" height="18" fbpadding="3,0,5,0" fgpadding="0,0,0,0" bkimage="npc.pc.PlayerProgress_bkVir.png" fgimage="PlayerProgress_progress_noVir.png" downloadimage="npc.pc.PlayerProgress_downloadVir.png" thumbimage="PlayerProgress_thumbVir.png" thumbsize="16,16" setcursor="all"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+      
+    </TabLayout>
+  </VerticalLayout>
+</Window>

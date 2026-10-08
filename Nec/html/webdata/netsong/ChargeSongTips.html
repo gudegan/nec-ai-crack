@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>浮层tip页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <link href="css/base.css" rel="stylesheet" type="text/css" />
+  <link href="css/content.css" rel="stylesheet" type="text/css" /> -->
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/comm2.js"></script>
+  <link href="css/iconfont.css" rel="stylesheet" />
+	<style>
+    body{
+        margin: 0;
+        font-family:"Microsoft YaHei", "微软雅黑", '\65B0\5B8B\4F53', '\5B8B\4F53', Verdana;-webkit-user-select:none;
+    }
+    .bottomSongTips{
+        font-size: 14px;
+        color:rgba(45, 29, 23, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        flex-direction: column;
+    }
+
+    .defaultText {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 44px;
+        background: rgba(254, 236, 213, 1);
+    }
+
+    .arrow {
+        width: 0;
+        height: 0;
+        border-top: 7px solid rgba(254, 236, 213, 1);
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+    }
+	</style>
+</head>
+<body>
+  <div class="bottomSongTips">
+    <div class="defaultText">
+      <span class="text"></span>
+    </div>
+    <div class="arrow"></div>
+  </div>
+  <script>
+    if (callClient('isPlayMv') === '1') {
+      // mv会员专享弹窗
+      $('body').css('cursor', 'default');
+      $('.text').html('正在为您播放会员专享视频');
+      showAndReSize(240, 51);
+      setTimeout(() => {
+        $('.bottomSongTips').css('visibility', 'visible');
+      },20)
+      $('html, body').on('mouseenter', function() {
+        callClient('mousehover')
+      })
+    } else {
+      // 付费3.0歌曲提示
+      const get_text = callClient('get_text');
+      const defualText = getValue(get_text, 'defualText');
+      const defaultWidth = (defualText.length + 1)* 15;
+      const textWidth = defaultWidth;
+      $('.text').html(defualText);
+      setTimeout(() => {
+        $('.bottomSongTips').css('visibility', 'visible');
+      },20)
+      showAndReSize(textWidth, 51);
+      $('html, body').on('mouseenter', function() {
+        callClient('mousehover')
+      })
+    }
+    function showAndReSize(w, h) {
+      callClient(`ShowAndReSize?width=${w}&height=${h}`);
+    }
+  </script>
+</body>
+</html>

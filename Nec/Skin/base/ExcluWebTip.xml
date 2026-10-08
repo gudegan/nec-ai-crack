@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,15" roundcorner="0,0" size="450,235">	 
+  <VerticalLayout bkcolor="#00000000" bkimage="tip.png" >
+  	<HorizontalLayout name="Exclu_Main_Wnd" padding="7,3,7,11" >
+		<VerticalLayout inset="15,10,0,0">
+		<Label name="intro_cont" text="什么是独占模式?" padding="-10,8,0,0" font="Def.Label.InfoTip"  height="20" textcolor="#FFd99f55" align="center"></Label>
+		<Control  height="20" />
+		<Label text="独占模式可以免除电脑系统对声音的一切污染，使声音无损传输到播放设备" padding="0,0,0,0" font="Default.FontSmall"  height="20" textcolor="#FFd99f55" align="left"></Label>
+		<Label text="中同时声卡也只被一个程序占用，最大程度保持歌曲的纯净音质。" padding="0,4,0,0" font="Default.FontSmall"  height="20" textcolor="#FFd99f55" align="left"></Label>
+		<Label text="很多音频发烧软件带有类似配置，但操作有些复杂使用不方便，酷我研发的" padding="0,4,0,0" font="Default.FontSmall"  height="20" textcolor="#FFd99f55" align="left"></Label>
+		<Label text="一键切换开关彻底解决这一问题，让您一键享受HiFi音质。" padding="0,4,0,0" font="Default.FontSmall"  height="20" textcolor="#FFd99f55" align="left"></Label>
+		<Label text="由于声音被酷我独占，所以其他软件或网页会没声，您可以关闭HiFi独占模" padding="0,4,0,0" font="Default.FontSmall"  height="20" textcolor="#FFd99f55" align="left"></Label>
+		<Label text="式来恢复这些声音。" padding="0,4,0,0" font="Default.FontSmall"  height="20" textcolor="#FFd99f55" align="left"></Label>
+		</VerticalLayout>  		
+  	</HorizontalLayout>		
+  </VerticalLayout>
+</Window>

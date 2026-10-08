@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="80,91" caption="0,0,0,0">
+  <VerticalLayout name="container" >
+
+    <Control name="treestub" width="40" height="23"></Control>
+    
+    <VerticalLayout name="background" width="56" height="58" bkimage="musicballshadow.png">
+
+      <Container padding="2,3,2,3" width="52" height="52">
+        <LevelControl name="song_level" hor="false" bkimage="musicballbg.png" fgimage="musicballfg.png" min="0" max="35" value="0" 
+                      curve_control_points="0,0;1,5;3,13;5,19;8,25;9,26" />
+        <Label name="musictreeani" bkimage="tree_ani.png" userdata="mspf=40,frames=49"/>
+        <HorizontalLayout name="ballui">
+          <TabLayout name="ball_tab" padding="12,11,0,0" width="28" height="30">
+            <Button name="Play" width="28" height="30" statusimage="musicball_play.png"></Button>
+            <Button name="Pause" width="28" height="30" statusimage="musicball_pause.png"></Button>
+          </TabLayout>
+        </HorizontalLayout>
+      </Container>
+      
+    </VerticalLayout>
+
+    <HorizontalLayout float="true" height="31" >
+      <Label name="tree" padding="8,0,0,0" width="40" height="26" bkimage="tree3.png" 
+             userdata_template="minval,maxval,treeimage,treeheight;注意：treeimage不要超过50个字符，也不能为空"
+             userdata="0,0,nothing,0;1,2,tree0.png,10;3,14,tree1.png,13;15,34,tree2.png,15;35,2147483647,tree3.png,26;"></Label>
+      <VerticalLayout>
+        <Control></Control>
+        <Label textpadding="0,-1,0,0" name="curvalue" align="center" varwidth="false" minwidth="15" width="25" height="11" font="MusictreeNumTip" text="0" textcolor="#ffffffff" bkimage="tree_value_bg.png"></Label>
+      </VerticalLayout>
+    </HorizontalLayout>
+
+
+  </VerticalLayout>
+</Window>

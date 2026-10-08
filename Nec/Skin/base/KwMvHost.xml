@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window sizebox="0,0,0,0" dbclicktofullscreen="true">
+  <themes>
+    <theme name="opwnd_normal" width="22" />
+    <theme name="opwnd_float" width="0" />
+  </themes>
+  
+	<HorizontalLayout name="root">
+    <Container>
+      <WindowProxy name="mvwindow" sendsizemsg="true"/>
+      <HorizontalLayout>
+        <Control name="pad"/>
+        <WindowProxy name="opwnd" theme="opwnd_normal" visible="false"/>
+      </HorizontalLayout>
+    </Container>
+    
+    <VerticalLayout name="mvlistcontainer" width="306" bkcolor="#ff000000">
+      <WebUI name="mvlist" create="true" nav="$${netsong}rcmMv.html"/>
+    </VerticalLayout>
+    
+  </HorizontalLayout>
+</Window>

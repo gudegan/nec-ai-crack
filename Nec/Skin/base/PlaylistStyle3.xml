@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="100,100" caption="0,0,0,20">
+  <HorizontalLayout >
+    <Control></Control>
+    <VerticalLayout name="container" width="20">
+      <Control></Control>
+      <Button name="trigger" width="20" height="75" bkimage="PlaylistTrigger.png" ></Button>
+      <Control></Control>
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

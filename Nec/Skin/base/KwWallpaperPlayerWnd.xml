@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="52,52" size="52,52">
+  <VerticalLayout>
+    
+    <TabLayout name="player_tab" width="52" height="52">
+      <HorizontalLayout name="play_ui">
+        <Button name="play" statusimage="playbtn_wallpaper.png"></Button>
+      </HorizontalLayout>
+      <HorizontalLayout name="pause_ui">
+        <Button name="pause" statueimage="pausebtn.png"></Button>
+      </HorizontalLayout>
+    </TabLayout>
+    
+  </VerticalLayout>
+</Window>

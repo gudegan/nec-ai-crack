@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,60" size="730,540">
+  <Default name="VScrollBar" value="buttonlength=&quot;8&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_popup_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_popup_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_popup_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_popup_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;"/>
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;16&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;14,-3,0,0&quot; padding=&quot;0,8,0,0&quot;" />
+  <!--
+  <EventHook event="OnSkinChange">
+    <Attribute control="title" value="textcolor=&quot;Global.DarkGray&quot;" />
+  </EventHook>
+-->
+
+  <TabLayout name="pages">
+    <VerticalLayout name="ChangeSkinPanel">
+      <!--
+      <HorizontalLayout name="TitlePanel" height="45">
+        <Label name="title" text="更换皮肤" textcolor="#cc000000" padding="10,0,0,0"/>
+        <Control />
+        <Button name="close" padding="0,10,10,0" width="30" height="30" statusimage="popupwndcloseVir.png"/>
+      </HorizontalLayout>
+      -->
+      <Control height="10" />
+      <HorizontalLayout name="titlepanel" padding="30,0,0,0" height="38">
+        <Option name="musicwpTab" theme="Pop.Tab" padding="0,0,0,0" textpadding="0,-4,0,0" group="tabs" varwidth="true" text="音乐桌面" tooltip="" />
+        <Option name="themeTab" theme="Pop.Tab" padding="26,0,0,0" textpadding="0,-4,0,0" group="tabs" varwidth="true" text="主题皮肤" tooltip="" />
+        <Option name="skinTab" theme="Pop.Tab" padding="26,0,0,0" textpadding="0,-4,0,0" group="tabs" varwidth="true" text="背景皮肤" tooltip="" />
+        <Option name="myTab" theme="Pop.Tab" padding="26,0,0,0" textpadding="0,-4,0,0" group="tabs" varwidth="true" text="我的皮肤" tooltip="" />
+        <!--<Option name="wpTab" theme="Pop.Tab" group="tabs" width="70" text="音乐壁纸" tooltip="音乐壁纸" />-->
+        <Control />
+        <Label name="ChangeSkinTitle" padding="0,0,0,0" textpadding="0,-6,0,0" font="Default.FontSmall"  textcolor="Global.LightGray" varwidth="true" text="可以鼠标拖拽本地图片到音乐盒"/>
+        <Button name="close" padding="0,0,10,0" width="30" height="30" statusimage="popupwndcloseVir.png"/>
+        <!--Button name="addskinpic" padding="0,7,1,1" width="16" height="16" statusimage="list_netsong_add.png" /-->
+      </HorizontalLayout>
+      <VerticalLayout height="3">
+        <Control height="1" bkcolor="#0f000000" />
+        <Control />
+      </VerticalLayout>
+      <TabLayout name="skinpanel">
+        <VerticalLayout name="skin">
+          <TabLayout name="serverorlocalskin" padding="30,0,6,0">
+            <VerticalLayout name="serverthemepage">
+              <Control height="13" />
+              <HorizontalLayout name="serverthemetag_" theme="skingtagbar" />
+              <TileLayout name="serverthemepanel" vscrollbar="true"/>
+            </VerticalLayout>
+            <VerticalLayout name="serverskinpage">
+              <Control height="13" />
+              <HorizontalLayout name="serverskintag_" theme="skingtagbar" />
+              <TileLayout name="serverskinpanel" vscrollbar="true"/>
+            </VerticalLayout>
+            <VerticalLayout name="localskinpanel" vscrollbar="true" inset="0,13,0,0">
+              <HorizontalLayout name="themetitle" height="33">
+                <Label align="left" varwidth="true" text="主题皮肤" textcolor="Global.DarkGray"/>
+              </HorizontalLayout>
+              <TileLayout name="localthemes" />
+
+              <HorizontalLayout name="skintitle" height="40" inset="0,10,0,0">
+                <Label text="背景皮肤" textcolor="Global.DarkGray"/>
+              </HorizontalLayout>
+              <TileLayout  name="localskins" />
+            </VerticalLayout>
+          </TabLayout>
+          <Control height="1" bkcolor="#0f000000" />
+          <VerticalLayout height="64" padding="30,0,28,0">
+            <HorizontalLayout>
+              <!-- <CheckBox name="lyricBkCheckBox" text="开启歌手写真" padding="10,15,0,0" textpadding="17,0,0,0" width="100" /> -->
+              <Label name="playlistalphadesc" varwidth="true" text="皮肤透明：" textcolor="pp.Text.Normal"/>
+              <Slider name="playlistalpha" visible="true" padding="0,17,0,0" width="173" height="24" bkimage="slider_skinwnd_bk.png" thumbimage="slider_skinwnd_thumb.png" thumbsize="24,24" markerimage="progress_threshold_marker.png" markersize="3,20" userdata="您正在使用老版本皮肤，不支持调节透明度"/>
+              <Control />
+              <!-- <Button name="restoreDefault" varwidth="true" theme="PopUpDefBtn" padding="0,10,0,10" text="恢复默认皮肤" /> -->
+              <Button name="CreateSkin" width="90" theme="PopUpDefBtn" padding="0,10,0,10" text="自定义皮肤" />
+            </HorizontalLayout>
+            <Control height="9" />
+          </VerticalLayout>
+
+        </VerticalLayout>
+
+        <VerticalLayout name="wallpaper">
+          <WebUI name="wpweb" create="true" nav="$${netsong}/music_wp.html" />
+        </VerticalLayout>
+
+        <VerticalLayout name="soundskintab" visible="false">
+          <HorizontalLayout name="soundskinintro" padding="0,5,0,0"  height="40" width="665">
+            <Control />
+            <Label padding="1,1,0,0" text="将启动图片设为电脑壁纸，每日更换音乐心情" width="350" height="25" textcolor="#FF666666" font="ChangeSkin.Title" />
+            <Button name="startorclosesongwallpaper" width="100" height="25" text="开启壁纸" textpadding="17,0,0,0" tooltip="开启壁纸" statusimage="StartSongWallPaper.png" textcolor="#ffffffff" visible="true"/>
+            <Control />
+          </HorizontalLayout>
+          <VerticalLayout name="soundskinpanel" bkcolor="#00000000" height="330" vscrollbar="true" hscrollbar="false"/>
+        </VerticalLayout>
+      </TabLayout>
+    </VerticalLayout>
+    
+    <VerticalLayout name="CreateSkinPanel" sendsizemsg="true">
+      <HorizontalLayout name="TitlePanel" height="58" inset="31,0,0,0">
+        <Label varwidth="true" text="自定义皮肤" font="Default.Font18" />
+        <Control />
+        <Button name="goback" padding="0,10,10,0" width="30" height="30" statusimage="popupwndcloseVir.png"/>
+      </HorizontalLayout>
+
+      <VerticalLayout  inset="28,0,26,0">
+        <VerticalLayout name="mks.canvas" bkcolor="#ff98A1B3" inset="82,47,82,47" userdata="mks.sizer.png" bordersize="8">
+          <VerticalLayout name="mks.root" bkimage="msk.previewborder.png" inset="2,2,2,2">
+            <HorizontalLayout name="mks.body">
+              <VerticalLayout name="mks.nav" width="113" theme="mks.navbk">
+                <HorizontalLayout height="54" inset="18,15,0,14">
+                  <Control name="mks.userphoto" width="25" height="25" bkimage="mks.userphoto.png"/>
+                  <VerticalLayout inset="7,3,0,0">
+                    <Control name="mks.user.text1" width="38" height="6" theme="mks.colorbars"/>
+                    <Control height="6" />
+                    <Control nam="mks.user.text2" width="46" height="6" theme="mks.colorbars"/>
+                  </VerticalLayout>
+                </HorizontalLayout>
+                <VerticalLayout>
+                  <List name="mks.navs" theme="mks.navlist">
+                    <DefChildAttr height="22" inset="22,4,0,4"/>
+                    <ListContainerElement name="mks.nav0" selected="true">
+                      <HorizontalLayout>
+                        <Control name="icon" width="14" height="14" theme="mks.colorbars" />
+                        <Label name="text" theme="mks.NavChildText" padding="7,0,0,0" text="推荐" />
+                      </HorizontalLayout>
+                    </ListContainerElement>
+                    <ListContainerElement name="mks.nav1">
+                      <HorizontalLayout>
+                        <Control name="icon" width="14" height="14" theme="mks.colorbars" />
+                        <Label name="text" theme="mks.NavChildText" padding="7,0,0,0" text="电台" />
+                      </HorizontalLayout>
+                    </ListContainerElement>
+                    <ListContainerElement name="mks.nav2">
+                      <HorizontalLayout>
+                        <Control name="icon" width="14" height="14" theme="mks.colorbars" />
+                        <Label name="text" theme="mks.NavChildText" padding="7,0,0,0" text="视频" />
+                      </HorizontalLayout>
+                    </ListContainerElement>
+                    <ListContainerElement name="mks.nav3">
+                      <HorizontalLayout>
+                        <Control name="icon" width="14" height="14" theme="mks.colorbars" />
+                        <Label name="text" theme="mks.NavChildText" padding="7,0,0,0" text="直播" />
+                      </HorizontalLayout>
+                    </ListContainerElement>
+                  </List>
+
+                </VerticalLayout>
+
+              </VerticalLayout>
+
+              <VerticalLayout name="mks.netsong" inset="13,0,13,0">
+                <DefChildAttr theme="mks.ListLabelSongList" />
+
+                <HorizontalLayout height="134" inset="0,13,14,21">
+                  <Control name="mks.albumpic" width="100" height="100" bkimage="mks.albumpic.png" bkcolor="0x0f000000" />
+                  <VerticalLayout padding="13,0,0,0">
+                    <Label name="mks.albumtitle" theme="mks.ListLabelSongList" font="Default.Font18" varwidth="true" text="酷我最热音乐歌单" />
+                    <Label name="mks.albuminfo1" width="150" height="8" padding="0,10,0,0" theme="mks.colorbars" />
+                    <Label name="mks.albuminfo2" width="273" height="12" padding="0,4,0,0" theme="mks.colorbars" />
+                    <Button name="mks.playall" theme="mks.ListBtnPlay" width="68" height="26" padding="0,14,0,0" icondest="14,8,22,19" textpadding="10,0,0,0" text="播放" />
+                  </VerticalLayout>
+                </HorizontalLayout>
+
+                <HorizontalLayout height="24" theme="mks.colorbars">
+                  <DefChildAttr align="center" theme="mks.ListHeader" font="Default.FontSmall"/>
+                  <Label text="歌名" />
+                  <Label text="歌手" />
+                  <Label text="专辑" />
+                  <Label text="音质" />
+                </HorizontalLayout>
+                <Control height="4" />
+                <Label text="你最喜欢的音乐单曲01" font="Default.FontSmall" theme="mks.colorbars"/>
+                <Control height="4" />
+                <Label text="你最喜欢的音乐单曲02" font="Default.FontSmall" theme="mks.colorbars"/>
+                <Control height="4" />
+                <Label text="你最喜欢的音乐单曲03" font="Default.FontSmall" theme="mks.colorbars"/>
+              </VerticalLayout>
+
+
+            </HorizontalLayout>
+
+            <HorizontalLayout name="mks.playcontrol" height="48" theme="mks.playcontrolbk">
+              <DefChildAttr bordercolor=""/>
+              <Button name="mks.pre" bkimage="mks.pre.png" width="32" height="32" padding="12,8,0,8"/>
+              <Button name="mks.play" bkimage="mks.play.png" width="40" height="40" padding="12,4,0,4"/>
+              <Button name="mks.next" bkimage="mks.next.png" width="32" height="32" padding="12,8,0,8"/>
+              <Slider name="mks.progress" enabled="false" padding="7,15,0,0" height="18" fgimage="mks.progressfg.png" bkimage="mks.progressbk.png" thumbimage="mks.progressthumb.png" thumbdisabledimage="mks.progressthumb_1.png" thumbsize="16,16" value="80"/>
+              <Control width="17" height="17" padding="13,15,0,0" theme="mks.colorbars" />
+              <Control width="17" height="17" padding="13,15,0,0" theme="mks.colorbars" />
+              <Control width="17" height="17" padding="13,15,0,0" theme="mks.colorbars" />
+              <Control width="17" height="17" padding="13,15,18,0" theme="mks.colorbars" />
+            </HorizontalLayout>
+          </VerticalLayout>
+
+        </VerticalLayout>
+
+        <HorizontalLayout height="72" inset="0,16,0,18">
+          <Button name="colorscheme" align="left" setcursor="true" padding="0,8,0,8" text="文字色:" textcolor="pp.Text.Normal" iconimage="mks.colorscheme.png" icondest="50,3,66,19" width="70" />
+          <Control width="18" />
+          <Button name="topiccolor" align="left" setcursor="true" padding="0,8,0,8" text="主题色:" textcolor="pp.Text.Normal" iconimage="mks.topiccolor.png" icondest="50,1,70,21" width="70" />
+          <Control />
+          <Button name="resetimage" text="恢复默认" theme="PopUpDefBtn" width="90" tooltip="恢复图片初始大小"/>
+          <Control width="12" />
+          <Button name="pickimage" text="重新选图" theme="PopUpDefBtn" width="90" />
+          <Control width="12" />
+          <Button name="finish" text="完成制作" theme="ListBtnFocus" width="90" />
+        </HorizontalLayout>
+
+        <ColorPickerUI name="ColorPicker" float="true" visible="false" pos="135,280,0,0" width="216" height="160" initcolor="#color11" preview="cp.preview" picker="cp.picker" slider="cp.slider"></ColorPickerUI>
+      </VerticalLayout>
+    </VerticalLayout>
+  </TabLayout>
+
+</Window>
+
+
+
+
+
+
+
+
+<!--VerticalLayout name="ChangeSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180"/>
+    <Label name="SoundSkinTitle" text="声音皮肤" padding="10,5,0,0" font="ChangeSkin.Title" visible="false"/>
+    <VerticalLayout name="SoundSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180" visible="false"/-->
+
+<!--?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,30" size="665,440">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_popup_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_popup_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_popup_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_popup_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,32,51,33'&quot;" />
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;16&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;14,-3,0,0&quot; padding=&quot;0,8,0,0&quot;" />
+  <VerticalLayout name="ChangeSkinPanel">
+    <HorizontalLayout name="TitlePanel" height="32">
+      <Label name="ChangeSkinTitle" text="更换皮肤" textcolor="#ff333333" padding="7,2,0,0" font="PopUp.Title"/>
+      <Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+    <VerticalLayout name="ChangeSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180"/>
+    <Label name="SoundSkinTitle" text="声音皮肤" padding="10,5,0,0" font="ChangeSkin.Title" visible="false"/>
+    <VerticalLayout name="SoundSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180" visible="false"/-->
+<!--Control bkcolor="#ffececec" float="true" pos="1,61,665,62"/>
+    <HorizontalLayout name="titlepanel"  padding="0,0,0,0" height="30" childpadding="5">
+      <Option name="tab1" width="70" padding="10,0,0,0" text="推荐皮肤" tooltip="这里是酷我为您推荐的皮肤" statusimage="btn_skinwnd_tab.png" selectedimage="btn_skinwnd_tab_3.png" group="skintab" selected="true" textcolor="#ff333333" hottextcolor="#ff46b4e6" pushedtextcolor="#ff46b4e6" selectedtextcolor="#ff46b4e6"/>
+    	<Option name="tab2" width="70" text="我的皮肤" tooltip="这里保存了您使用过的皮肤" statusimage="btn_skinwnd_tab.png" selectedimage="btn_skinwnd_tab_3.png" group="skintab" textcolor="#ff333333" hottextcolor="#ff46b4e6" pushedtextcolor="#ff46b4e6" selectedtextcolor="#ff46b4e6"/>
+      <Option name="tab3" width="70" text="音乐壁纸" tooltip="音乐壁纸" statusimage="btn_skinwnd_tab.png" selectedimage="btn_skinwnd_tab_3.png" group="skintab" textcolor="#ff333333" hottextcolor="#ff46b4e6" pushedtextcolor="#ff46b4e6" selectedtextcolor="#ff46b4e6" visible="true"/>
+      <Control />
+      <Label padding="10,0,0,0" name="ChangeSkinTitle" text="可以鼠标拖拽本地图片到音乐盒" textcolor="#ff999999" width="180"/>
+	  <Button name="addskinpic" padding="0,7,1,1" width="16" height="16" statusimage="list_netsong_add.png" />
+    </HorizontalLayout>
+    <TabLayout name="skinpanel" height="316" padding="10,8,10,0">
+      <VerticalLayout  name="serverskinpanel" bkcolor="#00000000" height="316" vscrollbar="true" hscrollbar="false" />
+      <VerticalLayout  name="localskinpanel" bkcolor="#00000000" height="316" vscrollbar="true" hscrollbar="false" />
+      <VerticalLayout name="soundskintab" visible="false">
+        <HorizontalLayout name="soundskinintro" padding="0,5,0,0"  height="40" width="665">
+            <Control />
+            <Label text="将启动图片设为电脑壁纸，每日更换音乐心情" width="350" height="25" textcolor="#FF666666" font="ChangeSkin.Title" />
+			<Option name="startorclosesongwallpaper" text="开启壁纸" textcolor="#FFffffff" textpadding="17,0,0,0" group="xxx" font="ChangeSkin.Title" width="100" height="25" statusimage="startsongwallpaper.png" selectedimage="closesongwallpaper.png" selected="false" />
+            <Control />
+        </HorizontalLayout>        
+		<VerticalLayout name="soundskinpanel" bkcolor="#00000000" height="276" vscrollbar="true" hscrollbar="false"/>	
+      </VerticalLayout>	  
+    </TabLayout>
+    <HorizontalLayout>
+      <CheckBox name="lyricBkCheckBox" text="开启歌手写真" padding="10,15,0,0" textpadding="17,0,0,0" width="100" />
+      <Control />
+      <Label name="playlistalphadesc" padding="10,-2,0,0" text="列表透明 40%" width="90" textcolor="#ff333333"/>
+      <Slider name="playlistalpha" padding="0,19,22,0" width="175" height="18" bkimage="slider_skinwnd_bk.png" thumbimage="slider_skinwnd_thumb.png" thumbsize="18,18"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window-->

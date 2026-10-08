@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window roundcorner="0,0">
+  <Default name="Option" value="setcursor=&quot;true&quot; normalimage=&quot;cfg_radio_1.png&quot; hotimage=&quot;cfg_radio_2.png&quot; selectedimage=&quot;cfg_radio_3.png&quot; disabledimage=&quot;cfg_radio_4.png&quot; height=&quot;15&quot; textpadding=&quot;16,1,1,1&quot; align=&quot;left&quot; " />
+  <HorizontalLayout name="root">
+    <!--
+    <DropDownList 
+		name="DropDownList" 
+		headerheight="5" 
+		footheight="7" 
+		font="Default.FontName" 
+		internalspace="6"
+		textcolor="#ff666666" 
+		keywordcolor="#ffff0000" 
+		hoverbkcolor="#fff1f1f1" 
+		selectbkcolor="#fff0f0f0"
+		itemhottextcolor="#ff000000"
+		inset="3,5,3,6"
+        header="hidden"
+		itemhotbkcolor="#fff0f0f0"
+		itemselectedbkcolor="#fff0f0f0"
+		/>-->
+
+    <VerticalLayout name="keyword_pannel">
+      <VerticalLayout name="caption" height="38">
+        <HorizontalLayout>
+          <Label name="searchcap" text="" textpadding="13,0,13,0" textcolor="pp.Text.Minor" userdata="大家都在搜"/>
+        </HorizontalLayout>
+        <Control height="1" padding="13,0,13,0" bkcolor="#0f000000" />
+      </VerticalLayout>
+      <List name="keyword_list"
+            padding="12,8,12,8"
+            header="hidden"
+            itemtextpadding="0,0,0,0"
+            itemhotbkcolor="pp.ListItemSelectBkColor"
+            itemselectedbkcolor="pp.ListItemSelectBkColor"
+            ></List>
+		<!--VerticalLayout name="vipFlagTip" height="30" bkcolor="#ff00ff00" >
+			<Label text="这个地方要增加Vip触达" textpadding="13,0,13,0" textcolor="pp.Text.Minor"/>
+		</VerticalLayout-->
+    </VerticalLayout>
+    <Control width="1" bkcolor="#0f000000"/>
+    <VerticalLayout name="hist_panel">
+      <VerticalLayout name="caption" height="38">
+        <HorizontalLayout>
+          <Label text="搜索历史" textpadding="13,0,0,0" textcolor="pp.Text.Minor"/>
+          <Button name="clear_hist" theme="ClearHistBtn" varwidth="true" padding="0,18,13,0" text="清空" setcursor="true"/>
+        </HorizontalLayout>
+        <Control height="1" padding="13,0,13,0" bkcolor="#0f000000" />
+      </VerticalLayout>
+      <TabLayout name="hist_tab">
+        <List name="hist_list"
+            padding="12,8,12,8"
+            header="hidden"
+            itemtextpadding="0,0,0,0"
+            itemhotbkcolor="pp.ListItemSelectBkColor"
+            itemselectedbkcolor="pp.ListItemSelectBkColor"
+            />
+        <VerticalLayout name="hist_empty">
+          <Control height="80" />
+          <HorizontalLayout height="75">
+            <Control />
+            <Control width="132" bkimage="search_hist_empty.png" />
+            <Control />
+          </HorizontalLayout>
+          <Control height="16" />
+          <Label align="center" height="20" text="暂无搜索历史记录" textcolor="pp.Text.Minor"/>
+          <Control />
+        </VerticalLayout>
+      </TabLayout>
+
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

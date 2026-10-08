@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>单曲评论引导页</title>
+	<link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		body {background: rgba(0,0,0,0.5);}
+		.tipsBox {width: 100%;height: 100%;overflow: hidden;}
+		.borderArea {float:left;width: 86px;height: 28px;border:1px dashed #ffffff;margin:2px 0 0 7px;}
+		.borderArea img {margin:5px 0 0 7px;}
+		.tips {float:left;width: 175px;height: 34px;background: url(img/singleComment/tipsBg.png);margin-left: 10px;}
+		.tips span {float: left;line-height: 33px;margin-left: 17px;color:#ffffff;font-size: 14px;font-weight: 600}
+		.close {float: right;display: block;width: 12px;height: 12px;margin:11px 10px 0 0}
+	</style>
+</head>
+<body>
+	<div class="tipsBox">
+		<div class="borderArea"><img src="img/singleComment/LyricBk.png" /></div>
+		<div class="tips">
+			<span>查看歌词和歌手写真</span>
+			<a href="javascript:;" class="close"></a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/comm2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		callClientNoReturn('ShowWindow');
+		var url = window.location.href;
+		var posY = parseInt(getValue(url,"y"))+5;
+		var posX = getValue(url,"x");
+		var posIndex = getValue(url,"index");
+		if(posIndex=="0"){
+			$(".tips span").html("查看歌词和歌手写真");
+		}else if(posIndex=="1"){
+			$(".tips span").html("试试边看评论边听歌");
+			$(".borderArea img").attr("src","img/singleComment/CommentBk.png");
+		}
+		$(".tipsBox").css("margin",posY+"px 0 0 "+posX+"px");
+		$("body,html").click(function(){
+			 callClientNoReturn('CloseWindow');
+		});
+	});
+</script>
+</html>

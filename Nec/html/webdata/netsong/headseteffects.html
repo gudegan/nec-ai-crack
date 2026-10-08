@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>耳机音效</title>
+	<link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/headseteffects.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="headsetBox">
+		<a href="javascript:;" class="select_more">更多<span></span></a>
+		<ul class="select_btnBox" data-model="kw_selectModel"></ul>
+		<div class="BigImgBox"></div>
+		<div class="scrollBarBox">
+			<div class="headsetListOverFlowBox">
+				<ul class="headsetListBox" data-model="kw_scrollModel"></ul>
+			</div>
+		</div>
+		<div class="selectedVen"></div>
+	</div>
+	<span class="layerShadow"></span>
+	<div class="layerBox">
+		<ul class="layer_select_btnBox" data-model="kw_selectModel"></ul>
+	</div>
+	<div class="triangle">
+		<div class="triangle_border_up">
+			<span></span>
+		</div>
+	</div>
+	<!-- model -->
+	<ul id="kw_selectModel" style="display:none;">
+		<li class="{$classname}" title="{$titlename}" data-id="{$id}" data-name="{$name}">
+			<img class="lazy" width="96" height="40" src="img/default.png" onerror="headsetImgError(this);" data-original="{$pic}" data-hover="{$pichover}">
+			<p>{$name}</p>
+		</li>
+	</ul>
+	<ul id="kw_scrollModel" style="display:none;">
+		<li class="{$classname}" data-id="{$id}" data-name="{$name}" data-eq="{$eq}">
+			<img class="lazy" src="img/headseteffects/small.png" onerror="headsetImgError(this);" data-original="{$pic}">
+			<p>{$name}</p>
+            <i></i>
+		</li>
+	</ul>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js" type="text/javascript"></script>
+    <script src="js/headseteffects.js" type="text/javascript"></script>
+</body>
+</html>

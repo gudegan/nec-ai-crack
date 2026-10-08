@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="484,340">	 
+  <VerticalLayout>
+  	<WebUI name="web" create="true">
+	</WebUI>	
+  </VerticalLayout>
+</Window>

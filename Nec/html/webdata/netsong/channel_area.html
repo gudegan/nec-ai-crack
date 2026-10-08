@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>精选集频道页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/to_top.css" rel="stylesheet" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js" type="text/javascript"></script>
+    <script src="js/create_structure.js" type="text/javascript"></script>
+    <script src="js/music.js" type="text/javascript"></script>
+    <script src="js/channel_area.js" type="text/javascript"></script>
+    <script src="js/radio_comment.js" type="text/javascript"></script>
+    <style>
+        html,body{
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="allcontent">
+    <div id="content" class="content mv-content">
+        <div id="areaModel"></div>
+    </div>
+</div>
+<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+<div id="areaBannerBox" style="display:none;">
+    <div class="bannerBox area-banner-mb">
+        <div class="focus" id="focusImg">
+            <div id="w_focus"><ul class="focusList"></ul></div>
+            <i class="prev" id="lxPre"></i>
+            <i class="next" id="lxNext"></i>
+            <div id="focusplay" onclick="focusPlay(); return false;" title="直接播放">
+                <a href="javascript:;" hidefocus></a>
+            </div>
+        </div>
+        <span class="btn" id="focus_btn"></span>
+    </div>
+</div>
+<div id="area_bannerlist" style="display:none;">
+    <ul class="m_bannerImg">
+        <li class="{$itemClassName}" data-click="{$click}">
+            <a class="{$classname}" data-source="{$source}" data-sourceid="{$sourceid}" data-name="{$name}" href="javascript:;" hidefocus="" id="jdtpic{$indexnum}">
+                <img class="lazy" onerror="imgOnError(this,800);" id="jdtimg{$indexnum}" src="img/def800.jpg" data-original="{$pic}">
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

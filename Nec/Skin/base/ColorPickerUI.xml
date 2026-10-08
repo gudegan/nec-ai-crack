@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <VerticalLayout name="cp.root" bkimage="mks.colorpickerbk.png" inset="11,9,10,15">
+    <ColorButtonUI name="cp.picker" group="initcolors"/>
+    <HorizontalLayout height="18">
+      <ColorSliderUI name="cp.slider" height="18" value="50" bkcolor="#ff000000" bkcolor2="#ffFF0000" bkcolor3="#ffffffff" thumbimage="colorpickerthumb.png" thumbsize="18,18" bkinset="0,6,0,7"/>
+      <!--<Control name="cp.preview" width="20" height="20" bkcolor="#ff000000" bordercolor="#ffff0000"/>-->
+    </HorizontalLayout>
+
+    <VerticalLayout height="37" >
+      <HorizontalLayout childpadding="3">
+        <DefChildAttr class="OptionUI" group="initcolors" width="25" height="16"/>
+        <Option name="#color00" bkcolor="#ffff0000"/>
+        <Option name="#color01" bkcolor="#ffED5F3B"/>
+        <Option name="#color02" bkcolor="#ffFF860B"/>
+        <Option name="#color03" bkcolor="#ffFFC00A"/>
+        <Option name="#color04" bkcolor="#ff73C82B"/>
+        <Option name="#color05" bkcolor="#ff33BE64"/>
+        <Option name="#color06" bkcolor="#ff32C8AD"/>
+      </HorizontalLayout>
+      <HorizontalLayout childpadding="3">
+        <DefChildAttr class="OptionUI" group="initcolors" width="25" height="16"/>
+        <Option name="#color10" bkcolor="#ff2ECBD8"/>
+        <Option name="#color11" bkcolor="#ff2B99F3"/>
+        <Option name="#color12" bkcolor="#ff476BEC"/>
+        <Option name="#color13" bkcolor="#ff886FF2"/>
+        <Option name="#color14" bkcolor="#ffC263F5"/>
+        <Option name="#color15" bkcolor="#ffF95EBB"/>
+        <Option name="#color16" bkcolor="#ffF03B53"/>
+      </HorizontalLayout>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

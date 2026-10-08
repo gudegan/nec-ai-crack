@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,60" size="456,521">
+  <Default name="Edit" value="height=&quot;42&quot; textcolor=&quot;Global.LightGray&quot; normalimage=&quot;PopUpWndEditVir_1.png&quot; focusedimage=&quot;PopUpWndEditVir_2.png&quot; disabledimage=&quot;PopUpWndEditVir_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Default.FontName&quot;" />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;32&quot; font=&quot;Default.FontName&quot;" />
+  <Default name="Label" value="&quot;Global.DarkGray&quot;"/>
+
+  <EventHook event="OnSkinChange">
+    <!--<Attribute control="title" value="textcolor=&quot;Global.DarkGray&quot;" />-->
+  </EventHook>
+
+  <VerticalLayout >
+    <HorizontalLayout name="PopUpTitleHor" >
+      <Label text="设置头像" theme="PopUpTitle"/>
+      <Control />
+      <Button name="close"  theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+    <Control height="1" theme="#Msg_SepLine"/>
+
+    <Control height="40" />
+    <Label text="恭喜你注册成功！" align="center" font="Default.Font20" />
+    <Control height="6"/>
+    <Label text="上传头像获得更多积分奖励" align="center" font="Default.Font16" />
+
+    <HorizontalLayout  height="42" padding="50,56,0,0" >
+      <Label text="头像：" width="50" font="Default.Font16"/>
+      <Edit name="facepath" width="300" readonly="true" textpadding="4,0,64,0"/>
+      <Control width="1" height="40" bkcolor="#FFD6D6D6" float="true" pos="282,1"/>
+      <Button name="browse"  width="40" text="浏览" font="Default.FontName" float="true" pos="296,4"/>
+    </HorizontalLayout>
+
+    <HorizontalLayout height="109" padding="50,30,0,0" >
+      <VerticalLayout width="50">
+        <Label text="预览：" height="20" textpadding="0,0,0,0" font="Default.Font16" padding="0,0" />
+        <Control />
+      </VerticalLayout>
+      <Button name="photo" width="107" height="107" bordercolor="#ffd2d2d2" setcursor="false" bordersize="1" bkcolor="#ffffffff" bkimage="defaultface.jpg"/>
+      <VerticalLayout>
+        <Label  name="uploadinfo" padding="10,0,0,0" text="" textcolor="#ff226699"/>
+        <Control />
+      </VerticalLayout>
+    </HorizontalLayout>
+
+    <HorizontalLayout  height="32" padding="50,70" >
+      <Control />
+      <Button name="upload" text="保存" width="104" height="32" theme="MsgBox_Btn_Focus"/>
+      <Button name="cancle" text="跳过" padding="10,0,20,0" width="104" height="32" theme="PopUpDefBtn"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

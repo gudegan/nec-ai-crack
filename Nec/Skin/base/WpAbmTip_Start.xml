@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="146,106" size="146,106">
+  <Default name="Button" value="setcursor=&quot;true&quot; font=&quot;YAHEI.N014&quot; hottextcolor=&quot;#ffffffff&quot; pushedtextcolor=&quot;#ffffffff&quot; focusedtextcolor=&quot;#ffffffff&quot;" />
+    <HorizontalLayout name="root" width="146" height="106" bkimage="WpAbmTip_Start.png">
+      <Button name="close" padding="120,28,0,0" width="21" height="21" statusimage="WpAbmTip_Start_close.png"></Button>
+    </HorizontalLayout>
+</Window>

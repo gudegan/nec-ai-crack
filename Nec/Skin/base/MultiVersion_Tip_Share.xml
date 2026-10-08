@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="170,136" size="170,136">
+  <Default name="Button" value="setcursor=&quot;true&quot; font=&quot;YAHEI.N014&quot; hottextcolor=&quot;#ffffffff&quot; pushedtextcolor=&quot;#ffffffff&quot; focusedtextcolor=&quot;#ffffffff&quot;" />
+  <VerticalLayout name="root" bkimage="multiversion_tip_share.png">
+    <Button name="close" padding="148,25,0,0" width="21" height="21" statusimage="multiversion_tip_close.png"></Button>
+    <Control></Control>
+    <Button name="share" padding="52,0,0,40" width="70" height="22" statusimage="multiversion_tip_share_bt.png"></Button>
+  </VerticalLayout>
+</Window>

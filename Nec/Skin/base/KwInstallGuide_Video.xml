@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Container name="root" bkcolor="#42000000">
+    <VerticalLayout>
+      <Control padding="15,125,0,0" width="461" height="125" bkimage="installguid_video.png" />
+    </VerticalLayout>
+    <Button name="close" />
+  </Container>
+</Window>

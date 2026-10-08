@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,60" size="400,200">  
+  <VerticalLayout name="root">	
+	<WebUI name="web" create="true" padding="1,1,1,1">
+	</WebUI>
+	<Button name="button_Close" float="true" pos="-37,10,-7,0"  width="30" height="30"  setcursor="true" statusimage="popupwndcloseVir.png"/>
+  </VerticalLayout>
+</Window>

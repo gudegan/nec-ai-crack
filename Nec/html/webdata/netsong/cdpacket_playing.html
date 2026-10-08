@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>cd包播放页</title>
+        <link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+        <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+        <link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+        <link href="css/cdplaying_page.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="main_body_div">
+            <div class="left_nav" >
+                <div class="left_top_img">
+                    <img class="album_img lazy" onerror="imgonError(this,300);"src="img/default.png" height="380" width="380" data-original="img/default.png"/>
+                </div>
+                <div class="mid_info">
+                    <div class="tag_info">
+
+                        <div class = "btn_album_info">
+                            <img class="band_tag_info" src='./img/cdpack/second/cdIcon.png'/>
+                            <span class="bank_info">母带</span>
+                        </div>
+
+                        <div class="tag_right_al_info">
+                            <div class="right_big_alname">
+                              <p class="band_album_info" title="">The Velvet Underground</p>
+                            </div>
+                            <div class="right_small_artname">
+                               <p id = "artist_info" title="" >The Velvet Underground</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="bottom_hz">
+                    <a href="javascript:;" class="format_flac">FLAC</a>
+                    <a href="javascript:;" class="format_hz">96000HZ</a>
+                    <a href="javascript:;" class="format_bit">24bit</a>
+                    <a href="javascript:;" class="format_k">4410kbps</a>
+                </div>
+            </div>
+            <div id="right_content" >
+                <div class="right_list_cont">曲目</div>
+                <div class="list_title">
+                    <div class="title_index_info">
+                        <p class="idnex_info">序号</p>
+                    </div>
+                    <div class="title_name_time_info">
+                       <span class="title_sname_intro">歌曲名</span>
+                    </div>
+                    <div class="m_title_r">
+                        <span class="title_time">时长</span>
+                    </div>
+                </div>
+
+                <ul id="song_list_info_detail"></ul>
+                <div class="commentBox" style="overflow:hidden; zoom:1;"></div>
+                <a class="closeCommentBtn" href="javascript:;"></a>
+                <a class="openCommentBtn" href="javascript:;"><span></span>说两句...</a>
+            </div>
+        </div>
+        <!-- model -->
+        <ul id="kw_right_song_info_model" style="display:none;">
+            <li class="cdmusic_wrap" rid="{$rid}" relapos="{$relapos}" abso="{$absoindex}" ondblclick="PlaySongDbList(this)">
+                <div class="m_left_index">
+                    <span class="song_index {$failed}" title="{$errinfo}">{$num}</span>
+                </div>
+                <div class="m_right_info">
+                    <a href="javascript:;" class="right_name_span {$name_box_failed}" title="{$songname}" onclick="PlayOneSongClk(this)">{$songname}</a>
+                </div>
+                <div class="right_time_span">
+                    <span class="right_time_content {$longbox_failed}">{$duration}</span>
+                </div>
+            </li>
+        </ul>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/comm2.js" type="text/javascript"></script>
+        <script src="js/commentModel.js" type="text/javascript"></script>
+        <script src="js/cdpacket_playing_page.js" type="text/javascript"></script>
+    </body>
+</html>

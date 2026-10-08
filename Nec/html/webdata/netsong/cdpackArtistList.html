@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>cd包歌手列表</title>
+	<link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/to_top.css" rel="stylesheet"/>
+	<link href="css/cdpackArtistList.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/cdpackArtistList.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="indexContentBox">
+		<div class="artistListTop">
+			<div class="navBox">
+				<div class="logo">
+					<div class="logo_icon"><i></i></div>
+					<div class="logo_icon_splice"></div>
+				</div>
+				<h1>发烧音乐</h1>
+				<div class="nav">
+					<a href="javascript:commonClick({'source':'9002'});" class="index active"><span>发现音乐<i></i></span></a>
+					<a href="javascript:;" class="jumpLike"><span>我的收藏</span><label></label></a>
+					<a href="javascript:;" class="jumpDown"><span>我的下载</span><label></label></a>
+				</div>
+			</div>
+			<div class="sub_nav">
+				<a href="javascript:;" class="current">热门</a>
+				<a href="javascript:;">A</a>
+				<a href="javascript:;">B</a>
+				<a href="javascript:;">C</a>
+				<a href="javascript:;">D</a>
+				<a href="javascript:;">E</a>
+				<a href="javascript:;">F</a>
+				<a href="javascript:;">G</a>
+				<a href="javascript:;">H</a>
+				<a href="javascript:;">I</a>
+				<a href="javascript:;">J</a>
+				<a href="javascript:;">K</a>
+				<a href="javascript:;">L</a>
+				<a href="javascript:;">M</a>
+				<a href="javascript:;">N</a>
+				<a href="javascript:;">O</a>
+				<a href="javascript:;">P</a>
+				<a href="javascript:;">Q</a>
+				<a href="javascript:;">R</a>
+				<a href="javascript:;">S</a>
+				<a href="javascript:;">T</a>
+				<a href="javascript:;">U</a>
+				<a href="javascript:;">V</a>
+				<a href="javascript:;">W</a>
+				<a href="javascript:;">X</a>
+				<a href="javascript:;">Y</a>
+				<a href="javascript:;">Z</a>
+				<a href="javascript:;">#</a>
+			</div>
+		</div>
+		<div class="nodataBox">
+			<img src="img/cdpack/nodata.png">
+			<p>暂无相关内容噢，</p>
+			<p>酷小我正在努力获取资源中...</p>
+		</div>
+		<ul class="cdArtistListBox" data-model="kw_cdArtistList"></ul>
+	</div>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+
+	<!-- model -->
+	<ul id="kw_cdArtistList" style="display:none;">
+		<li>
+			<a title="{$artist}" href="javascript:;" class="cover" onclick="{$click}">
+				<div class="coverBox">
+					<img class="lazy" width="140" height="132" src="img/cdpack/second/default.png" data-original="{$pic}" onerror="imgOnError(this,'150cd');">
+				</div>
+			</a>
+			<span class="artist"><a class="skinLink" title="{$artist}" href="javascript:;" onclick="{$click}">{$artist}</a></span>
+			<span class="albumCnt" title="{$albumCnt}张专辑">{$albumCnt}张专辑</span>
+		</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="320,400" caption="0,0,0,150" roundcorner="10,10">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,2,14,16'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;14,-2,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;YAHEI.NO12&quot;" />
+  <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <VerticalLayout name="layout_clientrect" bkimage="UpqualityWnd.png">
+		
+    <HorizontalLayout height="43">
+      <Control />
+      <Button name="button_Close" padding="0,27,17,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+		</HorizontalLayout>
+    <Button  name="btn_confirmupquality" padding="90,250,0,0" width="136" height="38" text="免费升级" textcolor="#FFCA9D63" hottextcolor="#FFCA9D63" pushedtextcolor="#FFCA9D63" focusedtextcolor="#FFCA9D63" font="Def.ListLabel" statusimage="btn_confirmupquality.png"/>
+
+  </VerticalLayout>
+</Window>

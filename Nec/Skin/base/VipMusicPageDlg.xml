@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,60">
+  <VerticalLayout name="root" >
+	<WebUI name="web" create="true">
+	</WebUI>
+	<Button name="btn_close" float="true" pos="-31,0,-1,0"  width="30" height="30"/>
+  </VerticalLayout>
+</Window>

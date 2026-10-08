@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="250,60" >
+  <VerticalLayout  bkimage="NicamTipBackground.png">
+    <Control />
+      <HorizontalLayout height="27">
+	    <Control />
+       	
+        <Label padding="0,0,0,0"  text="弹幕环境初始化失败，请重试。" width="235" height="25" align="center" textcolor="#ffffffff" font="ChangeSkin.Title"/>
+        <Control />
+	  </HorizontalLayout>      
+    <Control />
+  </VerticalLayout>
+</Window>

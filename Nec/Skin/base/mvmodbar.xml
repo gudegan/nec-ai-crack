@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <VerticalLayout name="root" bkcolor="#ff000000">
+    <TabLayout name="MVInfo">
+      <VerticalLayout name="loading">
+        <Control />
+        <HorizontalLayout height="22" >
+          <Control />
+          <Label name="WebLoading" width="40" height="22" bkimage="WebLoading.png" frametime="1170" framenum="13" />
+          <Control />
+        </HorizontalLayout>
+        <Control />
+      </VerticalLayout>
+
+      <VerticalLayout name="stopped">
+        <Control />
+        <HorizontalLayout height="62">
+          <Control />
+          <Label name="MvLoad" width="60" height="62" bkimage="playmvloading.png" />
+          <Control  />
+        </HorizontalLayout>
+        <HorizontalLayout height="20" padding="0,13,0,0">
+          <Control />
+          <Label text="播放已停止" align="center" width="140" textcolor="#bfffffff"/>
+          <Control />
+        </HorizontalLayout>
+        <Control />
+      </VerticalLayout>
+    </TabLayout>
+
+  </VerticalLayout>
+</Window>

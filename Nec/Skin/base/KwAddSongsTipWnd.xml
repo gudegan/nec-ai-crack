@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="165,70" roundcorner="6,6">
+  <VerticalLayout  bkimage="NicamTipBackground.png">
+    <Control height="20"/>
+      <HorizontalLayout  height="40">
+	    <Control width="20" />
+        <Label name="tipIcon" width="30" height="30" bkimage="mylist_add_success.png" padding="0,0,0,0" />
+		<Control width="10" />
+		<VerticalLayout name="addSongsLabel" minwidth="90" maxwidth="175" >
+		   <Label name="add_song_suc" padding="0,0,0,0" textcolor="#ffffffff" endellipsis="true" font="ChangeSkin.Title"/>
+		   <Label name="add_listTo" visible="true" padding="0,0,0,0"  textcolor="#ffffffff" endellipsis="true" font="PopUp.DefaultText"/>
+		   <Control />
+		</VerticalLayout>        		
+	  </HorizontalLayout>      
+  </VerticalLayout>
+</Window>

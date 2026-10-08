@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="630,510" caption="0,0,0,120" >
+	<Default name="Combo" value="statusimage=&quot;Config_Combo.png&quot; textcolor=&quot;Config.DefaultText&quot; height=&quot;24&quot; width=&quot;79&quot; textpadding=&quot;5,4,5,5&quot; itembkcolor=&quot;#FFFFFFFF&quot; itemselectedbkcolor=&quot;#FFa9b2b8&quot; itemhotbkcolor=&quot;#BBd9e2e8&quot; font=&quot;Default.FontName&quot; scrollwheel=&quot;ifpushed&quot;" />
+	<!--Default name="Combo" value="statusimage=&quot;dropdown_common_cfg.png&quot; height=&quot;26&quot; textpadding=&quot;5,7,5,5&quot; " /-->	
+	<Default name="Option" value="setcursor=&quot;true&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Download_Radio_1.png&quot; hotimage=&quot;Download_Radio_2.png&quot; selectedimage=&quot;Download_Radio_3.png&quot; disabledimage=&quot;Download_Radio_4.png&quot; height=&quot;16&quot; textpadding=&quot;16,-2,1,0&quot; align=&quot;left&quot; font=&quot;Config.DefaultText&quot; " />
+	<Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;download_EditBox_1.png&quot; focusedimage=&quot;download_EditBox_2.png&quot; disabledimage=&quot;download_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Config.DefaultText&quot;" /> 
+  <!--EventHook event="OnSkinChange">
+    <Attribute control="text_title1" value="textcolor=&quot;Global.DarkGray&quot;" />
+  </EventHook-->
+	<VerticalLayout name="layout_clientrect" >
+		<HorizontalLayout name="layout_dialog_title" height="24" padding="24,15,0,0">
+			<Label name="text_title1" align="left" font="PopUpWnd.Download.TitleBold" textcolor="#FF333333" />
+			<Button name="button_Close" padding="0,0,7,0" width="30" height="30" statusimage="popupwndcloseVir.png"/>
+		</HorizontalLayout>
+		<Control height="1" bkcolor="#FFF2F2F2" padding="0,9,0,0"/>
+		<HorizontalLayout name="title_layout" padding="24,12,24,0" height="24">
+			<Label name="text_songname" varwidth="true" maxwidth="320" align="left" font="PopUpWnd.Download.Title" textcolor="#FF555555" endellipsis="true"/>
+			<Label name="text_author" align="left" font="PopUpWnd.Download.Title" textcolor="#FF555555" endellipsis="true"/>
+		</HorizontalLayout>						
+		<VerticalLayout name="layout_songinfo" padding="24,9,24,0" height="214" bkcolor="#FFF9F9F9" bordercolor="#ffe9eaeb">		
+		</VerticalLayout>
+		<HorizontalLayout name="layout_link" height="30" padding="24,10,24,0">
+			<Label align="left" varwidth="true" padding="0,0,0,5" textcolor="#FF999999" text="下载链接:"/>
+			<Label name="lblLink" padding="5,0,30,7"  textcolor="#FF999999"/>
+			<Button name="btnCopyLink" width="85" text="复制链接" textcolor="#FF4A7BB4" statusimage="btn_ListDef.png" borderround="4,4" setcursor="true" />
+		</HorizontalLayout>
+		<HorizontalLayout name="layout_downladpath" height="30" padding="24,13,24,0" >
+			<Label  name="label_downloadpath" align="left" textcolor="#FF333333" text="保存位置:" width="70"/>
+			<Edit name="edit_path" width="377" height="30"/> 
+			<Button name="button_selectpath" pos="422,6,440,24" float="true" statusimage="btn_selectdownpath.png" setcursor="true" />
+			<Button name="button_browserdir" padding="-1,0,0,0" height="30" width="42" statusimage="list_folder.png" setcursor="true" />
+			<Control />
+			<Button name="label_moresetting" width="85" height="30" textcolor="#FF333333" text="更多设置" statusimage="btn_ListDef.png" borderround="4,4" setcursor="true" />
+		</HorizontalLayout>		
+		<HorizontalLayout name="layout_operatorbutton"  padding="282, 50, 0, 25" >
+			<Button name="button_startdownload_pc" width="158" height="36" theme="ListBtnFocus" textcolor="List.Btn.TextColor" text="下载到电脑" font="Def.ListLabel" iconstatusimage="download_pcVir.png" icondest="20, 9, 38, 27" textpadding="20,0,0,0" setcursor="true" />
+			<Button name="button_startdownload_phone" padding="10,0,24,0" width="158" height="36" enabled="false"  textcolor="#FF333333" text="下载到手机" font="Def.ListLabel"  statusimage="btn_ListDef.png" borderround="4,4"  iconstatusimage="download_iphoneVir.png" icondest="20, 9, 38, 27" textpadding="20,0,0,0" setcursor="true" />
+		</HorizontalLayout>	
+	</VerticalLayout>
+</Window>

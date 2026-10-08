@@ -1,0 +1,8 @@
+{
+	"type":"shallow",
+	"skinColor":"#FFC15D",
+	"linkColor":"#FFC15D",
+	"hifiColor":"#FFC15D",
+	"errorColor":"#F3451D",
+	"opqSwitch": true
+}

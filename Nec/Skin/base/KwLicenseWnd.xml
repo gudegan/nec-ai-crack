@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<VerticalLayout name="root" bkimage="LicenseBK.png">
+    <Control />
+    <HorizontalLayout height="400">
+      <Control />
+      <WebUI name="web" width="590" create="true" nav="$${netsong}privacyPolicy.html" bkimage="main_bk_tankuang2.png">
+      </WebUI>
+      <Control />
+    </HorizontalLayout>
+    <Control />
+
+  </VerticalLayout>
+</Window>

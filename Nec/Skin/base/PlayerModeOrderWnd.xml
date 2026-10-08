@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="158,213">
+  <VerticalLayout name="root" bkimage="playmode_bk.png">
+    <DefChildAttr align="left" height="38" icondest="12,12,30,30" textpadding="42,0,0,0" textcolor="#ff000000" statusimage="playmode_btn_bk.png" selectedimage="playmode_btn_bk_3.png" font="Default.FontName" />
+
+    <Option name="mode_single_once" padding="17,20,17,0" group="ModeOpt" text="单曲播放" iconstatusimage="pop_singleonce.png" iconselectedimage="pop_singleonce_3.png"/>
+    <Option name="mode_single_circle" padding="17,0,17,0" group="ModeOpt" text="单曲循环" iconstatusimage="pop_single.png" iconselectedimage="pop_single_3.png"/>
+    <Option name="mode_all_order" padding="17,0,17,0" group="ModeOpt" text="顺序播放" iconstatusimage="pop_order.png" iconselectedimage="pop_order_3.png"/>
+    <Option name="mode_all_circle" padding="17,0,17,0" group="ModeOpt" text="循环播放" iconstatusimage="pop_circle.png" iconselectedimage="pop_circle_3.png"/>
+    <Option name="mode_all_random" padding="17,0,17,0" group="ModeOpt" text="随机播放" iconstatusimage="pop_random.png" iconselectedimage="pop_random_3.png"/>
+  </VerticalLayout>
+</Window>

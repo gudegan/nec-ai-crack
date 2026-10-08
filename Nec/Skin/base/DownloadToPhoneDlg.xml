@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,113" caption="0,0,0,32" roundcorner="5,5">
+	<VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="32">
+			<Label name="text_title" padding="8,0,0,0" align="left" font="Main.ChannelTitle" textcolor="#ff333333" text="酷我提示" />
+			<Control />
+			<Button name="button_Close" padding="0,10,0,10" width="19" height="20" statusimage="download_CloseBtn.png"/>
+		</HorizontalLayout>
+		<VerticalLayout name="layout_text1" height="20" padding="0,15,0,0">
+			<Label name="text_text1" padding="30,0,0,0" align="left" text="版权方要求，普通用户所选有需付费歌曲不提供免费服务。" font="Default.FontName" textcolor="#ff333333" layertext="true"/>
+		</VerticalLayout> 
+	</VerticalLayout>
+</Window>

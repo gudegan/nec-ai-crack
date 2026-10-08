@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400, 300">
+	<Default name="VScrollBar1" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Button" value="fadetime=&quot;500&quot;"/>
+  <Default name="Option" value="fadetime=&quot;500&quot;"/>
+ <HorizontalLayout bkcolor="#ffffffff" name="mainLayout">
+ 	<Control width="25"/>
+  <TabLayout name="root" bkcolor="#FFFAFAFA">
+    <WindowProxy name="mvwindow"  sendsizemsg="true"/>
+    <WindowProxy name="recommend" text="稍等片刻，好音乐马上就来..." align="center" font="Default.FontName.Bold"/>
+    <!--<HorizontalLayout name="ranking">
+    	<VerticalLayout name="rankmain" width="149"  inset="5,0,0,0"  vscrollname="VScrollBar1" vscrollbar="true" hscrollbar="false">
+    		<Label text="全球音乐榜"  height="21"  padding="0,2,0,0"font="Default.FontName.Bold"/>
+    		<VerticalLayout name="WorldMusicRankList"  vscrollbar="false" hscrollbar="false" >
+			  </VerticalLayout>
+			  <TabLayout name="foldrank" height="19">
+			  	<Button name="unfold" height="19"hotimage="btn_ranking_2.png" fadetime="0" setcursor="true" text="展开所有榜单>>" textcolor="#ff226699"/>
+			  	<Button name="fold" height="19"hotimage="btn_ranking_2.png"  fadetime="0" setcursor="true" text="收起榜单>>" textcolor="#ff226699"/>
+			  </TabLayout>  
+    		<Label text="酷我特色精选集" height="19" padding="0,5,0,0" font="Default.FontName.Bold"/>
+    		<VerticalLayout name="KuwoSpecialRankList"  vscrollbar="false" hscrollbar="false" >
+    		</VerticalLayout>
+    	</VerticalLayout>
+    	 <Control bkcolor="#ffeaeaea" width="1"/>
+      <TabLayout name="rankingbody">
+        <WindowProxy name="rankingmain"/>
+        <VerticalLayout name="rankingright">
+        	<HorizontalLayout inset="5,5,0,0" height="65">
+         	<Control name="ranktitle" height="60" width="466" bordersize="5"/>
+         	<Button name="rankradio" float="true" pos="348,21,456,47" fadetime="0" statusimage="btn_rank_radio.png"/>
+         	</HorizontalLayout>
+          <SpeciallyTab name="rankingspecially" />
+        </VerticalLayout>
+      </TabLayout>  
+    </HorizontalLayout>
+    <HorizontalLayout name="artist">
+      <VerticalLayout name="artistleft" width="149">
+        <HorizontalLayout height="24" inset ="2,2,2,2">
+          <Edit name="searchartistedit" textpadding="4,3,18,3" bkimage="edit_netsong_searchartist_1.png" defaulttext="搜索歌手…" defaulttextcolor="NetSong.EditDefaultTextColor" />
+        </HorizontalLayout>
+        <HorizontalLayout >
+          <ArtistCategory name="artistcategory" width="36"/>
+          <List name="artistlist" header="hidden" inertiascroll="true" usefadehotbkg="true"  vscrollbar="true" hscrollbar="false" bkcolor="#ffffffff">
+            <ListHeader>
+              <ListHeaderItem />
+            </ListHeader>
+            <DefChildAttr height="23"/>
+          </List>
+        </HorizontalLayout>
+      </VerticalLayout>
+      <Control name="line" bkcolor="#FFEAEAEA" width="1" insert="10,0,0,0"/>
+      <TabLayout name="artistbody" >
+        <WindowProxy name="artistmain"/>
+        <VerticalLayout name="artistright">
+        	<HorizontalLayout name="artisttop" height="100" width="495" inset="5,5,0,0">
+        			<Button name="artistpic" height="93" width="93" bkimage="bk_artist_bk.png" icondest="4,3,89,88"/>
+        			<VerticalLayout bkcolor="#fff2f2f2" width="372" padding="5,3,0,5" inset="8,10,0,5">
+        				<HorizontalLayout height="19">
+        					<Label name="artistname" text="周杰伦"  width="50" font="Artist.Name.Bold"/>
+        					<Label text=" - " width="20"/>
+        					<Button name="artistinfo" text="简介" textcolor="#FF226699" setlink="true" width="35" setcursor="true"/>
+        				</HorizontalLayout>
+        				<HorizontalLayout name="similarartist">
+        					<Label  name="similarlabel" text="相似歌手：" width="65"/>
+        					<Button name="similar1" textcolor="#FF226699" setlink="true" setcursor="true" visible="false"/>
+        					<Button name="similar2" textcolor="#FF226699" setlink="true" setcursor="true" visible="false"/>
+        					<Button name="similar3" textcolor="#FF226699" setlink="true" setcursor="true" visible="false"/>
+        					<Control />
+        				</HorizontalLayout>
+        				<TabLayout name="radioinfo" height="26">
+        					<Button name="artistradio" height="26" width="108" fadetime="0" statusimage="btn_artist_radio.png"/>
+        					<HorizontalLayout>
+        							<Label  name="musiclabel" text="单曲:" width="30" />
+        							<Button name="musiccount" textcolor="#FF226699" width="24" setcursor="true" setlink="true"fadetime="0"/>
+        							<Label  name="albumlabel" text="专辑:"  padding="10,0,0,0" width="35" />
+        							<Button name="albumcount" textcolor="#FF226699" width="24" setcursor="true" setlink="true" fadetime="0"/>
+        							<Label  name="mvlabel" text="MV:"  padding="10,0,0,0" width="30"/>
+        							<Button name="mvcount" textcolor="#FF226699" width="24" setcursor="true" setlink="true" fadetime="0"/>
+        					</HorizontalLayout>
+        			  </TabLayout>
+        			 <HorizontalLayout name="recentinfo" inset="8,0,0,0" float="true" pos="0,56,370,84" bkcolor="#fffff0bb" visible="false">
+        					<HorizontalLayout>
+	        					<Label  name="recentlabel" text="最近更新："/>
+	        					<Button name="recentAlbum" textcolor="#FF226699" setlink="true" setcursor="true" visible="false"/>
+	        					<Label name="interlabel" text="、" width="13"/>
+	        					<Button name="recentMv" textcolor="#FF226699" setlink="true" setcursor="true" visible="false"/>
+	        					<Control />
+        					</HorizontalLayout>
+        					<Button name="closerecent" statusimage="btn_musictool_close.png" fadetime="0" width="11" padding="0,8,8,0" height="11"/>
+        				</HorizontalLayout>
+        			</VerticalLayout>
+        	</HorizontalLayout>
+        	 <!--WindowProxy name="artisttitle" height="100"/-->
+          
+    <!--<SpeciallyTab name="artistspecially" />     
+        </VerticalLayout>
+      </TabLayout>
+    </HorizontalLayout>
+    <HorizontalLayout name="category">
+      <WindowProxy name="categoryleft" width="150"/>
+      <TabLayout name="categorybody">
+        <WindowProxy name="categorymain"/>
+        <VerticalLayout name="categoryright">
+          <WindowProxy name="categorytitle" height="100"/>
+          <SpeciallyTab name="categoryspecially" />
+        </VerticalLayout>
+      </TabLayout>
+    </HorizontalLayout>
+	<WindowProxy name="musicradio"/>
+	
+	
+	
+    <HorizontalLayout name="download">
+     <HorizontalLayout name="spliter" width="150" minwidth="100" sepwidth="+2" inset="1,0,2,0" bkimage="file='icon_uidownload_mqbk.png' hole='true'">    
+      	<VerticalLayout name="downloadleftwnd" bkcolor="#FFF3F3F3" minwidth="100" >  
+		    	<List name="CategoryList" bkcolor="#FFF3F3F3" height="52" padding="0,10,0,0" header="hidden" rectangleselect="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true"  itemselectedbkcolor="#FFF3F3F3">
+			    	<ListHeader>
+			    		<ListHeaderItem />
+			    	</ListHeader>
+			    	<DefChildAttr height="23" menu="true"/>
+					</List> 					
+					<VerticalLayout name="localmusictitlewnd" bkcolor="#FFF3F3F3" height="35">
+					</VerticalLayout>					
+					<Edit name="searchlocalmusicedit" height="20" padding="5,0,5,0" defaulttext="搜索本地歌曲" defaulttextcolor="NetSong.EditDefaultTextColor" normalimage="edit_netsong_searchartist_1.png" focusedimage="edit_netsong_searchartist_2.png"/>					
+					<TabLayout name="localmusiccontentarea">
+						<List name="LocalMusicArrangeList" bkcolor="#FFF3F3F3" header="hidden" rectangleselect="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true" itemselectedbkcolor="#FFF3F3F3">
+			    		<ListHeader>
+			    			<ListHeaderItem />
+			    		</ListHeader>
+			    		<DefChildAttr height="23" menu="true"/>
+						</List> 			
+						<Control />		
+					</TabLayout>
+					<VerticalLayout name="copytoolwnd" bkcolor="#FFF3F3F3" height="42">
+					</VerticalLayout>				
+				</VerticalLayout>		
+		 </HorizontalLayout>	
+		 <HorizontalLayout name="rightsplitter" inset="1,0,0,0" minwidth="450"  name="rightspliter"> 				
+					<TabLayout name="downloadrightwnd">  					
+					  <VerticalLayout name="downloademptywnd">  
+					   	<HorizontalLayout name="downingoperatorwnd1" bkcolor="#FFFFFFFF" height="40">
+						  	<Button name="downloadstartall1" width="70" height="23" text="全部开始" textcolor="#FF226699" padding="5,10,0,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+						  	<Button name="downloadpauseall1" width="70" height="23" text="全部暂停" textcolor="#FF226699" padding="10,10,0,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+						  	<Control />
+						  	<Button name="downloadshutdown1" width="70" height="23" text="定时关机" textcolor="#FF226699" padding="120,10,0,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>
+						  	<Button name="downloadsetting1"  width="70" height="23" text="下载设置" textcolor="#FF226699" padding="10,10,5,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+						  </HorizontalLayout>  	
+						  <Control name="control_spliterline" bkimage="icon_uidownload_leftbk.png" height="1" padding="0,0,0,0"/>
+							<Label  name="label_emptytext1" padding="0,40,0,0" height="24" align="center" textcolor="#FF6A6A6A" text="没有歌曲正在下载"/>  
+							<Label  name="label_emptytext2" padding="0,0,0,0" height="24" align="center" textcolor="#FF6A6A6A" text="您可以到乐库或播放列表查找想要的歌曲"/>  
+					  </VerticalLayout>				   
+					  <VerticalLayout name="localemptywnd">
+					  	<Control height="50"/>
+					  	<HorizontalLayout name="layout_localemptycontent" height="248">
+					  		<Control /> 
+					  		<HorizontalLayout name="layout_scanbuttoncontent" width="425" height="248" minwidth="425" minheight="248" bkimage="icon_uidownload_localemptywndbk.png"> 
+					  			<Button name="button_manualscan" width="70" height="23" text="手动选择添加" textcolor="#FF226699" pos="50,135,150,158" float="true" statusimage="btn_uidownload_common.png" textpadding="0,2,10,0" iconimage="btn_uidownload_arrangeicon.png" icondest="86,10,92,13" fadetime="0"/>
+						  		<Button name="button_autoscan"  width="70" height="23" text="自动全盘扫描添加" textcolor="#FF226699" pos="170,135,290,158" float="true" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+					  		</HorizontalLayout>
+					  		<Control />
+					  	</HorizontalLayout> 
+					  	<Control />
+					  </VerticalLayout>				
+						<VerticalLayout name="downloadingpanel"> 						
+						  <HorizontalLayout name="downingoperatorwnd" bkcolor="#FFFFFFFF" height="40">
+						  	<Button name="downloadstartall" width="70" height="23" text="全部开始" textcolor="#FF226699" padding="5,10,0,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+						  	<Button name="downloadpauseall" width="70" height="23" text="全部暂停" textcolor="#FF226699" padding="10,10,0,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+						  	<Control />
+						  	<Button name="downloadshutdown" width="70" height="23" text="定时关机" textcolor="#FF226699" padding="10,10,0,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>
+						  	<Button name="downloadsetting"  width="70" height="23" text="下载设置" textcolor="#FF226699" padding="10,10,5,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+						  </HorizontalLayout>  						
+							<List name="DownloadingList" bkcolor="#FFFFFFFF" rectangleselect="true" itemshowhtml="false" vscrollbar="true" hscrollbar="true" itemalign="left" menu="true">
+					    	<ListHeader height="24">
+								</ListHeader>
+					    	<DefChildAttr height="50" menu="true"/>
+							</List> 						
+						</VerticalLayout>						
+						<VerticalLayout name="recentdownedpanel">						
+							<HorizontalLayout name="downedoperatorwnd" bkcolor="#FFFFFFFF" height="40">
+								<Label  name="recentdowntextlabel" align="left" textcolor="#FF6A6A6A" text="  已下载的歌曲"/>
+						  	<Button name="downloadplayall"   width="70" height="23" text="播放全部" textcolor="#FF226699" padding="10,10,0,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>
+						  	<Button name="downloadsetting2"  width="70" height="23" text="下载设置" textcolor="#FF226699" padding="10,10,5,0" statusimage="btn_uidownload_common.png" textpadding="2,2,0,0"/>	
+						  </HorizontalLayout>						
+							<List name="RecentDownedList" bkcolor="#FFFFFFFF" rectangleselect="true" itemshowhtml="false" vscrollbar="true" hscrollbar="true" itemalign="left" menu="true">
+					    	<ListHeader height="24">
+								</ListHeader>
+					    	<DefChildAttr height="23" menu="true"/>
+							</List> 
+						</VerticalLayout>						
+						<VerticalLayout name="localmusicpanel">						
+						 <HorizontalLayout name="localoperatorwnd" bkcolor="#FFFFFFFF" height="40">							
+							<TabLayout name="localleftwnd">							
+								<TabLayout name="localinfotablayout"> 
+									<HorizontalLayout	name="normaltextdisplaylayout">
+										<Label name="label_normaltext" text="" textcolor="#FF6A6A6A"/>
+									</HorizontalLayout>
+									<HorizontalLayout	name="directorydisplaylayout">
+										<Label   name="label_directorystatic" textcolor="#FF6A6A6A" width="42"/> 
+										<Button  name="button_directorypath" align="left" textcolor="#FF226699" setlink="true" setcursor="true"/>
+									</HorizontalLayout>
+								</TabLayout>													
+								 <HorizontalLayout name="localworkingwnd">	
+									 <HorizontalLayout	name="workinttextdisplaylayout">
+										<Label name="loading"  padding="2,12,0,0" width="16"height="16" bkimage="loading.png" frametime="1200" framenum="12"/>
+										<Label name="label_workingtext" textcolor="#FF6A6A6A"/> 
+									 </HorizontalLayout>
+									 <TabLayout name="tab_addedresult" width="80" padding="0,14,0,0"> 
+										<Label name="label_addedsongcount" width="80" height="16" text="" textcolor="#FF226699"/>
+										<Control width="80" height="16" />
+								   </TabLayout>
+									 <TabLayout name="tab_controllayout" width="16" padding="0,12,5,0">
+										<Button name="startworkbutton"   width="16" height="16" text="" tooltip="开始" textcolor="#FF226699" statusimage="btn_uidownload_operatorbk.png" iconimage="icon_uidownload_start.png" icondest="6,4,11,12" fadetime="0"/> 
+										<Button name="pauseworkbutton"   width="16" height="16" text="" tooltip="暂停" textcolor="#FF226699" statusimage="btn_uidownload_operatorbk.png" iconimage="icon_uidownload_pause.png" icondest="4,4,12,12" fadetime="0"/> 
+									 </TabLayout>
+									 <TabLayout name="tab_stopworklayout" width="16" padding="0,12,0,0">
+										 <Button name="stopworkbutton"    width="16" height="16" text="" tooltip="停止" textcolor="#FF226699" statusimage="btn_uidownload_operatorbk.png" iconimage="icon_uidownload_stop.png" icondest="5,5,11,11" fadetime="0"/>
+								  	 <Control width="16" height="16" />
+								   </TabLayout>
+								 </HorizontalLayout>					
+						    </TabLayout>						  	
+						  	<Button name="localaddsong"      width="50" height="23" text="添加" tooltip="导入本地歌曲到曲库" textcolor="#FF226699" padding="5,10,0,0" statusimage="btn_uidownload_common.png" textpadding="15,2,0,0" iconimage="list_netsong_add_2.png" icondest="3,4,19,20" fadetime="0"/>
+						  	<Button name="localrecosong"     width="50" height="23" text="识别" tooltip="智能修正歌曲混乱信息" textcolor="#FF226699" padding="5,10,0,0" statusimage="btn_uidownload_common.png" textpadding="15,2,0,0" iconimage="icon_uidownload_reco.png" icondest="5,5,16,18" fadetime="0"/>	
+						  	<Button name="localrefreshsong"  width="50" height="23" text="刷新" tooltip="重新扫描本地歌曲" textcolor="#FF226699" padding="5,10,0,0" statusimage="btn_uidownload_common.png" textpadding="15,2,0,0" iconimage="icon_uidownload_refresh.png" icondest="5,6,17,18" fadetime="0"/>	
+						  	<Button name="localplaysong"     width="50" height="23" text="播放" tooltip="播放全部" textcolor="#FF226699" padding="5,10,5,0" statusimage="btn_uidownload_common.png" textpadding="15,2,0,0" iconimage="list_netsong_play_1.png" icondest="3,4,19,20" fadetime="0"/>	
+						  </HorizontalLayout>						
+							<List name="localmusicList" bkcolor="#FFFFFFFF" rectangleselect="true" itemshowhtml="false" vscrollbar="true" hscrollbar="true" itemalign="left" menu="true">
+					    	<ListHeader height="24">
+								</ListHeader>
+					    	<DefChildAttr height="23" menu="true"/>
+							</List> 
+						</VerticalLayout>					
+					</TabLayout>				
+		 </HorizontalLayout>			
+    </HorizontalLayout>-->
+    <HorizontalLayout name="search" bkcolor="#FFFAFAFA">
+      <!--<WindowProxy name="searchleft" width="150"/>-->
+      <TabLayout name="searchbody" bkcolor="#FFFAFAFA">
+        <WindowProxy name="searchmain" bkcolor="#FFFAFAFA"/>
+        <VerticalLayout name="searchright" bkcolor="#FFFAFAFA">
+          <!--<WindowProxy name="searchtitle" height="120"/>-->
+          <SpeciallyTab name="searchspecially"  bkcolor="#FFFAFAFA"/>
+        </VerticalLayout>
+      </TabLayout>
+    </HorizontalLayout>
+    <!--<WindowProxy name="ucenter" />
+    <WindowProxy name="game" />
+	  <WindowProxy name="vip" />
+    <HorizontalLayout name="fang">
+      <WindowProxy name="fangleft" width="150"/>
+      <TabLayout name="fangbody">
+        <WindowProxy name="fangmain"/>
+        <VerticalLayout name="fangright">
+          <WindowProxy name="fangtitle" height="100"/>
+          <SpeciallyTab name="fangspecially" />
+        </VerticalLayout>
+      </TabLayout>
+    </HorizontalLayout>-->
+    <WindowProxy name="share0" />
+    <WindowProxy name="share1" />
+    <WindowProxy name="share2" />
+    <WindowProxy name="share3" />
+    <WindowProxy name="share4" />
+    <WindowProxy name="share5" />
+    <WindowProxy name="share6" />
+    <WindowProxy name="share7" />
+    <WindowProxy name="share8" />
+    <WindowProxy name="share9" />
+  </TabLayout>
+ </HorizontalLayout>
+</Window>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,35"  size="430,210" roundcorner="2,2">
+	<VerticalLayout name="root">
+		<HorizontalLayout height="35">
+		  <Label name="text_title" padding="15,0,0,0" align="left" height="32" font="Main.ChannelTitle" textcolor="#ff333333" text="登录通知" />
+		  <Control />
+		  <Button name="btnClose" padding="0,10,0,10" width="19" height="20" statusimage="download_CloseBtn.png"/>
+		</HorizontalLayout>
+		<Control height="40"/>
+		<HorizontalLayout name="text_content">
+			<Control />
+			<VerticalLayout width="250">
+				<Label name="text_1"  align="center" height="16" font="Main.ChannelTitle" textcolor="#ff333333" text="未登录用户无法获得礼包中额外奖励" />
+				<Control height="8" />
+				<Label name="text_2"  align="center" height="16" font="Main.ChannelTitle" textcolor="#ff333333" text="只能获取酷豆并按月清除" />
+				<Control height="30"/>		
+				<Button name="button_Login" padding="60,0,0,0"  width="130" height="40"  font="Main.ChannelTitle" statusimage="btn_localempty.png" text="立即登录"/>
+			</VerticalLayout>
+			<Control />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset*/
+/*清零*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input { margin: 0; padding: 0; border: 0; }
+body {font-size: 14px; font-family:"Microsoft YaHei", "微软雅黑", '\65B0\5B8B\4F53', '\5B8B\4F53', Verdana; }
+ul, ol { list-style-type: none; }
+select, input, img { vertical-align: middle; outline: none; border:none; background:none; }
+em,strong{font-style:normal;font-weight:normal;}
+a { text-decoration: none; }
+a { outline: none; }
+h1, h2, h3, h4, h5, h6 {font-size:100%}
+
+.fl{float:left;}
+.lineBlock{display:inline-block;}
+/*清除浮动*/
+.clearfix:after {content:""; display:block; clear:both;}
+.clearfix {zoom:1;}
+
+
+/* 滚动条 */
+body::-webkit-scrollbar{
+	width:10px;
+}
+/* 滚动条的滑轨背景颜色 */
+body::-webkit-scrollbar-track {
+		background: rgba(0,0,0,0.0001);
+}
+/* 滑块颜色 */
+body::-webkit-scrollbar-thumb {
+	border-radius:5px;
+}
+body.default::-webkit-scrollbar-thumb,
+body.dark::-webkit-scrollbar-thumb {
+background-color: rgba(0,0,0,0.08);
+}
+body.default::-webkit-scrollbar-thumb:hover,
+body.dark::-webkit-scrollbar-thumb:hover {
+background-color: rgba(0,0,0,0.12);
+}
+body.shallow::-webkit-scrollbar-thumb {
+	background-color: rgba(255,255,255,0.08);
+}
+body.shallow::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255,255,255,0.12);
+}

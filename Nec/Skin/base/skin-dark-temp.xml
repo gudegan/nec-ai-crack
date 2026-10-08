@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+  <include name="${base}skin-dark.xml"/>
+  <Color>
+    <Color name="PlayControlPanel.bkcolor.normal" value="#99000000" />
+  </Color>
+</Skin>

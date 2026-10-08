@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>错误页面</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div>
+		<section class="no-net">
+            <div class="no-data-box no-network-img"></div>
+            <p class="no-data-text">当前无网络链接 请检查网络设置</p>
+            <p class="no-data-btn">
+                <a href="javascript:;"
+                   onclick="callClient('NavRefresh');return false;">刷新页面</a>
+            </p>
+		</section>
+	</div>
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script>
+if (getValue(window.location.href,'type') === 'reg') {
+	$(".no-net").addClass("reg");
+}
+function callClient(call){
+	try{
+		return window.external.callkwmusic(call);
+	}catch(e){
+		return "";
+	}
+}
+// 换肤
+function readFile(path) {
+  return callClient(`ReadFile?path=${path}`);
+}
+
+function getSkinConfig() {
+	var config = callClient('GetSkinConf');
+	if (config!='') {
+		config = JSON.parse(config);
+	}
+  return config;
+}
+
+var fileName = 'netsong/skinConfig.json';
+var skinConfig = {
+  "type": "default",
+	"skinColor": "#FFD200",
+	"linkColor": "#487BB6",
+	"hifiColor": "#DFAB45",
+	"opqSwitch": false
+};
+;(function () {
+  /** 皮肤参数据 */
+  try {
+    var skinData = getSkinConfig();
+    if(skinData!=''){
+			var file = readFile(skinData.dir + fileName);
+			if (file!='') {
+					skinConfig = JSON.parse(file);
+			}
+		}
+    if (skinConfig.opqSwitch) {
+      handleOpq(skinData.Opq);
+	}
+	setSkin();
+  } catch (e) {
+  }
+})();
+
+function OnSkinChange(data) {
+	if (data!='') {
+		var jsonData = JSON.parse(data);
+		var file = readFile(jsonData.dir + fileName);
+		if (file!='') {
+				skinConfig = JSON.parse(file);
+		}
+	}
+  if (skinConfig.opqSwitch) {
+    handleOpq(jsonData.Opq);
+  }
+  setSkin();
+}
+
+function setSkin(fn) {
+  $("body").removeClass().addClass(skinConfig.type);
+  $("a").css("background",skinConfig.skinColor);
+}
+
+function OnAlphaChange(data) {
+  if (skinConfig.opqSwitch) {
+    handleOpq(JSON.parse(data).Opq);
+    setSkin();
+  }
+};
+
+function handleOpq(opq) {
+  if (opq === '1') {
+    skinConfig.type = 'dark';
+  } else if (opq === '0') {
+    skinConfig.type = 'shallow';
+  }
+}
+function getValue(url, key){
+	url = url.toString();
+	if(url.indexOf('#')>=0){
+		url = url.substring(0,url.length-1);
+	}
+	var value='';
+	var begin = url.indexOf(key + '=');
+	if(begin>=0){
+		var tmp = url.substring(begin + key.length + 1);
+		var eqIdx = tmp.indexOf('=');
+		var end = 0;
+		if(eqIdx>=0){
+			tmp = tmp.substring(0,eqIdx);
+			end = tmp.lastIndexOf('&');
+		}else{
+			end = tmp.length;
+		}
+		if(end>=0){
+			try{
+				value = decodeURIComponent(tmp.substring(0,end));
+			}catch(e){
+				value = tmp.substring(0,end);
+			}
+		}else{
+			try{
+				value = decodeURIComponent(tmp);
+			}catch(e){
+				value = tmp;
+			}
+		}
+	}
+	return value;
+}
+</script>
+</html>

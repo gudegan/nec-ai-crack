@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="468,380" caption="0,0,0,36" >
+		<!--总的界面-->
+    <VerticalLayout name="main_frame" visible="true" >
+    	<!--标题栏-->
+    	<VerticalLayout name="caption" height="35" bkcolor="#FFEEEEEE">    		
+    		<HorizontalLayout name="caption_control" inset="1,5,0,0">
+    			<Label width="9" />    			
+					<Label height="24" align="left" width="80" textcolor="#FF666666" text="手机听歌" />
+					<Label />				
+					<Button name="button_Close" float="true" pos="433,2,463,30" width="31" height="34"  statusimage="AppTreasrue_close.png" tooltip="关闭"/>					
+    			<Label width="3" />
+    		</HorizontalLayout>    		
+    	</VerticalLayout>
+    	<HorizontalLayout height="35">
+    	</HorizontalLayout> 
+    	<!--标题栏-->
+    	<HorizontalLayout height="170" >
+    		<Label width="59" />
+    		<Label name="main_imag" bkimage="main_appTreasrue_bkg.png" />
+    		<Label width="59" />
+    	</HorizontalLayout>
+    	<HorizontalLayout height="30" >
+    	</HorizontalLayout>
+    	<VerticalLayout name="onekey_install" height="70" >    		
+    		<HorizontalLayout >
+    			<Label width="169" />
+    			<Button name="btn_onekey" width="130" height="35" textcolor="#FFFFFFFF" text="一键安装" font="Default.Font16" statusimage="appTreasrueKey.png"/>
+     			<Label width="169" />
+    		</HorizontalLayout>    		
+    		<Label />
+    	</VerticalLayout>
+    	<HorizontalLayout name="dont_mention" height="15" >
+    		<Label width="25" />
+    		<CheckBox name="check_notice" width="14" height="14" statusimage="App_Treasrue_checkbox.png" />
+    		<Label width="5" />
+    		<Text name="notice_text" width="60" text="不再提醒" textcolor="#FF666666" font="Default.FontSmall"/>
+    	</HorizontalLayout>
+   
+    </VerticalLayout>    	
+</Window>

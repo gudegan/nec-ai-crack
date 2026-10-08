@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,180" caption="0,0,0,30" roundcorner="5,5">
+	<Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+	<Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;Config.DefaultText&quot;" />	
+	<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,16,17'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.DefaultText&quot;" />	
+	<Default name="Label" value="font=&quot;Config.DefaultText&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />	
+	<EventHook event="OnSkinChange">
+		<Attribute control="BackToOldVer_TXT_Msg" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />		
+	</EventHook>
+	
+	<VerticalLayout inset="7,7, 10,5" name="BackToOldVer_ClientRect" bkcolor="#00000000">
+		<HorizontalLayout name="BackToOldVer_Content" inset="0,0,0,0" height="45" >
+			<Text name="BackToOldVer_TXT_Msg" align="center" text="回到旧版" font="PopUp.Title" padding="0,0,0,0" textcolor="PopWnd.title.textcolor"/>
+			<Control />
+			<Button name="BackToOldVer_BTN_Close" width="19" height="20" statusimage="Config_CloseBtn.png"/>
+		</HorizontalLayout>
+
+		<TabLayout name="BackToOldVer_root">
+			<VerticalLayout name="BackToOldVer_tip">
+				<VerticalLayout padding="10,10,0,0" height="65">
+					<Label padding="25,0,0,0" text="您正在使用的是酷我音乐2016概念版，确定要回到" />
+					<Label padding="10,0,0,0" text="旧版吗？" />
+				</VerticalLayout>
+
+				<HorizontalLayout padding="10,0,0,0">
+					<Control />
+					<Button text="确定" padding="0,0,5,0" width="72" height="32" name="download" hottextcolor="#ff000000" pushedtextcolor="#ff000000" focusedtextcolor="#ff000000" />
+					<Button text="取消" padding="5,0,10,0" width="72" height="32" name="tipcancel" hottextcolor="#ff000000" pushedtextcolor="#ff000000" focusedtextcolor="#ff000000" />
+				</HorizontalLayout>
+			</VerticalLayout>
+		  
+		  <VerticalLayout name="BackToOldVer_downloading">
+			<Label name="downloadPercent" padding="10,0,0,0" text="正在为您下载安装文件，请稍候..."/>
+			<Progress name="downloadProgress" padding="10,15,0,0" fgimage="progress_common_2.png" bkimage="progress_common_1.png" width="360" height="22" min="0" max="100"/>
+			<Button text="取消" padding="300,20, 0,0" width="72" height="32" name="downcancel" hottextcolor="#ff000000" pushedtextcolor="#ff000000" focusedtextcolor="#ff000000" />
+		  </VerticalLayout>
+		  
+		  <VerticalLayout name="BackToOldVer_downloaderr">
+			<Label name="downloaderrPercent" padding="10,0,0,0" text="抱歉，下载出错了，请重试。"/>
+			<Progress name="downloaderrProgress" padding="10,15,0,0" fgimage="progress_common_2.png" bkimage="progress_common_1.png" width="360" height="22" min="0" max="100"/>
+			<Button text="我知道了" padding="300,20, 0,0" width="72" height="32" name="downerrcancel" hottextcolor="#ff000000" pushedtextcolor="#ff000000" focusedtextcolor="#ff000000" />
+		  </VerticalLayout>
+		  
+		  <VerticalLayout name="BackToOldVer_installing">
+			<Label name="insPercent" padding="10,0,0,0" text="正在安装酷我音乐2015，请稍候..."/>
+			<Progress name="insProgress" padding="10,15,0,0" fgimage="progress_common_2.png" bkimage="progress_common_1.png" width="360" height="22" min="0" max="100"/>			
+			<Button text="取消" enabled="false" padding="300,20, 0,0" width="72" height="32" name="inscancel" hottextcolor="#ff000000" pushedtextcolor="#ff000000" focusedtextcolor="#ff000000" />
+		  </VerticalLayout>
+		  
+		  <VerticalLayout name="BackToOldVer_installsuc">
+			<Label name="inssuctip" padding="10,0,0,0" text="恭喜，酷我音乐2015安装成功！" width="200"/>
+			<CheckBox name="insrun" text="立即运行酷我音乐" padding="10,15,0,0"/>
+			<Button text="完成" padding="300,20, 0,0" width="72" height="32" name="insok" hottextcolor="#ff000000" pushedtextcolor="#ff000000" focusedtextcolor="#ff000000" />
+		  </VerticalLayout>
+		</TabLayout>
+	</VerticalLayout>
+</Window>

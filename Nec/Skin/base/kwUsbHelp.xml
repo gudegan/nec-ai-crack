@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="360,500" caption="0,0,0,35" >
+<VerticalLayout name="root" bkcolor="#ffffffff">
+	<HorizontalLayout height="34">
+	  <Label padding="28,7,0,0" text="手机数据线连接向导" textcolor="#ff555555" varwidth="true" height="22"/>
+      <Button name="button_Close" padding="130,7,8,0" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+	<Label padding="27,10,0,0" text="安卓手机请打开USB调试模式" textcolor="#ff333333" varwidth="true" height="22" font="Default.Font16" />
+	<Control name="tran_image1" padding="19,10,0,0" width="322" height="274" bkimage="tran_USB1.png" />
+	<Control name="tran_image2" width="322" height="274" bkimage="tran_USB2.png" float="true"/>
+	<HorizontalLayout padding="18,20,0,0" height="34">
+		<Label text="仍然无法连接？ 试试安装" padding="-5,0,3,0" align="right" textcolor="#ff555555" width="175" height="22" />
+		<Control padding="0,1,0,0" width="20" height="20" bkimage="yingyongbao_icon.png" />
+		<Button name="yingyongbao" align="left" text="应用宝" setcursor="true" width="50" height="20" textcolor="#ff21a0ed" hottextcolor="#ff24aafc" selectedtextcolor="ff1b97e2"/>
+		<Label text="再连接手机" align="left" textcolor="#ff555555" width="90" height="22" />
+	</HorizontalLayout>
+	<Button name="finished" padding="20,21,0,0" width="320" height="44" text="知道了" font="Default.Font18" theme="MsgBox_Btn_Focus"/>
+</VerticalLayout>
+</Window>

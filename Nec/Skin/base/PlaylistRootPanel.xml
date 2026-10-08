@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window sizebox="4,4,4,4" mininfo="348,455" maxinfo="600,680" roundcorner="2,2" caption="0,0,0,80">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+	<Default name="Button" value="fadetime=&quot;300&quot;"/>
+	<Default name="Option" value="fadetime=&quot;300&quot;"/>
+	<!--<Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;3,-2,0,0&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Config.DefaultText&quot;" />-->	
+	<VerticalLayout name="playlistrootpanel" >
+		<HorizontalLayout name="playlistHeaderArea" height="40">
+			<Label bkimage="playlistheader.png" height="23" width="95" padding="10,12,0,0"/>
+			<Control width="2" height="19" bkimage="bkline.png" padding="12,13,0,0"/>
+			<Button name="morebtn" padding="12,13,0,0" height="23" varwidth="true" minwidth="39" maxwidth="100" font="Playlist.more" textcolor="#ff46b4e6" text="更多列表" align="left" setcursor="true"/>
+			<Control />
+			<Button name="packupbtn" visible="false" width="14" height="14" padding="0,13,0,0" statusimage="playlistpackup.png" />
+			<Button name="closebtn" width="14" height="14" padding="25,13,10,0" statusimage="playlistclosebtn.png" />
+		</HorizontalLayout>
+		<TabLayout name="UserLoginArea" minwidth="250" height="40" inset="0,6,0,0" >
+            <HorizontalLayout name="InitLog">
+				<Button name="login"  width="32" padding="5,0,0,0" text="登录" bkcolor="#00000000" setcursor="true" font="Default.FontName.UnderLineBold" textcolor="#ff46b4e6" tooltip="登录尊享个性化歌曲推荐"/>
+				<Label width="91" padding="3,0,0,0"  align="left" text="开启你的音乐云" textcolor="#ff999999"/>
+              <!--Control /-->
+              <!--Button name="reg"  width="64" padding="0,5,5,0" text="快速注册" bkcolor="#00000000" setcursor="true" textcolor="#ffffffff" tooltip="注册账户发现你的专属音乐"/-->
+            </HorizontalLayout>
+            <HorizontalLayout name="LogSuc">
+				<TabLayout name="loadpic" width="30" padding="5,0,0,0">
+					<Label name="loading" padding="5,5,0,0" width="16" height="16" bkimage="loading.png" frametime="1200" framenum="12"/>
+					<UserPhoto name="photo" width="28" height="28" statusimage="btn_userinfo_photo.png" />
+				</TabLayout>
+				<Button name="username" width="70" height="18" padding="0,4,0,0" textcolor="#ff999999" endellipsis="true"/>
+				<Button name="userlevel" visible="false" padding="0,0,0,0" fadetime="0" width="20" bkimage="file='btn_userinfo_level.png' dest='0,0,18,12' source='0,0,18,12'"/>
+				<Button name="vip" width="31" height="13" padding="0,7,0,0" bkimage="vip_1.png"/>
+				<Button  name="logininfolabel" visible="false" width="70" padding="3,4,0,0" height="18"  align="left" text="(已离线)" textcolor="#ff999999"/>
+				<Control />
+				<Button name="mailballon" visible="false" width="14" height="10" fadetime="0" padding="0,10,5,0" statusimage="userinfo_ballon.png" align="center" textcolor="#ffffffff"/>
+				<Button name="newmailcount" padding="-12,3,0,0" bkimage="icon_tool_AddToolBtn_5.png" width="12" height="12"/>
+				<Button name="moreuserinfobtn" visible="true" width="11" height="10" fadetime="0" padding="1,10,8,0" statusimage="userinfo_more.png"/>
+				<Control width="2"/>
+            </HorizontalLayout>           
+            <HorizontalLayout name="LogFail" >
+				<Label   width="103" padding="8,5,0,0" textcolor="#ff999999" text="登录失败，请稍后"/>
+				<Button name="relogin" width="30" padding="3,5,0,0" text="重试" font="Default.FontName.UnderLineBold" bkcolor="#00000000"  textcolor="#ff999999" setcursor="true"/>
+            </HorizontalLayout>
+            <HorizontalLayout name="Loging" >
+				<Label   name="labLoging" align="center" width="103" textcolor="#ff999999" text="正在登录..."/>
+            </HorizontalLayout>
+        </TabLayout>
+		<Control height="1" bkcolor="#FFE2E2E2"/>
+		<HorizontalLayout name="Body" inset="0,0,0,0" sepwidth="-4" sepimm="true">
+			<HorizontalLayout name="ClassListSepline" inset="0,0,3,0" sepwidth="3" sepimm="true" minwidth="110" width="110" bkimage="file='PlaylistSepBkg.png' hole='true'">
+			<VerticalLayout name="BodyLeft" >
+				<Control height="5" mouse="false"/>
+				<Button name="CreateList" text="创建列表" textcolor="#ff77c9ef" tooltip="创建列表" textpadding="13,0,0,0" statusimage="playlist_createnew.png" iconimage="playlist_createnew_icon.png" icondest="12,8,22,18" font="PlaylistFindTip" padding="7,0,0,0" height="24" width="96" />
+				<VerticalLayout padding="0,2,0,0">
+					<List name="BaseLeftList" header="hidden" acceptdrag="true" dragtarget="true" draghovertype="color" inertiascroll="true" itemtextpadding="0,20,20,0" usefadehotbkg="true" padding="3,3,0,3" itemselectedtextcolor="#ffffffff" itemtextcolor="#ff333333" itemhotbkcolor="#ffe7f2f7" itemselectedbkcolor="#ff77c9ef" itemactivetextcolor="#ffffffff" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="center" menu="true" checkboximage="playlist_editbk">
+						<ListHeader>
+							<ListHeaderItem />
+						</ListHeader>
+						<DefChildAttr height="28" menu="true"/>
+					</List>
+					<LISTACCEPTTOPDRAG height="1" enabled="true" mouse="true"/>
+				</VerticalLayout>
+				<!--<Control height="1" bkimage="playlist_left_sepline.png"/>-->
+				<!--<VerticalLayout name="leftBottom" padding="0,3,0,0" height="68">
+					<List name="LeftDownloadList" header="hidden" acceptdrag="true" dragtarget="true" draghovertype="color" inertiascroll="true" itemtextpadding="20,0,20,0" usefadehotbkg="true" padding="3,3,0,3" itemselectedtextcolor="#ffffffff" itemtextcolor="#ff333333" itemhotbkcolor="#ffe7f2f7" itemselectedbkcolor="#ff46b4e6" itemactivetextcolor="#ffffffff" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+						<ListHeader>
+							<ListHeaderItem />
+						</ListHeader>
+						<DefChildAttr height="28" menu="true"/>
+					</List>
+					<LISTACCEPBOTTOMTDRAG height="1" enabled="true" mouse="true"/>
+					<Button name="playlist_DownloadList" text="下载列表" width="65" height="30" />
+					<Button name="playlist_LocalList" text="本地列表" width="65" height="30" />
+				</VerticalLayout>-->
+			</VerticalLayout>
+			</HorizontalLayout>
+			<!--<Control width="1" bkcolor="#FFE2E2E2"/>-->
+			<TabLayout name="MusicPanel" minwidth="230" padding="0,5,0,0">
+				<TabLayout name="MyListPage">
+					<List name="BaseListPanel" header="hidden" acceptdrag="true" dragtarget="true" draghovertype="line" rectangleselect="true" itemtextcolor="#ff666666" itemselectedtextcolor="#ffffffff" itemhotbkcolor="#ffe7f2f7" itemselectedbkcolor="#ff77c9ef" itemexpandbkcolor="#ff46b4e6" inertiascroll="true" usefadehotbkg="true" multiselecting="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+					<ListHeader>
+						<ListHeaderItem />
+					</ListHeader>
+					<DefChildAttr height="32" expandheight="65" menu="true"/>
+					</List>
+					<HorizontalLayout name="DefaultBlankList" menu="true"> <!--默认列表没有歌曲时面板 -->
+					<PLACCEPTDRAG enabled="true" mouse="true">
+					<VerticalLayout name="MyLocalPageNoSongs" >
+						<Label text="列表中暂时没有歌曲，您可以..." height="30" font="PlaylistFindTip" padding="12,0,0,0" />
+						<Button name="MyLocalPageNoSongs_findbase" padding="12,12,0,0" text=".发现乐库好歌" font="PlaylistFindTip" textcolor="#ff46b4e6" varwidth="true" minwidth="82" maxwidth="100" setcursor="true" align="left"/>
+						<Button name="MyLocalPageNoSongs_listenradio" padding="12,12,0,0" text=".收听音乐电台" font="PlaylistFindTip" textcolor="#ff46b4e6" varwidth="true" minwidth="82" maxwidth="100" setcursor="true" align="left"/>
+						<Button name="MyLocalPageNoSongs_getfavorite" padding="12,12,0,0" text=".获取收藏列表" font="PlaylistFindTip" textcolor="#ff46b4e6" varwidth="true" minwidth="82" maxwidth="100" setcursor="true" align="left"/>
+					</VerticalLayout>
+					</PLACCEPTDRAG>
+					</HorizontalLayout>
+				</TabLayout>
+				<VerticalLayout name="MusicRadioPanel" padding="0,0,0,0"> 
+						<List name="MusicRadioList" sendsizemsg="true" minwidth="10" header="hidden" multiexpanding="true" itemtextcolor="#ff666666" itemselectedtextcolor="#ff666666" itemhotbkcolor="#ffe7f2f7" itemselectedbkcolor="#ffdaeff9" itemexpandbkcolor="#ff46b4e6" itemactivetextcolor="#ffffffff" inertiascroll="true" usefadehotbkg="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+					    <ListHeader>
+							<ListHeaderItem bkcolor="#ffff0000"/>
+						</ListHeader>
+						<DefChildAttr height="50" menu="true"/>
+						</List>
+				</VerticalLayout>
+      </TabLayout>
+		</HorizontalLayout>
+		<TabLayout name="PlaylistHelpPanel" height="36" float="true" pos="2,-76,0,-40" inset="0,0,0,0" visible="false">
+		<VerticalLayout name="PlaylistFloatTipsPanel" > <!-- 下方浮层和搜索框 -->
+		<TabLayout name="FloatBubbleTabLayout" bkimage="playlist_float_bk.png"><!-- -->
+			<HorizontalLayout>
+				<Button name="PlaylistFloatTipsText" align="left" padding="8,0,0,0" setcursor="true" fadeouttime="500"/>
+				<Button name="favoriteleft" mouse="true" width="118" padding="8,0,0,0" align="left" />
+				<Button name="favoritemiddle" mouse="true" width="65" padding="0,0,0,0" align="left" setcursor="true" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" />
+				<Button name="favoriteright" mouse="true" width="105" padding="0,0,0,0" align="left" />
+			</HorizontalLayout>
+			<HorizontalLayout name="Uploading" >
+				<Label name="UploadingContent" mouse="false" width="200" padding="8,0,0,0" align="left" textcolor="#ff333333"/>
+				<Button name="UploadingPause" width="30" padding="0,3,0,0" text="暂停" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+				<Control width="1" height="16" bkimage="bkline.png" padding="5,12,0,0"/>
+				<Button name="UploadingCancle" width="30" padding="5,3,0,0" text="取消" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+				<Control mouse="false"/>
+				<Button name="UploadingClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+				<Control width="10" mouse="false"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="UploadedLocal" >
+				<Label name="UploadedContent" varwidth="true" minwidth="100" maxwidth="150" mouse="false" padding="8,0,0,0" align="left" textcolor="#ff333333"/>
+				<Button name="UploadedWatch" varwidth="true" minwidth="50" maxwidth="80" padding="0,3,0,0" text="查看详情" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/> <!---->
+				<Control mouse="false"/>
+				<Button name="UploadedClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+				<Control width="10" mouse="false"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="UploadNetwork" >
+				<Label name="UploadNetworkContent" text="网络异常，" textcolor="#ffbb4800" mouse="false" width="70" padding="8,0,0,0" align="left"/>
+				<Button name="UploadNetworkTryAgain" width="55" padding="0,0,0,0" text="点此重试" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+				<Control />
+				<Button name="UploadNetworkClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+				<Control width="10" mouse="false"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="UploadCommon" >
+				<Label name="UploadCommonContent" textcolor="#ff333333" mouse="false" padding="8,0,0,0" align="left"/>
+				<Button name="UploadCommonClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+				<Control width="10" mouse="false"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="InsertSongRepeat" >
+				<Label name="InsertSongRepeatContent" minwidth="130" textcolor="#ff333333" mouse="false" padding="8,0,0,0" align="left"/>
+				<Control width="10"/>
+				<Button name="InsertSongRepeatDel" width="55" padding="5,3,0,0" text="马上去重" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+				<Control width="1" height="16" bkimage="bkline.png" padding="0,12,0,0"/>
+				<Button name="InsertSongRepeatNHint" width="55" padding="5,3,0,0" text="不再提示" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+				<Control />
+				<Button name="InsertSongRepeatClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+				<Control width="10" mouse="false"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="UploadLocalBefore">
+				<Label name="UploadLocalBeforeContent" varwidth="true" minwidth="90" maxwidth="130" mouse="false" padding="8,0,0,0" align="left" textcolor="#ff333333"/>
+				<Button name="UploadLocalBeforeWatch" minwidth="128" maxwidth="150" varwidth="true" align="left" text="继续同步本地歌曲文件" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" setcursor="true"/><!----> 
+				<Control />
+				<Button name="UploadLocalBeforeClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+				<Control width="10" mouse="false"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="UploadLocalSetting" >
+				<Label name="UploadSettingContent1" text="您可以在" width="55" mouse="false" padding="8,0,0,0" align="left" />
+				<Button name="UploadSettingWatch" minwidth="30" maxwidth="100" varwidth="true" padding="0,0,0,0" text="设置-云同步设置" align="left" font="Playlist.Tooltip.UnderLine" textcolor="#ff46b4e6" setcursor="true"/>
+				<Label name="UploadSettingContent2" text="中开启该功能" varwidth="true" minwidth="30" maxwidth="80" mouse="false" padding="0,0,0,0" align="left" />
+				<Control />
+				<Button name="UploadSettingClose"  height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+				<Control width="10" mouse="false"/>
+			</HorizontalLayout>
+		</TabLayout>
+		</VerticalLayout>
+		<HorizontalLayout name="PlaylistFloatFindPanel" inset="0,0,0,0" >
+			<HorizontalLayout height="36" bkimage="PlaylistFindBkg.png">
+			<PLFINDEDIT name="PlaylistFloatFindEdit" height="24" padding="6,6,0,0" textpadding="30,0,100,0" bkcolor="#00000000" normalimage="PlaylistFindEdit.png" hotimage="PlaylistFindEdit.png" focusedimage="PlaylistFindEdit.png" disabledimage="PlaylistFindEdit.png" maxchar="20" defaulttext="查找歌曲" font="Default.FontName" textcolor="#ff666666"/>
+			<Button name="PlaylistFloatFindNext" width="14" height="24" padding="0,6,0,0" statusimage="PlaylistFindPost.png" tooltip="下一个"/>
+			<Button name="PlaylistFloatFindPre" width="17" height="24" padding="0,6,0,0" statusimage="PlaylistFindPre.png" tooltip="上一个"/>
+			<Button name="PlaylistFloatFindClose" width="9" height="10"  padding="9,14,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭搜索框"/>
+			<Control width="7"/>
+			<Control float="true" pos="15,12,27,24"  mouse="false" bkimage="PlaylistFindIco.png"/>
+			<Label name="PlaylistFloatFindInfoLabel" float="true" pos="-120,12,-65,26" textcolor="#ff999999" mouse="false" font="PlaylistFindTip" align="right"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		</TabLayout>
+		<Control name="PlaylistZeroLine" height="1" bkcolor="#FFE2E2E2"/>
+		<HorizontalLayout name="ToolBarArea" height="40" >
+			<Control />
+			<Button name="toolbaraddmenu" tooltip="添加本地歌曲" padding="0,5,0,0" statusimage="playlistadd.png" width="30" height="30" />
+			<Button name="toolbardustbinmenu" tooltip="删除歌曲" padding="33,5,0,0" statusimage="playlistdel.png" width="30" height="30" />
+			<Button name="toolbarfindmenu" tooltip="查找列表中的歌曲" padding="33,5,0,0" statusimage="playlistsearch.png" width="30" height="30" />
+			<Button name="toolbarplaymodemenu" tooltip="顺序播放" padding="33,5,0,0" statusimage="playmodeorder.png" width="30" height="30" />
+			<Control width="10"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

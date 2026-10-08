@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>url跳转</title>
+<script>
+function getValue(url,key){
+    url = url.toString();
+    if(url.indexOf('#')>=0){
+        url = url.substring(0,url.length-1);
+    }
+    var value='';
+    var begin = url.indexOf(key + '=');
+    if(begin>=0){
+        var tmp = url.substring(begin + key.length + 1);
+        var eqIdx = tmp.indexOf('=');
+        var end = 0;
+        if(eqIdx>=0){
+            tmp = tmp.substring(0,eqIdx);
+            end = tmp.lastIndexOf('&');
+        }else{
+            end = tmp.length;
+        }
+        if(end>=0){
+            try{
+                value = decodeURIComponent(tmp.substring(0,end));
+            }catch(e){
+                value = tmp.substring(0,end);
+            }
+        }else{
+            try{
+                value = decodeURIComponent(tmp);
+            }catch(e){
+                value = tmp;
+            }
+        }
+    }
+    return value;
+}
+
+function getQueryString(url,name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    if(url.indexOf("?")>-1){
+        url = url.split("?")[1];
+    }
+    var r = url.match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return getValue(url,name);
+}
+window.onload = function(){
+    try{
+        //forjumpdata2016
+
+        pwd = getQueryString(loc,"pwd");
+        sid = getQueryString(loc,"sid");
+        uid = getQueryString(loc,"uid");
+        url = getQueryString(loc,"url");
+        post = getQueryString(loc,"post");
+        uname = getQueryString(loc,"uname");
+
+        document.getElementById('pwd').value = pwd;
+        document.getElementById('sid').value = sid;
+        document.getElementById('uid').value = uid;
+        document.getElementById('url').value = url;
+        document.getElementById('post').value = post;
+        document.getElementById('uname').value = uname;
+        document.getElementById('uname').value = uname;
+        document.getElementById('jumpForm').submit();
+    }catch(e){alert(e.message);}
+};
+</script>
+</head>
+<body>
+    <form id="jumpForm" action="http://album.kuwo.cn/album/mbox/login"  method="post">
+        <input type="hidden" id="uname" name="uname"/>
+        <input type="hidden" id="pwd" name="pwd"/>
+        <input type="hidden" id="sid" name="sid"/>
+        <input type="hidden" id="uid" name="uid"/>
+        <input type="hidden" id="url" name="url"/>
+        <input type="hidden" id="post" name="post"/>
+    </form>
+</body>
+</html>

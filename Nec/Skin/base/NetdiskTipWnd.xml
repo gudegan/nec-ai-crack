@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="240,80" roundcorner="6,6">
+  <VerticalLayout  bkimage="clouddiskgb.png">
+    <Control height="20" />
+    <VerticalLayout name="main_con_Ver" height="40" >    	
+    	<HorizontalLayout   name="main_con_Hor" height="40" >
+	    	<Control width="26" />
+	    	<VerticalLayout  width="40">
+	    		<Control />
+	    		<Label name="tipIcon" align="center" width="40" height="40" bkimage="pop_point.png" />
+	    		<Control />
+	    	</VerticalLayout>
+        
+				<Control width="12" />
+				<VerticalLayout name="NetdiskTip_ver" minwidth="90">          
+			  </VerticalLayout>        		
+	    </HorizontalLayout>
+    </VerticalLayout>    
+	  <Control height="20" />
+  </VerticalLayout>
+</Window>

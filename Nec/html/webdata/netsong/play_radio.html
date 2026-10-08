@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>radio</title>
+	<link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/play_radio.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="wrap">
+		<div id="slideBox">
+			<div id="slideControll">
+				<div class="slideBtn">
+					<p>选择</p>
+					<div class="arrow"><i></i></div>
+				</div>
+			</div>
+			<div id="slideCon">
+				<div id="radioNav">
+					<ul class="radioNav">
+						<li>推荐</li>
+						<li>我的</li>
+						<li>心情</li>
+						<li>主题</li>
+						<li>风格</li>
+						<li>曲风</li>
+						<li>场景</li>
+						<li>乐器</li>
+						<li>ACG</li>
+						<li>时间</li>
+						<li>场景</li>
+						<li>语种</li>
+					</ul>
+				</div>
+				<div id="radioChose">
+					<div class="left"></div>
+					<div class="right"></div>
+					<ul class="radioList">
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+						<li><img src="img/default.png"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="radioBox">
+			<div id="rotateBox">
+				<input type="button" id="left" />
+				<div class="directionBtn_left1 j_left_direction"></div>
+				<div class="directionBtn_left2 j_left_direction"></div>
+				<ul id="rotatePic"></ul>
+				<div class="directionBtn_right2 j_right_direction"></div>
+				<div class="directionBtn_right1 j_right_direction"></div>
+				<input type="button" id="right" />
+			</div>
+			<div id="controlBox">
+				<a href="javascript:;" class="control_like iconfont icon-notcollection" title="喜欢"></a>
+				<a href="javascript:;" class="control_delete iconfont icon-delete" title="不喜欢"></a>
+				<a href="javascript:;" class="control_next iconfont icon-next" title="下一首"></a>
+				<a href="javascript:;" class="control_add iconfont icon-addbtn" title="更多"></a>
+			</div>
+			<div id="playingInfoBox">
+				<div class="playingInfoPosBox">
+					<p class="now">正在播放：</p>
+					<p class="info allowSelect"></p>
+				</div>
+			</div>
+			<div id="artistRadioBox"></div>
+		</div>
+	</div>
+	<!-- model -->
+	<ul id="radioNavModel" style="display:none;">
+		<li>{$name}</li>
+	</ul>
+	<div id="kw_radioListBoxModel" style="display:none;">
+		<ul class="radioList">{$radioList}</ul>
+	</div>
+	<ul id="kw_radioListModel" style="display:none;">
+		<li class="br_wrap {$radioClass}" data-index="{$indexNum}" data-pid="{$pid}">
+			<a _onclick="{$log}{$click}" onclick="{$log}{$click}" title="{$titlename}" class="br_pic" href="javascript:;" hidefocus="">
+				<span class="br_shade"></span>
+				<i title="直接播放" class="i_play i_play_big"></i>
+				<img class="lazy" width="140" height="140" src="img/default.png" onerror="imgOnError(this,150)"; data-original="{$pic}">
+				<span class="br_name">{$name}</span>
+			</a>
+		</li>
+	</ul>
+	<ul id="kw_playRadioListModel" style="display:none;">
+		<li class="{$radioClass} {$liClass}">
+			<div class="box {$radioClass}">
+				<a _onclick="{$log}{$click}" onclick="{$log}{$click}" title="{$titlename}" class="br_pic" href="javascript:;" hidefocus="">
+					<img class="playinglazy" src="img/default.png" onerror="imgOnError(this,300);" data-original="{$pic}" />
+					<span class="bg_shadow"></span>
+					<i title="直接播放" class="i_play i_play_radio"></i>
+                    <div class="infoBox">
+                        <span class="br_name" title="{$name}"><span>{$name}</span></span>
+                        <span class="lis_cnt">{$listen}</span>
+                    </div>
+				</a>
+			</div>
+			<div class="shadow"></div>
+		</li>
+	</ul>
+	<div id="kw_artistRadioModel" style="display:none;">
+		<span class="bg_shadow"></span>
+		<a href="javascript:;" class="artistpicbox" title="{$artisttitle}" onclick="{$artistclick}">
+			<img class="artistImg" src="img/default.png" width="50" height="50" onerror="
+		imgOnError(this,60);" data-original="{$pic}">
+		</a>
+		<a href="javascript:;" class="artistRadio_like" c-id="{$a_id}" c-digest="4">
+			<span class="left_icon"><i></i></span>
+			<span class="content_name" title="收藏该艺人">收藏艺人</span>
+		</a>
+		<a href="javascript:;" class="radio_btn artist_radio" c-id="{$a_id}" c-name="{$name}">
+			<span class="left_icon"><i></i></span>
+			<span class="content_name" title="播放">播放</span>
+		</a>
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/move.js"></script>
+<script src="js/comm2.js"></script>
+<script src="js/music.js"></script>
+<script src="js/play_radio.js"></script>
+</html>

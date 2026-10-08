@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="175,148" roundcorner="10,10">
+	<Default name="Label" value="font=&quot;Default.FontName&quot; textcolor=&quot;#FF333333&quot;"/>
+  <Default name="Button" value="setcursor=&quot;true&quot;"/>
+	<VerticalLayout name="hq">
+		<HorizontalLayout name="hq_perfect_rc" height="32">
+		<Label   name="hq_perfect_code"    width="65" text="无损音质" align="right" textcolor="#FFC9A328"/>
+		 <Label   name="hq_perfect_bitrate" width="40" text="APE" align="left" padding="10,0,0,0" textcolor="#FFC9A328" />
+		 <Control name="hq_perfect_img"     width="16" height="17" bkimage="vip_logo.png" padding="0,6,0,0" />
+		 <Button name="hq_perfect_play"    width="14" height="14" padding="0,9,0,0" />
+		</HorizontalLayout>
+
+		<HorizontalLayout name="hq_super_rc" height="32">
+		 <Label   name="hq_super_code"    width="65" text="超品音质" align="right" textcolor="#FF323C50" />
+		 <Label   name="hq_super_bitrate" width="40" text="320K" align="left" padding="10,0,0,0" textcolor="#FF323C50" />
+		 <Control name="hq_super_img"     width="16" height="17" bkimage="vip_logo.png" padding="0,6,0,0" />
+		 <Button name="hq_super_play"    width="14" height="14" padding="0,9,0,0" />
+		</HorizontalLayout>
+
+		<HorizontalLayout name="hq_high_rc" height="32">
+		 <Label   name="hq_high_code"    width="65" text="高品音质" align="right" textcolor="#FF323C50" />
+		 <Label   name="hq_high_bitrate" width="40" text="128K" align="left" padding="10,0,0,0" textcolor="#FF323C50" />
+		 <Control name="hq_high_img"     width="22" />
+		 <Button name="hq_high_play"    width="14" height="14" padding="2,9,0,0" />
+		</HorizontalLayout>
+
+		<HorizontalLayout name="hq_generic_rc" height="32">
+		 <Label   name="hq_generic_code"    width="65" text="流畅音质" align="right" textcolor="#FF323C50" />
+		 <Label   name="hq_generic_bitrate" width="45" text="WMA" align="left" padding="10,0,0,0" textcolor="#FF323C50" />
+		 <Control name="hq_generic_img"     width="17" />
+		 <Button name="hq_generic_play"    width="14" height="14" padding="2,9,0,0" />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

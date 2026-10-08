@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="398,230" caption="0,0,0,60" roundcorner="2,2">
+  <EventHook event="OnSkinChange">
+    <!--<Attribute control="text_title" value="textcolor=&quot;Global.DarkGray&quot;" />-->
+  </EventHook>
+  <VerticalLayout name="root">
+    <HorizontalLayout name="PopUpTitleHor">
+      <Label name="Usr_title" text="账号绑定" theme="PopUpTitle"/>
+      <Control />
+      <Button name="btn_close" theme="PopUpCloseBtn" />
+    </HorizontalLayout>
+    <Control height="1" theme="#Msg_SepLine"/>
+    <HorizontalLayout name="UsrPayBindInfo">
+
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

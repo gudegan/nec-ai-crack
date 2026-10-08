@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,0" size="300,270" roundcorner="2,2">
+  <VerticalLayout name="root">
+    <HorizontalLayout name="SyncCoolBeanPage">
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

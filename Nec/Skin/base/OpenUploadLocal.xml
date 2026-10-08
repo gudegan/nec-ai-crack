@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,200" roundcorner="5,5" caption="0,0,0,50" >
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;Config.DefaultText&quot;" />
+	<VerticalLayout  inset="4,4,4,4" bkcolor="#00000000">
+		<HorizontalLayout height="50">
+			<Label text="同步本地歌曲文件" textpadding="15,0,0,0" width="200" textcolor="#ff000000" mouse="false" font="Playlist.newlist"/>
+			<Control />
+			<Button name="close" width="22" height="22" padding="0,6,0,0" statusimage="Config_CloseBtn.png" tabstop="true"  tooltip="关闭" tabstop="true"/>
+			<Control width="6"/>
+		</HorizontalLayout>
+		<Label text="开启该功能后，每次同步都会自动将列表中的" textcolor="#ff333333" font="Main.ChannelTitle" padding="15,5,0,0" />
+		<Label text="本地歌曲文件上传到音乐云。" textcolor="#ff333333" font="Main.ChannelTitle" padding="15,0,0,0" />
+		
+		<Label text="(该功能正在公测中，如有问题欢迎向我们反馈)" textcolor="#ff999999" padding="14,10,0,0"/>
+		<Control height="8"/>
+		<HorizontalLayout height="50">
+			<Button name="UploadLocalOpen" text="马上开启" padding="98,10,0,0" height="30" width="80" statusimage="Config_Button.png" tabstop="true"/>
+			<Button name="UploadLocalCancel"   text="取消" padding="10,10,0,0" height="30" width="80" statusimage="Config_Button.png" tabstop="true"/>
+			<Control height="10"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

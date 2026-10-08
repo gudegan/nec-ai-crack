@@ -1,0 +1,158 @@
+/* tab标签 */
+h3 { float:left; width:100%; height:29px;margin-bottom:20px; position:relative;}
+h3.tab{border-bottom:#dbdbdb 1px solid;}
+h3 a { float:left; width:80px; height:30px; line-height:29px; font-weight:normal; color:#323c50; font-size:13px; text-align:center; background:url(../img/com_icon.png) no-repeat -80px 0px; margin:0 -1px -1px 0; position:relative; z-index:1;}
+h3 .current{ color:#19aad2; background:url(../img/com_icon.png) no-repeat 0px 0px; z-index:2;}
+h3 a:hover { color:#19aad2;}
+.bread { display:none;float:left; width:100%; height:24px; line-height:24px; font-size:14px; color:#888999; margin:5px 0 7px 0; overflow:hidden;position:relative;}
+.bread a { color:#19aad2;}
+.newlist { display:block;background:#f5ffff; border-top:#93ceee 1px dashed; border-bottom:#93ceee 1px dashed; padding-top:3px;padding-bottom:3px; margin-bottom:8px;clear:both;}
+
+
+
+.bnew { float:right; display:none; padding-left:40px; font-size:14px; color:#0aafe6; height:26px; margin-top:6px;}
+.breadback { position:absolute;right:0px; font-size:12px;}
+
+
+/*歌单内容页样式*/
+.classify font{font-size:12px;}
+.gedan_head { float:left; width:100%;margin-bottom:20px; margin-top:20px;position:relative; overflow:hidden;}
+.gedan_head .pic{ float:left; width:162px; height:157px;position: relative;}
+.gedan_head .pic img {border-radius: 5px; box-shadow: 3px 3px 6px #c6c6c6; }
+.gedan_head .h_r { padding-left: 168px;}
+.gedan_head p { color:#999; font-size:12px; line-height:18px;position:relative;}
+.gedan_headf p.user{color:#000 !important;}
+.gedan_head p.user font { color:#888999; font-size:12px; line-height:18px;}
+.gedan_head .name {  font-size:20px; color:#000000; margin:14px 0 20px 0;}
+.gedan_head .classify,.gedan_head .user{ margin-bottom:14px;overflow:hidden;*zoom:1;}
+.gedan_head .user{color:#999;padding-right: 11px;margin-bottom: 13px;}
+.gedan_head .c_name{color:#999;padding-right: 11px;}
+.gedan_head .user font{ font-weight: normal;color:#888999;}
+
+.gedan_head .user font{font-size:12px; color:#999;margin-left:11px;}
+.gedan_head .user .create_name{font-size:12px; color:#000;margin-left:11px;}
+.gedan_head  p .icon{width: 16px;height: 16px;display: none;position: absolute;top:0;left:0;background: url(../img/icon_tip.png) no-repeat;}
+.gedan_head .classify .icon_u{ background-position: 0 0;}
+.gedan_head .user .icon_u{ background-position: 0 0;}
+.gedan_head .info .icon_info{background: url(../img/icon_tip.png) no-repeat -35px 0;margin-top:1px;}
+
+
+.gedan_head .classify .icon_tag{ background-position: -16px -1px;margin-top:2px;}
+.gedan_head .classify a { color:#0aafe6;cursor:default;}
+.gedan_head .classify a.tag_item:hover { cursor:default;}
+.gedan_head .classify .tag_item{float: left;display:inline;margin-right: 11px;padding:0 10px;border-radius:12px;border:1px solid #83b7d8;text-align:center;height: 18px;line-height: 18px;}
+.gedan_head .info { height:36px; overflow:hidden; padding:0 15px 6px 0;}
+.gedan_head .info.special {height: auto}
+.gedan_head .info span a{ margin-left:5px; color:#0aafe6;}
+.gedan_head .info span a:hover{ text-decoration:underline;}
+.gedan_head .on { height:auto;}
+
+.artist_head {height:100px; margin-bottom:20px; position:relative;width:100%;background:url(../img/artist_banner.jpg) repeat-x 0 0;}
+.artist_head .left_mask{position: absolute;left:0;top:0;width:4px;height:100px;}
+.artist_head .right_mask{position: absolute;right:0;top:0;width:4px;height:100px;}
+.artist_head .pic{ float:left; width:76px; height:76px;overflow:hidden;margin:12px 12px 0 21px;border-radius:38px;position: relative;}
+.artist_head .h_r { padding-left:80px;}
+.artist_head .pic img{width: 76px ;height: 76px;}
+.artist_head p { color:#888999; font-size:12px; line-height:18px;}
+.artist_head .art_btn_wrap{overflow: hidden;*zoom:1;*width:auto;height:28px;position: absolute;right:0;top:36px;}
+.artist_head .name { height:26px; line-height:26px; font-size:18px; color:#323c50;margin-top: 37px;}
+.artist_head .like_btn{display:none;margin-left:10px;width:67px;height:28px;line-height:28px;background: url(../img/icon_png8.png) no-repeat -112px -100px;position: absolute;font-size:0;text-indent:-9999px;}
+.artist_head .like_btn:hover{background: url(../img/icon_png8.png) no-repeat -112px -133px;}
+.artist_head .like_btn.like_current{width:78px;background:url(../img/icon_png8.png) no-repeat -180px -100px;text-indent:-9999px;padding-left: 0;}
+.artist_head .like_btn.like_current:hover{background:url(../img/icon_png8.png) no-repeat -180px -133px}
+
+
+.selall_mv .like_btn{display:block;width:67px;height:28px;line-height:28px;background: url(../img/icon_png8.png) no-repeat -112px -100px;left:102px;font-size:0;text-indent:-9999px;overflow:hidden;}
+.selall_mv .like_btn:hover{background: url(../img/icon_png8.png) no-repeat -112px -133px;}
+.selall_mv .like_btn.like_current{width:78px;background:url(../img/icon_png8.png) no-repeat -180px -100px;text-indent: inherit;}
+.selall_mv .like_btn.like_current:hover{background:url(../img/icon_png8.png) no-repeat -180px -133px}
+
+
+.artist_head .radio_btn{width:91px;height:28px;background:url(../img/icon_png8.png) no-repeat -111px -164px;position:absolute;padding-left: 0;}
+.artist_head .radio_btn.artist_radio{position: static;float:left;}
+.artist_head .radio_btn:hover{background:url(../img/icon_png8.png) no-repeat -111px -193px;}
+.common_content { display:none;}
+
+.bang_head { float:left; width:100%; margin:20px 0 20px 0; position:relative;border-radius: 4px; z-index:99;}
+.bang_box {float:left;width:100%;height: 100px;}
+.bang_head .bang_left {float:left;height:100px;overflow:hidden;}
+.bang_head .bang_left .bang_name {float:left;font-size:38px;color:#fff;margin-left:29px;display:inline;height:100px; line-height:100px;}
+.bang_head .bang_info{float:left; display:inline; margin:54px 0 0 20px;}
+.bang_head .time {font-size:14px;color:#fff;}
+.bang_head .bang_right {float:right;width:207px;}
+
+
+.album_head{overflow:visible;z-index:1000;height:157px;padding-top:20px;}
+.album_head .icon{width: 16px;height: 16px;	display: block;	position: absolute;	top: 0;	left: 0;background: url(../img/icon_tip.png) no-repeat;}
+.album_head .icon.icon_u{background-position: 0 0;}
+.album_head .icon.icon_info{background-position: -52px 0;}
+.album_head .icon.icon_date{background-position: -35px 0;margin-top:3px;}
+.album_head .icon.icon_lang{background-position: -52px 0;margin-top:4px;}
+.album_head .lang {padding-top:3px;}
+.album_head .datetime {padding-top:3px;}
+.album_head { float:left; width:100%;margin-bottom:13px; position:relative; overflow:hidden;}
+.album_head p {font-size:12px;}
+.album_head .pic{ float:left; width:189px; height:157px;position: relative;}
+.album_head .pic img {border-radius: 5px; box-shadow: 3px 3px 6px #c6c6c6; }
+.album_head .pic .bg_vinyl{position:absolute; right:0; top:10px; width:39px; height:130px; background:url(../img/bg_vinyl.png) no-repeat;}
+.album_head .h_r { padding-left:110px;}
+.album_head p {color: #999;padding-right: 11px;position: relative;padding-left: 24px;}
+.album_head .name { height:26px; line-height:26px; font-size:18px; color:#000;   margin: 7px 0 16px 0;}
+.album_head .artist span a { color:#333; font-size:12px;}
+.album_head .artist span a:hover{ color:#07b2e5;text-decoration:none;}
+
+.classify_head { display:none;float:left; width:100%; height:58px;position:relative; overflow:hidden;}
+.classify_head .pic{ float:left; width:70px; height:70px;display: inline;margin-right: 10px;}
+.classify_head .h_r { padding-left:80px;}
+.classify_head p { color:#888999; font-size:12px; line-height:18px;}
+.classify_head .name { height:26px; line-height:26px; font-size:20px; color:#000; margin-top:10px;font-weight: 500;}
+
+.mv_head { float:left; width:100%; height:70px; margin:0 0 20px 0; position:relative; overflow:hidden;}
+.mv_head p .icon{width: 16px;	height: 16px;	display: block;	position: absolute;	top: 0;	left: 0;background: url(../img/icon_tip.png) no-repeat;}
+
+.mv_head .pic{ float:left; width:150px; height:150px;}
+.mv_head .h_r {}
+.mv_head p { color:#999; font-size:12px; line-height:18px;position: relative}
+.mv_head .name {font-size: 20px;color: #000000;margin: 20px 0 15px 0;}
+.mv_head .info{padding-left: 24px;float:left;}
+.mv_head .info .icon.icon_info{background-position:-35px 0}
+
+/* 弹幕样式 */
+.tm_mv{display:block;z-index:999;background:url(../img/tanmu/tm.png);width:27px;height:14px;position:absolute;right:0px;top:0px;}
+
+/*2015-0827 个性化歌单新样式 by rsw*/
+.newrcm_head{background:#b5b2ba; position:relative;}
+.newrcm_head .rcm_title{position:absolute; left:110px; top:65px; height:14px; line-height:14px; _height:16px; _line-height:16px; font-family:"Microsoft YaHei";  font-size:14px; color:#fff;}
+/*20150914 个性化发现内容页的推荐理由样式 by rsw*/
+.discoverText{padding-left:40px; margin-bottom:4px; font-size:12px; color:#8c8c91; background:#f2f2f2;}
+.discoverText span,.discoverText a{display:inline; zoom:1; height:34px; line-height:34px; word-break:break-all;}
+.discoverText a{color:#19aad2;}
+.music_wrapDiscover{margin-bottom:4px;}
+.rcm_advice{width:620px; height:85px; margin:0 auto; margin-top:32px;}
+/*新增结束*/
+
+/*打榜倒计时*/
+.conCount { overflow:hidden; height:30px;padding-bottom:16px; line-height:30px; text-align:center;width:209px;margin:0 auto;display: none;}
+.countdown .countdownT{float:left; margin-right:10px; font-size:12px; color:#333;}
+.countdown img{float:left; margin-right:3px;}
+.time-box{position: relative;width:101px;height:30px;float:left;background:url(../img/def165.png) no-repeat;}
+.time-box .minutes{height:30px;float:left;letter-spacing:15px;padding-left: 6px;font-weight:600;color:#5a5d63;}
+.time-box .seconds{color:#5a5d63;height: 30px;float:right;position:absolute;right:-9px;letter-spacing:15px;font-weight:600;}
+
+/*酷我曲库ugc相关css*/
+.kw_ugcInfoIcon,.kw_ugcInfoIconAlbum {width:12px;height: 12px;float:left;background:url(../img/ugc_info.png) no-repeat; margin-top: 12px;}
+.ugc_tipsBox {position:absolute;right:65px; top:0;display: none;padding:20px; border:1px solid #ddd; border-radius:3px; background:#fff;z-index:1001;}
+.ugc_content{width:216px;position: relative;}
+.ugc_content p{font-size:12px; height:12px; line-height:12px; padding:2px 0;color:#999;}
+.ugc_content a{float:right; font-size:12px; color:#21a0ed;}
+.ugc_content .userName {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:120px;}
+.ugc_content_desc{float:left;}
+.ugc_info_triangle_down{position:absolute; right:7px; bottom:-9px; width:14px; height:9px; background:url(../img/ugc_info_triangle.png) no-repeat;}
+.ugc_content .info_line1,.ugc_content .info_line2{height:16px;line-height: 16px;}
+.ugc_content .info_line1,.ugc_content .info_line2{margin-bottom:16px;}
+.ugc_close {position: absolute;right: -15px;top: -15px;width: 10px;height: 10px;background: url(../img/earth_close.png) no-repeat;cursor: pointer}
+.jianjie_z {float:left;}
+.kw_ugcInfoIconAlbum {margin:8px 0 0 10px;cursor: pointer;display: none}
+.ugc_album {right:-212px;top:33px;line-height: 16px;}
+.ugc_album .ugc_info_triangle_down{background:url(../img/ugc_info_triangle_top.jpg) no-repeat;top:-9px;left:37px;}
+/*酷我曲库ugc相关css end*/

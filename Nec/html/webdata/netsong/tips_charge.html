@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>下载单曲页面tips</title>
+    <style>
+        body, h1, h2, h3, h4, h5, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, button, input, textarea, th, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, button, input, select, textarea {
+            font: 12px "Microsoft YaHei", arial, sans-serif;
+        }
+
+        body {
+            background: transparent;
+        }
+
+        address, cite, dfn, em, var {
+            font-style: normal;
+        }
+
+        html, body {
+            cursor: default;
+            overflow: hidden;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        img {
+            border: 0 none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        font {
+            font-size: 12px;
+        }
+
+        .w_loading {
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            margin: -16px -16px 0 0;
+        }
+
+        .page-top-tips {
+            height: 42px;
+            padding-left: 20px;
+            line-height: 42px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .d_container {
+            margin: 0 auto;
+        }
+
+        .pay_tsrr {
+            text-align: center;
+            margin: 32px 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /*908付费需求*/
+        .song-cover {
+            width:106px;
+            height:106px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,.1);
+        }
+        .cover-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 2px;
+        }
+        .tag {
+            width: 28px;
+            height: 14px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        /*end*/
+        .pay_tsrr p {
+            line-height: 20px;
+        }
+        .pay_tsyq {
+            font-size: 14px;
+            margin: 22px 10px 6px;
+            color:rgba(51,51,51,1);
+        }
+
+        .list-song-box {
+            display: none;
+        }
+        .list-song-text {
+            width: 224px;
+            font-size: 14px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            margin: 22px 0 4px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+        .list-song-left {
+            width: 70px;
+        }
+        .list-song-name {
+            max-width: 84px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .list-song-right {
+            width: 70px;
+        }
+        .pay_tsxz {
+            height: 18px;
+            font-size: 12px;
+            font-weight:400;
+            color: #999;
+            width: 100%;
+        }
+        .pay-tsxz-highlight {
+            font-weight:600;
+            color:rgba(239,43,43,1);
+            margin: 0 1px;
+        }
+
+        .pay-but {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pay-but .sr {
+            background: #FAD785 !important;
+            border-radius: 3px;
+            display: inline-block;
+            width: 160px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            font-size: 14px;
+            color:#A16B00 !important;
+            font-family: 'Microsoft Yahei';
+            background-position: 0 0;
+        }
+
+        .pay-but .sn {
+            border-radius: 3px;
+            display: inline-block;
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            font-family: "Microsoft Yahei";
+            background-position: 0 -207px;
+        }
+
+        .pay-but .span {
+            font-size: 12px;
+        }
+
+        .pay-but .st {
+            border-radius: 3px;
+            display: inline-block;
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            font-family: "Microsoft Yahei";
+            background-position: 0 -104px;
+        }
+
+        .month-pay-btns a {
+            display: block;
+        }
+
+        .month-pay-btns a:first-child {
+            background-color: #FFDF1F;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 0 20px;
+            min-width: 120px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            font-size: 14px;
+            color: #333333 !important;
+            font-family: 'Microsoft Yahei';
+        }
+
+        .month-pay-btns a:last-child {
+            margin-top: 10px;
+            text-align: center;
+            font-size:12px;
+            font-family: 'Microsoft Yahei';
+            font-weight:400;
+            color:rgba(74,123,180,1) !important;
+        }
+
+        .default .pay-but a {
+            color: #000000
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/comm2.js" type="text/javascript"></script>
+    <script>
+        var version = "";
+        var musicobj;
+        var rid = '';
+        var listenMusicHq;
+        var musicSizeInfo = "";
+        var timerCount = 0;
+        var psrcPath;
+        var audition;
+
+        var newTips;
+        var downtype = "music";
+        var downbr;
+        var downprice = 0;
+        var downpid = "";
+        var buytype = "song";
+        var albumid = 0;
+
+        var payObj = {};
+        var userObj;
+        var tryTimes = 0;
+        var sendFeeLogFlag = false;
+
+        var locationHref = window.location.href;
+        // 是否切换音质
+        var ifUserChangeQuality = getValue(locationHref, 'bUserChangeQuality') === '1';
+        /*
+        * 是否可以在线播放
+        * @author 邢祥超 [20190709]
+        * */
+        var iscantplayonline;
+        /*
+        * 908 付费低价策略需求
+        * 用户信息 loginUid/virtualUid
+        * 缓存 cacheId
+        * 是否低级策略 isLowPrice
+        * */
+        var loginUid = getUserID('uid');
+        var virtualUid = getVirtualUid('viruid');
+        var cacheId = '';
+        var newCatchKey = 'PCAdInfoObjDownNew251013';
+        var isLowPrice = 0;
+        var listen30TipsInfo = {}; // 试听30秒提示文案
+        if (loginUid !== '0') {
+            cacheId = loginUid;
+        } else if (virtualUid !== '0') {
+            cacheId = virtualUid;
+        }
+        // 判断弹窗是否是 mv拦截窗
+        const isMvType = (function () {
+          const mvArr = ['SD', 'HD', 'FHD', 'BD'];
+          const HQ = getValue(locationHref, 'HQ');
+          return mvArr.indexOf(HQ) > -1;
+        })()
+        var PCAdInfoObj = {};
+
+        $(function () {
+            const flag = window.location.href.indexOf('noResize') > -1;
+            if (!flag) {
+                callClientNoReturn('ReSize?width=268&height=292');
+            }
+            callClientNoReturn('ShowWindow');
+            getVersion();
+            showMusisinfo();
+        });
+        window.onerror = function () {
+            return true;
+        };
+
+        function realTimeLog(type, msg) {
+            callClientNoReturn("LogRealTime?type=" + type + "&msg=" + encodeURIComponent(msg));
+        }
+
+        function getVersion() {
+            if (version === "") version = callClient("GetVer");
+            return version;
+        }
+
+        function getUserID(s) {
+            var clientString = callClient("UserState?src=user");
+            var clientid = getValue(clientString, s);
+            if (clientid == "") {
+                clientid = 0;
+            }
+            return clientid;
+        }
+
+        function getVirtualUid(s){
+            return getValue(callClient("VirtualUsrState"), s);
+        }
+
+        function getValue(url, key) {
+            url = url.toString();
+            if (url.indexOf('#') >= 0) {
+                url = url.substring(0, url.length - 1);
+            }
+            var value = '';
+            var begin = url.indexOf(key + '=');
+            if (begin >= 0) {
+                var tmp = url.substring(begin + key.length + 1);
+                var eqIdx = tmp.indexOf('=');
+                var end = 0;
+                if (eqIdx >= 0) {
+                    tmp = tmp.substring(0, eqIdx);
+                    end = tmp.lastIndexOf('&');
+                } else {
+                    end = tmp.length;
+                }
+                if (end >= 0) {
+                    try {
+                        value = decodeURIComponent(tmp.substring(0, end));
+                    } catch (e) {
+                        value = tmp.substring(0, end);
+                    }
+                } else {
+                    try {
+                        value = decodeURIComponent(tmp);
+                    } catch (e) {
+                        value = tmp;
+                    }
+                }
+            }
+            return value;
+        }
+
+        function getUser(arr, flag) {
+            try {
+                var closeStr = false;
+                if (arr && arr.length > 0) {
+                    closeStr = true;
+                    for (var i = 0, j = arr.length; i < j; i++) {
+                        var someuser = arr[i];
+
+                        if (someuser.type == 'vip' && someuser.order == 0) {
+                            userObj = someuser;
+                            break;
+                        }
+                    }
+                }
+                if (closeStr && flag == true) {
+                    callClientNoReturn("CloseWindow");
+                }
+            } catch (e) {
+            }
+        }
+
+        // 客户端回调方法
+        function sendFeeLog(){
+            if(!sendFeeLogFlag){
+                realTimeLog("MUSIC_FEE","FEE_TYPE:DOWNLOAD_SHOW");//下载收费弹窗露出发送日志
+                sendFeeLogFlag = true;
+            }
+        }
+
+        // 客户端回调方法
+        function downOnLogin(param) {
+            loginUid = getUserID('uid');
+            virtualUid = getVirtualUid('viruid');
+            $(".w_loading").show();
+            showPayinfo(true);
+        }
+
+        // 获取歌曲信息-初始化信息入口
+        function showMusisinfo() {
+            var musicinfo = callClient("DGetMusicListInfo");
+            musicobj = eval('(' + musicinfo + ')');
+            if (!musicobj || !musicobj.musiclist || musicobj.musiclist.length != 1) {
+                return;
+            }
+            listenMusicHq = musicobj.musiclist[0].musicformat[0].name;
+            musicobj = musicobj.musiclist[0];
+            psrcPath = musicobj.psrc;
+            iscantplayonline = musicobj.iscantplayonline || '0';
+            rid = musicobj.rid;
+            if (rid.indexOf("MUSIC_") > -1) {
+                rid = rid.replace("MUSIC_", "");
+            }
+            getCoverImg(rid, musicobj.name);
+            var musicformat = musicobj.musicformat;
+            if (musicformat && musicformat.length == 1) {
+                musicSizeInfo = musicformat[0].size;
+            }
+            audition = musicobj.audition;
+            // 音质获取不到 补救措施
+            if (timerCount < 30) {
+                if (!musicformat) {
+                    setTimeout(function () {
+                        showMusisinfo();
+                    }, 50);
+                    timerCount++;
+                    return;
+                }
+            }
+            if (isMvType) {
+              // 2020-4-9 新增mv播放拦截 获取接口文案， 在此处做判断类型是单曲还是mv
+              getMvInfo();
+            } else {
+              if (audition === '1') {
+                tpayConfigInfo();
+              }
+              showPayinfo(false);
+            }
+        }
+        // 获取mv拦截信息
+        function getMvInfo() {
+            var userInfo = '';
+            var uid = loginUid !== '0' ? loginUid : '-1';
+            var vir = virtualUid !== '0' ? virtualUid : '-1';
+            if (loginUid || virtualUid) {
+                userInfo = `&loginUid=${uid}&virtualUid=${vir}`;
+            }
+            var URL = `http://vip1.kuwo.cn/vip/v2/sysinfo?op=getRePayAndDoPayBoxNew&platform=pc&isShowNewPayConfig=1&ver=${version}&${userInfo}`
+            var DEFAULTJSON = {
+              'boxText': '版权方要求，该视频需要开通会员后播放',
+              'buttonVIPText': '立即开通'
+            };
+            $.ajax({
+                url: URL,
+                dataType: 'json',
+                type: "get",
+                crossDomain: false,
+                timeout: 3000,
+                success: function (res) {
+                  if (res.data&&res.data.videoInterceptBoxPc) {
+                    var videoInterceptBoxPc = res.data.videoInterceptBoxPc;
+                    // saveDataToCache('videoInterceptBoxPc', JSON.stringify(videoInterceptBoxPc), 21600);//寸cache 6小时
+                    showMvInfo(videoInterceptBoxPc);
+                  } else {
+                    // $(".w_loading").html(`<a href="###" onclick="reload()">点此刷新</a>`);
+                    showMvInfo(DEFAULTJSON);
+                    return;
+                  }
+                },
+                error: function () {
+                    showMvInfo(DEFAULTJSON);
+                }
+            });     
+        }
+        // 展示mv信息
+        function showMvInfo (obj) {
+          $('.pay_tsyq').html(obj.boxText);
+          $('.pay_tsxz').hide();
+          // $('#d_music_single_down').html(obj.buttonVIPText).show().siblings().hide();
+          $("#d_music_monthly").html(obj.buttonVIPText).show();
+          $('.w_loading').hide();
+          $('#tipChangeTag').show();
+          $('.pay_tsrr').show();
+          // 日志
+          // realTimeLog('MUSIC_FEE', 'FEE_TYPE:OPEN_BTN_SHOW|VIEW_TYPE:SINGLE_LISTEN_DOWNLOAD');
+        }
+        // 付费3.0
+        function tpayConfigInfo() {
+            var jsonStrReg = /^\{.*\}$/;
+            var listen30TipsInfoCache = getDataByCache('listen30TipsInfo');
+            if (jsonStrReg.test(listen30TipsInfoCache)) {
+                listen30TipsInfo = JSON.parse(listen30TipsInfoCache);
+                return;
+            }
+            $.ajax({
+                url: `http://vip1.kuwo.cn/vip/v2/sysinfo?op=getRePayAndDoPayBox&platform=pc&isShowNewPayConfig=1&ver=${version}`,
+                type: 'get',
+                dataType: 'json',
+                success: function (res) {
+                    listen30TipsInfo = res.data.tryListen30Box || {};
+                    saveDataToCache('listen30TipsInfo', JSON.stringify(listen30TipsInfo), 21600);//寸cache 6小时
+                },
+                error: function () {
+                    listen30TipsInfo = {
+                        "picUrl": "http://kwimg2.kuwo.cn/star/upload/3/3/1530095844675_.png",
+                        "boxText": "正在播放歌曲试听片段。开通会员畅享VIP歌曲，支持好音乐。",
+                        "buttonVIPText": "会员畅听完整版",
+                        "buttonUrl": "http://vip1.kuwo.cn/vip/added/mbox/music.html?fromsrc=audition_btn_play",
+                        "buttonText2": null,
+                        "buttonUrl2": null,
+                        "boxTitle": null,
+                        "boxTitleSong": "正在播放*歌曲片段",
+                        "bottomText": null,
+                        "isShowBox": 1
+                    };
+                    saveDataToCache('listen30TipsInfo', JSON.stringify(listen30TipsInfo), 21600);//寸cache 6小时
+                }
+            });
+        }
+
+        // 获取音乐信息
+        function getMusicInfo(obj) {
+            var musicString = '{"songs":[{"id":"' + obj.rid + '","br":"' + downbr + '","songName":"' + obj.name + '","albumName":"' + obj.album + '","price":"' + downprice + '","type":"' + downtype + '","pid":"' + downpid + '"}]}';
+            return encodeURIComponent(musicString);
+        }
+
+        function showPayinfo(flag) {
+            var kid = getUserID("kid");
+            var isLocalEncrp = musicobj.encrp === "1" && musicobj.playonline === "1"; //本地已下载加密
+            var copywritingtype = '';
+            if (audition === '1') {
+                copywritingtype = '4';
+            } else if (isLocalEncrp) {
+                copywritingtype = '3';
+            }
+            var url = `http://musicpay.kuwo.cn/music.pay?op=query&src=mbox&apiversion=1&feeTypeVer=4&uid=${loginUid}&sid=${kid}&ver=${version}&action=play&ids=${rid}&signver=new&copywritingtype=${copywritingtype}&time=${Math.random()}`;
+            $.ajax({
+                url: url,
+                dataType: "text",
+                type: "get",
+                crossDomain: false,
+                timeout: 4000,
+                success: function (paydata) {
+                    realTimeLog('MUSIC_PAY_DETAIL', 'DATA:' + encodeURIComponent(paydata) + '|PAGE:tips_charge');
+                    if (!paydata || paydata.indexOf('"ok"') < 0) {
+                        $(".w_loading").html(`<a href="###" onclick="reload()">点此刷新</a>`);
+                        return;
+                    }
+                    var obj = eval('(' + paydata + ')');
+                    if (obj.result && obj.result == 'ok' && obj.songs) {
+                        if (obj.user) {
+                            getUser(obj.user, flag);
+                        }
+                        payObj = obj.songs[0];
+                        if (iscantplayonline == '1') {
+                            playOnlineIntercept();
+                        } else {
+                            checkPayinfo(listenMusicHq);
+                        }
+                    }
+                },
+                error: function () {
+                    if (tryTimes < 2) {
+                        tryTimes++;
+                        showPayinfo(flag);
+                    } else {
+                        $(".w_loading").html(`<a href="###" onclick="reload()">点此刷新</a>`);
+                    }
+
+                }
+            });
+        }
+        function reload() {
+            window.location.href = window.location.href.indexOf('noResize') > -1 ? window.location.href : (window.location.href + '&noResize=1');
+            return false;
+        };
+        function checkPayinfo(hq) {
+            try {
+                var fmt = "";
+                var fmt_bak = "";
+                downtype = "music";
+                if (hq === '无损音质') {
+                    fmt = 'AL';
+                } else if (hq === '超品音质') {
+                    fmt = 'MP3H';
+                    fmt_bak = 'MP3192';
+                } else if (hq === '高品音质') {
+                    fmt = 'MP3128';
+                    fmt_bak = 'WMA128';
+                } else if (hq === '流畅音质') {
+                    fmt = 'WMA96';
+                } else if (hq === '高清画质') {
+                    downtype = 'mv';
+                    fmt = 'MV700';
+                } else if (hq === '流畅画质') {
+                    downtype = 'mv';
+                    fmt = 'MV500';
+                }
+                if (!payObj || !payObj.audio) {
+                    return;
+                }
+
+                var audioobjs = payObj.audio;
+                var audioarray = [];
+                var videoType1 = 0;
+                var videoType2 = 0;
+                $('.btn').hide();
+                for (var i = 0, j = audioobjs.length; i < j; i++) {
+                    var someobj = audioobjs[i];
+                    if (hq === '超品音质' || hq === '高品音质') {
+                        if (fmt == someobj.fmt && videoType2 == 0) {
+                            videoType1++;
+                            audioarray.push(someobj);
+                            continue;
+                        }
+                        if (fmt_bak == someobj.fmt && videoType1 == 0) {
+                            videoType2++;
+                            audioarray.push(someobj);
+                            continue;
+                        }
+                    } else {
+                        if (fmt == someobj.fmt) {
+                            audioarray.push(someobj);
+                        }
+                    }
+                }
+                if (audioarray.length == 0) {
+                    if (hq === '无损音质') {
+                        hq = '超品音质';
+                    } else if (hq === '超品音质') {
+                        hq = '高品音质';
+                    } else if (hq === '高品音质') {
+                        hq = '流畅音质';
+                    }
+                    checkPayinfo(hq);
+                    return;
+                }
+                var lock = (hq === '超品音质' || hq === '无损音质') && ifUserChangeQuality;
+                if (audioarray.length == 2) {
+                    var _st = audioarray[0].st + '' + audioarray[1].st;
+                    someobj._st = _st;
+                    var starray = [];
+                    starray.push(audioarray[0]);
+                    starray.push(audioarray[1]);
+                    someobj.starray = starray;
+                    someobj.id = payObj.id;
+                    getNewTips(hq, lock, someobj);
+                } else if (audioarray.length == 1) {
+                    var someobj = audioarray[0];
+                    downbr = someobj.br;
+                    getNewTips(hq, lock, someobj);
+                } else {
+                    //错误数据 length==3
+                    var someobj = audioarray[0];
+                    downbr = someobj.br;
+                    getNewTips(hq, lock, someobj);
+                }
+            } catch (e) {
+            }
+        }
+
+        function getNewTips(hq, lock, someobj) {
+            if (!lock) {
+                getPCAdInfo(someobj);
+            } else {
+                // 切换音质时触发
+                var desc;
+                if (musicobj.rid.indexOf("MUSIC_") > -1) {
+                    desc = hq.indexOf('超品') > -1 ? '超品' : '无损';
+                    var url = 'http://musicpay.kuwo.cn/music.pay?op=query&action=play&apiversion=1&feeTypeVer=4&ids=' + rid + '&copywritingtype=2';
+                    $.ajax({
+                        url: url,
+                        type: 'get',
+                        success: function (res) {
+                            var res = JSON.parse(res);
+                            var tips = res.songs[0].copywriting;
+                            var index = tips.indexOf('音质');
+                            if (index > -1) {
+                                var arr = tips.split('');
+                                arr.splice(index - 2, 2, desc);
+                                newTips = arr.join('');
+                            }
+                            getPCAdInfo(someobj);
+                        },
+                        error: function () {
+                            getPCAdInfo(someobj);
+                        }
+                    });
+                }
+            }
+
+        }
+
+        // 获取付费文案
+        function getPCAdInfo(obj) {
+            var jsonStrReg = /^\{.*\}$/;
+            var cachekey = cacheId ? `${newCatchKey}-${cacheId}`: newCatchKey;
+            var userInfo = '';
+            var uid = loginUid !== '0' ? loginUid : '-1';
+            var vir = virtualUid !== '0' ? virtualUid : '-1';
+            if (loginUid || virtualUid) {
+                userInfo = `&loginUid=${uid}&virtualUid=${vir}`;
+            }
+            PCAdInfoObj = getDataByCache(cachekey);
+            if (jsonStrReg.test(PCAdInfoObj)) {
+                PCAdInfoObj = JSON.parse(PCAdInfoObj);
+                showPriceinfo(obj, PCAdInfoObj);
+                return;
+            }
+            $.ajax({
+                url : `http://vip1.kuwo.cn/vip/v2/sysinfo?op=getBoxConfig&platForm=pc&isShowNewPayConfig=1&device=${getUserID('devid')}&ver=${getVersion()}` + userInfo,
+                type: 'get',
+                dataType: 'json',
+                success: function (res) {
+                    if (res.data) {
+                        var data = res.data;
+                        PCAdInfoObj = data;
+                        saveDataToCache(cachekey, JSON.stringify(data), 21600);//寸cache 6小时
+                        showPriceinfo(obj, data);
+                    } else {
+                        errorBack();
+                    }
+                },
+                error: function () {
+                    errorBack();
+                }
+            });
+        }
+
+        function errorBack() {
+            var jsondata = '{"data":{"allNewSongText":"歌曲下载后仅限会员有效期内本地播放","downloadSA":{"textList":[{"text":"%E7%89%88%E6%9D%83%E6%96%B9%E8%A6%81%E6%B1%82%EF%BC%8C%E9%83%A8%E5%88%86%E6%AD%8C%E6%9B%B2%E4%B8%8D%E8%83%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%EF%BC%9B%E5%8F%AF%E4%BB%98%E8%B4%B9%E5%90%8E%E7%95%85%E4%BA%AB","index":1}],"btnList":[{"btnTitle":"单曲购买","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"downloadMA":{"textList":[{"text":"%E7%89%88%E6%9D%83%E6%96%B9%E8%A6%81%E6%B1%82%EF%BC%8C%E9%83%A8%E5%88%86%E6%AD%8C%E6%9B%B2%E4%B8%8D%E8%83%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%B8%93%E8%BE%91%E9%9C%80%E5%8D%95%E7%8B%AC%E8%B4%AD%E4%B9%B0","index":1}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"享更多内容","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":"open"},{"btnTitle":"专辑购买","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"downloadFree":{"textList":[{"text":"您共选择了X首歌曲","index":1}],"btnList":[{"btnTitle":"下载","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":"free"}]},"paySongDownNewOldTips":{"text1":"本次消耗X首，还可下载X首付费歌曲","text2":"","buttonUrl":"","picUrl":"","isShow":1,"buttonText":"下载(已包月)","iconText":"","textUrl":"","canClose":1,"button2Text":"","button2Url":"","buttonType":"isopen","button2Type":"","buttonColor":"50bdef","button2Color":""},"downloadMSHasVipM":{"textList":[{"text":"版权方要求，音乐包用户可下载会员歌曲","index":1}],"btnList":[{"btnTitle":"下载（已包月）","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":"isopen"},{"btnTitle":"单曲下载","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"vipmExpireBox":{"description":"音乐包过期，付费即可播放付费歌曲","button1Text":"在线播放","button2Text":"续费音乐包","button1Color":"50bdef","button2Color":"50bdef","boxText":"过期播放","isShowBox":1,"isShowButton1":1,"isShowButton2":1},"downloadMAHasVipMAddTxt":"本次消耗X首，还可下载XXX首，其中部分歌曲仍需单独购买","mixNewOldSongText":"版权方要求，音乐包用户可下载会员歌曲，部分歌曲仅限会员有效期内本地播放","VIPMUpdate":{"textList":[{"text":"您的音乐包已达到300首上线，升级音乐包可继续缓存付费歌曲","index":1}],"btnList":[{"btnTitle":"升级音乐包","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":"up"}]},"auditionM":{"textList":[{"text":"版权方要求试听需付费，包月8元即畅享","index":1},{"text":"更多优质内容，多端同步无限享用","index":1}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"享更多内容","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":null}]},"downloadA":{"textList":[{"text":"版权方要求，该专辑需要付费，付费后永久享有播放和下载","index":1}],"btnList":[{"btnTitle":"购买专辑","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"downloadMHasVipM":{"textList":[{"text":"版权方要求，音乐包用户可下载会员歌曲","index":1}],"btnList":[{"btnTitle":"下载(已包月)","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":"isopen"}]},"paySongDownNewNewTips":{"text1":"此歌曲下载后仅限会员有效期内本地播放","text2":"本次消耗X首，还可以下载X首付费歌曲","buttonUrl":"","picUrl":"","isShow":1,"buttonText":"下载(已包月)","iconText":"","textUrl":"","canClose":1,"button2Text":"","button2Url":"","buttonType":"isopen","button2Type":"","buttonColor":"50bdef","button2Color":""},"auditionS":{"textList":[{"text":"版权方不让免费听这首歌了，可付费后畅享哦","index":1},{"text":"购买后可以永久免费试听/下载本首歌哦","index":2}],"btnList":[{"btnTitle":"单首购买","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":null}]},"batchExportSongBox":{"description":".kwm格式转成.mp3格式专用(2元/首)可重复下载，永久享有","button1Text":"单曲购买","button1Color":"50bdef","boxText":"批量导出","isShowBox":1,"isShowButton1":0},"downloadMAHasVipM":{"textList":[{"text":"版权方要求，音乐包用户可下载会员歌曲，专辑歌曲需单独付费","index":1}],"btnList":[{"btnTitle":"下载(已包月)","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":"isopen"},{"btnTitle":"专辑购买","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"downloadM":{"textList":[{"text":"%E7%89%88%E6%9D%83%E6%96%B9%E8%A6%81%E6%B1%82%EF%BC%8C%E4%B8%8D%E8%83%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BB%98%E8%B4%B9%E5%90%8E%E7%95%85%E4%BA%AB","index":1}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"享更多内容","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":"open"}]},"auditionE":{"textList":[{"text":"付费歌曲已过期，已下载的歌曲无法离线播放","index":1},{"text":"付费后可播放歌曲","index":1}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"享更多内容","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":null}]},"exportSongBox":{"description":"为支持正版，购买后永久享用","button1Text":"永久下载2元/首","button1Color":"50bdef","boxText":"导出歌曲","isShowBox":1,"isShowButton1":1},"paySongDownNovipOldTips":{"text1":"版权方要求下载此歌曲需付费，开通会员畅享千万歌曲","text2":"","buttonUrl":"","picUrl":"","isShow":1,"buttonText":"开通豪华VIP","iconText":"","textUrl":"","canClose":1,"button2Text":"","button2Url":"","buttonType":"open","button2Type":"","buttonColor":"FAD785","button2Color":""},"isUseNewStrategy":1,"downLoadAdminBox":{"isShowBox":1,"willExpireDescription":"%E6%82%A8%E7%9A%84%E4%BB%98%E8%B4%B9%E9%9F%B3%E4%B9%90%E8%BF%98%E6%9C%897%E5%A4%A9%E8%BF%87%E6%9C%9F%EF%BC%8C%E5%B7%B2%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%BB%98%E8%B4%B9%E6%AD%8C%E6%9B%B2%E5%B0%86%E4%B8%8D%E8%83%BD%E7%A6%BB%E7%BA%BF%E6%92%AD%E6%94%BE%EF%BC%8C%3Ca+href%3D%22http%3A%2F%2Fvip1.kuwo.cn%2Fvip%2Fadded%2Fvip_2016%2Findex.jsp%3Ffrom%3D1%22%C2%A0target%3D%22_blank%22%3E%E7%BB%AD%E8%B4%B9%3E%3C%2Fa%3E++","expiredDescription":"%E6%82%A8%E7%9A%84%E9%9F%B3%E4%B9%90%E5%8C%85%E5%B7%B2%E8%BF%87%E6%9C%9F%EF%BC%8CX%E9%A6%96%E5%B7%B2%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%BB%98%E8%B4%B9%E6%AD%8C%E6%9B%B2%E5%B0%86%E4%B8%8D%E8%83%BD%E7%A6%BB%E7%BA%BF%E6%92%AD%E6%94%BE%EF%BC%8C%3Ca+href%3D%22http%3A%2F%2Fvip1.kuwo.cn%2Fvip%2Fadded%2Fvip_2016%2Findex.jsp%3Ffrom%3D1%22%C2%A0target%3D%22_blank%22%3E%E7%BB%AD%E8%B4%B9%3E%3C%2Fa%3E","vipdescription":"%E4%B8%BA%E4%BA%86%E6%94%AF%E6%8C%81%E6%AD%A3%E7%89%88%EF%BC%8C%E9%9F%B3%E4%B9%90%E5%8C%85%E7%BC%93%E5%AD%98%E7%9A%84%E4%BB%98%E8%B4%B9%E6%AD%8C%E6%9B%B2%E4%BB%85%E5%9C%A8%E4%BC%9A%E5%91%98%E6%9C%9F%E5%86%85%E5%8F%AF%E7%94%A8%EF%BC%8C%3Ca+href%3D%22http%3A%2F%2Fvip1.kuwo.cn%2Fvip%2Fadded%2Fvip_2016%2Findex.jsp%3Ffrom%3D1%22%C2%A0target%3D%22_blank%22%3E%E6%9F%A5%E7%9C%8B%3E%3C%2Fa%3E"},"auditionMS":{"textList":[{"text":"版权方不让免费听了，推荐您开通豪华VIP，解锁百万付费曲库！","index":1},{"text":"更多优质内容，多端同步无限享用","index":2}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":null},{"btnTitle":"单曲购买","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":null}]},"auditionA":{"textList":[{"text":"版权方不让免费听这首歌了，可付费后畅享哦","index":1},{"text":"支持歌手的独家数字音乐专辑后即可下载整张专辑","index":2}],"btnList":[{"btnTitle":"购买专辑","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":null}]},"downloadS":{"textList":[{"text":"%E6%94%AF%E6%8C%81%E6%AD%A3%E7%89%88%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%B4%AD%E4%B9%B0%E5%8D%95%E6%9B%B2%E5%90%8E%E6%92%AD%E6%94%BE%E5%92%8C%E4%B8%8B%E8%BD%BD%E6%B0%B8%E4%B9%85%E4%BA%AB%E7%94%A8","index":1}],"btnList":[{"btnTitle":"单曲下载","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"downloadMS":{"textList":[{"text":"%E7%89%88%E6%9D%83%E6%96%B9%E8%A6%81%E6%B1%82%EF%BC%8C%E9%83%A8%E5%88%86%E6%AD%8C%E6%9B%B2%E4%B8%8D%E8%83%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%8F%AF%E4%BB%98%E8%B4%B9%E5%90%8E%E7%95%85%E4%BA%AB","index":1}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":"open"}]},"allNewSongText2":"本地消耗X首，还可以下载X首付费歌曲","songExporationDetailTips":{"text1":"包月下载的歌曲会员期内有效，续费后可恢复","text2":"","buttonUrl":"http://vip1.kuwo.cn/vip/added/mobile/v2/andrVip.jsp?fromsrc=songExpirationDatailTips","picUrl":"","isShow":1,"buttonText":"续费","iconText":"","textUrl":"","canClose":1,"button2Text":"","button2Url":"","buttonType":"","button2Type":"","buttonColor":"","button2Color":""},"auditionMA":{"textList":[{"text":"版权方不让免费听这首歌了，可付费后畅享哦","index":1},{"text":"更多优质内容，多端同步无限享用","index":2}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"享更多内容","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":null},{"btnTitle":"购买专辑","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":null}]},"downloadMSA":{"textList":[{"text":"%E7%89%88%E6%9D%83%E6%96%B9%E8%A6%81%E6%B1%82%EF%BC%8C%E9%83%A8%E5%88%86%E6%AD%8C%E6%9B%B2%E4%B8%8D%E8%83%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%EF%BC%9B%E5%8F%AF%E4%BB%98%E8%B4%B9%E5%90%8E%E7%95%85%E4%BA%AB","index":1}],"btnList":[{"btnTitle":"开通豪华VIP","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"FAD785","btnType":"open"},{"btnTitle":"单曲下载","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"downloadMSAHasVipM":{"textList":[{"text":"版权方要求，音乐包用户可下载会员歌曲，专辑歌曲需单独付费","index":1}],"btnList":[{"btnTitle":"下载(已包月)","btnDesc":"","index":1,"buttonStyle":0,"btnColor":"50bdef","btnType":"isopen"},{"btnTitle":"单曲下载","btnDesc":"","index":2,"buttonStyle":0,"btnColor":"50bdef","btnType":"pay"}]},"mixNewOldSongText2":"本次消耗X首，还可以下载X首付费歌曲","downloadMSAHasVipMAddTxt":"本次消耗X首，还可下载XXX首，其中部分歌曲仍需单独购买","paySongDownNovipNewTips":{"text1":"版权方要求下载此歌曲需付费，下载的歌曲在会员有效期内有效","text2":"","buttonUrl":"","picUrl":"","isShow":1,"buttonText":"开通豪华VIP","iconText":"","textUrl":"","canClose":1,"button2Text":"","button2Url":"","buttonType":"open","button2Type":"","buttonColor":"FAD785","button2Color":""}},"ctime":1533282717992,"meta":{"desc":"成功","code":200}}';
+            var data = JSON.parse(jsondata).data;
+            PCAdInfoObj = data;
+            saveDataToCache(cachekey, JSON.stringify(data), 21600);//寸cache 6小时
+            showPriceinfo(obj, data);
+        }
+
+        function showPriceinfo(obj, PCAdInfoObj) {
+            try {
+                if (typeof(obj.st) == "undefined" || obj.st.length == 0) {
+                    return;
+                }
+                var st = obj.st;
+                var cost = obj.cost;
+                var _starray = [];
+                downprice = obj.oprice;
+                downpid = obj.opid;
+                downbr = obj.br;
+                if (obj._st) {
+                    st = obj._st;
+                }
+                var vipcount = 0;
+                //同一首歌双收费策略时，价格显示
+                if (obj._st) {
+                    var _st = obj._st;
+                    //判断：若vip包月且cost=1，vipcount++
+                    _starray = obj.starray;
+                    var stFlag = false;
+                    for (var i = 0, j = _starray.length; i < j; i++) {
+                        if (_starray[i].st == "0" && _starray[i].policy == "vip" && _starray[i].cost == "1") {
+                            stFlag = true;
+                            break;
+                        }
+                    }
+                    if (_st.indexOf("103") > -1) {
+                        if (_st.indexOf("102") > -1 || _st.indexOf("201") > -1 || stFlag == true) {
+                            vipcount++;
+                        }
+                    } else if (_st.indexOf("104") > -1) {
+                        if (_st.indexOf("102") > -1 || _st.indexOf("201") > -1 || stFlag == true) {
+                            vipcount++;
+                        }
+                    }
+                } else {
+                    if (cost == 1) {
+                        vipcount = 1;
+                    }
+                }
+                //一、判断包月情况
+                //【包月购买】
+                var _downlast = 0;
+                var _isdown;	//剩余包月
+                var _isupgrade;		//余额不足时：是否可升级
+                var _isupgrade_data;	//余额不足时：vip有效期是否>1个月
+                var _judgeVip;
+                var info = {};//付费文案对象
+                var btnInfoArr = [];//按钮文案
+                var textInfoArr = [];//说明文案
+                var price = 0;
+                if (userObj) {
+                    _judgeVip = userObj["final"] && (userObj["final"].length > 0);
+                    _downlast = userObj.downUpper - userObj.downCnt;
+                    if (_downlast <= 0) {
+                        _downlast = 0;
+                    }
+                    //歌曲list中有包月需求
+                    if (vipcount > 0) {
+                        _isdown = _downlast >= vipcount;
+                    }
+                    if (_downlast >= vipcount) {
+                        // 余额充足
+                    } else {
+                        // 余额不足
+                        var upgrade = userObj["final"];
+                        var _date = userObj.end;
+                        //_date = new Date(parseInt(_date,10)*1000).toLocaleDateString();
+                        _date = new Date(parseInt(_date, 10) * 1000).getTime() - new Date().getTime();
+                        _date = _date / (1000 * 60 * 60 * 24);
+                        _date = Math.floor(_date);
+                        _isupgrade_data = _date > 30;
+                        _isupgrade = upgrade && upgrade.length > 0;
+                    }
+                }
+
+                if (musicobj.encrp == "1" && musicobj.playonline == "1") {//本地已下载加密
+                    info = PCAdInfoObj.auditionE;
+                    musicMonthlyBack(PCAdInfoObj, info);
+                } else if (st == "102") {//提示用户开通包月
+                    info = PCAdInfoObj.auditionM;
+                    musicMonthlyBack(PCAdInfoObj, info);
+                    $('#tipChangeTag').show();
+                } else if (st == "103") {//提示用户购买单曲
+                    downprice = obj.price;
+                    downpid = obj.pid;
+                    info = PCAdInfoObj.auditionS;
+                    musicByBack(info, downprice);
+                } else if (st == "104") {//提示用户购买专辑
+                    downprice = obj.price;
+                    downpid = obj.pid;
+                    buytype = "album";
+                    albumid = obj.albumid;
+                    info = PCAdInfoObj.auditionA;
+                    musicByBack(info, downprice);
+                } else if (st == "102104" || st == "104102") {//提示用户购买专辑或包月
+                    info = PCAdInfoObj.auditionMA;
+                    if (st == "102104") {
+                        albumid = _starray[1].albumid;
+                        price = _starray[1].price;
+                        downbr = _starray[1].br;
+                        downpid = _starray[1].pid;
+                    } else {
+                        albumid = _starray[0].albumid;
+                        price = _starray[0].price;
+                        downbr = _starray[0].br;
+                        downpid = _starray[0].pid;
+                    }
+                    buytype = "album";
+                    downprice = price;
+                    musicMonthlyOrByBack(info, downprice);
+                } else if (st == "102103" || st == "103102") {//提示用户购买单曲或包月
+                    info = PCAdInfoObj.auditionMS;
+                    if (st == "102103") {
+                        price = _starray[1].price;
+                        downbr = _starray[1].br;
+                        downpid = _starray[1].pid;
+                    } else {
+                        price = _starray[0].price;
+                        downbr = _starray[0].br;
+                        downpid = _starray[0].pid;
+                    }
+                    buytype = "song";
+                    downprice = price;
+                    musicMonthlyOrByBack(info, downprice);
+                } else {
+                    //异常数据处理
+                    if (st == "103104" || st == "104103") {
+                        var price = 0;
+                        if (st == "103104") {
+                            albumid = _starray[1].albumid;
+                            price = _starray[1].price;
+                            downbr = _starray[1].br;
+                            downpid = _starray[1].pid;
+                        } else {
+                            albumid = _starray[0].albumid;
+                            price = _starray[0].price;
+                            downbr = _starray[0].br;
+                            downpid = _starray[0].pid;
+                        }
+                        info = {
+                            "textList": [
+                                {
+                                    "text": "版权方要求，这首歌需购买专辑",
+                                    "index": 1
+                                },
+                                {
+                                    "text": "专辑购买支持终身享用",
+                                    "index": 2
+                                }
+                            ],
+                            "btnList": [
+                                {
+                                    "btnTitle": "专辑购买",
+                                    "btnDesc": "",
+                                    "index": 2,
+                                    "buttonStyle": 0,
+                                    "btnColor": "50bdef",
+                                    "btnType": "pay"
+                                }
+                            ]
+                        };
+                        musicByBack(info, price);
+                    } else {
+                        info = PCAdInfoObj.auditionM;
+                        musicMonthlyBack(PCAdInfoObj, info);
+                    }
+                }
+                var url = 'http://vip1.kuwo.cn/vip/v2/sysinfo?op=getListenConfig&songId=' + rid;
+                $.ajax({
+                    url: url,
+                    type: 'get',
+                    dataType: 'json',
+                    success: function (jsondata) {
+                        handleSysinfo(jsondata);
+                    },
+                    error: function () {
+                        var jsondata = '{"data":{"isShow":1},"ctime":1533282673320,"meta":{"desc":"成功","code":200}}';
+                        handleSysinfo(JSON.parse(jsondata));
+                    }
+                });
+                logShow();
+            } catch (e) {
+                return true;
+            }
+        }
+
+        function handleSysinfo(jsondata) {
+            var data = jsondata.data;
+            if (data) {
+                var payText = data.payText;
+                if (payText) {
+                    $(".pay_tsyq").html(newTips || payObj.copywriting || payText);
+                    $(".pay_tsxz").html("");
+                }
+            }
+            $(".w_loading").hide();
+            $(".pay_tsrr").show();
+        }
+
+        /*
+        * 908 付费需求-低价策略
+        * musicMonthlyBack 开通豪华VIP时处理方法
+        * @author 邢祥超 [20191128]
+        * */
+        function musicMonthlyBack(PCAdInfoObj, info) {
+            // soundQuantityBox 切换音质文案规则
+            var soundQuantityObj = PCAdInfoObj.soundQuantityBox;
+            // listenInterBoxPrice 试听文案规则
+            var listenInterObj = PCAdInfoObj.listenInterBoxPrice;
+            var btnInfoArr = info.btnList;
+            var textInfoArr = info.textList;
+            var paytsxzText = '';
+            var btnText = btnInfoArr[0].btnTitle;
+            // 音质切换
+            if (ifUserChangeQuality && soundQuantityObj) {
+                if (listenMusicHq.indexOf('超品') > -1) {
+                    newTips = soundQuantityObj.superQualitityText;
+                } else if (listenMusicHq.indexOf('无损') > -1) {
+                    newTips = soundQuantityObj.LosslessQualitytext;
+                }
+                // 产品策略-音质切换按钮文案优先获取floatText，如为空，取buttonText
+                if (soundQuantityObj.floatText || soundQuantityObj.buttonText) {
+                    btnText = soundQuantityObj.floatText || soundQuantityObj.buttonText;
+                }
+                isLowPrice = 1;
+            } else if (listenInterObj) {
+                if (listenInterObj.floatText) {
+                    var price = listenInterObj.price;
+                    var floatText = listenInterObj.floatText;
+                    var priceIndexOf = floatText.indexOf(price);
+                    var paytsxzTextArr = [];
+                    if (price && priceIndexOf > 0) {
+                        paytsxzTextArr = floatText.split(price);
+                        paytsxzText = `${paytsxzTextArr[0]}<span class="pay-tsxz-highlight">${price}</span>${paytsxzTextArr[1]}`;
+                    } else {
+                        paytsxzText = floatText;
+                    }
+                } else if (audition === '1') {
+                    paytsxzText = '开通会员畅享完整版';
+                } else {
+                    paytsxzText = '开通会员立即畅享';
+                }
+
+                // 有试听片段时按钮取buttonText2
+                if (audition === '1' && listenInterObj.buttonText2) {
+                    btnText = listenInterObj.buttonText2;
+                } else if (listenInterObj.buttonText) {
+                    // 无试听片段时按钮取buttonText
+                    btnText = listenInterObj.buttonText;
+                } else if (listenInterObj.buttonText3) {
+                    // 容错处理
+                    btnText = listenInterObj.buttonText3;
+                }
+                isLowPrice = 1;
+            } else if (audition === '1') {
+                // 30 秒试听-付费3.0 文案及按钮
+                var buttonVIPText = listen30TipsInfo.buttonVIPText;
+                if (buttonVIPText) {
+                    btnText = buttonVIPText ;
+                } else {
+                    btnText = btnInfoArr[0].btnTitle || '会员畅听完整版';
+                }
+                logShow();
+            }
+            // 有试听片段时展示歌曲名称信息，隐藏tsyq 文案
+            if (!ifUserChangeQuality && listenInterObj && audition === '1') {
+                $('#listSongBox').show();
+                $(".pay_tsyq").hide();
+                $(".pay_tsxz").html(paytsxzText);
+            } else {
+                $(".pay_tsyq").html(newTips || payObj.copywriting || listen30TipsInfo.boxText || textInfoArr[0].text);
+                $('#listSongBox').hide();
+                $(".pay_tsxz").html('');
+            }
+            $("#d_music_monthly").html(btnText).show();
+            $(".w_loading").hide();
+            $(".pay_tsrr").show();
+        }
+        /*
+        * 908 整理
+        * musicByBack 专辑购买时处理方法
+        * @author 邢祥超 [20191128]
+        * */
+        function musicByBack(info, downprice) {
+            var btnInfoArr = info.btnList;
+            var textInfoArr = info.textList;
+            $(".pay_tsyq").html(textInfoArr[0].text);
+            $(".pay_tsxz").html('');
+            // 产品需求隐藏二级标题
+            // if (textInfoArr.length > 1) {
+            //     $(".pay_tsxz").html(textInfoArr[1].text);
+            // } else {
+            //     $(".pay_tsxz").html('');
+            // }
+            $("#d_music_buy").html(btnInfoArr[0].btnTitle + '<span class="span"> (' + downprice + '元)</span>').show();
+            $(".w_loading").hide();
+            $(".pay_tsrr").show();
+        }
+
+        /*
+        * 908 整理
+        * musicMonthlyOrByBack 开通豪华VIP及购买按钮同时存在处理方法
+        * @author 邢祥超 [20191129]
+        * */
+        function musicMonthlyOrByBack(info, downprice) {
+            var btnInfoArr = info.btnList;
+            var textInfoArr = info.textList;
+            var btnHtml = '';
+            $(".pay_tsyq").html(payObj.copywriting || textInfoArr[0].text);
+            $(".pay_tsxz").html('');
+            btnInfoArr.forEach(item => {
+                if (item.btnTitle.indexOf('专辑') > -1 || item.btnTitle.indexOf('单曲') > -1) {
+                    btnHtml+= `<a href="#" class="d_pay_down" onclick="downMusic('DPay');return false;">${item.btnTitle}<span class="span"> (${downprice}元)</span></a>`;
+                } else {
+                    btnHtml+= `<a href="#" class="d_vip_open" onclick="showVIPGuide();return false;">${item.btnTitle}</a>`;
+                }
+            });
+            $('#payBtn').hide();
+            $('#monthOrPayBtn').html(btnHtml).show();
+            $(".w_loading").hide();
+            $(".pay_tsrr").show();
+        }
+        // 开通VIP
+        function showVIPGuide() {
+            var type = $(".d_vip_open").attr("data-type");
+            if (!type) {
+                type = 0;
+            }
+            if (isMvType) {
+              // 2020-4-10 新增mv播放拦截
+              callClientNoReturn(`OpenSuperVIP?logmsg=${encodeURIComponent('FROM=曲库->' + decodeURIComponent(musicobj.name) + '->mv播放拦截->支付页')}`);
+              return
+            }
+            // if(audition == '1'){
+            //     psrcPath = 'single_listen_audition';
+            // }
+            //type 0开通 1升级 2续费
+            callClientNoReturn(`DShowVIPGuide?type=${type}&action=play&psrc=${psrcPath}&buy=${getMusicInfo(musicobj)}&logmsg=${encodeURIComponent('isLowPrice='+ isLowPrice)}`);
+        }
+
+        function downMusic(type) {
+            //何时需求强制登陆？专辑购买
+            if ($("#d_music_buy").html().indexOf("专辑") > -1 && loginUid === '0') {
+                callClientNoReturn('UserLogin?src=login');
+                return;
+            }
+            var mobj = musicobj;
+            var musicarray = [];
+            musicarray[musicarray.length++] = mobj.name;
+            musicarray[musicarray.length++] = mobj.artist;
+            musicarray[musicarray.length++] = mobj.album;
+            musicarray[musicarray.length++] = mobj.rid;
+            musicarray[musicarray.length++] = mobj.artistid;
+            musicarray[musicarray.length++] = mobj.albumid;
+            musicarray[musicarray.length++] = listenMusicHq;
+            musicarray[musicarray.length++] = musicSizeInfo;
+            var s1 = musicarray.join("\t");
+            s1 = encodeURIComponent(s1);
+            var d1 = '';
+            if (buytype == "song") {
+                d1 = '{"songs":[{"id":"' + mobj.rid + '","br":"' + downbr + '","songName":"' + mobj.name + '","albumName":"' + mobj.album + '","price":"' + downprice + '","type":"' + downtype + '","pid":"' + downpid + '"}]}';
+            } else {
+                d1 = '{"albums":[{"id":"' + albumid + '","price":"' + downprice + '","albumName":"' + mobj.album + '","pid":"' + downpid + '"}]}';
+            }
+            pos = "";
+            // if(audition == '1'){
+            //     psrcPath = 'single_listen_audition';
+            // }
+            logShow('CLICK');
+            callClientNoReturn(type + "?pos=" + pos + "&d1=" + encodeURIComponent(d1) + "&n=1&s1=" + s1 + "&psrc=" + psrcPath);
+        }
+        //日志处理
+        function logShow(click) {
+            var isLogin = false;
+            var isUpgrade = false;
+            var isMonthPay = false;
+            var isAlbumPay = false;
+            var isSinglePay = false;
+            var isVipOpen = false;
+
+            if (loginUid !== '0') {
+                isLogin = true;
+            }
+            if (($(".d_pay_down").html().indexOf("专辑") > -1) && ($(".d_pay_down").css("display") != "none")) {
+                isAlbumPay = true;
+            }
+            if (($(".d_pay_down").html().indexOf("单曲") > -1) && ($(".d_pay_down").css("display") != "none")) {
+                isSinglePay = true;
+            }
+            if ($(".d_vip_open").css("display") != "none" && (($(".d_vip_open").attr("disabled") == "undefined") || ($(".d_vip_open").attr("disabled") == undefined))) {
+                isVipOpen = true;
+            }
+            var feeType = '';
+            if (isAlbumPay) {
+                if (click) {
+                    feeType = 'ALBUM_BTN_CLICK';
+                } else {
+                    feeType = 'ALBUM_BTN_SHOW';
+                }
+                realTimeLog("MUSIC_FEE", "FEE_TYPE:" + feeType + "|VIEW_TYPE:SINGLE_LISTEN|" + psrcPath);
+            }
+            if (isSinglePay) {
+                if (click) {
+                    feeType = 'SINGLE_BTN_CLICK';
+                } else {
+                    feeType = 'SINGLE_BTN_SHOW';
+                }
+                realTimeLog("MUSIC_FEE", "FEE_TYPE:" + feeType + "|VIEW_TYPE:SINGLE_LISTEN|" + psrcPath);
+            }
+            if (isVipOpen) {
+                var viewType = 'SINGLE_LISTEN';
+                var LowPriceLog = '';
+                var listenInterBoxPrice = PCAdInfoObj.listenInterBoxPrice;
+                var soundQuantityBox = PCAdInfoObj.soundQuantityBox;
+                if (audition === '1') {
+                    viewType = 'SINGLE_LISTEN_AUDITION';
+                }
+                if (click) {
+                    feeType = 'OPEN_BTN_CLICK';
+                } else {
+                    feeType = 'OPEN_BTN_SHOW';
+                }
+                if (feeType === 'OPEN_BTN_SHOW' && ifUserChangeQuality) {
+                    if (listenMusicHq.indexOf('超品') > -1) {
+                        viewType += '_SUPER';
+                    } else if (listenMusicHq.indexOf('无损') > -1) {
+                        viewType += '_LOSSLESS';
+                    }
+                }
+                if (isLowPrice) {
+                    // && audition === '1'
+                    if (!ifUserChangeQuality  && listenInterBoxPrice && listenInterBoxPrice.boxType) {
+                        LowPriceLog += `|BOXTYPE:${listenInterBoxPrice.boxType}|PRICE:${listenInterBoxPrice.price}`;
+                    } else if(soundQuantityBox && soundQuantityBox.boxType) {
+                        LowPriceLog += `|BOXTYPE:${soundQuantityBox.boxType}|PRICE:${soundQuantityBox.price}`;
+                    }
+                }
+                realTimeLog("MUSIC_FEE", "FEE_TYPE:" + feeType + "|VIEW_TYPE:" + viewType + "|PSRC:" + psrcPath + "|REL_ID:" + rid + LowPriceLog);
+            }
+            if (isUpgrade) {
+                realTimeLog("MUSIC_FEE", "FEE_TYPE:UPGRADE_BTN_SHOW|VIEW_TYPE:SINGLE_LISTEN|" + psrcPath);
+            }
+        }
+        /*
+        * 只能下载不能在线播放拦截方法
+        * @author 邢祥超 [20190709]
+        * */
+        function playOnlineIntercept() {
+            var DEFAULTJSON = {
+                'boxText': '版权方要求歌曲不能在线播放，请下载后播放',
+                'buttonVIPText': '下载歌曲'
+            };
+            var URL = 'http://vip1.kuwo.cn/vip/v2/sysinfo?op=getRePayAndDoPayBoxNew&platform=pc&isShowNewPayConfig=1&ver=' + version;
+            $.ajax({
+                url: URL,
+                dataType: "text",
+                type: "get",
+                crossDomain: false,
+                timeout: 3000,
+                success: function (res) {
+                    var onlyDownload = res.onlyDownloadWindow || DEFAULTJSON;
+                    playOnlineCallback(onlyDownload);
+                },
+                error: function () {
+                    playOnlineCallback(DEFAULTJSON);
+                }
+            });
+        }
+
+        /*
+        * 只能下载不能在线播放拦截回调
+        * @author 邢祥超 [20190709]
+        * */
+        function playOnlineCallback(obj) {
+            $('.pay_tsyq').html(obj.boxText);
+            $('.pay_tsxz').html('');
+            $('#d_music_single_down').html(obj.buttonVIPText).show().siblings().hide();
+            $('.w_loading').hide();
+            $('.pay_tsrr').show();
+            // 只能下载不能在线播放露出发送日志
+            realTimeLog('MUSIC_FEE', 'FEE_TYPE:OPEN_BTN_SHOW|VIEW_TYPE:SINGLE_LISTEN_DOWNLOAD');
+        }
+
+        /*
+        * 只能下载不能在线下载方法调用
+        * @author 邢祥超 [20190709]
+        * */
+        function playOnlineDown() {
+            var obj = musicobj || {};
+            var musicInfoArr = [];
+            var count = 0;
+            var musicInfo;
+            if (Object.keys(payObj).length === 0) {
+                toast(0, '请稍后再试...');
+                showPayinfo(true);
+                return;
+            }
+            // 点击下载按钮日志
+            realTimeLog('MUSIC_FEE', 'FEE_TYPE:OPEN_BTN_CLICK|VIEW_TYPE:SINGLE_LISTEN_DOWNLOAD');
+            musicInfoArr[count++] = encodeURIComponent(obj.name || obj.SONGNAME || payObj.name || '');
+            musicInfoArr[count++] = encodeURIComponent(obj.artist || obj.ARTIST || payObj.artist || '');
+            musicInfoArr[count++] = encodeURIComponent(obj.album || obj.ALBUM || payObj.album || '');
+            musicInfoArr[count++] = payObj.nsig1 || payObj.NSIG1 || '';
+            musicInfoArr[count++] = payObj.nsig2 || payObj.NSIG2 || '';
+            musicInfoArr[count++] = obj.rid || 'MUSIC_' + payObj.id || '0';
+            musicInfoArr[count++] = payObj.mp3nsig1 || payObj.MP3NSIG1 || '';
+            musicInfoArr[count++] = payObj.mp3nsig2 || payObj.MP3NSIG2 || '';
+            musicInfoArr[count++] = payObj.MP3RID || 'MP3_' + payObj.mp3rid || '0';
+            musicInfoArr[count++] = 0;
+            musicInfoArr[count++] = 0;
+            musicInfoArr[count++] = payObj.MKVRID || 'MV_' + payObj.mkvrid || '0';
+            musicInfoArr[count++] = payObj.hasecho || 0;
+            musicInfoArr[count++] = encodeURIComponent(obj.psrc);
+            musicInfoArr[count++] = payObj.formats || payObj.FORMATS || '';
+            musicInfoArr[count++] = formatMultiVerNum(payObj);
+            musicInfoArr[count++] = formatPoint(payObj);
+            musicInfoArr[count++] = formatPayNum(payObj);
+            musicInfoArr[count++] = obj.artistid || payObj.artistid || 0;
+            musicInfoArr[count++] = obj.albumid || payObj.albumid || 0;
+            musicInfoArr[count++] = '0';
+            musicInfoArr[count++] = '0';
+            musicInfoArr[count++] = '0';
+            musicInfoArr[count++] = payObj.tpay || '0';
+            musicInfoArr[count++] = '0';
+            musicInfoArr[count++] = encodeURIComponent(`rid=${obj.rid || 0}`);
+            musicInfo = musicInfoArr.join('\t');
+            var call = 'Down?mv=0&n=1&s1=' + musicInfo;
+            callClientNoReturn(call);
+        }
+
+        /**
+         * 格式化point
+         */
+        function formatPoint(obj) {
+            return obj.ispoint || obj.isPoint || obj.is_point || obj.IS_POINT || obj.point || '0';
+        }
+
+        /**
+         * 格式化MultiVer
+         */
+        function formatMultiVerNum(obj) {
+            return obj.mutiver || obj.mutiVer || obj.muti_ver || obj.MUTI_VER || '0';
+        }
+
+        /**
+         * 格式化Pay
+         */
+        function formatPayNum(obj) {
+            return obj.pay || obj.PAY || '0';
+        }
+        /*
+        * 908付费需求-低价策略-展示单曲封面
+        * */
+        function getCoverImg(rid, name) {
+            $('#songName').html(decodeURIComponent(name));
+            if (rid === '0') {
+                return;
+            }
+            $.ajax({
+                url: 'http://artistpic.kwcdn.kuwo.cn/pic.web?type=rid_pic&pictype=url&size=150&rid=' + rid,
+                dataType: "text",
+                type: "get",
+                crossDomain: false,
+                timeout: 4000,
+                success: function (res) {
+                    $('#singerCover').attr('src', res)
+                },
+                error: function () {
+                    $('#singerCover').attr('src', 'img/default.png')
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="w_loading"><img src="img/loading.gif"/></div>
+<div class="d_container">
+    <div class="pay_tsrr" style="display:none;">
+        <div class="song-cover">
+            <img class="cover-img" onerror="imgOnError(this);" id="singerCover" src="img/default.png" />
+            <img id="tipChangeTag" class="tag" src="img/tip_change_tag.png"/>
+        </div>
+        <p class="pay_tsyq">版权方要求，这首歌需付费收听</p>
+        <div class="list-song-box" id="listSongBox">
+            <p class="list-song-text">
+                <span class="list-song-left">正在试听《</span>
+                <span class="list-song-name" id="songName"></span>
+                <span class="list-song-right">》歌曲片段</span>
+            </p>
+        </div>
+        <p class="pay_tsxz">开通会员立即畅享</p>
+        <div class="pay-but" id="payBtn">
+            <a href="#" id="d_music_monthly" style="display:none;" class="d_vip_open btn sr mr10"
+               onclick="showVIPGuide();return false;">开通豪华VIP</a>
+            <a href="#" id="d_music_buy" style="display:none;" class="d_pay_down btn sn"
+               onclick="downMusic('DPay');return false;">专辑购买<span class="span"> (6元/1张)</span></a>
+            <a href="#" id="d_music_single_down" style="display:none;" class="d_pay_down btn sn"
+               onclick="playOnlineDown();return false;">下载歌曲</a>
+        </div>
+        <!--此容器兼容两按钮同时出现的情况-->
+        <div class="pay-but month-pay-btns" id="monthOrPayBtn" style="display:none;"></div>
+    </div>
+</div>
+</body>
+<script>
+    // 换肤
+    function readFile(path) {
+        return callClient(`ReadFile?path=${path}`);
+    }
+
+    function getSkinConfig() {
+        var config = callClient('GetSkinConf');
+        return config;
+    }
+
+    var fileName = 'netsong/skinConfig.json';
+    var skinConfig = {
+        "type": "default",
+        "skinColor": "#FFD200",
+        "linkColor": "#487BB6",
+        "hifiColor": "#DFAB45",
+        "opqSwitch": false
+    };
+    setSkin(getSkinConfig());
+
+    function setSkin(data) {
+        if (data != '') {
+            var jsonData = JSON.parse(data);
+            var file = readFile(jsonData.dir + fileName);
+            if (file != '') {
+                skinConfig = JSON.parse(file);
+            }
+        }
+        $(".sn").css({'background': skinConfig.skinColor});
+        $("body").addClass(skinConfig.type);
+    }
+
+    // 换肤结束
+</script>
+</html>

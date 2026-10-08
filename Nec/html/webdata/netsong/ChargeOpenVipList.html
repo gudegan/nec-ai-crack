@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>右下角批量播放弹框页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js"></script>
+    <style>
+        .pageWrap {
+            padding: 7px 18px 0 20px;
+        }
+
+        .mainTitle {
+            color: rgba(121, 78, 21, 1);
+            height: 42px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 42px;
+            display: flex;
+        }
+
+        .mainTitle .desc {
+            padding: 4px 0 0 2px;
+            cursor: pointer;
+        }
+
+        .mainTitle .num {
+            font-size: 30px;;
+        }
+
+        .subTitle {
+            height: 18px;
+            font-size: 12px;
+            color: rgba(121, 78, 21, 1);
+            line-height: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0 10px;
+            height: 28px;
+            line-height: 28px;
+            background: linear-gradient(90deg, rgba(87, 71, 49, 1) 0%, rgba(68, 56, 38, 1) 100%);
+            border-radius: 3px;
+            font-weight: 500;
+            color: rgba(241, 221, 185, 1);
+            text-align: center;
+            cursor: pointer;
+            font-size: 12px;
+            text-decoration: none;
+            margin-top: 24px;
+        }
+
+        .bottom {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="pageWrap">
+    <!-- <div class="mainTitle">
+      <span class="num">28</span>
+      <span class="desc">首会员专享歌曲</span>
+    </div>
+    <div class="subTitle">
+      开通会员畅听完整版
+    </div>
+    <div class="bottom">
+      <a class="btn" href="javascript:;">
+        立即开通
+      </a>
+    </div>-->
+</div>
+<script>
+    const get_text = callClient('get_text');
+    const num = getValue(get_text, 'num');
+    const title = getValue(get_text, 'title');
+    const lowpriceStr = getValue(get_text, 'lowpriceStr');
+    const price = getValue(get_text, 'price');
+    const btnStr = getValue(get_text, 'btnStr');
+    replaceText = '';
+    if (price) {
+      replaceText = lowpriceStr.split(price).join(`<span style="color:rgba(216, 41, 41, 1)">${price}</span>`);
+    } else {
+      replaceText = lowpriceStr;
+    }
+    $('.pageWrap').html(
+      `<div class="mainTitle">
+        <span class="num">${num}</span>
+        <span class="desc">${title}</span>
+      </div>
+      <div class="subTitle">
+        ${replaceText}
+      </div>
+      <div class="bottom">
+        <a class="btn" href="javascript:;">
+          ${btnStr}
+        </a>
+      </div>`
+    );
+    $('.btn').on('click', function () {
+        callClient('btn_openvip');
+    });
+    $('.num, .desc').on('click', function () {
+        callClient('btn_check');
+    });
+    $('html, body').on('mouseenter', function() {
+      console.log(1);
+      callClient('mousehover')
+    })
+</script>
+</body>
+</html>

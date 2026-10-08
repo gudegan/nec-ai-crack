@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="33,25">
+  <VerticalLayout bkimage="wallpaper_closebk.png">
+    <HorizontalLayout height="21">
+      <Control></Control>
+      <Button name="close" statusimage="close.png" width="18" height="21" tooltip="关闭酷我启动页壁纸"></Button>
+      <Control></Control>
+    </HorizontalLayout>
+    <Control></Control>
+  </VerticalLayout>
+</Window>

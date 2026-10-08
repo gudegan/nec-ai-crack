@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "mimosa-hook-status/v1",
+  "recordedAt": "2026-10-08T08:53:45.579Z",
+  "sessionId": "sess_dwf-dwfrun-ead554e2-a1ad-4c9d-a357-b7783a24bdec-actor_4_1",
+  "event": "PostToolUse",
+  "toolName": "Edit",
+  "file": "D:\\破解项目2\\nec吸附PUBG\\work\\scratch\\r10_click.py",
+  "outcome": "inconclusive",
+  "coverage": "partial",
+  "findingCount": 0,
+  "durationMs": 6,
+  "hostState": "hook_complete",
+  "reportHint": ".mimosa/reports/"
+}

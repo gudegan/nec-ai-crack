@@ -1,0 +1,21 @@
+﻿<Window size="257,146" caption="0,0,0,0" roundcorner="5,5">
+	<VerticalLayout bkcolor="#00000000">
+		<HorizontalLayout name="titlepanel" height="50">
+			<Label name="title" text="其它终端登录" textpadding="15,0,0,0" width="220" textcolor="#ff000000" mouse="false" font="Playlist.newlist"/>
+			<Control />
+			<Button name="close" width="22" height="22" padding="0,6,0,0" statusimage="Config_CloseBtn.png"  tooltip="关闭"/>
+			<Control width="6"/>
+		</HorizontalLayout>
+		<!--<Control name="UserPhotoBk" pos="16,38,64,97" float="true" width="59" height="59" bkimage="UserPhotoBk.png"/>-->
+		<HorizontalLayout height="70">
+			<Control name="UserPhoto" padding="20,8,0,0" width="55" height="55"  bkimage="btn_userinfo_photo.png"/>
+			<VerticalLayout >
+				<Text name="RemoteLoginAfter_UserName" padding="10,6,0,0" width="180" font="Default.FontName.Bold"/>
+				<HorizontalLayout >
+					<Text name="RemoteLoginAfter_BaseInfo"  minwidth="95" padding="10,8,0,0" /> 
+					<Button name="RemoteLoginAfter_Watch"  text="查看详情" float="true" pos="115,8,175,26" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+				</HorizontalLayout>
+			</VerticalLayout>
+		</HorizontalLayout>	
+	</VerticalLayout>
+</Window>

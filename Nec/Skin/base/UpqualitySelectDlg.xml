@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="460,480" caption="0,0,0,120" roundcorner="10,10">
+  <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <VerticalLayout name="layout_clientrect" bkimage="UpqualitySelect.png">
+		<HorizontalLayout name="layout_dialog_title" height="122">
+      <Control />
+      <Button name="button_Close" padding="0,20,20,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+		</HorizontalLayout>
+    <HorizontalLayout name="webcontainer" padding="19,1,17,19" />
+    
+	</VerticalLayout>
+</Window>

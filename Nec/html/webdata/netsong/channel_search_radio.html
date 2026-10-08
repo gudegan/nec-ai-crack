@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>搜索电台</title>
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/comm2.js"></script>
+    <script type="text/javascript" src="js/music.js" ></script>
+    <script type="text/javascript" src="js/comm_search.js"></script>
+	<script type="text/javascript" src="js/channel_search.js"></script>
+    <script type="text/javascript" src="js/radio_comment.js" ></script>
+	<style>
+		@media screen and (min-width:1055px) and (max-width:1368px){
+			.br_wrap {
+			width: 16.66666667%;
+			}
+		}
+		@media screen and (min-width:1369px){
+			.br_wrap {
+			width: 14.28571429%;
+			}
+		}
+		#content {overflow: hidden;}
+	</style>
+</head>
+<body>
+	<div class="channelContent">
+	    <div id="content" style="padding:0">
+            <div class="common_content w_radiolist">
+                <ul class="kw_radiolist"></ul>
+            </div>
+	        <div class="page"></div>
+	    </div>
+	</div>
+	<style>
+	</style>
+	<ul id="kw_radiolistModel" style="display:none;">
+		<li class="br_wrap {$radioClass}">
+			<a _onclick="{$log}{$click}" onclick="{$log}{$click}" title="{$titlename}" class="br_pic forRefLog" data-rid="{$rid}" href="javascript:;" hidefocus="">
+				<span class="br_shade"></span>
+				<div class="cover">
+					<img src="img/default.png" class="lazy" onerror="imgOnError(this,150);" data-original="{$pic}" />
+				</div>
+				<span class="playCntSplice"></span>
+                <div class="lstdiv">
+                    <span class="listeners">{$listnum}</span>
+                </div>
+			</a>
+			<p class="br_name">
+				<a onclick="{$log}{$click}" title="{$titlename}" href="###" hidefocus="">{$showdisname}</a>
+			</p>
+		</li>
+	</ul>
+</body>
+</html>

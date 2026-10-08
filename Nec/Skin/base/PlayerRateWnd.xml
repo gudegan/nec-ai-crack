@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="197,88">
+<VerticalLayout name="root" bkimage="playrate_bk.png">
+	<Label name="ks_song_name" padding="0,20,0,0" text="1.0倍速" align="center" height="14" textcolor="#ff000000"/>
+	<Slider name="rateSlider" step="10" value="50" padding="25,7,0,0" width="148" height="11" bkimage="play_rate_bk.png" thumbimage="play_rate_thumb.png" thumbsize="11,11" />
+</VerticalLayout>
+</Window>

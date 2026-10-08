@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>cd收藏下载频道</title>
+    <link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/to_top.css" rel="stylesheet" />
+	<link href="css/channel_mycd.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="navBox">
+		<div class="logo">
+			<div class="logo_icon"><i></i></div>
+			<div class="logo_icon_splice"></div>
+		</div>
+		<h1>发烧音乐</h1>
+		<div class="nav">
+			<a href="javascript:commonClick({'source':'9002'});" class="index"><span>发现音乐</span></a>
+			<a href="javascript:;" class="jumpDown"><span>我的下载</span><label></label></a>
+		</div>
+	</div>
+	<div class="tabBox tabs" style="display: none">
+		<div class="tab">
+			<a href="javascript:;" class="finish active">已下载<span>0</span></a>
+			<a href="javascript:;" class="underway">下载中<span>0</span></a>
+			<a href="javascript:;" class="collections" style="display: none">收藏夹</a>
+			<s id="redInfoTip" style="display:none"></s>
+		</div>
+		<div class="cdDownOver">
+			<a href="javascript:;" class="cdPackageImport"><i class="iconBox iconfont icon-import"></i><span>导入本地HIFI音乐</span></a>
+		</div>
+		<div class="underwayOperationBox">
+			<a href="javascript:;" class="all_stop"><i class="iconBox iconfont icon-suspend"></i>全部暂停</a>
+			<a href="javascript:;" class="all_start"><i class="iconBox iconfont icon-download"></i>全部开始</a>
+			<a href="javascript:;" class="time"><i class="iconBox iconfont icon-timing-shutdown"></i>定时关机</a>
+			<a href="javascript:;" class="all_del"><i class="iconBox iconfont icon-delete"></i>清空</a>
+			<!-- <a href="javascript:;" class="seting"><i class="iconBox iconfont icon-download"></i>下载设置</a> -->
+		</div>
+	</div>
+	<div class="finishContentBox">
+		<!-- <div class="finishInfoOperationBox">
+			<div class="finishOperationBox" style="display:none;">
+			</div>
+		</div> -->
+        <div id="finished_content">
+            <ul id="finished_packet" data-model="kw_cdpacket_lists">
+			</ul>
+        </div>
+	</div>
+	<div class="underwayContentBox" style="display:none;">
+		<div class="underwayCDListBox">
+            <ul id="user_packet_undownload" data-model="kw_cdpacket_lists">
+            </ul>
+		</div>
+	</div>
+    <div class="CD_Collections" style="display:none;">
+        <div class="coll_top_tag tabs" >
+			<div class="tagbtns tab">
+				<a href="javascript:;" class="coll_total active">全部</a>
+				<a href="javascript:;" class="coll_finished">已下载</a>
+				<a href="javascript:;" class="coll_unfinished">未下载</a>
+			</div>
+			<span class="collect_total">共0张专辑</span>
+            <div class="kw_select">
+                <span>按添加时间</span>
+                <i class="tri_press_down"></i>
+                <ul class="sel_list" style="display:none;">
+				    <li class="active">按添加时间</li>
+                    <li >按艺术家</li>
+                    <li >按专辑名称</li>
+                </ul>
+            </div>
+        </div>
+        <div class="collect_CDListBoxs">
+            <ul id="user_packet_collect"></ul>
+        </div>
+    </div>
+	<div id="nocdBox">
+        <img src="img/cdpack/hifi-no-data.png">
+        <p class="p1">HiFi 音乐功能已停止服务</p>
+        <p class="p2">您在播放歌曲时，可通过选择音质，</p>
+        <p class="p2">继续享受品质音乐~</p>
+	</div>
+    <div class="login_guide" style="display:none;">
+        <div class="nologinImg"></div>
+        <p class="unlogin_tip">登录后才能下载HiFi发烧音乐噢~</p>
+        <a href="###" class="login_btn">马上登录</a>
+    </div>
+    <a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+    <!-- model -->
+	<ul id="kw_cdpacket_lists" style="display: none">
+		<li id="{$albumid}" down_status="{$status}" class="cue_block" c-status="0" downedtime="{$downtime}">
+			<div class="cdPicBox" oncontextmenu="CDContextMenu(this)">
+				<img class="localPic {$status}" src="img/cdpack/cdImportlocal.png">
+				<div class="coverBox">
+					<div class="cover">
+						<img class="cdHeadPic lazy" src="img/cdpack/second/default.png" onerror="imgOnError(this,'150cd')" data-original="{$pic}">
+					</div>
+					<span class="cdshadow"></span>
+					<div class="splice"></div>
+					<div class="{$icon_show_type}">母带</div>
+				</div>
+				{$canvas}
+				<div class="downInfoTips">
+					<p class="down_percent">{$percent}</p>
+					<p class="i_info">{$info_tip}</p>
+				</div>
+				<i class="{$down_status}"></i>
+				<i class="play_icon_normal" title="直接播放"></i>
+				<i class="play_icon"></i>
+				<i class="play_icon_pause"></i>
+			</div>
+			<div class="albumNameBox">
+				<a href="javascript:;" class="albumName skinLink" title="{$albumname}">{$albumname}</a>
+			</div>
+			<div class="artistNameBox">
+				<a href="javascript:;" class="artistName skinLink" title="{$artname}">{$artname}</a>
+			</div>
+            <i class="list_no_dot {$reddot}"></i>
+		</li>
+	</ul>
+    <ul id="kw_cdpacket_coll_lists" style="display:none;">
+        <li id="{$albumid}_coll" down_status="collect" class="cue_block" c-status="-1" downedtime="{$downtime}">
+            <div class="cdPicBox" oncontextmenu="CDContextMenu(this)">
+				<div class="coverBox">
+					<div class="cover">
+						<img class="cdHeadPic lazy" src="img/cdpack/second/default.png" onerror="imgOnError(this,'150cd')" data-original="{$pic}">
+					</div>
+					<span class="cdshadow"></span>
+					<div class="splice"></div>
+					<div class="{$icon_show_type}">母带</div>
+					<i onclick="callDownLoadIconfn(arguments[0],this);return false;" class="i_down" data-id="{$albumid}">
+						<i class="i_Arrow"></i>
+					</i>
+				</div>
+			</div>
+            <div class="albumNameBox">
+				<a href="javascript:;" class="albumName skinLink" title="{$albumname}">{$albumname}</a>
+			</div>
+			<div class="artistNameBox">
+				<a href="javascript:;" class="artistName skinLink" title="{$artname}">{$artname}</a>
+			</div>
+        </li>
+    </ul>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js" type="text/javascript"></script>
+    <script src="js/pinyin.js" type="text/javascript"></script>
+    <script src="js/channel_mycd.js" type="text/javascript"></script>
+</body>
+</html>

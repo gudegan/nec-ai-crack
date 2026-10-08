@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="360,500" caption="0,0,0,35" >
+<VerticalLayout name="root" bkcolor="#ffffffff">
+	<HorizontalLayout height="32">
+	  <Control />
+      <Button name="button_Close" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+	<Label 	padding="0,30,0,0" text="安装手机酷我音乐" width="360" height="16" align="center" textcolor="#ff333333" font="Default.Font16"/>
+	<Label 	padding="0,20,0,0" text="请扫描二维码，安装手机酷我音乐" width="360" height="14" align="center" textcolor="#ff555555" />
+	<Label 	padding="0,5,0,0" text="畅享多端同步" width="360" height="14" align="center" textcolor="#ff555555" />
+	
+	<Control name="QRImage" padding="60,20,0,0" width="240" height="240"/>
+	<Button name="finished" padding="20,36,0,0" width="320" height="44" text="完成" font="Default.Font18" theme="MsgBox_Btn_Focus"/>
+</VerticalLayout>
+</Window>

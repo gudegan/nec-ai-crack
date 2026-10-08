@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Window size="0,0" caption="0,0,0,0" roundcorner="1,1">
+<VerticalLayout>
+<Control height="1"/>
+<HorizontalLayout>
+	<Control width="1"/>
+	<List name="PathList" header="hidden" rectangleselect="true" itemtextcolor="#ff666666" itemhotbkcolor="#ffe7f2f7" itemselectedbkcolor="#ffdaeff9" itemexpandbkcolor="#ff98d5f2" inertiascroll="false" usefadehotbkg="true" multiselecting="true" itemshowhtml="false" vscrollbar="false" hscrollbar="false" itemalign="left">
+		<ListHeader>
+				<ListHeaderItem />
+		</ListHeader>
+		<DefChildAttr height="32" menu="true"/>
+	</List>
+	<Control width="1"/>
+</HorizontalLayout>
+</VerticalLayout>
+</Window>

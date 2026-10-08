@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window mininfo="439,505" size="439,505" roundcorner="0,0" dbclicktofullscreen="true">
+  <Default name="VScrollBar" value="overlay=&quot;true&quot; buttonlength=&quot;8&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_popup_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_popup_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_popup_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_popup_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <VerticalLayout name="root" inset="34,0,0,0" bkimage="playinglistbk.png">
+    <VerticalLayout name="playinglistCaption" height="73" bkcolor="pp.TitleMaskColor">
+      <HorizontalLayout>
+        <Label name="playinglistWndTitle"  padding="20,0,0,0" text="播放列表" textcolor="pp.Text.Em" textpadding="0,6" endellipsis="true"/>
+        <!--<Button name="close" width="16" height="16" padding="0,10,5,10" statusimage="playinglist_close.png" />-->
+      </HorizontalLayout>
+      <HorizontalLayout height="28" >
+        <Label name="songcount" padding="20,-2,0,0" width="100" text="共首歌曲" endellipsis="true" />
+        <Control />
+        <RichEdit name="playingEdit" textpadding="24,5,10,3" padding="6,0,14,0" defaulttextcolor="#4D000000" textcolor="#CC333333" width="126" height="26" font="Default.FontSmall" defaulttext="搜索列表歌曲" bkimage="playing_edit_search_bk.png" rich="false" autohscroll="true" multiline="false" maxchar="20"/>
+        <Button name="PlayingSearBtn"  width="12" height="12" statusimage="playing_search_btn.png" setcursor="true" float="true" pos="134,7"  tooltip="搜索列表歌曲" />
+        <Button name="addto" textpadding="18,0,0,0" varwidth="true" text="添加到" setcursor="true" icondest="0,6,18,24" iconstatusimage="icon_ListAddVir-playing.png"/>
+        <Control width="12" />
+        <Button name="clear" textpadding="18,0,0,0" varwidth="true" text="清空" setcursor="true" icondest="0,6,18,24" iconstatusimage="icon_ListDelVir-playing.png"/>
+        <Control width="16" />
+      </HorizontalLayout>
+      <Control height="10"/>
+    </VerticalLayout>
+    <HorizontalLayout name="floatAuditionPanel" theme="horizontal_list_tip">
+		<Label theme="icon_vip_golden" padding="10,5,0,0"/>
+		<Label name="playing_float_tip_label" textcolor="#B22D1D17"  font="Default.FontSmall"  endellipsis="true" width="230"/>
+		<Control />
+		<Button name="btnAuditionOpen" visible="false" theme="open_vip_float_tip"/>
+		<Button name="btnAuditionClick" visible="false" theme="btn_float_tip"/>
+		<Control width="20"/>
+    </HorizontalLayout>
+    <TabLayout name="listTab" >
+      <VerticalLayout name="playlistrootpanel">
+        <List name="playingList"
+              bordersize="0"
+              inset="2,0,2,0"
+              header="hidden"
+              acceptdrag="true"
+              dragtarget="true"
+              draghovertype="line"
+              rectangleselect="true"
+              inertiascroll="true"
+              usefadehotbkg="true"
+              multiselecting="true"
+              itemshowhtml="false"
+              itemalign="left"
+              menu="true"
+              vscrollbar="true"
+            >
+          <DefChildAttr height="44" expandheight="44" menu="true"/>
+          <ListHeader name="playingListHeader">
+            <ListHeaderItem text="index" width="26" minwidth="26" maxwidth="80" padding="10,0,0,0" />
+            <ListHeaderItem text="name" />
+            <!--<ListHeaderItem text="buttons" width="80" />-->
+            <ListHeaderItem text="artist" width="120" />
+          </ListHeader>
+        </List>
+        <Control height="1" />
+      </VerticalLayout>
+      <VerticalLayout name="emptylistpannel">
+        <Control />
+        <VerticalLayout height="208">
+          <HorizontalLayout height="120">
+            <Control />
+            <Control align="center" width="200" bkimage="empty_list_onwhite.png" />
+            <Control />
+          </HorizontalLayout>
+          <Control height="4" />
+          <Label align="center" height="30" text="播放列表没有歌曲" textcolor="pp.Text.Minor"/>
+          <Control height="12" />
+          <HorizontalLayout height="30">
+            <Control />
+            <Button name="songlib" varwidth="true" textpadding="17,0,17,0" text="去发现好音乐" setcursor="true" statusimage="BtnListPlayVir.png" textcolor="Text.UnderTopic"/>
+            <Control />
+          </HorizontalLayout>
+        </VerticalLayout>
+        <Control />
+      </VerticalLayout>
+    
+    <VerticalLayout name="playingsearchempty">
+        <Control />
+        <VerticalLayout height="208">
+          <HorizontalLayout height="120">
+            <Control />
+            <Control align="center" width="200" bkimage="playingempty_list.png" />
+            <Control />
+          </HorizontalLayout>
+          <Control height="4" />
+          <Label align="center" height="30" font="Default.FontName" text="没有找到相关结果，换个词再试试?" textcolor="Global.LightGray"/>
+        </VerticalLayout>
+        <Control />
+      </VerticalLayout>
+
+    </TabLayout>
+    
+
+  </VerticalLayout>
+</Window>

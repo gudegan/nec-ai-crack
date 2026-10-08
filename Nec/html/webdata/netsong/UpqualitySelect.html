@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>一键升高音质</title>	
+	<link href="css/upquality.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/upquality.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			$kw_upQuality.load();
+		});
+	</script>
+</head>
+<body>
+	<div class="content">
+		<div class="topLine">
+			<div class="checkbox checkAll">
+			  	<label class="checked"></label>
+		  	</div>
+			<span class="name">全选</span>
+			<span class="format">升级后音质</span>
+			<span class="size">升级后大小</span>
+		</div>
+		<div class="upgradeList scrollBar" data-model="kw_upgradeItemModel"></div>
+		<div class="bottomLine">
+			<div class="line">
+				<span class="num">共0首歌曲</span>
+				<span class="allSize">总容量：0M</span>
+			</div>
+			<a class="upgrade" href="javascript:;">马上升级</a>
+		</div>
+	</div>
+	
+	<!-- model -->
+	<div id="kw_upgradeItemModel" style="display:none">
+		<div class="item {$itemClass}" data-index="{$index}">
+			<div class="checkbox checkItem">
+			  	<label class="{$checkClass}"></label>
+		  	</div>
+		  	<span class="name">{$name}</span>
+			<span class="format">{$format}</span>
+			<span class="size">{$size}M</span>
+		</div>
+	</div>
+</body>
+</html>

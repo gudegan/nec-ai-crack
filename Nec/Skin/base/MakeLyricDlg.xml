@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,60" roundcorner="1,1" size="630,480">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,7'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_popup_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_popup_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_popup_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_popup_thumb_v_4.png&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Global.DarkGray&quot; normalimage=&quot;PopUpWndEditVir_1.png&quot; focusedimage=&quot;PopUpWndEditVir_2.png&quot; disabledimage=&quot;PopUpWndEditVir_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Default.FontName&quot;" />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;Default.FontSmall&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; textcolor=&quot;Global.DarkGray&quot; statusimage=&quot;Config_CheckBox.png&quot; font=&quot;Default.FontName&quot;" />  
+  <VerticalLayout >
+    <!--title-->
+    <HorizontalLayout name="PopUpTitleHor" >
+      <Label name="title_head" text="您准备制作的歌曲是：" theme="PopUpTitle" font="Default.Font18"/>
+      <Label name="title" text="" padding="0,4" varwidth="true" font="MsgBox.Title" textcolor="MsgBox.Title.txt" />
+      <Control />
+      <Button name="close" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+
+    <!--播放进度条-->
+    <HorizontalLayout padding="16,0,10,0" height="40" >
+      <TabLayout padding="0,0,0,0" name="Play_Pause" width="40" height="40">
+        <Button name="Play" tooltip="播放" pos="0,0,0,0" height="40" width="40" align="center" statusimage="playbtnVir.png" />
+        <Button name="Pause" tooltip="暂停" pos="0,0,0,0" height="40" width="40" align="center" statusimage="pausebtnVir.png" />
+      </TabLayout>
+      <VerticalLayout>
+        <Control />
+        <Slider name="PlayerProgress_makeLyric" padding="19,0,17,0" height="20" max="100" min="0" bkimage="lrc_PlayerProgress_bk_1.png" fgimage="PopUpWndProgress_fgVir_1.png" thumbimage="slider_skinwnd_thumb.png" thumbsize="20,20"/>
+        <Control />
+      </VerticalLayout>
+    </HorizontalLayout>
+    <!--歌词编辑区域和操作说明-->
+    <HorizontalLayout padding="16,10,0,0" height="202" >
+      <!--
+    	<RichEdit name="lyrictext" rich="true" wantreturn="true" autovscroll="true" autohscroll="true" defaulttext="请填入歌词，如夹杂广告或者QQ号不能通过审核" defaulttextcolor="#ff909090" padding="10,0,10,0" width="388" height="200" normalimage="Config_EditBox_1.png" focusedimage="Config_EditBox_2.png" textcolor="Config.DefaultText" font="Config.DefaultText" />
+        -->
+      <TabLayout name="tl_lyric" padding="0,0,0,0" width="380" height="202" >
+        <RichEdit name="lyrictext" wantreturn="true" font="Default.Font16" defaulttext="请填入歌词，如夹杂广告或QQ号不能审核通过" textcolor="Global.DarkGray" bordercolor="#0dffffff" bkcolor="#FFF9F9F9" defaulttextcolor="#ff909090" autovscroll="true" vscrollbar="true" autohscroll="true" hscrollbar="true" rich="true"  bordersize="1"  />
+        <MakeLyricCtrl name="ctrl_makelyric" keyrelay="0" font="Default.FontName" linecount="9" linespacing="4" wordspacing="5" bordercolor="#ffbfd4de" bordersize="1" highlight_textcolor="Topic.Normal" common_textcolor="#ff333333" curline_bkgcolor="#4d000000" curword_bordercolor="#0dffffff" />
+      </TabLayout>
+      <Control width="20" />
+      <VerticalLayout  >
+        <HorizontalLayout height="24">
+          <Label bkimage="playicon.png" height="24" width="24"/>
+          <Label text="1. 点击播放开始制作" padding="2,1,0,0" />
+        </HorizontalLayout>
+        <HorizontalLayout padding="0,12,0,0">
+          <Label bkimage="rightarrowicon.png" height="24" width="24"/>
+          <VerticalLayout padding="2,1,0,0">
+            <Label text="2. 按歌词敲击键盘右箭头" />
+            <HorizontalLayout width="250" height="22">
+              <Label text="    歌词停顿，敲击" />
+              <Label bkimage="lrc_downarrow_icon.png" padding="0,5,0,0" height="12" width="12"/>
+              <Control />
+            </HorizontalLayout>
+            <HorizontalLayout width="250" height="22">
+              <Label text="    回上一字，敲击" />
+              <Label bkimage="lrc_leftarrow_icon.png" padding="0,5,0,0" height="12" width="12"/>
+              <Control />
+            </HorizontalLayout>
+            <HorizontalLayout width="250" height="22">
+              <Label text="    回上一行，敲击" />
+              <Label bkimage="lrc_uparrow_icon.png" padding="0,5,0,0" height="12" width="12"/>
+              <Control />
+            </HorizontalLayout>
+            <Control />
+          </VerticalLayout>
+        </HorizontalLayout>
+
+      </VerticalLayout>
+    </HorizontalLayout>
+    <!--昵称和qq号码-->
+    <HorizontalLayout padding="16,10,0,0" height="30">
+      <Edit name="nickname" width="180" height="30" defaulttext="填写昵称：" defaulttextcolor="Global.LightGray" maxchar="20" />
+      <Edit name="qqnumber" width="180" height="30" padding="20,0,0,0" defaulttext="QQ号：" digitalonly="true" defaulttextcolor="Global.LightGray" />
+    </HorizontalLayout>
+    <!--底部按钮-->
+    <HorizontalLayout padding="14,0,0,15" >
+      <Label text="歌词制作官方群：275752540" height="30" textcolor="Global.DarkGray" width="220" />
+      <Control />
+      <TabLayout name="tablayout_preview" padding="0,80,0,0" width="104" >
+        <Button name="preview" text="试听预览" height="32" theme="MsgBox_Btn_Focus"/>
+        <Button name="stop_preview" text="结束预览" height="32"  theme="MsgBox_Btn_Focus"/>
+      </TabLayout>
+      <Button name="finish" padding="10,80,22,0" text="完成制作" width="104" height="32" theme="PopUpDefBtn"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

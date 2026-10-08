@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="360,500" caption="0,0,0,35" >
+  <Default name="VScrollBar" value="overlay=&quot;true&quot; buttonlength=&quot;8&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_popup_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_popup_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_popup_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_popup_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;"/>
+<VerticalLayout name="root" bkcolor="#ffffffff">
+	<HorizontalLayout width="360" height="167" >
+	  <Control name="tran_top1" padding="104,63,0,0" width="160" height="70" bkimage="tran_pop.png"/>
+	  <Control name="tran_top2" width="160" height="70" bkimage="tran_pop2.png" float="true"/>
+	  <Control />
+      <Button name="button_Close" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+	<Control padding="20,0,20,0" bkcolor="#33000000" height="1" />
+	<VerticalLayout padding="0,8,0,0">
+	<Label padding="18,5,0,0" text="请选择要传到其他设备的歌单：" varwidth="true" height="20" textcolor="#ff333333" />
+                      <List name="BaseList"
+                            padding="20,17,20,0"
+											bordersize="0"
+											inset="2,0,2,0"
+											header="hidden"
+											acceptdrag="false"
+											dragtarget="false"
+											draghovertype="line"
+											rectangleselect="false"
+											font="Default.FontName"
+											itemtextcolor="#ff333333"
+											itemselectedtextcolor="#ff333333"
+											itemhotbkcolor="#fff4f4f4"
+											itemselectedbkcolor="#ffececec"
+											itemactivetextcolor="#ff222222"
+											itemexpandbkcolor="#fff4f4f4"
+											itemdisabledtextcolor="#ff999999"
+											inertiascroll="true"
+											usefadehotbkg="true"
+											multiselecting="false"
+											itemshowhtml="false"
+											itemalign="center"
+											menu="false"
+											vscrollbar="true"
+											hscrollbar="false"
+											bkcolor="#fffafafa"
+                          >
+                        <ListHeader>
+                          <ListHeaderItem />
+                        </ListHeader>
+                        <DefChildAttr height="36" menu="true"/>
+                      </List>
+    </VerticalLayout>
+</VerticalLayout>
+</Window>

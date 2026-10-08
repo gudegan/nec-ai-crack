@@ -1,0 +1,13 @@
++name:catalog-quku;display:曲库;hide:true;
+ch:2;name:songlib;display:推荐;jump:${netsong}index.html;icon:netsong_recommend.png;
+ch:10000;name:radio;display:听吧;jump:${netsong}channel_radio.html;icon:netsong_radio.png;
+ch:10001;name:MV;display:视频;jump:${netsong}channel_mv.html;icon:netsong_video.png;
+ch:10004;name:bang;display:排行;jump:${netsong}channel_bang.html;hide:true;
+ch:10003;name:artist;display:歌手;jump:${netsong}channel_artist.html;hide:true;
+ch:10006;name:vipzone;display:付费专区;jump:http://vip1.kuwo.cn/vip/added/vipzone_pc/index.html;hide:true;
+ch:10002;name:classify;display:歌单分类;jump:${netsong}channel_classify.html;hide:true;
+ch:10005;name:mnx;display:美女秀;jump:${netsong}channel_mnx.html;hide:true;
+ch:10009;name:songlib;display:歌单详情;jump:${netsong}content_gedan.html;hide:true;
+ch:10008;name:gedan;display:编辑歌单;jump:${netsong}editorNote.html;hide:true;
+ch:10015;name:logout;display:注销页面;jump:${netsong}logout.html;hide:true;
+ch:10016;name:newDiscShelves;display:新碟上架更多;jump:${netsong}newDiscShelves.html;hide:true

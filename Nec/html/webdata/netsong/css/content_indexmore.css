@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+/*本页公用*/
+body{overflow-x:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+/*清除浮动*/
+.clearfix:after {content:""; display:block; clear:both;}
+.clearfix {zoom:1;}
+
+/*大容器*/
+.content_indexmoreWrap{padding:20px 0 0 23px;}
+/*大标题*/
+.content_indexmoreTitle{float:none; width:auto; height:18px; line-height:18px; margin-bottom:20px; font-size:18px;}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="320,60" >
+  <VerticalLayout  bkimage="SongWallPaperDownloadStatus.png">
+    <Control />
+      <HorizontalLayout height="25">
+	    <Control />		 
+        <Label padding="1,1,0,0"  text="壁纸加载失败，请您稍后再试。" width="240" height="25" textcolor="#ffffffff" font="ChangeSkin.Title"/>
+        <Control />
+	  </HorizontalLayout>      
+    <Control />
+  </VerticalLayout>
+</Window>

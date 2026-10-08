@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="676,450" caption="0,0,0,44">
+	<VerticalLayout name="verMain" bordersize="1" bordercolor="#ff2c66b0">
+		<HorizontalLayout>
+			<VerticalLayout>
+				<VerticalLayout>
+				  <HorizontalLayout name="titlepanel" padding="1,1,1,0" bkimage="minisite_title_bkimage.png" height="44" >
+						<Label name="title" width="200" font="Minisite2013.Title"/>
+						<Label name="titleInfo" text="您好，亲爱的酷我用户" padding="0,10,0,10" textcolor="#ffffffff" font="Default.FontName.Bold" />
+						<Button name="min" padding="0,5,10,0" width="22" height="22" statusimage="minisite_title_btn_min.png"/>
+						<Button name="close" padding="0,5,10,0" width="22" height="22" statusimage="minisite_title_btn_close.png"/>
+					</HorizontalLayout>
+				<VerticalLayout name="verWeb" padding="1,0,1,1">
+					<HorizontalLayout name="horLoadingWebUI">
+						<Control />
+						<VerticalLayout width="200" >
+							<Control />
+							<Label text="正在加载..." width="200" align="center" font="YAHEI.NO18" textcolor="#FF666666"/>
+							<Control />
+						</VerticalLayout>
+						<Control />
+					</HorizontalLayout>
+					<HorizontalLayout name="horWebHtml" visible="false">
+						<KwWebBrowser2 name="ie" />
+					</HorizontalLayout>
+					</VerticalLayout>
+				</VerticalLayout>
+			</VerticalLayout>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

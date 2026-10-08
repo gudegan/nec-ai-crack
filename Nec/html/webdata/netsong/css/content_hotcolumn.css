@@ -1,0 +1,96 @@
+/*base 公用*/
+body{overflow-x:hidden;}
+.wrap750{width:750px; margin:auto; padding-top:20px;}
+.shadow60{position:absolute; left:0; top:0; width:60px; height:60px; border-radius:3px; background:#000; opacity:0.3;}
+.icon{float:right; width:74px; height:38px; padding-top:22px; margin-left:-10px;}
+.icon a{float:left; width:16px; height:14px; margin-right:8px; background:url(../img/icon_png8.png) no-repeat;}
+.icon a.m_add{width:14px; background-position:-24px 0;}
+.icon a.m_add:hover{background-position:-24px -23px;}
+.icon a.m_down{background-position:-46px -0;}
+.icon a.m_down:hover{background-position:-46px -23px;}
+.icon a.m_more{background-position:-114px -2px;}
+.icon a.m_more:hover{background-position:-114px -25px;}
+.hide{display:none;}
+.mb20{margin-bottom:20px;}
+.pb22{padding-bottom:22px;}
+.pb30{padding-bottom:30px;}
+
+/*热门专栏内容页私有*/
+.hotBannerBox{position:relative; width:750px; height:180px; margin-bottom:30px;}
+.hotbanner{position:absolute;}
+.hotbanner img{width:750px; height:180px; cursor:default;}
+.hotbannerShadow{position:absolute; bottom:0; width:750px; height:30px; background:#000; opacity:0.5;}
+.hotbannerInfo{position:absolute; bottom:0; width:750px; height:30px; line-height:30px; color:#fff;}
+.hotbannerInfo img{float:left; width:30px; height:30px; padding:0 5px 0 10px; border-radius:50%;}
+.hotbannerInfo span{float:left;}
+.hotbannerInfo span.spanDes{margin-left:10px;}
+/*全部xx按钮*/
+h1{float:none;}
+h1.toolbar{float:none; padding-bottom:12px;}
+/*本页公用标题*/
+h3{height:18px; line-height:18px; padding-bottom:10px; font-size:18px; font-weight:normal;}
+/*专栏大描述*/
+.aboutBox{padding-bottom:22px;}
+.aboutBox p{line-height:30px;color:#666;}
+
+/*底部大图区域部分css*/
+.bottomPicBox{padding-bottom:20px;}
+.bottomPicBox img{max-width:750px; margin:0 auto;}
+.bottomPicBox .bigPic{width:640px; height:200px; margin:0 auto; margin-bottom:16px; border-radius:3px;}
+.bottomPicBox .picInfo{line-height:24px; color:#666; margin-bottom:16px;}
+
+/*相似歌手区域部分css*/
+.relatedSingerBox{margin-right:-38px; margin-bottom:-30px; padding-bottom:30px; overflow:hidden;}
+.relatedSingerBox h3{padding-bottom:20px;}
+.relatedSingerBox .singerBox{overflow:hidden;}
+
+/*往期专栏部分css*/
+.prevColumnBox{margin-right:-38px; padding-bottom:30px;}
+.prevColumnBox h3{float:left;}
+.prevColumnBox .more{float:right; margin-right:40px; font-size:14px; color:#999;}
+.prevColumnBox .more:hover{color:#21a0ed;}
+.prevColumnBox ul{overflow:hidden;}
+
+/*单曲model*/
+.singerModelBox{padding-bottom:30px;}
+.singerModelBox h3{height:18px; line-height:18px; padding-bottom:10px; font-size:18px; font-weight:normal;}
+/*列表公用*/
+.musicListBox{margin-bottom:-10px;}
+.musicList{height:60px; margin-bottom:10px; background:#f1f1f1;}
+.picBox{position:relative; float:left; width:60px; height:60px; border-radius:3px; cursor:default;}
+.picBox .num{position:absolute; z-index:6; width:16px; height:25px; line-height:18px; font-size:12px; text-align:center; color:#fff; background:url(../img/icon_index.png) no-repeat;}
+.picBox img{width:60px; height:60px;}
+.picBox .i_play{left:50%; top:50%; width:30px; height:30px; margin:-15px 0 0 -15px; cursor:pointer; transform:translate(0);}
+
+.songInfoBox{float:left; width:606px; height:46px; padding:14px 0 0 10px;}
+.songInfoBox .name{display:inline-block; height:14px; line-height:14px; margin-bottom:6px; color:#333;}
+.songInfoBox .name:hover{color:#21a0ed;}
+.songInfoBox .artist{font-size:12px; color:#999;}
+.songInfoBox .artist:hover{color:#21a0ed;}
+
+/*歌单使用*/
+.pl120Box{margin-right:-38px; padding-bottom:30px; overflow:hidden;}
+
+/*mv使用*/
+/*.mv165Box{margin-right:-30px; margin-bottom:-30px; padding-bottom:30px; overflow:hidden;}*/
+.mv165Box{width:165px; margin:0 auto; overflow:hidden;}
+.mv165Box .bmv_wrap .bmv_pic:hover .bmv_shade{background:#000; opacity:0.35;}
+.mv165Box .bmv_wrap .bmv_pic .i_play{transform:translate(0); left:50%; top:50%; margin-top:-17px; margin-left:-17px;}
+
+/*120歌单*/
+.kw_plwrap{margin-right:-38px; overflow:hidden;}
+.kw_pl120{float:left; width:120px; margin:0 37px 0 0;}
+.kw_pli120{position:relative; display:block; width:120px; height:120px;}
+.kw_pli120 img{display:block; width:120px; height:120px; border-radius:3px;}
+.kw_pl120s{position:absolute; left:0; top:0; width:120px; height:120px; border-radius:3px; background:#000; opacity:0.35; transform:translateX(3000px);}
+.kw_pli120:hover .kw_pl120s{transform:translateX(0);}
+.i_play,.i_play_big{transform:translateX(3000px); margin:0;}
+.kw_pli120:hover .i_play{right:3px; bottom:3px; transform:translateX(0);}
+.kw_plinfoBox{padding-top:6px;}
+.kw_plinfo{display:block; color:#000; line-height:18px; white-space:normal; text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.kw_plinfo:hover{color:#21a0ed;}
+
+/*歌手使用*/
+.b_wrap{padding-bottom:30px;}
+.b_wrap .b_pic:hover .i_play{transform:translate(0);}
+.b_wrap p{text-align:left;}

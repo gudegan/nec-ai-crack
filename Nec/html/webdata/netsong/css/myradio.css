@@ -1,0 +1,540 @@
+﻿/*页面公用*/
+.contentBox{padding:12px 26px 0 25px;}
+.title_box{margin-bottom:17px;}
+.title_box h3{float:left; height:22px; line-height:22px; font-weight:bold; font-size:16px;opacity: 0.8;}
+.login_box{float:right; height:18px; line-height:18px;}
+.login_box p{float:left; margin-right:10px; font-size:12px; color:#999;}
+.login_box a{float:right; width:56px; height:25px; line-height:25px; margin-top:-4px; text-align:center; font-size:14px; color:#fff; border-radius:12px; background:#209be7;    margin-right: 11px;}
+
+/*听过电台部分css*/
+.history_radio_box .title_box h3{float:left;height:22px; line-height:22px;font-size: 16px;font-weight: bold; opacity: 0.8;}
+.raido_total{float:left; margin: 2px 0 0 5px; height:20px; line-height:20px;  font-size:14px; opacity: 0.6;}
+.sort_box{float:right;}
+.sort_box a{float:left; height:22px; line-height:22px; text-align:center; font-size:12px; color:#cacaca; opacity: 0.6}
+.sort_box .sort-margin{ display: inline-block;width: 1px;height: 13px; margin: 0 8px; font-style: normal;border-left: 1px solid;float: left;opacity: 0.6;position: relative;top: 4px;}
+.sort_box a:hover, .sort_box a.active{opacity: 1;font-weight: 600}
+/*结束*/
+
+.myradio_box {
+  position: relative;
+}
+
+ul {
+  margin: 0 -8px;
+  overflow: hidden;
+}
+/*上部分电台和下部分电台*/
+.br_wrap_radio
+{
+  float:left;
+  padding: 0 8px;
+  margin-bottom: 8px;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+/*一个电台的主体部分*/
+.br_wrap_radio .br_pic { display:block; position:relative; width:100%; height:0;padding-bottom: 100%; overflow:hidden;}
+.br_wrap_radio .br_pic .cover {width: 100%;height: 100%;position: absolute;top: 0;left: 0}
+.br_wrap_radio .br_pic .cover img {width: 100%;height: 100%;}
+
+/*背景图片*/
+.br_pic .lazy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.br_pic .lazyorig {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lazy_add {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*删除按钮*/
+.br_pic .radio_del {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top:5px;
+  right: 5px;
+  cursor:default;
+  background: url("../img/btn_radio_close.png") no-repeat 0 0;
+}
+
+.br_pic .lstdiv{position: absolute;left:2px;bottom:4px;}
+.br_pic .listeners{color: #ffffff;font-size: 12px;background: url(../img/play_radio/listen.png) 2px no-repeat;background-size:20px 20px;padding: 1px 2px 0px 21px;text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);}
+
+.br_pic .radio_del:hover {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top:5px;
+  right: 5px;
+  cursor:default;
+  background: url("../img/btn_radio_close.png") no-repeat -17px 0;
+}
+
+.br_pic .radio_recommond_1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top:0;
+  left:0;
+  background: url("../img/recommond.png");
+}
+
+/*圆形的放背景图用的层*/
+.br_pic .circle_div {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*圆形的透明遮罩图片*/
+.br_pic .circle_bg_img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background:url("../img/circle_20.png");
+}
+
+
+/*在上面的小的圆形的封面*/
+.br_pic .circle_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-radius: 50%;
+}
+.circle_cover_add {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 41px;
+  height: 41px;
+  margin: -20.5px 0 0 -20.5px;
+  background: url("../img/btn_add_radio.png");
+}
+
+.circle_cover_add:hover {
+  background-position: -43px 0;
+
+}
+
+/*进行播放的按钮*/
+.br_pic .i_play {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  background:url("../img/i_play_big.png");
+  display: block;
+}
+
+/*进行播放的按钮对应的hover的图片*/
+.br_pic .i_play:hover {
+  background: url("../img/i_play_h_big.png");
+}
+
+/*暂停的图片*/
+.br_pic .i_pause {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  background:url("../img/radio_pause_big.png");
+  display: block;
+}
+
+/*暂停的图片hover的图片*/
+.i_pause:hover {
+  background: url("../img/radio_pause_h_big.png");
+}
+
+
+/*正在播放的图片是一个gif图*/
+.br_pic .i_playing {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  background:url("../img/radio_play.gif");
+  display: block;
+}
+
+/*暂停的时候的图*/
+.br_pic .i_stop{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  background:url("../img/radio_stop.png");
+  display: block;
+}
+
+/*灰色透明遮罩图片*/
+.br_pic .br_shade {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-position: center;
+
+  -webkit-background-size: cover;
+  background-size: cover;
+  background: #000000;
+  opacity: 0.3;
+}
+
+.br_pic .br_shade_unlogin {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-position: center;
+
+  -webkit-background-size: cover;
+  background-size: cover;
+  background: #000000;
+  opacity: 0.3;
+}
+
+
+.playing_text_tip {
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  bottom: 5px;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.8;
+  cursor: default;
+  text-indent: 5px;
+}
+
+.playing_text_tip:hover {
+  opacity: 1;
+}
+
+.playing_text_tip p {
+  margin-top: 2px;
+}
+
+
+.playing_content {
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  margin-left: 10px;
+  top: 8px;
+  font-family: "微软雅黑";
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 0.8;
+  cursor: default;
+}
+
+.playing_content:hover {
+  opacity: 1;
+}
+
+.playing_content:p {
+  margin-top: 2px;
+}
+
+.br_pic .unlogin_text_tip {
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "微软雅黑";
+  font-size: 12px;
+  background-position: center;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+
+.br_pic .unlogin_text_tip:hover {
+  opacity: 1;
+}
+
+.br_pic .unlogin_text_tip p {
+  margin-top: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  color: #ffffff;
+  cursor: default;
+}
+
+.br_pic .radio_sec_tip {
+  display: block;
+  position: absolute;
+  height: 18px;
+  width: 32px;
+  top: 5px;
+  right: 5px;
+  text-align:center;
+  font-size:12px;
+  color:#fff;
+  border-radius:2px;
+  background:#000;
+  line-height:18px;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+/*正在播放时hover时的删除，喜欢等工具条*/
+.playing_oper {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  bottom: 0;
+  left: 0;
+  background: #000000;
+  z-index: 999999999;
+  opacity: 0.3;
+  text-align: center;
+  cursor: default;
+  margin: 0;
+}
+
+/*工具条上的相应的操作按钮*/
+.playing_oper .radio_like,.playing_oper .radio_dust,.playing_oper .radio_add,.playing_oper .radio_liked {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*喜欢按钮 未喜欢时候的问题*/
+.playing_oper .radio_like {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  margin-top: 10px;
+  background:url("../img/btn_radio_area_like.png")  no-repeat 0 0;
+}
+
+/*未喜欢时的hover状态*/
+.playing_oper .radio_like:hover {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  margin-top: 10px;
+  background:url("../img/btn_radio_area_like.png");
+  background-position: -17px 0px;
+}
+
+/*已经喜欢的按钮*/
+.playing_oper .radio_liked {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  margin-top: 10px;
+  background:url("../img/btn_radio_liked.png") no-repeat 0 0;
+}
+
+
+/*已经喜欢的按钮的hover的状态*/
+.playing_oper .radio_liked:hover {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  margin-top: 10px;
+  background:url("../img/btn_radio_liked.png") no-repeat -34px 0;
+}
+
+/*不喜欢，目前是垃圾箱的图片*/
+.playing_oper .radio_dust {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  margin-top: 10px;
+  background:url("../img/menu_delete.png") no-repeat 0 0;
+}
+
+.playing_oper .radio_dust:hover {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  margin-top: 10px;
+  background:url("../img/menu_delete.png");
+  background-position: -17px 0;
+}
+
+
+/*工具条上的添加按钮*/
+.playing_oper .radio_add {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-top: 10px;
+  background:url("../img/menu_add_to.png") no-repeat 0 0;
+}
+
+.playing_oper .radio_add:hover {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-top: 10px;
+  background:url("../img/menu_add_to.png") no-repeat -17px 0;
+}
+
+
+/*电台名字和歌曲信息居中显示*/
+.br_wrap_radio .br_name,.br_wrap_radio .br_info {
+  text-align: left;
+  width: 100%;
+}
+
+/*电台名称长度不够长度时打点显示*/
+.br_wrap_radio .br_name a {
+  display: block;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.br_wrap_radio .br_info {
+  height: 14px;
+  margin-bottom: 8px;
+}
+
+.br_wrap_radio .br_name {
+  margin-top: 7px;
+}
+
+#playing_text_songinfo {
+  display: inline-block;
+  font-size: 12px;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#playing_text_name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+
+/*歌曲信息*/
+.br_wrap_radio .br_info a {
+  font-family: "微软雅黑";
+  font-size: 12px;
+  opacity: 0.5;
+  cursor:default;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#scroll_info {
+  display: block;
+  cursor:default;
+  white-space: nowrap;
+  width: 100%;
+  height: 18px;
+  overflow: hidden;
+}
+
+.loadingIcon { float:left; position:fixed; display:none; width:26px; height:26px; background:url(../img/loading.gif) no-repeat 0 0; z-index:9999999; right:70px; bottom:10px;}
+
+span.playCntSplice {width: 100%;height: 40px;background: url(../img/play_radio/splice.png);display: block;position: absolute;bottom: 0;left: 0;}
+
+.playing-subtitle{
+  cursor: default;
+  width: 100%;
+  height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playing-subtitle a {
+  font-size: 12px;
+  opacity: 0.5;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*适配换肤*/
+.default,.default a,.dark,.dark a {color:#000000;}
+.shallow,.shallow a {color:#ffffff;}
+@media screen and (min-width:1117px) and (max-width:1430px){
+  .br_wrap_radio {
+    width: 16.66666667%;
+  }
+}
+@media screen and (min-width:1431px){
+  .br_wrap_radio {
+    width: 14.28571429%;
+  }
+}

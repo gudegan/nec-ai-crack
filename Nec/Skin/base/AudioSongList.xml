@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="456,475" caption="0,0,0,100" >	
+	<Default name="VScrollBar" value="overlay=&quot;true&quot; buttonlength=&quot;8&quot; width=&quot;12&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_popup_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_popup_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_popup_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_popup_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;" />
+	<VerticalLayout name="layout_clientrect" >
+		<HorizontalLayout name="layout_dialog_title" height="50" padding="24,0,0,0">
+			<Label align="left" text="会员专享歌曲" font="Default.Font16" textcolor="#FF333333" />
+			<Button name="btn_close" padding="0,10,7,0" width="30" height="30" statusimage="popupwndcloseVir.png"/>
+		</HorizontalLayout>
+		<HorizontalLayout height="40" bkcolor="#FFF9F9F9">
+			<Label name="Text_SongCount" width="320" padding="24,0,0,0" align="left" text="" textcolor="#FF999999" />
+		</HorizontalLayout>						
+		<List name="AudioListPanel"
+				bordersize="0"
+				inset="2,0,2,0"
+				header="hidden"
+				acceptdrag="true"
+				dragtarget="true"
+				draghovertype="line"
+				rectangleselect="true"
+				inertiascroll="true"
+				usefadehotbkg="true"
+				multiselecting="true"
+				itemshowhtml="false"
+				itemalign="left"
+				menu="true"
+				itemlinecolor="#FFF5F5F5"
+				itemselectedbkcolor="pp.ListItemSelectBkColor"
+				itemhotbkcolor="pp.ListItemSelectBkColor"
+				vscrollbar="true">
+			<ListHeader name="playingListHeader">
+				<ListHeaderItem text="index" width="26" minwidth="26" maxwidth="50" padding="24,0,0,0" />
+				<ListHeaderItem text="name" />
+				<ListHeaderItem text="artist" width="120" />
+			</ListHeader>
+			<DefChildAttr height="44" expandheight="44" menu="true"/>
+		</List>	
+		<Control height="1" bkcolor="#FFF9F9F9"/>
+		<HorizontalLayout height="76">
+			<Control />
+			<Button name="btn_openVip" width="192" height="40" padding="0,18,0,0" statusimage="AudioList_OpenVip.png"/>
+			<Control />
+		</HorizontalLayout>	
+	</VerticalLayout>
+</Window>

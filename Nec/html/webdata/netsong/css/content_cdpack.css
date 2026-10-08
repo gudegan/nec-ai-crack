@@ -1,0 +1,163 @@
+/*公用*/
+html{overflow:visible; overflow-x:hidden;}
+body {padding:0 25px;}
+
+/*logo*/
+.logo {position: relative;width: 69px;height: 42px;}
+.logo_icon {width: 69px;height: 42px;overflow: hidden;}
+.logo_icon i {display:block;width: 138px;height: 42px;background: url(../img/cdpack/third/logo/logo.png) no-repeat;margin-left: -69px;}
+.logo_icon_splice {width: 28px;height: 28px;background: url(../img/cdpack/third/logo/logo_splice.png);position: absolute;left: 0;bottom: 0;}
+/*标题*/
+.navBox {display: flex;margin-bottom:5px;}
+.navBox h1 {font-size: 17px;font-weight: 500;margin: 17px 0 0 3px;}
+.nav {text-align: center;flex: 1;overflow: hidden;margin-left: -140px;}
+.nav a {position: relative;display: inline-block;font-size: 16px;margin: 19px 40px 0 0;}
+.nav a span {opacity: 0.6;}
+.nav a:hover span {opacity: 1;}
+.nav a.active span {opacity: 1;font-weight: 600}
+.nav a.jumpDown {margin-right: 0px;}
+.nav a label {width:5px;height: 5px;border-radius: 50%;display: block;background:#fc5457;position: absolute;top: 0px;right: -5px;display: none;}
+.nav a i {width: 18px;height: 3px;border-radius: 2px;display: block;margin: 4px 0 0 25px;}
+
+/*控制信息盒子部分css*/
+.controlBox{height:44px;position: relative;display: flex;font-size:16px;border-bottom: 1px solid rgba(0, 0, 0, 0.06);padding-left: 96px;}
+.shallow .controlBox {border-bottom: 1px solid rgba(255, 255, 255, 0.05);}
+.controlBox a{position: relative;text-align:center;margin-right: 59px;opacity: 0.6;padding-bottom: 10px;margin-top:12px;}
+.controlBox a i {position: absolute;width: 18px;height: 2px;left: 50%;bottom: 0;margin-left: -9px;display: none}
+.controlBox a.active {opacity: 1;}
+.controlBox a.active i {display: block}
+.tabNum {font-size: 12px;}
+
+.w_loading { position:fixed;right:20px; bottom:4px; z-index:99999;}
+#l_loadfail { width: 100%;background-color: #fafafa;z-index: 99999; display:none; position:absolute;padding-bottom: 5px;top:0px;}
+.loaderror { height:250px;position:relative;margin-top:-160px;top:50%;width:100%;}
+.loaderror img { display:block;margin:0 auto;}
+.loaderror p { text-align:center;font-size:22px;}
+.loaderror p a { text-decoration:underline;}
+
+/*本页面标题公用*/
+.titleBox{position:relative;overflow:hidden;}
+.titleBox h3{float:left;font-size:18px; font-weight:500;opacity: 0.8;}
+.titleBox .openBtn{position:absolute; right:0; top:0;cursor:pointer;opacity: 0.4}
+/*公用结束*/
+
+/*头部信息部分开始*/
+.headInfoBox{display: flex;margin-bottom:10px;padding: 22px 25px;background:rgba(0,0,0,0.02);margin:0 -25px;}
+.shallow .headInfoBox {background:rgba(255,255,255,0.04)}
+/*cd封面*/
+.headInfoBox .cdPicBox{position:relative; width:196px; height:176px;}
+.headInfoBox .cdPicBox .cdCoverBox{position:absolute;top:0;left:0;width:196px; height:176px; background:url(../img/cdpack/third/cd-bg.png) no-repeat;}
+.headInfoBox .cdPicBox .cdHeadPic {width:176px;height: 176px;}
+.headInfoBox .cdPicBox .scoreSplice {position: absolute;bottom:0px;left:0px;width: 176px;height:48px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,1));}
+.headInfoBox .cdPicBox .splice {width:176px;height: 176px;position: absolute;top:0;left: 0;background: rgba(0, 0, 0, 0.05)}
+/*总评分*/
+.cdScore {overflow: hidden;position: absolute;left:13px;bottom:10px;display: flex}
+.starBox {margin-top:3px;}
+.starBox .star {width:12px;height: 12px;float: left;background: url(../img/cdpack/second/star_1.png);margin-right: 10px;}
+.myScoreLine .starBox .star {width:18px;height: 18px;background: url(../img/cdpack/second/star_1_big.png);margin-right: 10px;}
+.starBox .full,.starBox .clickFull {background: url(../img/cdpack/second/star_3.png)}
+.myScoreLine .starBox .full,.myScoreLine .starBox .clickFull {background: url(../img/cdpack/second/star_3_big.png)}
+.starBox .half {background: url(../img/cdpack/second/star_2.png)}
+.cdScore .score {font-size: 12px;color:#ffffff;}
+/*我的评分*/
+.myScore {margin-top:3px;height: 26px;display: flex;flex:1;overflow: hidden;}
+.myScore .myScoreLine {overflow: hidden;display: flex}
+.myScore span {margin:2px 5px 0 0;opacity: 0.8;}
+.myScore p {margin-top:2px;opacity: 0.8;display: none;position: relative;}
+.myScore p span {margin:0;}
+.myScore a {color:#FF0606;width:39px;height: 26px;background: url(../img/cdpack/third/delScoreBg.png);display: block;text-align: center;font-size: 12px;position: absolute;left:-5px;top:-30px;line-height:21px;}
+.myScore .star {cursor: pointer;}
+/*cd信息*/
+.headInfoBox .cdNameBox {overflow: hidden;}
+.cdNameBox label {width:5px;height: 5px;border-radius: 50%;display: block;background:#fc5457;position: absolute;display: none}
+.cdNameArea {width:100%;display: flex;}
+.headInfoBox .cdNameBox .cdIcon {width:58px;height: 22px;background:url(../img/cdpack/second/cdIcon.png)no-repeat;line-height: 22px;text-indent: 26px;margin:8px 10px 0 0;display: none;}
+.headInfoBox .cdNameBox .cdName {flex:1;font-size: 26px;position: relative;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;cursor: default;}
+.headInfoBox .cdHeadInfo{flex:1;margin-left:20px;overflow: hidden;}
+.headInfoBox .line1 {height:16px; line-height:14px; margin-top:12px;opacity: 0.8;}
+.headInfoBox .line1 .artist {float:left;width:100%;overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;height: 20px;}
+.headInfoBox .line1 .artist span {cursor: pointer;}
+.headInfoBox .line {height:16px; line-height:14px; margin-top:9px;font-size:12px;opacity: 0.6;display: flex}
+.headInfoBox .line2 {margin-top:15px;}
+.headInfoBox .line p {margin-right: 23px;}
+.headInfoBox .line p.style {margin-right: 0px;}
+.headInfoBox .line a.uploadBtn{float:left; display:none; margin-left:30px; color:#999;}
+.headInfoBox .line a.uploadBtn:hover{color:#ca9d63;}
+.infoBottom {display: flex;width: 100%; margin-top:27px;}
+.infoBottom .btnBox{height:30px;display: flex;width: 271px;;}
+.infoBottom .btnBox a {display: flex; align-items: center;padding:0 12px;height:30px; line-height:28px; font-weight:500; border-radius:2px;color:#000000;text-align: center;border:1px solid rgba(0,0,0,0.2);margin-right:10px;}
+.infoBottom .btnBox a span {opacity: 0.8;}
+.shallow .infoBottom .btnBox a span {opacity: 1;}
+.shallow .infoBottom .btnBox a {color:#ffffff;border:1px solid rgba(255,255,255,0.2)}
+.dark .infoBottom .btnBox .download,.dark .infoBottom .btnBox .downing,.dark .infoBottom .btnBox .downed {color:#ffffff;}
+
+.icon { font-size: 18px; opacity: 0.8; margin-right: 1px;}
+.shallow .icon {opacity: 1;}
+.download,.downing,.downed {width:70px;border-color: transparent !important;}
+.download {transition: opacity .2s linear;opacity: 1;padding:0 !important;line-height: 30px !important;}
+.download i{margin-left: 10px;}
+.download i,.download span{opacity: 1 !important; }
+.download:hover{opacity: 0.9;}
+.downing,.downed { padding-left: 13px;}
+.likeBtn i{margin-top: 1px;}
+.icon,.likeBtn span,.shareBtn span {transition: opacity .2s linear;}
+.icon,.likeBtn:hover .icon,.likeBtn:hover span,.shareBtn:hover .icon,.shareBtn:hover span {opacity: 1 !important;}
+.likeBtn,.shareBtn {transition: background-color .2s linear;}
+.likeBtn:hover,.shareBtn:hover {background: rgba(0,0,0,0.1);}
+.shallow .likeBtn:hover,.shallow .shareBtn:hover {background: rgba(255,255,255,0.1);}
+.icon-collection{color: #ff6161!important;}
+
+
+/*头部信息部分结束*/
+
+
+/*详情部分css*/
+.detailsBox{margin:15px 0 20px 0;display: none;}
+.detailsBox .titleBox{margin-bottom:5px;}
+.detailsBox p.cdInfo{line-height:26px; text-indent:2em;opacity:0.8;overflow:hidden; }
+.detailsBox p.open{height:auto; max-height:none; display:block;}
+.cd_commentBox{display: none;}
+/*详情部分css结束*/
+
+/*曲目部分css*/
+.songInfoBox {padding-bottom:20px;}
+.songInfoBox .titleBox{margin-bottom:4px;}
+.songInfoBox  .musicListBox{overflow:hidden;margin-bottom:6px;}
+.songInfoBox .list{float:left; width:100%; margin-bottom:10px;}
+.songInfoBox .list h4{font-size:14px; font-weight:500;opacity: 0.8;;margin:8px 0;}
+.songInfoBox .list h4.h4hide{display:none;}
+.songInfoBox .list .describe{height:44px; line-height:44px;overflow: hidden;background:rgba(0, 0, 0, 0.03);border-bottom: 1px solid rgba(0, 0, 0, 0.06);}
+.shallow .songInfoBox .list .describe{background:rgba(255, 255, 255, 0.04);border-bottom: 1px solid rgba(255, 255, 255, 0.05);}
+.songInfoBox .list .describe .describeMidBox{overflow:hidden;}
+.songInfoBox .list .describe p{float:left;opacity: 0.6;}
+.songInfoBox .list .describe p.t_num{float:left;width:98px;text-indent: 10px;}
+.songInfoBox .list .describe p.t_name{width:43%;margin-right: 27px}
+.songInfoBox .list .describe p.t_artist{width:25%;margin-right: 27px}
+.songInfoBox .list .describe .describeRightBox{float:right;}
+.songInfoBox .list .describe p.t_long{float:right;width: 35px;}
+.songInfoBox .list .describe p.t_quality {float:right;width:43px;text-indent: 7px;margin: 0 10px 0 63px;}
+/*歌曲列表部分*/
+.songInfoBox .list ul.cdlistBox{overflow:hidden;}
+.songInfoBox .list .cdlistBox .musiclist{height:44px; line-height:44px;border-bottom: 1px solid rgba(0, 0, 0, 0.06);}
+.shallow .songInfoBox .list .cdlistBox .musiclist {border-bottom: 1px solid rgba(255, 255, 255, 0.05);}
+.songInfoBox .list .cdlistBox .musiclist .musiclistMidBox{overflow:hidden;}
+.songInfoBox .list .cdlistBox .musiclist p{float:left;opacity: 0.8}
+.songInfoBox .list .cdlistBox .musiclist p.c_num{float:left;width:98px;text-indent: 6px;opacity: 0.6;text-indent: 16px}
+.songInfoBox .list .cdlistBox .musiclist p.c_name{width:43%;margin-right: 27px;overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;}
+.songInfoBox .list .cdlistBox .musiclist p.c_artist{width:25%;margin-right: 27px;overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;}
+.songInfoBox .list .cdlistBox .musiclist .musiclistRightBox {float:right;}
+.songInfoBox .list .cdlistBox .musiclist p.c_long {float:right;}
+.songInfoBox .list .cdlistBox .musiclist p.c_quality {float:right;text-indent: 19px;width:45px;height: 16px;font-size:12px;margin:15px 10px 0 52px;opacity:1;line-height:16px;background: url(../img/cdpack/second/songIcon.png);color:rgba(255,255,255,0.8)}
+.songInfoBox .list .cdlistBox .musiclist p.flac {background: url(../img/m_hd.png) no-repeat -1px -69px;width: 45px;text-indent: -9999em;margin-left:61px;}
+
+.songInfoBox .list .cdlistBox .musiclist p.CD {background: url(../img/cdpack/second/cdPacket_CD.png) no-repeat;width: 45px;height: 16px; text-indent: 24px;margin-left:61px;}
+
+
+/*曲目部分css结束*/
+
+.uploaders {display:inline-block;opacity: 0.6;margin-right:30px;font-size: 12px}
+.uploadBtn {text-decoration:underline;opacity: 0.6;font-size: 12px}
+
+/*cdTips*/
+.cdTips {z-index:10;width:200px;height: 66px;position: fixed;top:50%;left:50%;margin:-33px 0 0 -100px;background:#000;border-radius: 10px;opacity: 0.8;display: none;text-align: center;font-size:16px;padding-top:10px;color:rgba(255,255,255,0.8);}
+.cdTips a {display: block;margin-top:5px;}

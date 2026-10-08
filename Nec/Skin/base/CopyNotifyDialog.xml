@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,40" roundcorner="0,0" size="285, 195">
+	<VerticalLayout bkimage="Android_Copy_Hint_bk.png" >
+		<Button name="close"  width="18" height="18" pos="265,5,283,23" float="true" statusimage="Android_Copy_Close.png"/>
+		<Button name="CopyAndroidBtn" width="120" height="26" pos="40,132,250,168" float="true" statusimage="Copy_2_Android_btn.png"/>
+	</VerticalLayout>
+</Window>

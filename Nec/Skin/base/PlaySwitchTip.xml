@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="85,48">
+	<VerticalLayout name="QualityRect1" bkimage="play_tip_bkg.png" inset="0,0,0,0">
+    <Text name="text_text1" font="Default.FontSmall" padding="0,0,0,0" pos="0,12,85,38" float="true" align="center" text="已开始播放"/>
+	</VerticalLayout>
+</Window>

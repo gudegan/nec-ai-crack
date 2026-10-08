@@ -1,0 +1,36 @@
+.c_banner{width:100%;height:160px;}
+.c_focus{width:520px;height:160px;position:relative;float:left;}
+.c_focusimg a{width:520px;height:160px;position:absolute;display:block;z-index:0;}
+.c_focusimg a img{width:520px;height:160px;background:url(../img/charge/def440.jpg) no-repeat;}
+.c_focus i { display:none; position:absolute; z-index:100; width:25px; height:58px;cursor:pointer;}
+.c_next {right:0; top:50%; margin-top:-29px; background:url(../img/next.png) no-repeat 0 0;}
+.c_next:hover {right:0; top:50%; margin-top:-29px; background:url(../img/next_h.png) no-repeat 0 0;}
+.c_next_hover {right:0; top:50%; margin-top:-29px; background:url(../img/next_h.png) no-repeat 0 0;}
+.c_prev { left:0; top:50%; margin-top:-29px; background:url(../img/prev.png) no-repeat 0 0;}
+.c_prev:hover { left:0; top:50%; margin-top:-29px; background:url(../img/prev_h.png) no-repeat 0 0;}
+.c_prev_hover {right:0; top:50%; margin-top:-29px; background:url(../img/prev_h.png) no-repeat 0 0;}
+.c_btn { display:block; position:absolute; z-index:99; left:10px; bottom:8px;}
+.c_btn a { overflow:hidden;float:left; width:8px; height:8px; background:#000; border:1px solid #cbced2;  opacity:0.30; position:relative; margin-right:5px;}
+.c_btn .current { background:#46b4e6;  opacity:1;}
+.c_open{float:left;width:210px;height:160px;margin-left:20px;display:inline; background:url(../img/charge/c_openbg.jpg) no-repeat;}
+.c_open a{font-size:14px;display:block;width:140px;height:38px;background:url(../img/charge/c_open.jpg) no-repeat;color:#fff; line-height:38px; text-indent:36px;margin:35px 0 7px 35px;}
+.c_open a:hover{background:url(../img/charge/c_openhover.jpg) no-repeat;}
+.c_open p{font-size:12px;text-align:center;color:#888999;width:100%;line-height:22px;}
+.c_open p font{font-size:12px;color:#ff6600;}
+.c_bang{clear:both;height:100px;width:103%;margin-top:20px;overflow:hidden;}
+.c_bang_con{width:365px;height:100px;margin-right:20px; background-color:#f0f0f0;float:left;display:inline;cursor:pointer;}
+.c_bang_img,.c_bang_img img{width:100px;height:100px;float:left;}
+.c_bang_con ul{float:left; width:254px; color:#323c50;font-size:12px;display:inline;margin:9px 0 0 11px;}
+.c_bang_con ul li{height:28px;line-height:28px;width:188px;overflow:hidden;float:left;white-space:nowrap;text-overflow:ellipsis;}
+.c_bang_con ul li span{color:#ff6600;padding: 0 3px 0 0;}
+.c_head{color:#323c50;font-size:16px;margin-bottom:20px;}
+.c_comm{width:103%;margin-top:30px;clear:both;overflow:hidden;}
+.c_list{width:104%;}
+.b_wrap{position:relative;}
+.c_icon{position:absolute;display:block;top:0px;left:0px;width:36px;height:36px;z-index:101;}
+.c_icon01{background:url(../img/charge/c_icon01.png) no-repeat;}
+.c_icon02{background:url(../img/charge/c_icon02.png) no-repeat;}
+.c_icon03{background:url(../img/charge/c_icon03.png) no-repeat;}
+#c_content .b_wrap{padding-bottom: 0 !important;}
+.br_wrap p {padding:0;}
+.br_wrap .br_info a { font-size:12px; color:#888999;}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="78,78" size="78,78" tracktime="500">
+  <Default name="Button" value="setcursor=&quot;true&quot; font=&quot;Default.FontName&quot; hottextcolor=&quot;#ffffffff&quot; pushedtextcolor=&quot;#ffffffff&quot; focusedtextcolor=&quot;#ffffffff&quot;" />
+
+  <themes>
+    <theme name="loadingani" frametime="1440" framenum="16" bkimage="musicwp_bkanimate.png" />
+    <theme name="loadingend" frametime="0" framenum="0" bkimage="musicwp_bk2.png" />
+  </themes>
+
+  <Container bkimage="musicwp_bk.png" menu="true">
+    <Label name="bkanimate" theme="loadingend"/>
+
+    <VerticalLayout name="root" inset="8,8,8,8">
+      <VerticalLayout inset="2,2,2,2">
+        <Container name="wpcover" bkimage="wpcover">
+          <VerticalLayout name="breathmask" bkimage="musicwp_mask.png" breath="bk" breath_conf="T=30;a1=51;a2=102;step1=30;step2=30;includechild=0;stopcircles=12;">
+            <Control />
+            <HorizontalLayout height="36">
+              <Control />
+              <Button name="play" statusimage="musicwp_play.png" menu="true" width="36" hittest="visiblity"/>
+              <Control />
+            </HorizontalLayout>
+            <Control />
+          </VerticalLayout>
+        </Container>
+      </VerticalLayout>
+    </VerticalLayout>
+
+  </Container>
+</Window>

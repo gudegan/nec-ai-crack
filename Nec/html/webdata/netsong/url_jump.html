@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>url跳转</title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/comm.js" type="text/javascript"></script>
+<script>
+
+function getQueryString(url,name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    if(url.indexOf("?")>-1){
+        url = url.split("?")[1];
+    }
+    var r = url.match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return getValue(url,name);
+}
+
+$(function(){
+    try{
+        var loc = callClient("getJumpUrl");
+        pwd = getQueryString(loc,"pwd");
+        sid = getQueryString(loc,"sid");
+        uid = getQueryString(loc,"uid");
+        url = getQueryString(loc,"url");
+        post = getQueryString(loc,"post");
+        uname = getQueryString(loc,"uname");
+
+        $("#pwd").val(pwd);
+        $("#sid").val(sid);
+        $("#uid").val(uid);
+        $("#url").val(url);
+        $("#post").val(post);
+        $("#uname").val(uname);
+        $("#uname").val(uname);
+
+        var newUrl = decodeURIComponent(url);
+        if(newUrl.length < 2014){
+            window.open('http://album.kuwo.cn/album/mbox/login?uname='+uname+'&pwd='+pwd+'&sid='+sid+'&uid='+uid+'&url='+encodeURIComponent(url));
+        }else{
+            document.getElementById('jumpForm').submit();
+        }
+        callClient("closeJumpWin");
+    }catch(e){}
+});
+</script>
+</head>
+<body>
+    <form id="jumpForm" action="http://album.kuwo.cn/album/mbox/login" target="_blabk" method="post">
+    	<input type="hidden" id="uname" name="uname"/>
+    	<input type="hidden" id="pwd" name="pwd"/>
+    	<input type="hidden" id="sid" name="sid"/>
+    	<input type="hidden" id="uid" name="uid"/>
+    	<input type="hidden" id="url" name="url"/>
+    	<input type="hidden" id="post" name="post"/>
+    </form>
+</body>
+</html>

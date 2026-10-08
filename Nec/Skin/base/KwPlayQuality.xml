@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="196,150">	 
+  <VerticalLayout name="QualityRect" bkimage="playmode_bk.png">
+
+  </VerticalLayout>
+</Window>

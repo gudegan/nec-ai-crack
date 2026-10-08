@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,70" size="398,200" closeonesc="true">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;MsgBox.ChkBoxTxt.txt&quot; checkinfo=&quot;dest='2,2,16,16'&quot; statusimage=&quot;PopUpWndChkVir.png&quot; textpadding=&quot;22,-6,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;MsgBox.ChkBoxTxt&quot;" />
+
+  <VerticalLayout name="MsgBox_PopWnd_New" >
+    <HorizontalLayout name="PopUpTitleHor">      
+      <Label name="MessageBox_Title" text="酷我提示" theme="PopUpTitle" />
+      <Control />
+      <Button name="MSG_ACTION_BTN_Close" theme="PopUpCloseBtn" userdata="2"/>
+    </HorizontalLayout>
+    <Control name="Msg_SepLine" height="1"/>
+    <Control height="24"/>
+    
+    <VerticalLayout name="ClientRect" >      
+      <HorizontalLayout name="MsgBox_Content" >
+        <Text name="MessageBox_TXT_Msg"  mouse="false" width="276" padding="20,0,0,0" textpadding="2,0,0,0"/>
+      </HorizontalLayout>      
+      <CheckBox name="MessageBox_CB_DownShowAgain" text="不再显示" padding="25,0,0,0" visible="false" setcursor="true" height="22" varwidth="true" />
+    </VerticalLayout>
+    
+    
+    
+    <Control height="12"/>
+    <HorizontalLayout name="buttonrow" height="36" userdata="mainbtn.png" padding="0,0,0,26" inset="28,0,0,0" visible="true" >
+      <Button setcursor="true" name="MessageBox_BTN_Link" align="left" textcolor="Topic.Normal" />
+      <Control enabled="false" mouse="false"/>
+    </HorizontalLayout>
+    
+  </VerticalLayout>
+</Window>

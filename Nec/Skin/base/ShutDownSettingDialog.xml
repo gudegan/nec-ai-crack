@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="630,430" caption="0,0,0,60" roundcorner="0,0">
+
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,7'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_popup_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_popup_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_popup_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_popup_thumb_v_4.png&quot;" />
+  
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.Button&quot;" />
+  
+  <Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Config.DefaultText&quot;" />
+  
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;32&quot; width=&quot;104&quot;theme=&quot;PopUpDefBtn&quot;" />
+  
+  <Default name="LiveButton" value="setcursor=&quot;true&quot; height=&quot;25&quot; bkcolor=&quot;Config.BtnNormal&quot; font=&quot;Config.DefaultText&quot;" />
+  
+  <Default name="Combo" value="statusimage=&quot;Config_Combo_Pop.png&quot; textpadding=&quot;5,4,5,5&quot; itemhotbkcolor=&quot;PlayingList.ItemSelectBkColor&quot; textcolor=&quot;Global.DarkGray&quot; itemselectedbkcolor=&quot;PlayingList.ItemSelectBkColor&quot; itemfont=&quot;Default.FontName&quot;height=&quot;30&quot; width=&quot;66&quot;" />
+  
+  <Default name="Text" value="font=&quot;Config.Button&quot; height=&quot;35&quot; " />  
+  
+  
+  <Default name="List" value="font=&quot;Default.FontName&quot; checkboximage=&quot;Config_CheckBox&quot; checkboxpos=&quot;15,0,0,0&quot; bkcolor=&quot;Global.White&quot; itembkcolor=&quot;Global.White&quot; itemselectedbkcolor=&quot;PlayingList.ItemSelectBkColor&quot; itemhotbkcolor=&quot;PlayingList.ItemSelectBkColor&quot; itemdisabledtextcolor=&quot;Config.List.ItemDisableBkColor&quot; " />
+  
+  <Default name="HotkeyEdit" value="font=&quot;Config.DefaultText&quot; height=&quot;25&quot; " />
+  
+  <EventHook event="OnSkinChange">
+    <!--<Attribute control="text_title" value="textcolor=&quot;Global.DarkGray&quot;" />-->
+  </EventHook>
+  <VerticalLayout name="layout_clientrect"  inset="1,0,1,1" >
+    <HorizontalLayout name="PopUpTitleHor">
+      <Label theme="PopUpTitle" text="定时设置" />
+      <Control />
+      <Button name="button_Close" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+
+    <HorizontalLayout name="AllButHeadArea" height="380">
+      <!--bkimage="lefebk.png"-->
+      <VerticalLayout   width="130"   text="导航按钮区"  bkcolor="#FFF9F9F9">
+        <!-- 左侧选项卡 -->
+        <Control height="17"></Control>
+        <!--statusimage statusimage="nav_bt_bk.png"  selectedimage="nav_bt_bk_3.png"-->
+        <Option  group="CfgBtnPanel"  width="130" height="44" align="center" textpadding="0,2" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png"  selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585" name="setting_OptShutdown"  text="定时关机" />
+        <Option  group="CfgBtnPanel"  width="130" height="44" align="center" textpadding="0,2" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png"  selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585" name="setting_OptPlay"  text="定时播放" />
+        <Option  group="CfgBtnPanel"  width="130" height="44" align="center" textpadding="0,2" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png"  selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585" name="setting_OptStop"  text="定时停止" />
+
+      </VerticalLayout >
+      <!--bkcolor="#f8ffffff"-->
+      <VerticalLayout name="PanelItemTabAndApplyArea"  bkcolor="#f8ffffff">
+        <TabLayout name="setting_Tab"  inset="35,0,0,0" height="324" vscrollbar="false" >
+
+          <VerticalLayout childpadding="6,0,0,0" >
+            <!---第一个选项设置  -->
+            <HorizontalLayout name="layout_setnull" height="14" padding="15,32,0,0">
+              <Option name="option_setnull"  group="ShutDownType" selected="true" text="不设置自动关机" theme="PopUpSingleSel"/>
+            </HorizontalLayout>
+            <HorizontalLayout name="layout_downfinish" height="14" padding="15,24,0,0">
+              <Option name="option_downfinish"  group="ShutDownType" text="下载完成后自动关机" theme="PopUpSingleSel"/>
+            </HorizontalLayout>
+            <HorizontalLayout name="layout_poweroff" height="14" padding="15,24,0,0">
+              <Option  name="option_timing" group="ShutDownType" text="设置定时关机" theme="PopUpSingleSel"/>
+            </HorizontalLayout>
+            <HorizontalLayout name="layout_timing" childpadding="5,0,0,0" height="30" padding="15,11,0,0" >
+              <Label  varwidth="true" height="30" padding="24,0,0,0"  text="关机时间:" />
+              <Combo name="combo_hour"  width="66"  height="30"  padding="0,0,0,0" itemdisabledtextcolor="#33333333" />
+              <!-- padding="0,2,0,0" padding="5,2,0,0"-->
+              <Combo name="combo_minute" width="66" height="30"  padding="0,0,0,0" />
+            </HorizontalLayout>
+
+          </VerticalLayout>
+
+
+          <VerticalLayout childpadding="6,0,0,0">
+            <!-- 第二个选项设置-->
+
+            <HorizontalLayout name="layout_playsetnull" height="14" padding="15,32,0,0">
+              <Option name="option_playsetnull" group="TimingPlay" selected="true" text="不设置定时播放" theme="PopUpSingleSel"/>
+            </HorizontalLayout>
+            <HorizontalLayout name="layout_playset" height="14" padding="15,24,0,0" >
+              <Option name="option_playset" group="TimingPlay"  text="设置定时播放" theme="PopUpSingleSel"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="30" padding="15,7,0,0" childpadding="5,0,0,0">
+              <Label  varwidth="true" height="30" padding="24,0" text="开始时间："  />
+              <Combo name="combo_playhour" width="66"  height="30"  />
+              <Combo name="combo_playminute"  width="66" height="30" />
+            </HorizontalLayout>
+            <HorizontalLayout height="25" padding="15,2,0,0" childpadding="5,0,0,0">
+              <Label text="定时播放的歌曲" varwidth="true" padding="24,0" ></Label>
+            </HorizontalLayout>
+
+            <HorizontalLayout height="30" padding="40,8,0,0" >
+              <Label text="列表:" width="60" height="30" />
+              <Combo name="combo_list" width="305" height="30" itemendellipsis="true" />
+            </HorizontalLayout>
+            <HorizontalLayout height="30" padding="40,9,0,0">
+              <Label text="曲目:" width="60" height="30" ></Label>
+              <Combo name="combo_song" width="305" height="30" itemendellipsis="true" > </Combo>
+            </HorizontalLayout>
+          </VerticalLayout>
+
+          <VerticalLayout childpadding="6,0,0,0">
+            <!-- 第三个选项设置-->
+            <Control height="12" />
+            <HorizontalLayout  height="14" padding="15,14,0,0" >
+              <Option name="option_setnullstopplay" group="TimingStop" selected="true" text="不设置定时停止播放" theme="PopUpSingleSel"/>
+            </HorizontalLayout>
+            <HorizontalLayout  height="14" padding="15,24,0,0" >
+              <Option name="option_setstopplay"  group="TimingStop"  text="设置定时停止播放"  theme="PopUpSingleSel"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="30" padding="40,11,0,0" >
+              <Label  width="70" height="25" text="停止时间："  />
+              <Combo name="combo_stophour" width="66"  height="30"  />
+              <Combo name="combo_stopminute" width="66" height="30" padding="8,0"/>
+            </HorizontalLayout>
+          </VerticalLayout>
+
+        </TabLayout>
+        <HorizontalLayout name="layout_opbutton"  padding="136,0,0,0" height="32" align="left" >
+          <Button name="button_comfort" text="确认"  width="104" height="32" theme="MsgBox_Btn_Focus"/>
+          <Button name="button_cancel" text="取消"  width="104" height="32" theme="PopUpDefBtn" padding="14,0"/>
+          <Button name="button_apply" text="应用" width="104" height="32" theme="PopUpDefBtn" padding="14,0" enabled="false" />
+        </HorizontalLayout>
+      </VerticalLayout>
+
+    </HorizontalLayout>
+
+  </VerticalLayout>
+</Window>

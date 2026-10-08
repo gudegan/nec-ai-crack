@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="86,190">
+<VerticalLayout name="root" bkimage="playmode_bk.png">
+<Slider name="PlayerVolumn" hor="false" step="5" value="80" padding="36,35,0,0" width="14" height="135" bkimage="playcontrol_volumnbk2_bk.png" fgimage="playcontrol_volumnbk2_fg.png" fgpadding="0,0,0,0" thumbimage="playcontrol_volumnthumb2.png" thumbsize="16,16" />
+<VerticalLayout name="volumn_tip_area" visible="false">
+<Label name="exclu_dis" text="独播" font="YAHEI.NO12" width="30" align="center" height="14" textcolor="#FFFFFFFF" padding="1,0,0,0"/>
+<Control height="1" />
+<Button name="btn_exclu_switch" width="26" height="14" padding="3,0,0,0"  normalimage="btn_exclu_switch_1.png" />
+</VerticalLayout>
+</VerticalLayout>
+</Window>

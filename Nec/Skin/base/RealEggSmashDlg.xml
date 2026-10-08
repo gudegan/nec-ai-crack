@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,500">
+  <VerticalLayout name="root">
+    <HorizontalLayout name="WndTitle" height="60">
+      <Label name="title" font="PopUp.Title" padding="10,-18,0,0" />
+      <Control />
+      <Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

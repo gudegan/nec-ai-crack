@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>下载专区</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/to_top.css" rel="stylesheet" />
+    <link href="css/download.css" rel="stylesheet" type="text/css" />
+<style>
+*{margin:0;padding:0;}ul,li{list-style:none;}img{border:0 none;}
+body{font:12px "微软雅黑"}
+a{color:#333333;text-decoration:none}
+a:hover{text-decoration:underline;}
+.downloading,.downloadfinish,.downloadall{display:none; overflow: hidden;}
+.loaded{width:512px;margin:0 auto;}
+.loaded b { font-size:20px; font-weight:normal;}
+.wenzi{color:#999999;padding:28px 0 252px;height:20px;text-align:center;font-size:14px;}
+.list{padding-left:15px;}
+.list_t{font-size:14px;color:#666;position:relative;height:25px}
+.img_list{overflow:hidden;}
+.img_list ul{width:110%;}
+.img_list li{width:104px;float:left;margin:0 18px 0 0;padding:0 0 11px}
+.pic100{width:100px;height:100px;display:block;overflow:hidden;border:2px solid #fafafa;}
+.pic100:hover{border-color:#46b4e6}
+.bgtra_txt{height:20px;position:absolute;bottom:2px;left:2px;line-height:20px;text-align:center;width:100px;overflow:hidden; z-index:10;}
+.bgtra_txt a{color:#fff;}
+.bgtra{height:20px;background:#000; opacity:0.35;position:absolute;bottom:2px;left:2px;width:100px; z-index:9;}
+.pic_m{position:relative;height:104px}
+.song{height:20px;text-align:center;width:104px;overflow:hidden;padding-top:1px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.song a:hover{ color:#46b4e6; text-decoration:none; }
+.bgtra a {color: #fff;}
+.load_btn{width:96px;height:24px;background:url(img/download_btn_bg.png) no-repeat;display:block;overflow:hidden;margin:0 auto}
+.load_btn:hover{background-position:0 -24px;}
+.rec{background:url(img/download_btn_bg.png) 0 -50px no-repeat;padding-left:18px;color:#46b4e6;position:absolute;right:28px;top:0;font-size:12px;line-height:24px}
+.rec:hover{text-decoration:underline;}
+.large {height:28px;padding-top:5px;overflow:hidden;}
+.large .rec{margin-top:9px;}
+.downloadmore{color:#aaa; font-size: 12px;}
+.downloadmore:hover{color:#46b4e6}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/download.js"></script>
+</head>
+<body>
+	<div class="allcontent" id="allcontent" style="background:#FAFAFA;">
+		<div class="allpad" id="flowContent" style="margin:0 auto; overflow:hidden;">
+			<div class="downloadall">
+				<div class="loaded">
+				    <div class="list">
+				          <p class="list_t">看看别人下载了什么<a href="###" class="rec">换一批</a></p>
+				          <div class="img_list">
+				                <ul></ul>
+				          </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="###" onclick="returnTop()" hidefocus class="w_rtop"></a>
+</body>
+</html>

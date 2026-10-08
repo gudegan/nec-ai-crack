@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="280,306" caption="0,0,0,35" roundcorner="6,6">
+  <VerticalLayout  name="mainwnd">
+    <HorizontalLayout name="maintipimg" height="140">
+      <Label bkimage="expandGB.png"/>
+    </HorizontalLayout>
+    
+    <HorizontalLayout name="upgrademaintip" height="22" padding="0,8">
+      <Label text="升级云盘空间" textcolor="Global.Black" font="Def.Label.KnowingSong" align="center"/>
+    </HorizontalLayout>
+    
+    <HorizontalLayout name="tipexplain" width="280" height="20" padding="0,8">    
+      <Label name="expandtip" text="开通豪华VIP即可升级至50GB容量" align="center" font="Default.FontName" textcolor="#66000000"/>     
+    </HorizontalLayout>
+    
+    <HorizontalLayout name="expandbtn" padding="0,22">
+      <Control />
+      <Button name="expandcapa" width="202" height="40" theme="ListBtnFocus" textcolor="List.Btn.TextColor" text="立即开通" font="Def.Label.NoSongs" setcursor="true"/>
+      <Control />
+    </HorizontalLayout>
+
+    <Button name="btnclose" height="30" width="30" float="true" pos="240,8,270,0" setcursor="true" statusimage="popupwndcloseVir.png" />
+
+  </VerticalLayout>
+</Window>

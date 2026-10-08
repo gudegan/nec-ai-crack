@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>cd包内容页</title>
+    <link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/to_top.css" rel="stylesheet" />
+	<link href="css/content_cdpackmusic.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="navBox">
+		<div class="logo">
+			<div class="logo_icon"><i></i></div>
+			<div class="logo_icon_splice"></div>
+		</div>
+		<h1>发烧音乐</h1>
+		<div class="nav">
+			<a href="javascript:commonClick({'source':'9002'});" class="index active"><span>发现音乐<i></i></span></a>
+			<a href="javascript:;" class="jumpLike"><span>我的收藏</span><label></label></a>
+			<a href="javascript:;" class="jumpDown"><span>我的下载</span><label></label></a>
+		</div>
+	</div>
+
+	<div class="headInfoBox">
+		<div class="headInfoWrap">
+			<div class="cdPicBox">
+				<img class="cdHeadPic1 cdHeadPic" src="img/cdpack/second/default.png" onerror="imgOnError(this,'150cd');">
+				<span class="cdCoverBox"></span>
+				<div class="splice"></div>
+			</div>
+			<div class="cdHeadInfo">
+				<p class="cdName"></p>
+				<ul class="line2 line">
+					<li class="li_artist_info">
+						<span class="art_tag">歌</span>
+						<span class="art_blank">手：</span>
+						<span class="artist_name"></span>
+					</li>
+					<li class="li_suffix_info">
+						<span class="art_tag">格</span>
+						<span class="art_blank">式：</span>
+						<span class="suffix"></span>
+					</li>
+				</ul>
+				<ul class="line3 line">
+					<li class="li_present_info">
+						<span class="pub_time_tag">发行时间：</span>
+						<span class="present_time"></span>
+					</li>
+					<li class="li_category_info">
+						<span class="art_tag">分</span>
+						<span class="tag_blank">类：</span>
+						<span class="category"></span>
+					</li>
+				</ul>
+				<div class="btnBox">
+					<a href="javascript:;" class="all_play j_all_play">
+						<i class="icon iconfont icon-play"></i>
+						<span>播放全部</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="headInfoBoxOnLine">
+		<div class="headInfo_left">
+			<div class="cdPicBox">
+				<img class="cdHeadPic1 cdHeadPic" src="img/cdpack/second/default.png" onerror="imgOnError(this,'150cd');">
+				<span class="cdCoverBox"></span>
+				<div class="scoreSplice"></div>
+				<div class="cdScore">
+					<div class="starBox">
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+					</div>
+					<span class="score">0分</span>
+				</div>
+				<div class="splice"></div>
+			</div>
+		</div>
+		<div class="cdHeadInfo">
+			<div class="cdNameBox">
+				<div class="cdNameArea">
+					<span class="cdIcon">母带</span>
+					<p class="cdName"></p>
+				</div>
+			</div>
+			<div class="line1">
+				<p class="artist">
+					<lable class="allowSelect">歌手：</lable>
+					<span class="allowSelect skinLink"></span>
+				</p>
+			</div>
+			<div class="line line2">
+				<p class="time">
+					<lable class="allowSelect">发行时间：</lable>
+					<span class="allowSelect"></span>
+				</p>
+				<p class="sampling_type">
+					<lable class="allowSelect">采样率：</lable>
+					<span class="allowSelect"></span>
+				</p>
+				<p class="size">
+					<lable class="allowSelect">大小：</lable>
+					<span class="allowSelect"></span>
+				</p>
+				<p class="style allowSelect"></p>
+			</div>
+			<div class="line">
+				<p class="downTimes">
+					下载次数：
+					<span></span>
+				</p>
+				<p class="perNum">少于10人评价</p>
+			</div>
+			<div class="infoBottom">
+				<div class="btnBox">
+					<a href="javascript:;" class="all_play j_all_play">
+                        <i class="icon iconfont icon-play"></i>
+						<span>播放全部</span>
+					</a>
+					<a href="javascript:;" class="likeBtn">
+						<i class="icon iconfont icon-notcollection"></i>
+						<span>收藏</span>
+					</a>
+				</div>
+				<div class="myScore">
+					<div class="myScoreLine">
+						<span>我要评分：</span>
+						<div class="starBox">
+							<div class="star"></div>
+							<div class="star"></div>
+							<div class="star"></div>
+							<div class="star"></div>
+							<div class="star"></div>
+						</div>
+					</div>
+					<p><span>较差</span><a href="javascript:;">删除</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="likePop">
+			<div class="likeBox">
+                <div class="likeBox-title">
+                    <span class="title-text">酷我提示</span>
+                    <span class="iconfont icon-close close closeLikePopBtn"></span>
+                </div>
+                <div class="likeBox-content">
+                    <h3>收藏专辑《<span class="cdName"></span>》</h3>
+                    <div class="myScore">
+                        <div class="myScoreLine">
+                            <span>我要评分：</span>
+                            <div class="starBox">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                        </div>
+                        <p><span>较差</span></p>
+                    </div>
+                </div>
+				<a href="javascript:;" class="likePopBtn">收 藏</a>
+			</div>
+		</div>
+	</div>
+	<div class="contentBox">
+		<div class="controlBox">
+			<a href="javascript:;" class="listBtn active">曲目<i></i></a>
+			<a href="javascript:;" class="infoBtn">详情<i></i></a>
+            <a href="javascript:;" class="commentBtn">评论<span class="tabNum">0</span><i></i></a>
+		</div>
+		<div class="musicContentBox">
+			<h1 class="titleinfoBox">
+                <div class="ml fl">
+                    <font id="songsnum">序号</font>
+                </div>
+                <div class="mr_box">
+                    <div class="mr_center_con">
+                        <span class="m_name_box">歌名</span>
+                        <span class="m_artist_box">歌手名</span>
+                        <div class="mr_box_r">
+	                        <span class="m_long_box">时长</span>
+	                        <span class="t_quality">音质</span>
+	                    </div>
+                    </div>
+                </div>
+            </h1>
+            <ul id="musicListBox">
+            </ul>
+            <ul id="kw_musicListBox" style="display: none">
+            	<li class="cdmusic_wrap" rid={$rid} relapos={$relapos} abso={$absoindex} oncontextmenu="SongListMenu(this)" ondblclick="PlaySongDbList(this)">
+            		<div class="m_l">
+            			<span class="num {$failed}" title="{$errinfo}">{$index}</span>
+            		</div>
+	            	<div class="mr_box" style="overflow:hidden;">
+						<div class="mr_center_con">
+							<a href="###" class="m_name_box {$name_box_failed}" title="{$songname}" onclick="PlayOneSongClk(this)">{$songname}</a>
+                            <p class="m_artist_box {$artist_failed}" title="{$artist}">{$artist}</p>
+                            <div class="mr_box_r">
+	                        	<p class="m_long_box {$longbox_failed}">{$duration}</p>
+		            			<p class="c_quality"></p>
+							</div>
+						</div>
+					</div>
+            	</li>
+            </ul>
+		</div>
+		<div class="infoBox">
+			<div class="titleinfoBox">
+				<span class="album_detail">专辑详情</span>
+			</div>
+			<p id="cd_list_detail_info"></p>
+			<div class="allowSelect"></div>
+            <div class="login_guide" style="display:block;">
+                <div class="nologinImg"></div>
+                <p class="unlogin_tip">暂无相关内容噢~</p>
+            </div>
+		</div>
+		<div class="commentBox"></div>
+	</div>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js" type="text/javascript"></script>
+    <script src="js/commentModel.js" type="text/javascript"></script>
+    <script src="js/content_cdpackmusic.js" type="text/javascript"></script>
+</body>
+</html>

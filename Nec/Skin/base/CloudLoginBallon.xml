@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="286,118" caption="0,0,0,128" roundcorner="10,10">
+	<VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="32">
+			<Label name="text_title" pos="5,8,75,22" float="true" align="left" font="Minisite.Title" text="下载提示" />
+			<Button name="button_Close" pos="241,0,276,22" float="true" statusimage="popwnd_closebtn.png"/>
+		</HorizontalLayout>
+		<Control />
+		<VerticalLayout name="layout_text1" height="40">
+			<Text name="text_text1" pos="5,6,280,20" float="true" align="left" text="您的歌曲尚未下载完成，是否退出酷我音乐盒？"/>
+		</VerticalLayout> 
+		<Control />
+		<HorizontalLayout name="layout_opbutton" height="40">
+		  <CheckBox name="checkbox_notip" pos="8,12,100,28" float="true" text="不再提示" textcolor="#FF999999" checkinfo="dest='0,0,13,13'" statusimage="checkbox.png"/>
+			<Button  name="button_shutdown" align="left" textcolor="#FF000000" text="定时关机" statusimage="mainbtn.png" pos="98,5,168,28" float="true" textpadding="8,2,0,0"/>
+			<Button  name="button_yes" align="left" textcolor="#FF000000" text="是" statusimage="mainbtn.png" pos="176,5,216,28" float="true" textpadding="12,2,0,0"/> 
+			<Button  name="button_no" align="left" textcolor="#FF000000" text="否" statusimage="mainbtn.png" pos="224,5,264,28" float="true" textpadding="12,2,0,0" selected="false"/>
+		</HorizontalLayout> 
+		
+	</VerticalLayout>
+</Window>

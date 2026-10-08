@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+<VerticalLayout name="root"  >
+   <VerticalLayout name="TanMuOperPanel"> 
+    <TabLayout name="TanMuOperTab" height="40" bkimage="TanMuBackground.png" bkcolor="#ff262626">
+	  <HorizontalLayout height="40">
+		<Button name="OpenTanMu" width="114" height="40" text="" tooltip="开启弹幕" statusimage="TanMuStartBtn.png" />
+        <Button name="TipLabel" height="26" textcolor="#CCFFFFFF" padding="0,7,0,0" align="center" setcursor="true" font="Default.FontName" text="来一发弹幕吧~" bkimage="TanMuBackground.png" />
+		<Button name="CloseTipLabel" width="22" height="22" padding="0,9,23,0" statusimage="SaveLDClose.png" />
+      </HorizontalLayout> 
+					
+      <HorizontalLayout height="40">				  
+		<Button name="CloseTanMu"  width="114" height="40" text=""  tooltip="关闭弹幕" statusimage="TanMuCloseBtn.png" />
+        <Control enabled="false" mouse="false" />
+		<Edit name="TanMuInput"  width="360" height="32" padding="0,4,0,0" maxchar="100" nativebkcolor="#ff525252" normalimage="TanMuInputBk.png" hotimage="TanMuInputBk.png" focusedimage="TanMuInputBk.png" defaulttextcolor="#ffcecece" defaulttext="最洗脑的一句歌词是什么?" textcolor="#FFFFFFFF" />
+	    <Button name="ColorBtn" width="85" height="32" padding="0,4,0,0" normalimage="TanMuWhite.png" bkimage="TanMuColorSelectBtn.png"/>
+		<Button name="ColorUpBtn" width="19" height="32" text=""  tooltip="" padding="0,4,0,0"  statusimage="TanMuColorSelectUp.png" />
+		<Button name="SendBtn" width="72" height="30" tooltip="发送" padding="0,5,0,0" statusimage="TanMuSendBtn.png" />
+        <Control enabled="false" mouse="false" />
+	  </HorizontalLayout>  
+    </TabLayout> 
+  </VerticalLayout> 
+  
+  <!--VerticalLayout name="TanMuFontPanel" bkimage="LyricBkPanelBk.png" float="true" pos="-20, 300, -10, 0" width="175" height="67" visible="false">
+     <Option name="TanMuColorGray" padding="0,2,0,0" group="TanMuColor" statusimage="LyricColorGray.png" selectedimage="LyricColorGray_4.png" width="100" height="25"/>
+     <Option name="TanMuColorBlue" padding="0,2,0,0" group="TanMuColor" statusimage="LyricColorBlue.png" selectedimage="LyricColorBlue_4.png" width="100" height="25"/>
+     <Option name="TanMuColorPurple" padding="0,2,0,0" group="TanMuColor" statusimage="LyricColorPurple.png" selectedimage="LyricColorPurple_4.png" width="100" height="25"/>
+     <Option name="TanMuColorYellow" padding="0,2,0,0" group="TanMuColor" statusimage="LyricColorYellow.png" selectedimage="LyricColorYellow_4.png" width="100" height="25"/>
+  </VerticalLayout-->  
+</VerticalLayout>   
+</Window>

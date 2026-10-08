@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="126,175">
+<VerticalLayout name="root" bkimage="playmode_bk.png">
+	<DefChildAttr align="left" height="38" icondest="12,12,30,30" textpadding="42,0,0,0" textcolor="#ff000000" statusimage="playmode_btn_bk.png" selectedimage="playmode_btn_bk_3.png" font="Default.FontName" />
+	
+    <Option name="BT_Download" group="MoreOpt" width="94" padding="17,20,17,0" group="ModeOpt" text="下载" iconstatusimage="playcontrol_download.png" />
+    <Option name="BT_MV" group="MoreOpt" padding="17,0,0,0" width="94" text="MV" iconstatusimage="MV.png"/>
+    <Option name="BT_KSong" group="MoreOpt" padding="17,0,0,0" width="94" text="K歌" iconstatusimage="playcontrol_KSong.png"/>
+    <Option name="BT_Share" group="MoreOpt" padding="17,0,0,0" width="94" text="分享" iconstatusimage="playcontrol_share.png"/>
+</VerticalLayout>
+</Window>

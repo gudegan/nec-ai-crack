@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,0" roundcorner="0,0" size="590,90">	 
+  <VerticalLayout bkcolor="#FFFFFFFF">
+	<Label name="Label_Introduction" padding="16,10,7,0" text="" singleline="false" height="75" textcolor="#FF555555" />
+	<Control />
+	<HorizontalLayout padding="0,0,0,5" height="20">
+		<Control />
+		<Button name="Close" width="30" padding="0,0,7,0" iconstatusimage="List_InstructUp_Btn.png" setcursor="true" icondest="6,1,24,19"/>		
+	</HorizontalLayout>	
+  </VerticalLayout>
+</Window>

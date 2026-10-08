@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>音乐树弹框</title>
+    <script type="text/javascript">
+        window.onerror = function () {
+            return true;
+        }
+    </script>
+    <style>html {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    body {
+        font-size: 12px;
+        background: #fff;
+        font-family: "微软雅黑"
+    }
+
+    .tips {
+        padding: 10px 9px 10px;
+        line-height: 22px;
+        color: #333;
+        background-color: white;
+    }
+
+    .btn {
+        height: 24px;
+        padding-top: 5px;
+        overflow: hidden;
+        width: 180px;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    .btn a {
+        height: 22px;
+        line-height: 22px;
+        float: left;
+        color: #000000;
+        text-decoration: none;
+        padding: 0 10px;
+        border: 1px solid #fff;
+        margin-right: 15px
+    }
+
+    .btn em {
+        width: 14px;
+        height: 12px;
+        background: url(treeimg/like.png?1.png);
+        float: left;
+        margin: 5px 5px 0 0;
+        overflow: hidden;
+    }
+
+    .btn a:hover {
+        border: 1px solid #def3fd;
+        background: #ecf7fe;
+        text-decoration: none;
+    }
+
+    .btn .def em {
+        background: url(treeimg/like.png?1.png) 0 -18px;
+    }</style>
+</head>
+<body onload="loadDone();">
+<div class="tips" id="tipsId"><p>酷我小心意：</p>
+    <p style="height:66px;"><a href="javascript:qtt('http://album.kuwo.cn/album/h/mbox?id=1317');" id="tipsName">华语电子乐的新风潮</a></p>
+    <p class="btn" id="btnId" style="display: none;"><a href="javascript:clike(1);" class="def"><em></em>喜欢</a><a
+            href="javascript:clike(2);"><em></em>不喜欢</a></p>
+    <p class="btn" id="descId" style="display:none;">你已表示”不喜欢“</p></div>
+<script type="text/javascript">
+    var cNavVer = getUrlMsg('cnav');
+    function $(s) {
+        return document.getElementById(s)
+    }
+    (function () {
+        if (cNavVer == 3) {
+            $('tipsName').innerHTML = '为你订制私人歌单';
+        }
+    })();
+    function is2012() {
+        try {
+            var lurl = window.location.href;
+            var arr = lurl.split("?");
+            if (arr.length > 1) {
+                if (arr[1].indexOf("ver=MUSIC_6") > -1) {
+                    return true;
+                }
+            }
+        } catch (e) {
+            return false;
+        }
+        return false;
+    }
+
+    function getUrlMsg(key) {//判断是不是16版音乐盒，添加onJump参数，客户端定位 by luger
+        try {
+            var lurl = window.location.href;
+            console.log(lurl);
+            var arr = lurl.split("?");
+            if (arr.length > 1) {
+                var tmp = arr[1].split('&');
+                for (var i = 0; i < tmp.length; i++) {
+                    var tmp2 = tmp[i].split('=');
+                    if (key == tmp2[0]) {
+                        return tmp2[1];
+                    }
+                }
+            }
+        } catch (e) {
+            return 0;
+        }
+        return 0;
+    }
+
+    function addCk(k, v) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() + (365 * 24 * 3600 * 1000));
+        document.cookie = k + "=" + v + ";expires=" + exp.toGMTString() + ";path=/" + ";domain=kuwo.cn";
+    }
+
+    function getDate(flag) {
+        var dateTime = new Date();
+        var yy = dateTime.getFullYear();
+        var MM = dateTime.getMonth() + 1;  //因为1月这个方法返回为0，所以加1
+        if (MM < 10) MM = "0" + MM;
+        var dd = dateTime.getDate();
+        if (dd < 10) dd = "0" + dd;
+        var week = dateTime.getDay();
+        var hh = dateTime.getHours();
+        if (flag == 1) {
+            return yy + "" + MM + "" + dd;
+        } else if (flag == 2) {
+            return dateTime.getTime();
+        }
+        return yy + "" + MM + "" + dd + "" + hh;
+    }
+
+    function loadDone() {
+        var mboxdate = document.cookie;
+        if (mboxdate.indexOf("mboxdate") > -1 && mboxdate.indexOf(getDate(1)) > -1) {
+            $('btnId').style.display = 'none';
+            if (mboxdate.indexOf("treef_1") > -1) {
+                $('descId').innerHTML = "你已表示”喜欢“";
+            } else {
+                $('descId').innerHTML = "你已表示”不喜欢“";
+            }
+            $('descId').style.display = 'block';
+        } else {
+            $('btnId').style.display = 'block';
+            $('descId').style.display = 'none';
+        }
+        kw_call("showwindowex?width=238&height=137");
+        var imgpv = new Image();
+        imgpv.src = 'http://webstat.kuwo.cn/logtjsj/commsj/commjstj/tree/mbox2013_pv.jpg';
+    }
+
+    function kw_call(cmd) {
+        window.external.callkwmusic(cmd);
+    }
+
+    function qtt(url) {
+        var img = new Image();
+        img.src = 'http://webstat.kuwo.cn/logtjsj/commsj/commjstj/tree/mbox2013_qtt.jpg';
+        if (is2012()) {
+            var url2012 = 'http://album.kuwo.cn/album/h/mbox?id=1317';
+            kw_call('qtt?' + url2012);
+        } else if (cNavVer) {
+            if (cNavVer == 1) {
+                url += '&year=2016';
+                var channelInfo = "{'source':'-2','sourceid':'5','name':'4','id':'-2'};name:分类;"
+                kw_call('qtt?' + encodeURIComponent('{"source":"21","sourceid":"' + url + '","name":"my","id":"21","back":"true"};jump:' + channelInfo));
+            } else if (cNavVer == 2) {
+                url += '&year=2016';
+                var channelInfo = 'ch:10002;name:classify';
+                var info = 'source=21&sourceid=' + encodeURIComponent(encodeURIComponent(url)) + '&name=my&id=21&other=""';
+                var src = '${netsong}content_jxj.html?' + info;
+                kw_call('qtt?' + encodeURIComponent('url:' + src + ';jump:' + channelInfo));
+            } else if (cNavVer == 3) {
+                var Param = 'channelname=songlib&param=';
+                var channelInfo = 'ch:2;name:songlib;';
+                var src = 'url:${netsong}rcmPlayList.html?';
+                var Info = 'source=1001&name=个性化推荐&logsrc=音乐树->曲库->个性化推荐&qkback=true&calljump=true';
+                kw_call('qtt?' + Param + encodeURIComponent(channelInfo + src + Info));
+            }
+        } else {
+            kw_call('qtt?{"source":"21","sourceid":"' + url + '","name":"my","id":"21","back":"true"}');
+        }
+    }
+
+    function clike(f) {
+        $('btnId').style.display = 'none';
+        var img = new Image();
+        addCk("mboxdate", getDate(1));
+        addCk("treef", "treef_" + f);
+        if (1 == f) {
+            $('descId').innerHTML = "你今天已表示”喜欢“";
+            img.src = 'http://webstat.kuwo.cn/logtjsj/commsj/commjstj/tree/mbox2013_like.jpg';
+        } else if (2 == f) {
+            $('descId').innerHTML = "你今天已表示”不喜欢“";
+            img.src = 'http://webstat.kuwo.cn/logtjsj/commsj/commjstj/tree/mbox2013_unlike.jpg';
+        }
+        $('descId').style.display = 'block';
+    }
+</script>
+</body>
+</html><!--htm finished-->

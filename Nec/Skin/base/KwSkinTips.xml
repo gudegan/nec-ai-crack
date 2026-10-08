@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="200,46">
+	<VerticalLayout name="root" inset="0,10,0,0">
+		<HorizontalLayout name="textlayout" height="20" padding="5,5,2,5">
+			<Label name="msg" padding="2,0,0,0" varwidth="true" text="皮肤有更新"  />
+			<Button name="close" width="19" height="20" padding="0,0,4,0" statusimage="Config_CloseBtn.png" setcursor="true"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

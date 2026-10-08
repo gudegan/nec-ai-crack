@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,400">
+<VerticalLayout name="root" bkimage="speed_mode_bk.png">
+	<Label name="ani"  frametime="1200" framenum="20" width="400" height="400" bkimage="speed_mode_pop.png"/>
+	<Label name="ani2" visible="false" width="400" height="400" float="true" />
+	<Label name="aniText" visible="false" width="400" height="400" float="true" />
+	<Label name="score" visible="false" pos="208,256,226,274" width="18" height="18" float="true"  />
+	<Label name="score2" visible="false" pos="218,256,236,274" width="18" height="18" float="true"  />
+	<Label name="score_percent" visible="false" bkimage="speed_percent.png" pos="230,257,250,277" width="18" height="18" float="true"  />
+</VerticalLayout>
+</Window>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,214" caption="0,0,0,50" roundcorner="5,5">
+	<VerticalLayout bkcolor="#00000000">
+	  	<HorizontalLayout name="titlepanel" height="50">
+    		<Label name="title" padding="15,6,0,0" text="酷我VIP提示" width="300" font="PopUp.Title"/>
+    		<Control />
+			<Button name="close"  width="19" height="20" padding="0,6,0,0" statusimage="Config_CloseBtn.png" />
+			<Control width="6"/>
+		</HorizontalLayout>
+		<HorizontalLayout height="25">
+			<Label text="亲爱的" padding="15,5,0,0" font="MessageBox.Content" width="50" height="16" />
+			<Label name="vipusername" padding="0,5,0,0" textcolor="Global.LightGray" font="MessageBox.Content" varwidth="true" minwidth="20" maxwidth="80" height="16" />
+			<Control name="viplogo" padding="0,5,0,0" width="16" height="17"/>
+			<Label text="成长值" pos="196,5,0,0" float="true" font="MessageBox.Content" width="50" height="16" />
+			<Label name="vipgrowthvalue" text="700" pos="246,5,0,0" width="100" float="true"  textcolor="Global.LightGray" font="MessageBox.Content" height="16" />
+		</HorizontalLayout>
+		<Control height="10" />
+		<Label name="info1" padding="15,5,0,0" font="MessageBox.Content" height="16"/>
+		<Label name="info2" padding="15,10,0,0" font="MessageBox.Content" height="16" />
+		<Control />
+		<HorizontalLayout height="30">
+			<Label name="vipdownloadline" padding="15,10,0,0" textcolor="Global.LightGray" text="成长值>1000，限额1000首" varwidth="true" minwidth="20" maxwidth="300" font="MessageBox.Content" height="16" />
+			<Button name="openkwvipbtn" text="知道了" pos="258,0,0,0" float="true" font="MessageBox.Content" width="70" height="30" statusimage="Config_Button.png" />
+			<Control width="15"/>
+		</HorizontalLayout>
+		<Control height="10"/>
+	</VerticalLayout>
+</Window>

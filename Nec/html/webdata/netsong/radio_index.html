@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>曲库首页电台</title>
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/comm2.js"></script>
+	<script type="text/javascript" src="js/music.js"></script>
+	<script type="text/javascript" src="js/radioInIndex.js"></script>
+    <script type="text/javascript" src="js/radio_comment.js"></script>
+</head>
+<body>
+	<div id="kw_wc" class="index_index">
+		<div class="indexRadioBox" data-model="kw_radiolistmodel">
+			<ul class="kw_indexListBox kw_indexRadio"></ul>
+		</div>
+	</div>
+	<!--model-->
+	<ul id="kw_radiolistModel" style="display:none;">
+		<li class="br_wrap {$radioClass}">
+			<a _onclick="{$log}{$click}" onclick="{$log}{$click}" title="{$titlename}" class="br_pic" href="javascript:;" hidefocus="">
+				<span class="br_shade"></span>
+				<div class="cover">{$imgstr}</div>
+				<div class="lstdiv">
+                    <span class="listeners">{$listnum}</span>
+                </div>
+                <span class="splice"></span>
+			</a>
+			<p class="br_name">
+				<a onclick="{$log}{$click}" title="{$titlename}" href="javascript:;" hidefocus="">{$disname}</a>
+			</p>
+		</li>
+	</ul>
+</body>
+</html>

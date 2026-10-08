@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="238,132">
+	<VerticalLayout name="root" width="238" height="132" bkimage="chargeOpenVipTipbk.png" >
+		<WebUI name="web" create="true" nav="$${netsong}ChargeOpenVipList.html">
+		</WebUI>
+		<Button name="btn_close" float="true" pos="-21,10,-10,0"  width="10" height="10" bkimage="ChargeViplistClose.png"/>
+	</VerticalLayout>
+</Window>

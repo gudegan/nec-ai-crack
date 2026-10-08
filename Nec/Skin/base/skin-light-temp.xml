@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+  <include name="${base}skin-light.xml"/>
+  <Color>
+    <Color name="Pl.Mask" value="#00FFFFFF" />
+    <Color name="PlayControlPanel.bkcolor.normal" value="#B3FFFFFF" />
+  </Color>
+</Skin>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+  <Color>
+    <!--基础固定配置-->
+    <Color name="Global.None" value="#00000000" />
+    <Color name="Global.White" value="#FFFFFFFF" />
+    <Color name="Global.LightWhite" value="#99FFFFFF"/>
+    <Color name="Global.Black" value="#FF000000" />
+    <Color name="Global.DarkGray" value="#FF333333" />
+    <Color name="Global.MidGray" value="#FF666666" />
+    <Color name="Global.LightGray" value="#FF999999"/>
+    <Color name="Global.ErrRed" value="#FFFF6161" />
+	<Color name="Global.Golden" value="#FFDFAB45" />
+    
+    <!--音效掩码色-->
+    <Color name="SoundEffectSitchBk" value="#FFEEEEEE" />
+    <!--音效掩码色-->
+
+    <!--云盘扩容的合成色-->
+    <Color name="NetDisk_Capa_Exp" value="#FFFFE29D"/>
+    <!--云盘扩容的合成色-->
+
+    <!--列表区掩码色，RGB部分表示颜色，A表示透明度阀值-->
+    <Color name="Body.Mask" value="#00000000" />
+    <Color name="Pl.Mask" value="#60ffffff" />
+    <Color name="ListAera.Mask" value="#33000000" />
+    <Color name="Main.Bk" value="#FF445062" />
+
+    <!--主题颜色-->
+    <Color name="Topic.Normal" value="#FF7E84E7" />  <!--控制按钮、进度条高亮等-->
+    <Color name="Topic.Alter" value="#FF7E84E7" />             <!--主题颜色备选，多同高亮色，白色下用于顶栏、复选框-->   
+    <Color name="Topic.LinkText" value="#FF7E84E7" />
+    <Color name="Topic.Menu.Hot" value="#337E84E7" />
+    <Color name="Topic.Menu.Selected" value="#807E84E7" />
+
+    <!--高亮背景色下的前景文字色-->
+    <Color name="Text.UnderTopic" value="#FFFFFFFF" />
+
+    <!--popup colors-->
+    <Color name="pp.Text.Em" value="#ff000000" />       <!--emphasize 突出文字色-->
+    <Color name="pp.Text.Normal" value="#cc000000" />   <!--正常文字色-->
+    <Color name="pp.Text.Minor" value="#99000000" />            <!--次要文字色-->
+    <Color name="pp.Text.Disabled" value="#4d000000" />         <!--禁用文字颜色-->
+    <Color name="pp.ListItemLineColor" value="#0a000000" />     <!--列表分隔线色-->
+    <Color name="pp.ListItemSelectBkColor" value="#0a000000" /> <!--元素选中背景色-->
+    <Color name="pp.TitleMaskColor" value="#06000000" />        <!--标题背景色-->
+    <Color name="pp.DisabledImage" value="#ffb3b3b3" />         <!--disable图片状态色-->
+    <Color name="pp.DisableFocusColor" value="#4d7E84E7"/>
+
+
+    <!--通用字体颜色 begin-->
+    <Color name="Text.Normal" value="#ffffffff" />
+    <Color name="Text.Hot" value="#ffffffff" />
+    <Color name="Text.Focused" value="#ffffffff" />
+    <Color name="Text.Pushed" value="#ffffffff" />
+    <Color name="Text.Selected" value="#ffffffff" />
+    <Color name="Text.Disabled" value="#ffffffff" />
+
+    <!--左侧导航目录级字体颜色-->
+    <Color name="Text.NavFld.Normal" value="#99ffffff" />
+    <!--左侧导航目录级字体颜色 end-->
+
+    <!--通用按钮融洽色——不响应曲库透明度变化的 特殊的特殊处理-->
+    <Color name="Comp.Normal" value="#ffffffff" />
+	<Color name="Radio.Normal" value="#FF000000" />  <!--免费下载弹框的radio单选按钮-->
+    
+	<Color name="CheckBox.Normal" value="#FFFFFFFF" />  <!--列表选择弹框的checkbox按钮-->
+	<Color name="Opq.CheckBox.Normal" value="#FF000000"/>
+	
+    <!--顶栏融洽色-->
+    <Color name="Comp.Topbar.Normal" value="#ffffffff" />
+    <Color name="topBar.search.textcolor" value="#ffffffff" />
+	<Color name="topBar.search.defaultcolor" value="#80ffffff" />
+	<Color name="topBar.search" value="#ffffffff" />
+	<Color name="topBar.line" value="#28ffffff" />
+
+    <!--播放栏按钮-->
+	<Color name="PlayBar.LineColor" value="#14FFFFFF" /> <!--播控栏分割线颜色-->
+    <Color name="PlayControlPanel.bkcolor.normal" value="#E5141531" />
+    <Color name="Comp.Playbar.Normal" value="#ffffffff" />
+    <Color name="pc.playBar.textcolor.normal" value="#B3FFFFFF" />
+    <Color name="pc.playBar.textcolor.hot" value="#FFFFFFFF" />
+    <Color name="pc.playBar.textcolor.push" value="#FFFFFFFF" />
+	<Color name="pc.playBar.textcolor.disable" value="#4DFFFFFF" />
+	
+	<Color name="npc.pc.playBar.textcolor.normal" value="#99FFFFFF" />
+    <Color name="npc.pc.playBar.textcolor.hot" value="#ffffffff" />
+    <Color name="npc.pc.playBar.textcolor.push" value="#ffffffff" />
+	<Color name="npc.pc.playBar.textcolor.disable" value="#4DFFFFFF" />
+	
+    <Color name="pc.playBar.totaltime.normal" value="#99FFFFFF" />
+	<Color name="npc.pc.playBar.totaltime.normal" value="#55FFFFFF" />
+	
+    <Color name="playBar.PlayerProgressThumb.Disabled" value="#ff949494" />  <!--播放进度条-->
+    <Color name="playBar.PlayerProgressBk.Color" value="#ffffffff" />
+    <Color name="playBar.PlayerProgressDownload.Color" value="#ffffffff" />
+    <Color name="playBar.playcontrol.volumnbk" value="#ffe7e7e7" />           <!--音量条背景--> 
+
+    <!--曲库区域即TabMainBody下所有UI要支在不同的透明度下用不同的颜色，所以该区域下的UI要定义专门的命名颜色值，不能直接写16进制数-->
+    <!--示例：全透明时配色方案name="xyz", 不透明时配色方案为Opq.xyz。规定：TabMainBody下所有的颜色名必须独立于全局颜色名-->
+    <!--规定：TabMainBody下所有的颜色名必须独立于全局颜色名，目的是使它们可独立赋值-->
+    <!--如全局字体颜色为Text.Normal, TabMainBody下的字体颜色必须另起一名，比如叫Body.Text.Normal-->
+    <!--全透明时配色方案-->
+
+    <!--列表标签的颜色-begin-->
+    <Color name="List.Label.Selected" value="#FF555555" />
+    <Color name="List.Label.Disabled" value="#FF999999" />
+    <Color name="List.Label.Tip" value="#FF666666"/>
+
+    <Color name="List.Label.TipText" value="#ff2db2eb" />
+    <Color name="List.Progress.bkg" value="#FFFFFFFF"/>
+    <Color name="PopUpProgBkImg" value="#19000000"/>
+
+	<!--New Standard-->
+	<Color name="List.TopAreaBkColor" value="#19FFFFFF" />
+	<Color name="List.HighLightTextColor" value="#FFFFFFFF"/>
+	<Color name="List.SubTextColor" value="#80FFFFFF" />
+	<Color name="List.MajorTextColor" value="#FFFFFFFF" />
+	<Color name="List.SplitLineColor" value="#0DFFFFFF" />
+	<Color name="List.TableHeadBkColor" value="#0AFFFFFF" />
+	<Color name="List.HighLightBtnTextColor" value="#FFFFFFFF"/>
+	<Color name="List.DisableBtnTextColor" value="#33FFFFFF"/>
+  <Color name="List.TopAreaBkPICColor" value="#CCFFFFFF" />
+    
+    <!--Option-->
+    <Color name="List.Option.Selected" value="#7FFFFFFF" />
+    <Color name="List.Option.Hover" value="#7F8285B5" />
+    <Color name="List.Option.UnSelected" value="#7FFFFFFF" />
+    <Color name="List.Option.Title.BKG" value="#FFFFFFFF" />
+    <Color name="List.Option.Title.Selected" value="#FFFFFFFF" />
+    <Color name="List.Option.Title.UnSelected" value="#7FFFFFFF" />
+
+    <Color name="Opq.List.Label.Selected" value="#FF555555" />
+    <Color name="Opq.List.Label.Tip" value="#FF666666"/>
+    <Color name="Opq.List.Label.Disabled" value="#FF999999" />
+    <Color name="Opq.List.Label.TipText" value="#ff2db2eb" />
+    <Color name="Opq.List.Progress.bkg" value="#FF000000"/>
+
+    <Color name="Opq.List.Option.Selected" value="#FF000000" />
+    <Color name="Opq.List.Option.UnSelected" value="#FF888888" />
+    <Color name="Opq.List.Option.Title.Selected" value="#FF000000" />
+    <Color name="Opq.List.Option.Title.UnSelected" value="#7F000000" />
+    <Color name="Opq.List.Option.Title.Underline" value="#FFFFD600"/>
+
+	<!--New Standard-->
+	<Color name="Opq.List.TopAreaBkColor" value="#06000000" />
+	<Color name="Opq.List.HighLightTextColor" value="#FF000000"/>
+	<Color name="Opq.List.SubTextColor" value="#99000000" />
+	<Color name="Opq.List.MajorTextColor" value="#CC000000" />
+	<Color name="Opq.List.SplitLineColor" value="#0A000000" />
+	<Color name="Opq.List.TableHeadBkColor" value="#08000000" />
+	<Color name="Opq.List.HighLightBtnTextColor" value="#FFFFFFFF"/>
+	<Color name="Opq.List.DisableBtnTextColor" value="#4D000000"/>
+  <Color name="Opq.List.TopAreaBkPICColor" value="#CC000000" />
+    <!--列表功能区不透明的颜色放这里统一-end-->
+
+    <Color name="LocalLeftList.ItemTextColor" value="#FF888888"/>
+    
+    <!--播放列表区域的普通按钮背景 begin-->
+    <Color name="Global.PlaylistGeneralIcon" value="#FFFFFFFF"/>
+    <Color name="Opq.Global.PlaylistGeneralIcon" value="#FF000000"/>
+	
+	<!--播放列表区域的特殊按钮背景 begin-->
+    <Color name="Global.PlaylistSpecialIcon" value="#FF000000"/>
+	<Color name="Opq.Global.PlaylistSpecialIcon" value="#FFFFFFFF"/>
+	
+    <!--播放列表区域的普通按钮背景 end-->
+
+    <!--列表歌曲的格式相关开始-->
+    <Color name="Global.List.SongFormat" value="#FFA7B3C2"/>
+    <Color name="Global.List.Pause" value="#FFFFFFFF"/>
+    <Color name="Global.List.Waiting" value="#FFFFFFFF"/>
+
+    <Color name="Opq.Global.List.SongFormat" value="#FFA7B3C2"/>
+    <Color name="Opq.Global.List.Pause" value="#FF000000"/>
+    <Color name="Opq.Global.List.Waiting" value="#FF000000"/>
+    <!--列表歌曲的格式相关结束-->
+
+    <!--MsgBox颜色开始-->
+    <Color name="MsgBox.Title.txt" value="#FF333333"/>
+    <Color name="MsgBox.InfoContent.txt" value="#FF333333"/>
+    <Color name="MsgBox.ChkBoxTxt.txt" value="#FF777777"/>
+    <Color name="MsgBox.BtnTxt.txt" value="#FF333333"/>
+    <Color name="MsgBox.SpeLine" value="#FFF2F2F2"/>
+    <!--MsgBox颜色结束-->
+
+    <!--滚动条颜色开始-->
+    <Color name="Scrollbar.Nav" value="#ffffffff" />
+    <Color name="Scrollbar.List" value="#ffffffff" />
+    <Color name="Opq.Scrollbar.List" value="#ff000000" />
+    <Color name="Scrollbar.Popup" value="#ff000000" />
+    <!--滚动条颜色结束-->
+    
+    <!--others-->
+    <Color name="Default.FontColor" value="#FF111111" />
+    <Color name="PopWnd.Bk" value="#FF10A1DF"/>
+    <Color name="Config.DefaultText" value="#FF333333" />
+    <Color name="Config.BtnNormal" value="#FFF0F8FF" />
+    <Color name="Config.List.BkColor" value="#FFFFFFFF" />
+    <Color name="Config.List.BorderColor" value="#FF95B4C4" />
+    <Color name="Config.List.HeadBkColor1" value="#FFF7FBFF" />
+    <Color name="Config.List.ItemAlternateBkColor1" value="#FFF7F7F7" />
+    <Color name="Config.List.ItemAlternateBkColor2" value="#FFFFFFFF" />
+    <Color name="Config.List.ItemHoverBkColor" value="#FFEDF5FD" />
+    <Color name="Config.List.ItemSelBkColor" value="#FFD8EBFD" />
+    <Color name="Config.List.ItemDisableBkColor" value="#FF98999B" />
+    <Color name="playingLayer.bkcolor" value="#00000000" />
+    <Color name="TabPlayControlPanel.bkcolor.normal" value="#00000000" />
+    <Color name="TabPlayControlPanel.bkcolor.playing" value="#00000000" />
+    <Color name="PlayControlPanel.bkcolor.playing" value="#00000000" />
+    <Color name="PlayControlPanel.bkcolor.mvplaying" value="#ff1b1b1b" />
+
+    <!--皮肤制作UI-->
+    <Color name="MakeSkinMask" value="#4dffffff" />
+    <Color name="MakeSkinBars" value="#3db1b6c0" />
+  </Color>
+  <imagecompose>
+    <image name="playbtn.png" count="4" mask="" colors="" />
+    <image name="pausebtn.png" count="4" mask="" colors="" />
+  </imagecompose>
+</Skin>

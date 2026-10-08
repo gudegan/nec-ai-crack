@@ -1,0 +1,5 @@
+/* 回到顶部 */
+.rtop,.w_rtop { display: none; position: fixed; right: 16px; bottom: 14px; width:30px; height:30px; background:url(../img/toTop/to_top.png) no-repeat 0 0; z-index:9999999;}
+.rtop:hover,.w_rtop:hover{ background:url(../img/toTop/to_top_hover.png) no-repeat 0 0;}
+.shallow .rtop,.shallow .w_rtop { background:url(../img/toTop/sto_top.png) no-repeat 0 0; }
+.shallow .rtop:hover,.shallow .w_rtop:hover{ background:url(../img/toTop/sto_top_hover.png) no-repeat 0 0;}

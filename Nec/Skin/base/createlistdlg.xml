@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,200" caption="0,0,0,128">
+  <Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Global.LightGray&quot; normalimage=&quot;PopUpWndEditVir_1.png&quot; focusedimage=&quot;PopUpWndEditVir_2.png&quot; disabledimage=&quot;PopUpWndEditVir_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Default.FontName&quot;" />
+  
+  <VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="PopUpTitleHor" >
+      <Label text="请输入列表名称" theme="PopUpTitle" />
+			<Control />
+			<Button name="btn_close" theme="PopUpCloseBtn"/>			
+		</HorizontalLayout>
+    <Control height="1" bkcolor="#FFf2f2f2"/>
+		<Edit name="edt_list_name" width="361" height="44" maxchar="20" padding="20,25,0,0"/>
+		<Text name="list_err_tip" text="" padding="17,5,0,0" height="16" textcolor="#FFFF0000"/>
+    <Control ></Control>
+    <HorizontalLayout name="layout_opbutton" height="35" padding="0,5,0,20">
+      <Control></Control>
+			<Button name="btn_list_ok" text="确认"  theme="MsgBox_Btn_Focus" width="104" height="32" focus="true"/>
+			<Button name="btn_list_cancel" text="取消" theme="PopUpDefBtn"   width="104" height="32" padding="8,0,20,0"/>
+		</HorizontalLayout>
+		<Control height="10"/>		
+	</VerticalLayout>
+</Window>

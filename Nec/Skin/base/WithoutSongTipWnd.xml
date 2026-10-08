@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="205,70" roundcorner="6,6">
+  <VerticalLayout  bkimage="NicamTipBackground.png">
+    <Control height="15"/>
+      <HorizontalLayout  height="40">
+	    	<Control width="10" />
+        <Label name="tipIcon" width="30" height="30" bkimage="myradio_without_song.png" padding="-2,0,0,0" />
+				<Control width="5"/>
+				<VerticalLayout name="withoutsong_ver" minwidth="90" maxwidth="175" >
+		   		<Label name="lab_withsong" padding="0,0,0,0" textcolor="#bfffffff" text="该电台已无歌曲可播" endellipsis="true" font="ChangeSkin.Title"/>
+		   		<Label name="lab_time_to_restor" visible="true" padding="0,0,0,0"  text="24小时后会恢复歌曲" textcolor="#bfffffff" endellipsis="true" font="PopUp.DefaultText"/>
+		   		<Control />
+			</VerticalLayout>        		
+	  </HorizontalLayout>      
+  </VerticalLayout>
+</Window>

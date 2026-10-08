@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/listening.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/listening.js" type="text/javascript"></script>
+</head>
+<body>
+
+<audio src="" autoplay="" loop="loop" id="test"></audio>
+<div class="topArea topArea2">
+	<span class="stamp"></span>
+	<!-- <a href="javascript:;" class="close"></a> -->
+	<p class="title"></p>
+	<!-- <p class="title resultTitle">金耳</p> -->
+	<div class="t_page1" style="display:block;">
+		<p class="describe_1">随着年龄的增长有一些高频的声音逐渐就听不到了</p>
+		<p class="describe">
+			<span>想知道你的耳朵能听到的</span>
+			<span class="emphasize">最高频率</span>
+			<span>是多少吗？你是</span>
+			<span class="emphasize">金耳</span>
+			<span>还是</span>
+			<span class="emphasize">木耳</span>
+			<span>？一试便知！</span>
+		</p>
+		<div class="head">
+			<span class="ring"></span>
+			<p class="countdown">5</p>
+		</div>
+	</div>
+	<div class="t_page2" style="display:none;">
+		<div class="cdBox">
+			<div class="cd"></div>
+			<div class="stylus"></div>
+			<p class="describe">准备中...</p>
+		</div>
+		<div class="btnBox">
+			<a href="javascript:;" data-hz="15" class="btn j_next">听见</a>
+			<a href="javascript:;" data-hz="12" class="btn j_prev">听不见</a>
+		</div>
+	</div>
+	<div class="t_page3" style="display:none;">
+		<div class="resultTitleBox">
+			<div class="firest fl">
+				<p style="height:31px; line-height:34px;" class="main fl">你能辨识的最高频率是</p>
+				<p class="main fl"><span class="num">12</span>KHZ,击败了</p>
+				<p class="main fl"><span class="num">10%</span>的测试者</p>
+			</div>
+			<p class="main pt44">你的耳朵弱爆了,请检查设备或提高音量再测一遍</p>
+			<p class="main pt13">调试音量建议使用高音质音乐</p>
+		</div>
+		<div class="artistBox">
+			<div class="artist">
+				<img src="img/listening/def76.jpg" alt="歌手" onerror="imgOnError(this,75);">
+				<span class="pumpingcd"></span>
+				<span class="mask"></span>
+				<a href="javascript:;" class="i_play"></a>
+			</div>
+			<p class="info">周杰伦&nbsp-&nbsp鞋子最大号</p>
+		</div>
+	</div>
+</div>
+<div class="bottomArea">
+	<div class="b_page1" style="display:block;">
+		<a href="javascript:;" class="btn j_start">开始测试</a>
+		<a href="javascript:;" class="btn j_now" style="display:none;">立即开始</a>
+		<p class="tips">注意：测试过程中保持周围环境安静，请先调整到最适合自己的音量，如测试过程中听不清，可加大音量</p>
+	</div>
+	<div class="b_page2" style="display:none;">
+		<p class="bigTips">请选择是否听到当前的声音</p>
+		<p class="tips">测试过程中请保持周围环境安静</p>
+	</div>
+	<div class="b_page3" style="display:none;">
+		<div class="colorBox">
+			<p class="tipsTitle">金耳</p>
+			<span class="tips_line"></span>
+			<div class="color_line">
+				<span class="round" style="left:46px;"></span>
+				<span class="round" style="left:178px;"></span>
+				<span class="round" style="left:309px;"></span>
+				<span class="round" style="left:375px;"></span>
+				<span class="round" style="left:441px;"></span>
+				<span class="round" style="left:507px;"></span>
+				<span class="round" style="left:573px;"></span>
+				<span class="round" style="left:639px;"></span>
+				<span class="round" style="left:706px;"></span>
+				<span class="round" style="left:771px;"></span>
+			</div>
+			<div class="bg_line"></div>
+			<div class="color_block">
+				<p class="describe" style="left:29px;">10KHZ</p>
+				<p class="describe" style="left:161px;">12KHZ</p>
+				<p class="describe" style="left:293px;">14KHZ</p>
+				<p class="describe" style="left:359px;">15KHZ</p>
+				<p class="describe" style="left:425px;">16KHZ</p>
+				<p class="describe" style="left:491px;">17KHZ</p>
+				<p class="describe" style="left:557px;">18KHZ</p>
+				<p class="describe" style="left:622px;">19KHZ</p>
+				<p class="describe" style="left:687px;">20KHZ</p>
+				<p class="describe" style="left:755px;">21KHZ</p>
+			</div>
+		</div>
+		<div class="btnBox">
+			<a href="javascript:;" class="btn j_again">再测一遍</a>
+			<a href="javascript:;" class="btn j_share">分享</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="240,77" roundcorner="10,10">
+  <VerticalLayout  bkimage="NicamTipBackground.png"> 
+	  <Control height="7"/>
+      <HorizontalLayout >
+	    <Control width="18" />
+        <Label name="exclu_ani_start" width="63" height="63" bkimage="exlu_ani_open.png " padding="0,0,0,0" />	
+        <Control width="13" />
+		<VerticalLayout width="120">
+			<Label text="HiFi独占模式开启" font="Default.FontName.Bold" align="center"  height="25" textcolor="#ffffffff" padding="-6,8,0,0"/>	
+			<Label text="享受最纯净的声音" font="Default.FontName.Bold" align="center"  height="25" textcolor="#ffffffff" padding="-6,-3,0,0"/>			
+		</VerticalLayout>
+        <Control />
+	  </HorizontalLayout>      
+      <Control height="7"/>
+  </VerticalLayout>
+</Window>

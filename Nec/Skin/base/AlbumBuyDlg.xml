@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,60" size="400,200">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.Button&quot;" />
+  <EventHook event="OnSkinChange">
+    <Attribute control="text_title" value="textcolor=&quot;Global.DarkGray&quot;" />
+  </EventHook>
+  
+  <VerticalLayout name="root">
+    <HorizontalLayout name="PopUpTitleHor" >
+	  <Label name="text_title" text="提示" theme="PopUpTitle" />
+      <Control />
+      <Button name="button_Close" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+    <Control height="1" theme="#Msg_SepLine"/>
+	
+    <HorizontalLayout name="SongPayInfo" padding="1,1,1,1">
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

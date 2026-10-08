@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="280,60" >
+  <VerticalLayout  bkimage="NicamTipBackground.png">
+    <Control />
+      <HorizontalLayout height="27">
+	    <Control />
+        	
+        <Label padding="0,0,0,0"  text="评论加载失败，请检查网络。" width="205" height="25" textcolor="#ffffffff" font="ChangeSkin.Title"/>
+        <Control />
+	  </HorizontalLayout>      
+    <Control />
+  </VerticalLayout>
+</Window>

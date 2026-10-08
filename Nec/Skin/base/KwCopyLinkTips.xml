@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="165,60" roundcorner="6,6">
+  <HorizontalLayout name="root" bkimage="NicamTipBackground.png">
+    <Control />
+		<Label name="msg"  varwidth="true" text="链接已复制" textcolor="#ffffffff" font="ChangeSkin.Title"/>
+    <Control />
+  </HorizontalLayout>
+</Window>

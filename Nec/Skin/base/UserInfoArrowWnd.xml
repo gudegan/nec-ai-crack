@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="240, 220" roundcorner="4,4" >
+  <Default name="Button" value="fadetime=&quot;0&quot;"/>
+  
+  <!-- 登录信息浮层 -->
+  <VerticalLayout>
+	  <HorizontalLayout name="UserInfoMainWnd" height="220" width="220">
+	  
+	  </HorizontalLayout>
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,70" size="400,200">
+	<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;MsgBox.ChkBoxTxt.txt&quot; checkinfo=&quot;dest='2,0,16,14'&quot; statusimage=&quot;PopUpWndChkVir.png&quot; textpadding=&quot;18,-6,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;MsgBox.ChkBoxTxt&quot;" />
+
+	<VerticalLayout name="MsgBox_PopWnd_New">
+		<HorizontalLayout height="50" name="titlepanel" >			
+			<Label name="title" text="酷我提示" mouse="false" padding="20,2"/>
+			<Button name="MSG_ACTION_BTN_Close" theme="PopUpCloseBtn" userdata="2"/>
+		</HorizontalLayout>
+		<Control name="Msg_SepLine" height="1"/>
+		<Control height="22" />
+		<VerticalLayout name="MessageBox_TXT_Content"/>
+		<CheckBox name="MessageBox_CHECKBOX" text="不再显示" padding="38,0,0,0" visible="false" setcursor="true" height="18" varwidth="true" />
+		<Control height="17" />
+		<HorizontalLayout name="MessageBox_TXT_BOTTOM_BTN" height="32" userdata="mainbtn.png" padding="0,0,0,20" inset="28,0,0,0" >
+			<Control enabled="false" mouse="false"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

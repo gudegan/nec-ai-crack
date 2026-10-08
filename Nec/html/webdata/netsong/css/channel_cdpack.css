@@ -1,0 +1,188 @@
+/*公用*/
+html{overflow:visible; overflow-x:hidden;}
+.indexContentBox{padding: 0 16px 0 25px; margin:0 auto;}
+.w_loading { position:fixed;right:0px; bottom:20px; z-index:99999;}
+#l_loadfail { width: 100%;background-color: #fafafa;z-index: 99999; display:none; position:absolute;padding-bottom: 5px;top:0px;}
+.loaderror { height:250px;position:relative;margin-top:-160px;top:50%;width:100%;}
+.loaderror img { display:block;margin:0 auto;}
+.loaderror p { text-align:center;font-size:22px;}
+.loaderror p a { color:#46b4e6; text-decoration:underline;}
+
+.icon {width: 18px;height: 18px;overflow: hidden;margin:2px 4px 0 0;display: inline-block;vertical-align: middle}
+.icon.ui-move{position: relative; top: 1px}
+/*公用结束*/
+/*logo*/
+.logo {position: relative;width: 69px;height: 42px;}
+.logo_icon {width: 69px;height: 42px;overflow: hidden;}
+.logo_icon i {display:block;width: 138px;height: 42px;background: url(../img/cdpack/third/logo/logo.png) no-repeat;margin-left: -69px;}
+.logo_icon_splice {width: 28px;height: 28px;background: url(../img/cdpack/third/logo/logo_splice.png);position: absolute;left: 0;bottom: 0;}
+/* logo结束 */
+.navBox {display: flex;margin-bottom:5px;}
+.navBox h1 {font-size: 17px;font-weight: 500;margin: 17px 0 0 3px;}
+.nav {text-align: center;flex: 1;overflow: hidden;margin-left: -140px;}
+.nav a {position: relative;display: inline-block;font-size: 16px;margin: 19px 40px 0 0;}
+.nav a span {opacity: 0.6;}
+.nav a:hover span {opacity: 1;}
+.nav a.active span {opacity: 1;font-weight: 600}
+.nav a.jumpDown {margin-right: 0px;}
+.nav a label {width:5px;height: 5px;border-radius: 50%;display: block;background:#fc5457;position: absolute;top: 0px;right: -5px;display: none;}
+.nav a i {width: 18px;height: 3px;border-radius: 2px;display: block;margin: 4px 0 0 25px;}
+/*nav*/
+.cdMenu {overflow:hidden;margin-bottom:30px;width: 100%;}
+.cdMenu ul {margin: 0 -4px;display: flex;flex-wrap: wrap;}
+.cdMenu ul li {position: relative;margin-top:5px;cursor: pointer;padding:0 4px;width: 20%;height: 60px;}
+.cdMenu ul li img {position: absolute;left:50%;top:50%;margin: -30px 0 0 -115px;}
+.cdMenu ul li .indexLabelBox {position: relative;width: 100%;height: 100%;overflow: hidden;border-radius: 4px}
+.cdMenu ul li span {width:100%;color:#ffffff;position: absolute;text-align: center;left:0;top:50%;height: 30px;margin-top:-15px;line-height: 30px;}
+.cdMenu ul li span .icon-updown{display: inline-block; width: 8px;height: 8px;border-style: solid;border-width: 1px 1px 0 0;border-color: #fff;transform: rotateZ(135deg);margin-left: 7px;opacity: 0.8;position: relative;top:1px;}
+.cdMenu ul li span .icondown{transform: rotateZ(-45deg);top:1px;}
+.cdMenu ul li span .iconup{transform: rotateZ(135deg);top:-2px;}
+.cdMenu .splice {width: 100%;height: 100%;background: rgba(0,0,0,0.3);position: absolute;left: 0;top: 0;display: none;}
+.cdMenu ul li:hover .splice {display: block}
+/*检索部分css*/
+.searchBox {position: relative;z-index: 1;margin-bottom:23px;}
+.searchCon {width:100%;}
+.searchCon label {float:left;margin-left:22px;color:#fff;opacity: 0.6}
+.search {cursor:pointer;display: flex;width: 50px;}
+.searchBox span{float:left;opacity: 0.8;}
+.select {position: absolute;right: 8px;bottom: 0px;z-index: 1;cursor:pointer;display: flex}
+.selectList {width:66px;height:auto;text-align:center;position:absolute;right:0px;top:25px;z-index: 2;background:#ffffff;color:#333333;box-shadow:0px 6px 12px 0px rgba(0,0,0,0.2);padding:10px 0;overflow:hidden;display: none;}
+.selectList li {height:30px;line-height:30px;cursor:pointer;}
+.selectList li:hover,.selectList li.active {background:#F0F0F0;}
+.searchList {width:750px;padding-top:8px;background:#ffffff;border-radius: 2px;box-shadow:0 0 6px 2px rgba(0,0,0,0.4);position:absolute;top:25px;left:0px;color:rgba(0,0,0,0.7);display: none}
+.searchList .item {display: flex;margin:11px 0;}
+.searchList label {width:90px;text-align:right;}
+.searchList ul {flex: 1;overflow: hidden;display: flex;flex-wrap: wrap}
+.searchList ul li {float:left;padding:0 12px;height:25px;margin:0 5px 9px 0;text-align:center;line-height:24px;cursor: pointer;}
+.searchList ul li:hover,.searchList ul li.active {border-radius: 12.5px;color:#ffffff;line-height: 25px}
+.searchList ul li.active {font-weight: 600}
+.default .searchList ul li:hover,.default .searchList ul li.active {color:#000000}
+
+
+/*检索部分css结束*/
+
+/*查看歌手*/
+.cdIndexTop {position: relative;}
+.lookArtist {position: absolute;left: 71px;bottom: 0;z-index: 2;cursor:pointer;display: flex}
+.lookArtist span {float:left;margin-right: 5px;opacity: 0.8;}
+
+/*cd包列表部分css*/
+.cdListBox{overflow: hidden;display: flex;flex-wrap: wrap;margin: 0 -17px;}
+.cdList{display: flex;position:relative;width:50%;margin-bottom:30px;padding:0 17px;}
+.cdList .cdimg {display:block;width:40%;}
+.coverBox {width:100%;height: 0;padding-bottom: 90%;position: relative;}
+.coverBox .cover {position: absolute;width: 100%;height: 100%;top:0;left:0;}
+.coverBox .cover img {opacity:1;width:90%;height: 100%;border-radius: 3px;overflow: hidden;border-right: 0px;}
+.coverBox .cdshadow {position:absolute; display:none; width:90%; height:100%; background:rgba(0,0,0,.5);border-radius: 3px;}
+.coverBox .cdshadowActive{display:block;}
+.coverBox .splice {position:absolute;width: 100%;height:100%; background:url(../img/cdpack/third/cd-bg.png) 0px 0;background-size:100% 100%;right: 0;}
+.coverBox .cdTagBox {display: flex;justify-content: space-between;position: absolute;bottom:0px;width: 90%;height:40px;background:url(../img/play_radio/splice.png);padding: 16px 0 0 3px;}
+.coverBox .cdTagBox .downTimes {display:flex;height: 20px;padding-right:4px;line-height: 22px;font-size:12px;color:#fff;margin-left:2px;text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);}
+.coverBox .cdTagBox .downTimes span{width:20px; height:20px; background:url(../img/cdpack/download_new.png) no-repeat;background-size: 100%;margin-right:1px;}
+.coverBox .cdTagBox .cdIcon {width:52px;height: 20px;line-height:19px;text-indent:24px;font-size:12px;color:#fff;background:url(../img/cdpack/second/cdIcon_mid.png) no-repeat;}
+.default .coverBox .cover img,
+.dark .coverBox .cover img {
+  /* border: 1px solid rgba(0,0,0,.06); */
+}
+.downBtnBox {width:90%;height: 100%;position:absolute;top:0;left: 0;}
+.downBtnBox .i_down,.downBtnBox .i_downing,.downBtnBox .i_downover {position:absolute;left:50%; top:50%; display:none; width:54px; height:57px;margin: -29px 0 0 -27px;}
+.downBtnBox .i_down {background:url(../img/cdpack/icon_down.png) no-repeat;}
+.downBtnBox .i_down:hover {background:url(../img/cdpack/icon_down_hover.png) no-repeat;}
+.downBtnBox .i_downing {overflow:hidden;}
+.downBtnBox .i_downing i {width:54px;height:57px;display:block;position:absolute;top:-57px;left:0px;background:url(../img/cdpack/icon_down.png) no-repeat; -webkit-animation:2.2s cddowninganimation linear infinite;}
+.downBtnBox .i_downover {width:67px;margin-left:-34px;background:url(../img/cdpack/icon_down_over.png) no-repeat;}
+.cdList .cdimg:hover .cdshadow,.cdList .cdimg:hover .i_down,.cdList .cdimg:hover .i_downing,.cdList .cdimg:hover .i_downover{display:block;}
+
+.cdInfo {margin-left:10px;font-size:14px;flex: 1;overflow: hidden;position: relative;}
+.artist,.name {width: 100%;}
+.artist{height: 20px; line-height: 20px;}
+.cdName {line-height:25px;font-size: 18px;opacity: 0.8;display: inline-block;max-width:100%;overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;margin:8px 0 4px 0;}
+.cdName:hover {opacity: 1;}
+.artistName {display: inline-block;max-width:100%;overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;opacity: 0.6;}
+.cdIntr {margin-top:4px;height: 40px; line-height: 20px; font-size:14px;opacity: 0.6;display: -webkit-inline-box;overflow:hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+
+.cdInfo_botoom {position: absolute;bottom:0px;left:0px;width: 100%;display: flex;justify-content: space-between;font-size:12px;opacity: 0.6;}
+.cdInfo_botoom .type em{margin: 0 5px;}
+.cdInfo_botoom .type em:first-child{margin-left: 0;}
+.cdInfo_botoom .type em:last-child{margin-right: 0;}
+.type span {margin:0 8px;}
+/*cd包列表部分css结束*/
+
+/*无数据部分css开始*/
+.nodataBox{display:block; margin-top:30px;}
+.nodataBox img{display:block; margin:0 auto; width: 140px;}
+.nodataBox .p1{line-height:24px; font-size:20px; text-align:center;color:rgba(62, 62, 62, 1);font-weight: bold;margin-top: 28px;margin-bottom: 5px;}
+.nodataBox .p2{line-height:22px; font-size:16px; color: #3E3E3E; text-align:center;font-weight: 400;}
+/*无数据部分css结束*/
+
+
+/*cdTips*/
+.cdTips {z-index:10;width:200px;height: 66px;position: fixed;top:50%;left:50%;margin:-33px 0 0 -100px;background:#000;border-radius: 10px;color:#fff;opacity: 0.8;display: none;text-align: center;font-size:16px;padding-top:10px;}
+.cdTips a {color:rgb(255,204,0);display: block;margin-top:5px;}
+
+/*下载部分动画*/
+.cdpicchengeplay{border-radius:50%; animation:0.3s cdpictchange ease-out forwards;}
+@keyframes cddowninganimation{
+	0%{transform:translateY(0);opacity: 0.4}
+	50%{opacity: 1}
+	100%{transform:translateY(114px);opacity: 1}
+}
+/*下载部分动画结束*/
+
+/*cd菜单跳转页面*/
+.menuPageTop {position: relative;margin-bottom: 20px;display: none}
+.menuPageTop .cdInfoBox h1 {font-size:18px;font-weight: 500;display: inline-block;vertical-align: middle}
+.menuPageTop .cdInfoBox span {font-size: 12px;display: inline-block;vertical-align: bottom;}
+.cdIntroBox {position: relative;display: inline-block;margin-left:7px;vertical-align: middle;display: none}
+.cdIntroBox i { cursor: pointer;}
+.cdIntro {display: none;}
+.cdIntro p  {line-height:26px;position: absolute;width: 360px;padding:10px 20px;background: #ffffff;border-radius: 3px;box-shadow:0px 6px 12px 0px rgba(0,0,0,0.2);color: rgba(0,0,0,0.8);z-index:2;left:-100px;top:25px;}
+/*母带*/
+.typeList {display: flex;padding: 25px 0 9px 0;border-bottom: 1px solid rgba(0,0,0,0.06);}
+.menuPageTop .typeList .cdInfoBox {width:130px;}
+.typeList .listBox {height:26px;overflow: hidden;position: relative;flex:1;margin-right: 20px;}
+.typeList ul {width: 999em;position: absolute;left:0;transition:left 0.6s;}
+.typeList ul li {float:left;width:84px;height: 26px;line-height:25px;text-align:center;margin-right: 10px;border-radius: 13px;cursor: pointer;opacity: 0.8;}
+.typeList ul li.hovered,.typeList ul li.active {color:#ffffff;opacity: 1;}
+.default .typeList ul li.hovered,.default .typeList ul li.active {color:#000000;opacity: 1;}
+.typeList a.btn {width:12px;height: 20px;background:rgba(0,0,0,0.0629);text-align:center;display: block;position: absolute;bottom:13px;display: none;}
+.typeList a.btn img {display: block}
+.typeList a.leftBtn {left:131px;}
+.typeList a.rightBtn {right:0px;}
+.childLabelList {display: none}
+
+/*cd包歌手cd列表页*/
+.artistCdListTop {margin:38px 0 29px 0;padding-bottom:22px;border-bottom: 1px solid rgba(0,0,0,0.06);}
+.artistCdListTop a:hover {color:rgba(255,255,255,1);}
+.artistCdListTop .artistInfoBox {display: flex}
+.artistCdListTop .artistInfoBox .artistInfo {flex:1}
+.artistInfoBox .cover {border-radius: 50%;width: 60px;height: 60px;margin-right: 22px;}
+.artistInfo .info {margin-bottom:6px;}
+.artistInfo h1 {font-size:20px;font-weight: 500;display: inline-block;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-width: 100%;}
+.artistInfo .cdCnt {opacity: 0.6;font-size: 12px;}
+.artistIntroBox {display: inline-block;vertical-align: top;margin-left:20px;position: relative;float: right}
+.artistIntroBox .lookIntro {display: inline-block;opacity: 0.6;cursor: pointer;}
+.artistIntroBox .lookIntro .icon {margin-top:0}
+.artistIntroBox .lookIntro .icon i {background: url(../img/cdpack/third/lookInfo.png) no-repeat;margin-top:0}
+.artistCdList {margin-top: 0px}
+.artistCdListTop .jumpDown,.artistCdListTop .jumpLike {margin-top:0px;}
+.artistCdListTop .cdIntro p {left: -282px;height: 184px;overflow: auto;}
+.artistCdListTop .cdIntro p::-webkit-scrollbar{width: 10px;height: 10px;background:rgba(0,0,0,0.0001);}
+.artistCdListTop .cdIntro p::-webkit-scrollbar-thumb{border-radius: 5px;background-color: rgba(0,0,0,0.08);}
+
+
+@media screen and (min-width:1265px){
+  .cdList {
+    width: 33.33333333%;
+  }
+}
+@media screen and (min-width:1117px) and (max-width:1430px){
+	.cdMenu ul li {
+	  width: 16.66666667%;
+	}
+}
+@media screen and (min-width:1431px){
+	.cdMenu ul li {
+	  width: 14.28571429%;
+	}
+}

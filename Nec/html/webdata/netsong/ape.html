@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>什么是APE</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<style>
+*{ margin: 0;padding: 0;list-style: none;}
+.tan{position:absolute;top:-102px;left:113px;}
+.tan1,.tan3{width:5px;height:4px;overflow:hidden;font-size:0;}
+.tan4,.tan5{width:5px;}
+.tan6,.tan8{width:5px;height:6px;overflow:hidden;}
+.l_content{width:200px;background:#fff}
+.l_content2{padding-bottom:10px;width: 630px;}
+.ku_title{ line-height: 28px;color: #333;font-size: 18px;font-weight: bold;padding-left: 25px;margin-bottom: 15px;}
+.tishi_btn a{float:right;width:68px;height:28px;line-height:28px;text-align:center;font-size:14px;margin-left:10px;}
+.tishi_yes{display:inline-block;color:#333;background:#f0f8ff;border:1px solid #bcc9d1;padding:0 20px;line-height:28px}
+.tishi_yes:hover{text-decoration:none;background:#d8ebfd}
+.tishi_yes:active{background:#afd3f5}
+.tan_con2{padding:0 20px }
+.textarea {border:1px solid #95b4c4;width:398px;height:73px;line-height: 24px;padding:5px 10px;}
+.textarea span{color:#52b9e8}
+.tan_share {height:21px;line-height:21px;overflow:hidden;margin-top:15px}
+.tan_share span{float:left;}
+.tan_share input{float:left;margin:4px 5px 0 0;width:14px;height:14px;}
+.tan_share  .tsian{background-position: 0 0}
+.tan_share  .tqt{background-position: 0 -21px}
+.tan_share  .tren{background-position: 0 -42px}
+.tan_share  .tqz{background-position: 0 -63px}
+.tan_share  .tkuwo{background-position: 0 -84px}
+.tan_aboutimg{margin-top:15px;overflow:hidden;zoom:1}
+.tan_left a{color:#5dbde9;float:left;}
+.tan_left img{float:left;clear:both;margin-top:5px}
+.tan_left{float:left;}
+.tan_right2{float:right;}
+.tan_right2 a{float:right;margin-top:76px}
+.ape_dec{color: #333;font-size: 16px; padding: 13px 0 32px 40px;position: relative;}
+.ape_dec p{ line-height: 28px;}
+.line{ position: absolute;left: 24px;top: 18px;background: #FFD200;width: 4px;height: 75px;border-radius: 2px;}
+.ape_bijiao{padding: 0 24px 0 30px;overflow:hidden;zoom:1;}
+.bijiao_left{float:left;width:276px;}
+.bijiao_right{float:right;width:276px;}
+.egpic{ display: block;width: 100%;}
+.egpic img{ width: 100%;}
+.shiting_song{height:20px;line-height:14px;font-size:12px;width:100%;text-align:center;margin-top:4px;*margin-top:0px;position: relative;}
+.tan_shiting{position:absolute;width:16px;height:14px;margin-left:4px;top: -2px;}
+.tansongname{color:#727272;display:inline-block;height:14px;overflow:hidden;word-break:break-all;}
+.bijiao_title{height:28px;line-height: 28px;color:#333;text-align: center;font-size: 14px;margin-bottom: 13px;}
+.bijiao_rightt{float:right;}
+.tan_playtop{font-size:22px;color:#e2b317;line-height:28px;}
+.tan_playbottom{font-size:14px;color:#bfbfbf;line-height:16px;}
+.tan_playing2{text-align: center;color:#333;font-size:14px;line-height:46px;}
+.tan_playing2 a{color:#46b4e6;}
+.l_content3{position:relative;padding:0 20px;}
+.tan_btn{overflow:hidden;zoom:1;}
+.tan_btn a{float:right;}
+.tan_closed:hover{background-position:-69px 0}
+#whatape{width: 630px;background-color: #fff;}
+</style>
+<script type="text/javascript">
+	function callClient(call){
+		try{
+			return window.external.callkwmusic(call);
+		}catch(e){
+			return "";
+		}
+	}
+
+	function apeMusic(apenum){
+		var playstring = "";
+		if(apenum==1){
+			playstring = "%25E8%25A2%25AB%25E9%2581%2597%25E5%25BF%2598%25E7%259A%2584%25E6%2597%25B6%25E5%2585%2589%2520(APE%25E8%25AF%2595%25E5%2590%25AC%25E9%259F%25B3%25E4%25B9%2590)%09%25E8%2594%25A1%25E7%2590%25B4%09%09813423426%093293437496%09MUSIC_3290134%091342261732%09160161300%09MP3_3290134%090%090%09MV_0%090";
+		}else{
+			playstring = "%25E8%25A2%25AB%25E9%2581%2597%25E5%25BF%2598%25E7%259A%2584%25E6%2597%25B6%25E5%2585%2589%2520(MP3%25E8%25AF%2595%25E5%2590%25AC%25E9%259F%25B3%25E4%25B9%2590)%09%25E8%2594%25A1%25E7%2590%25B4%09%091581251675%093341651451%09MUSIC_3290135%091326409919%092298037373%09MP3_3290135%090%090%09MV_0%090";
+		}
+		var call = "Play?mv=0&playape="+apenum+"&n=1&s1="+playstring + "&asnext=1&needplay=1";
+		try{
+			window.external.callkwmusic(call);
+		}catch(e){
+			
+		}
+	}
+</script>
+</head>
+<style>
+body{background:#fff; overflow:hidden;}
+</style>
+<body>
+	<div id="whatape">
+		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<tbody>
+				<tr>
+					<td>
+					<div class="l_content2">
+						<div class="ape_dec">
+								<p>无损音乐是媲美CD的音乐格式，完整保存声音细节</p>
+								<p>音质优于WMA、MP3等普通音乐格式，给您纯正完美的音乐体验</p>
+								<p>无损音乐体积较大，播放缓冲时间略长</p>
+								<div class="line" id="line"></div>
+						</div>
+						<h2 class="ku_title"><span>无损音乐与普通音乐频谱比较</span></h2>
+						<div class="ape_bijiao">
+							<div class="bijiao_left">
+								<p class="bijiao_title">无损音乐</p>
+								<a href="###" class="egpic" hidefocus onclick="apeMusic(1);"><img src="img/high.jpg"></a>
+								<div class="shiting_song">
+									<a class="tansongname" href="###" hidefocus onclick="apeMusic(1);">蔡琴-被遗忘的时光</a><a onclick="apeMusic(1);" class="tan_shiting" href="###" hidefocus><img src="img/erji.gif" alt="" /></a>
+								</div>
+							</div>
+							<div class="bijiao_right">
+								<p class="bijiao_title">普通MP3（128kbps）</p>
+								<a href="###" class="egpic" hidefocus onclick="apeMusic(0);"><img src="img/low.jpg"></a>
+								<div class="shiting_song">
+									<a class="tansongname" href="###" hidefocus onclick="apeMusic(0);">蔡琴-被遗忘的时光</a><a onclick="apeMusic(0);" class="tan_shiting" href="###" hidefocus><img src="img/erji.gif" alt="" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		// 换肤
+    function readFile(path) {
+        return callClient('ReadFile?path=' + path);
+    }
+    function getSkinConfig() {
+        var config = callClient('GetSkinConf');
+        return config;
+    }
+    var fileName = 'netsong/skinConfig.json';
+    var skinConfig = {
+        "type": "default",
+		"skinColor": "#FFD200",
+		"linkColor": "#487BB6",
+		"hifiColor": "#DFAB45",
+		"opqSwitch": false
+    };
+    setSkin(getSkinConfig());
+    function setSkin(data) {
+        if(data!=''){
+            var jsonData = JSON.parse(data);
+            var file = readFile(jsonData.dir + fileName);
+            if (file!='') {
+                skinConfig = JSON.parse(file);
+            }
+        }
+        var color = "#FFFFFF";
+        if(skinConfig.type == 'default') {
+            color = "#000000";
+        }
+        document.getElementById("line").style.background = skinConfig.skinColor;
+    }
+    // 换肤结束
+	</script>
+</body>
+</html>

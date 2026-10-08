@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,30" roundcorner="5,5" size="350,282">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot;button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Edit" value="height=&quot;24&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;PopUp.DefaultText&quot;" />
+  <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;24&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;24&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; textcolor=&quot;Config.DefaultText&quot; statusimage=&quot;Config_CheckBox.png&quot; font=&quot;PopUp.DefaultText&quot;" />
+  
+  <VerticalLayout  bkcolor="#00000000">
+		<HorizontalLayout padding="0,0,0,0" name="titlepanel" height="30">
+    	<Label name="title" padding="7,2,0,0" text="上传歌词" width="100" height="30" font="PopUp.Title"/>
+    	<Control />
+    	<Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+		<HorizontalLayout padding="15,15,0,0" height="25">
+    	<Label text="歌词文件" width="64"/>
+      <Edit name="file" padding="-3,0,0,0" width="203"/>
+    	<Button name="browse" padding="-1,0,20,0" text="浏览" width="54"/>
+    </HorizontalLayout>
+   	<HorizontalLayout padding="15,12,0,0">
+    	<Label text="歌名" padding="23,0,0,0" width="34"/>
+    	<Edit name="songname" padding="4,0,0,0" width="203" normalimage="Config_EditBox_1.png" focusedimage="Config_EditBox_2.png" />
+    	<Label text="*" padding="5,0,0,0" textpadding="0,2,0,0" textcolor="#ffff0000"/>
+    </HorizontalLayout>
+    <HorizontalLayout padding="15,6,0,0">
+    	<Label text="歌手" padding="23,0,0,0" width="34"/>
+    	<Edit name="artist"  padding="4,0,0,0" width="203"/>
+    	<Label text="*" padding="5,0,0,0" textpadding="0,2,0,0" textcolor="#ffff0000" />
+    </HorizontalLayout>
+    <HorizontalLayout padding="15,6,0,0">
+    	<Label text="专辑" padding="23,0,0,0" width="34"/>
+    	<Edit name="album" padding="4,0,0,0" width="203"/>
+    </HorizontalLayout>
+    <HorizontalLayout padding="15,6,0,0">
+    	<Label text="您的署名" width="64"/>
+    	<Edit name="username"  padding="-3,0,0,0" width="203"/>
+    	<Label text="*" padding="5,0,0,0" textpadding="0,2,0,0" textcolor="#ffff0000"/>
+    </HorizontalLayout>
+    <HorizontalLayout padding="20,0,0,0">
+      <CheckBox name="readrule" padding="50,2,0,0" text="" width="14" height="14"/>
+      <Button name="rule" padding="0,1,0,0" width="135" heigth="18" setcursor="true" textcolor="#FF46B4E6" hottextcolor="#FF46B4E6" pushedtextcolor="#FF46B4E6" focusedtextcolor="#FF46B4E6" text="已阅读并接受酷我协议" textpadding="0,-7,0,0" statusimage="notexist.png"/>
+    </HorizontalLayout>
+		<HorizontalLayout padding="0,-2,0,0">
+      <Label name="result" padding="20,0,0,0" textcolor="#ff6a6a6a" width="100"/>
+			<Button name="upload" padding="63,0,0,0" text="上传" width="70" height="25"/>
+			<Button name="cancel" padding="10,0,20,0" text="取消" width="70" height="25"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

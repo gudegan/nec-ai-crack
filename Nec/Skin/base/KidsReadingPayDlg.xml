@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,60" size="400,186">
+    <!-- 登录信息浮层 -->
+	<VerticalLayout name="root">
+	<WebUI name="web" create="true">
+	</WebUI>
+		<Button name="btn_close" float="true" pos="-45, 10, -10,0"  width="30" height="30" statusimage="popupwndcloseVir.png"/>
+	</VerticalLayout>
+</Window>

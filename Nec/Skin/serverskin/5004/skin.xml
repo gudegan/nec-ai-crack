@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+  <include name="${base}skin-light.xml"/>
+  <Color>
+    <!--整体蒙版颜色（通常全透明即可）
+	音乐盒背景从上至下分3层
+    （1）netsongbk.jpg（浅色皮肤需设置）
+    （2）Body.Mask（纯色皮肤需设置）
+    （3）bk.jpg（所有皮肤均需设置）
+	-->
+    <Color name="Body.Mask" value="#FFFCFAFA" />
+	<!--前两位为反色阈值，后六位为蒙版颜色-->	
+    <Color name="Pl.Mask" value="#00FFFFFF" />
+    <!--左侧主菜单蒙版颜色-->
+    <Color name="ListAera.Mask" value="#1AD2B6AF" />
+    <!--窗体背景色，皮肤未加载时展示的颜色，对应conf.ini里的maskcolor（10进制）-->   
+	<Color name="Main.Bk" value="#FFFCFCFC" />
+
+    <!--主题颜色-->
+    <Color name="Topic.Normal" value="#FFE7453D" />
+    <!--主题色备选色，如复选框选中、顶部ICO指上，除官方白之外，需与主题颜色配置成相同颜色-->
+    <Color name="Topic.Alter" value="#FFE7453D" />
+    <!--超链接色，高亮文字或链接文字指上色-->
+    <Color name="Topic.LinkText" value="#FFE7453D" />
+	<!--高音质色-->
+	<Color name="Global.Golden" value="#FFE7453D" />
+ 	<!--异常色，通常为红色-->
+    <Color name="Global.ErrRed" value="#FFF62F1C" />	 
+	<!--左侧主菜单指上颜色-->
+    <Color name="Topic.Menu.Hot" value="#09000000" />
+	 <!--左侧主菜单选中颜色-->
+    <Color name="Topic.Menu.Selected" value="#0D000000" />
+
+    <!--播控栏底色-->
+    <Color name="PlayControlPanel.bkcolor.normal" value="#FFFCFBFA" />
+  </Color>
+</Skin>

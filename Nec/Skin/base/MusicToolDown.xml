@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="398,200" caption="0,0,0,60">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot;button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Config.DefaultText&quot;" />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; textcolor=&quot;Config.DefaultText&quot; statusimage=&quot;Config_CheckBox.png&quot; font=&quot;Config.DefaultText&quot;" />
+  <EventHook event="OnSkinChange">
+		<Attribute control="MusicToolDown_Title" value="textcolor=&quot;Global.DarkGray&quot;" />
+	</EventHook>
+  <VerticalLayout >
+		<HorizontalLayout name="PopUpTitleHor" >
+			<Label text="下载应用" theme="PopUpTitle"/>
+      <Control />
+			<Button name="MusicToolDown_BTN_Close" theme="PopUpCloseBtn" userdata="2"/>
+		</HorizontalLayout>
+    
+    <Control theme="#Msg_SepLine" height="1"/>
+    
+		<VerticalLayout name="ClientRect">
+			<VerticalLayout name="MsgBox_Content" height="50" padding="20,19,0,0" >
+				<Text name="MusicToolDown_TXT_Msg" width="250" text="正在初始化..." maxheight="50" font="Default.FontName" />
+				<Progress name="MusicToolDown_Prog" padding="5,5,0,0" fgimage="progress_PopupWnd_2.png" bkimage="progress_PopupWnd_1.png" width="357" height="10" min="10" max="100"/>
+			</VerticalLayout>
+			<HorizontalLayout name="buttonrow" height="32" userdata="mainbtn.png" padding="0,22,0,20" >
+        <!--CheckBox name="MusicToolDown_CB_RunAfterInit" text="初始化后启动" padding="0,4,0,0" visible="false"
+						setcursor="true" height="15" width="70" checkinfo="dest='0,0,16,15'" statusimage="checkbox.png" /-->
+				<Control enabled="false" mouse="false" />
+				<!-- <Button setcursor="true" text="确定" statusimage="mainbtn.png" name="MusicToolDown_BTN_OK" visiable="false" padding="0,0,15,0" height="24" width="60"/> -->
+				<Button setcursor="true" text="取消" theme="MsgBox_Btn_Focus" name="MusicToolDown_BTN_Cancel" padding="0,0,16,10" height="32" width="104"/>
+			</HorizontalLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>

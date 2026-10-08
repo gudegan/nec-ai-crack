@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,200" caption="0,0,0,60">
+  <themes>
+    <theme name="edit_normal" textcolor="Global.LightGray" normalimage="PopUpWndEditVir_1.png" focusedimage="PopUpWndEditVir_2.png" disabledimage="PopUpWndEditVir_3.png" disabledtextcolor="#FF111111" font="Default.FontName"/>
+    <theme name="edit_error" textcolor="Global.LightGray" normalimage="PopUpWndEditVirErr_1.png" focusedimage="PopUpWndEditVirErr_2.png" disabledimage="PopUpWndEditVirErr_3.png" disabledtextcolor="#FF111111" font="Default.FontName"/>
+  </themes>
+
+  <VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="PopUpTitleHor">
+			<Label text="请输入歌单名称" theme="PopUpTitle"/>
+			<Control />
+			<Button name="close" theme="PopUpCloseBtn"/>
+			<Control width="6"/>
+		</HorizontalLayout>
+    <Control height="1" bkcolor="#FFf2f2f2"/>
+		<Edit name="listname" theme="edit_normal" width="361" height="44" maxchar="20" padding="20,25,0,0" />
+    <HorizontalLayout height="16" padding="17,5,0,0">
+      <Label name="wait" width="16" height="16" padding="0,0,2,0" visible="false" framenum="11" frametime="990" bkimage="createlist_wait.png"/>
+      <Label name="errorinfo" text="" font="Default.FontSmall" />
+    </HorizontalLayout>
+		<Control></Control>
+		<HorizontalLayout name="layout_opbutton" height="35" padding="0,5,0,20">
+			<Control></Control>
+			<Button name="Confirm" text="确认" theme="MsgBox_Btn_Focus" width="104" height="32" focus="true" />
+			<Button name="Cancel" text="取消"  theme="PopUpDefBtn" width="104" height="32" padding="14,0,20,0"/>
+		</HorizontalLayout>
+		<Control height="10"/>
+	</VerticalLayout>
+</Window>

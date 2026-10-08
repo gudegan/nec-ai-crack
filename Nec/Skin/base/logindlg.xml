@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,48" roundcorner="3,3" size="360,530">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;14&quot; textcolor=&quot;pp.Text.Normal&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;PopUpWndChkVir.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot;font=&quot;Default.FontSmall&quot;" />
+
+	<VerticalLayout  name="logindlgmain" >
+		<Button name="scancode_switch"  visible="false" height="62" width="62" padding="1,1" statusimage="qr.png"/>
+		<HorizontalLayout name="login_titlepanel" height="41" padding="0,53">
+			<Control />
+			<Option name="username_opt"  group="login_type_choose"  width="100"   font="Default.Font16" text="账号登录" selectedimage="list_OptionTitleUnderliveVir2.png" textcolor="pp.Text.Minor" selectedtextcolor="Global.DarkGray"/>
+			<Option name="quicklogin_opt" group="login_type_choose"  width="100"  font="Default.Font16" text="手机号登录" selectedimage="list_OptionTitleUnderliveVir2.png" textcolor="pp.Text.Minor" selectedtextcolor="Global.DarkGray"/>
+			<Option name="scancode_opt" group="login_type_choose"  width="120"  font="Default.Font16" text="酷我扫码登录" selectedimage="list_OptionTitleUnderliveVir2.png" textcolor="pp.Text.Minor" selectedtextcolor="Global.DarkGray"/>
+			<Control />
+			</HorizontalLayout>
+		<TabLayout name="subMainTabSwitch">
+			<!--账号和手机号登录开始-->
+			<VerticalLayout name="passwdquick" padding="0,25">
+				<TabLayout name="login_opt_choost" height="130">
+					<!--用户名和密码登录开始-->
+					  <VerticalLayout height="318" name="layoutusername">
+						<HorizontalLayout  height="42" padding="35,0,35,0" bkcolor="#fff745a8">
+						  <Edit name="username"  maxchar="40" textpadding="38,0,10,0" nativebkcolor="#fff5f5f5" font="Default.FontName" tooltip="请在这里输入您的账号" normalimage="edit_login_normal.png" focusedimage="edit_login_normal.png" hotimage="ledit_login_normal.png" disabledimage="edit_login_normal.png"/>
+						  <Label  height="20" width="20" tabstop="false" float="true" pos="11,11" bkimage="login_countname.png"/>
+						</HorizontalLayout>
+						<HorizontalLayout height="42" inset="0,0,0,0" padding="35,14,35,0">
+						  <Edit name="password" textpadding="38,0,96,0"  nativebkcolor="#fff5f5f5" password="true" tooltip="请在这里输入您的密码" normalimage="edit_login_normal.png" focusedimage="edit_login_normal.png" hotimage="edit_login_normal.png" disabledimage="edit_login_normal.png"/>
+						  <Label  height="20" width="20" float="true" pos="10,10" bkimage="login_lock.png"/>
+						</HorizontalLayout>
+						<HorizontalLayout height="31" padding="41,6" >
+						  <CheckBox name="rempassword"  text="记住密码" width="80" />
+						  <Control width="10"/>
+						  <CheckBox name="autologin" text="自动登录" width="80"/>
+						  <Button text="忘记密码" name="getpassword" float="true" pos="224,2,290,24"  font="Default.FontSmall" textcolor="Global.MidGray" setcursor="true" tabstop="false"/>
+					  
+						</HorizontalLayout>
+					  </VerticalLayout>
+				  <!--用户名和密码登录结束-->
+				
+				  <!--手机号登录开始-->
+				  <VerticalLayout height="318" name="layoutquick" >
+					<HorizontalLayout  height="42" inset="0,0,0,0"  padding="35,0,35,0">
+					  <Edit name="username_quick" textpadding="36,0,70,0" nativebkcolor="#fff5f5f5" maxchar="11" tooltip="请输入手机号" normalimage="edit_login_normal.png" focusedimage="edit_login_normal.png" hotimage="edit_login_normal.png" disabledimage="edit_login_normal.png" />
+					  <Label  height="20" width="20" float="true" pos="11,11" bkimage="login_phonenumber.png" />
+					</HorizontalLayout>
+
+					<HorizontalLayout height="42" padding="35,14">
+					  <Edit name="password_quick" width="184" inset="8,6,4,14" nativebkcolor="#fff5f5f5" textpadding="36,0,30,0" maxchar="5" tooltip="请输入验证码" normalimage="edit_login_vericode.png" focusedimage="edit_login_vericode.png" hotimage="edit_login_vericode.png" disabledimage="edit_login_vericode.png"/>
+					  <Label  height="20" width="20" float="true" pos="11,11" bkimage="login_lock.png"/>                
+					  <Button text="获取验证码" name="get_verify_code" theme="LoginBtnGetCode" width="106" height="42" tabstop="false"/>
+					</HorizontalLayout>              
+
+				  </VerticalLayout>
+				  <!--手机号登录结束-->
+				</TabLayout>
+
+				<HorizontalLayout name="errinfo_hor" height="14" padding="40,8,0,8" >
+					<Label name="Errinfo_img" height="14" width="14" bkimage="icon_loginErrInfo.png" />
+					<Label name="errtip_quick" height="14" text="" textcolor="#FFFF0000" font="Default.FontName" padding="4,0"/>
+				</HorizontalLayout>
+				<TabLayout name="info_result" height="40" padding="41,6,41,0">
+					<HorizontalLayout height="42">
+					<Button name="login" text="登录" setcursor="true" height="42" width="278" theme="ListBtnFocus" font="Def.Label.NoSongs" textcolor="List.Btn.TextColor"/>
+					</HorizontalLayout>
+					<Label name="result" bkimage="login_result.png" textcolor="#ff0044bb" align="center" height="40"/>
+				</TabLayout>
+				<HorizontalLayout height="20" padding="0,12" >
+					<Control />
+					<Button name="reg_count" width="180" text="没有账号，立即注册" textpadding="0,0"  iconimage="login_other_login.png" icondest="157,6,169,18" font="Default.List.Font" textcolor="#cc000000" setcursor="true" />
+					<Control />
+				</HorizontalLayout>
+				<VerticalLayout padding="41,44,41,0" height="42">
+					<HorizontalLayout height="42">
+						<Control width="34"/>
+						<Button name="btn_kuwo_other_login_qq" statusimage="login_other_qq.png" height="42" width="42"  setcursor="true" />
+						<Control />
+						<Button name="btn_kuwo_other_login_weibo" statusimage="login_other_weibo.png" height="42" width="42"  setcursor="true" />
+						<Control />
+						<Button name="btn_kuwo_other_login_weixin" statusimage="login_other_wechat.png" height="42" width="42"  setcursor="true" />
+						<Control />
+					</HorizontalLayout>
+				</VerticalLayout>
+				<HorizontalLayout height="24" padding="50,14,35,10" >
+					<CheckBox name="chk_license" width="50" text="同意"  selected="true" textpadding="18,0" padding="0,6" textcolor="List.Label.Selected" font="Default.FontSmall" />
+					<Button name="btn_user_poli" text="《酷我音乐用户服务协议》" textcolor="#ff598ecd" setcursor="true" padding="-6,0" varwidth="true" minwidth="40" maxwidth="160" font="Default.FontSmall"/>
+					<Button name="btn_priv_poli" text="《隐私政策》" textcolor="#ff598ecd" setcursor="true" varwidth="true" padding="-8,0" minwidth="40" maxwidth="120" font="Default.FontSmall" />
+				</HorizontalLayout>
+			</VerticalLayout>     
+			<!--账号和手机号登录结束-->
+			<!--扫码登录开始-->
+			<VerticalLayout name="qrScanLogin">
+				<WebUI name="scancodeweb" create="true">
+				</WebUI>
+			</VerticalLayout>
+			<!--扫码登录结束-->
+		</TabLayout>			
+		<Button name="close" height="30" width="30" float="true" pos="322,10,0,0" setcursor="true" statusimage="popupwndcloseVir.png"/>
+		<Button name="tips" visible="true" text="限免福利" textpadding="0,0,0,5" font="Default.FontSmall" textcolor="#FFFFFFFF" pos="290,39,0,0" float="true" width="65" height="25" bkimage="login_tips.png"/>	
+  </VerticalLayout>
+</Window>

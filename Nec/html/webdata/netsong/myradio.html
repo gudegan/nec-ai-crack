@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>我的电台</title>
+    <link href="css/radio_reset.css" rel="stylesheet" type="text/css"/>
+    <link href="css/to_top.css" rel="stylesheet" />
+    <link href="css/myradio.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/comm2.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/radio_load.js"></script>
+</head>
+<body>
+<div class="contentBox">
+    <div class="myradio_box">
+        <div class="title_box clearfix">
+            <h3>我的</h3>
+            <div class="login_box">
+                <p>立即登录，发现你的专属音乐</p>
+                <a href="javascript:;" onclick= OnRadioLogin();>登录</a>
+            </div>
+        </div>
+
+        <ul class="radio_con_top_radios" id="top_ul">
+        </ul>
+    </div>
+    <div class="history_radio_box">
+        <div class="title_box clearfix">
+            <h3>听过的</h3>
+            <p class="raido_total"><span id="radio_total_num">共10个</span></p>
+            <div class="sort_box">
+                <a class="time active" href="javascript:;" onclick="OnSortByTimeOrder()">时间</a>
+                <i class="sort-margin"></i>
+                <a class="frequency" href="javascript:;" onclick="OnSortByFreOrder()">频率</a>
+            </div>
+        </div>
+        <ul class="radio_con_bottom_radios" id="bottom_ul"></ul>
+        <ul id="kw_radio_con_bottom_radios" style="display: none">
+            <li class="br_wrap_radio radio_{$radioid}" playfre="{$playfre}" id="{$radioid}">
+                <a  _onclick="{$clk}" onclick="{$clk}" title="{$title}" class="br_pic" href="###" hidefocus>
+                    <div class="cover">
+                        <img class="lazy lazyorig" width="140"  height="140" src="img/default.png" onerror="imgOnError(this,150)" data-original="{$pic}"/>
+                    </div>
+                    <span class="br_shade"></span>
+                    <i title="直接播放" class="i_play"></i>
+                    <i class="i_playing"></i>
+                    <i title="暂停播放" class="i_pause"></i>
+                    <i title="" class="i_stop"></i>
+                    <div class="playing_oper" radio_blike="0" >
+                        <span class="radio_like" title="喜欢"></span>
+                        <span class="radio_dust" title="不喜欢"></span>
+                        <span class="radio_add" title="更多"></span>
+                    </div>
+                    <i class="radio_del" title="删除"></i>
+                    <i class="radio_recom radio_recommond_{$recom}" ></i>
+                    <span class="playCntSplice"></span>
+                    <div class="lstdiv">
+                        <span class="listeners">{$lscnt}</span>
+                    </div>
+                </a>
+                <p class="br_name">
+                    <a  href="javascript:void(0)" onclick="{$clk}"  title="{$title}">{$title}</a>
+                </p>
+                <p id="scroll_info" class="br_info">
+                    <a id="songinfo_{$radioid}"></a>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+<a class="loadingIcon"><img src='img/loading.gif' alt='' /></a>
+</body>
+</html>

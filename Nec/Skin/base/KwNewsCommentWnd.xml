@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window mininfo="394,505" size="394,505" roundcorner="0,0" dbclicktofullscreen="true">
+  <HorizontalLayout bkimage="playinglistbk.png">
+	  <Control width="34"/>
+	  <VerticalLayout name="webNewsComment">	  
+	  </VerticalLayout>
+  </HorizontalLayout>
+</Window>

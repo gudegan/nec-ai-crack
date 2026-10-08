@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="270,130" caption="0,0,0,0" roundcorner="5,5">
+	<VerticalLayout name="RestoreBackupList" >
+		<HorizontalLayout name="Header" height="50" >
+			<Label name="title" text="您的列表为空" textpadding="15,0,0,0" width="200" textcolor="#ff000000" mouse="false" font="Playlist.newlist"/>
+			<Control />
+			<Button name="close" width="19" height="20" padding="0,6,0,0" statusimage="Config_CloseBtn.png" />
+			<Control width="6"/>
+		</HorizontalLayout>
+		<Label name="RestoreBackupContent" text="我们为您备份了列表修改，您可以：" font="Main.ChannelTitle" height="25" mouse="false" padding="15,0,0,0" align="left"/>
+		<HorizontalLayout>
+			<Button name="RestoreBackupOK" width="63" padding="67,5,0,0" text="还原列表" font="Main.ChannelTitle" textcolor="#ff46b4e6" setcursor="true"/>
+			<Control width="1" height="16" bkimage="bkline.png" padding="15,13,0,0"/>
+			<Button name="RestoreBackupCancel" width="34" padding="15,5,0,0"  text="取消" font="Main.ChannelTitle" textcolor="#ff46b4e6" setcursor="true"/>
+		</HorizontalLayout>
+		<Control height="10"/>
+	</VerticalLayout>
+</Window>

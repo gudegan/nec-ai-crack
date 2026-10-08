@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<VerticalLayout name="root">
+		<WebUI name="web" create="true" nav="$${netsong}newUserIndex.html?${suffix}&amp;${silent}">
+		</WebUI>
+
+	</VerticalLayout>
+</Window>

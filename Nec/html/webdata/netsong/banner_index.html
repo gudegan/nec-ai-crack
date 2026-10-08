@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>曲库首页</title>
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+	<link href="css/banner_index.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+	<script src="js/bannerInIndex.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="kw_wc" class="index_index">
+		<div class="banner_box" data-model="kw_bannerlist">
+			<div class="carousel-container">
+				<div class="carousel-wrapper">
+					<!-- 轮播项将在这里添加 -->
+				</div>
+				<!-- 分页器 -->
+				<div class="carousel-pagination"></div>
+			</div>
+			<!-- 导航按钮 -->
+			<div class="carousel-button-prev"></div>
+			<div class="carousel-button-next"></div>
+		</div>
+	</div>
+	<!--model-->
+	<div id="kw_bannerlist" style="display:none;">
+		<div class="carousel-slide" data-click="{$click}">
+			<a data-source="{$source}" data-sourceid="{$focussourceid}" data-name="{$name}" href="javascript:;" hidefocus="">
+				<img class="carousel-lazy lazy" src="img/def_300_217.png" data-original="{$pic}" onerror="imgOnError(this,300);">
+				<!-- <div class="carousel-lazy-preloader"></div> -->
+        <div class="bottom_info" style="display:{$showBottomInfo}">
+          <div class="info_box">
+            <div class="tips" style="background:{$labelColor};display:{$labelShow}">{$labelText}</div>
+			<div class="text">{$picText}</div>
+          </div>
+        </div>
+        <div class="play_btn" title="直接播放" data-show="{$showPlayBtn}" data-source="{$source}" data-sourceid="{$focussourceid}" data-name="{$name}"></div>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

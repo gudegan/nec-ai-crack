@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="170,32">
+  <Default name="Button" value="setcursor=&quot;true&quot; font=&quot;Default.FontName&quot; hottextcolor=&quot;#ffffffff&quot; pushedtextcolor=&quot;#ffffffff&quot; focusedtextcolor=&quot;#ffffffff&quot;" />
+  <VerticalLayout>
+    <TabLayout name="wptype">
+      <HorizontalLayout name="ABM" height="32">
+        <Button name="abm_close" height="32" statusimage="abm_open.png" iconimage="btn_MiniWallpaper_Turnoff_1.png" icondest="28,4,52,28" textpadding="30,-2,0,0" textcolor="#ffffffff" text="关闭桌面写真" tooltip="关闭桌面写真" layertext="true" ></Button>
+      </HorizontalLayout>  
+      
+      <HorizontalLayout name="SP" height="32">
+        <Button name="play" width="142" height="32" menu="true" tooltip="点击播放音乐壁纸上的歌曲" normalimage="wp_play_normal.png" hotimage="wp_play_hover.png" pushedimage="wp_play_hover.png"></Button>
+        <Button name="menu" width="28" height="32" menu="true" tooltip="更多选项" normalimage="wp_menu_normal.png" hotimage="wp_menu_hover.png" pushedimage="wp_menu_normal.png"></Button>
+      </HorizontalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>

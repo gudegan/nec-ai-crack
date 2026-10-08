@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="128,102" size="128,102">
+  <Default name="Button" value="setcursor=&quot;true&quot; font=&quot;YAHEI.N014&quot; hottextcolor=&quot;#ffffffff&quot; pushedtextcolor=&quot;#ffffffff&quot; focusedtextcolor=&quot;#ffffffff&quot;" />
+  <VerticalLayout name="root" bkimage="nicam_guide_tip.png">
+    <Button name="close" padding="0,18,0,0" width="21" height="21" statusimage="nicam_guide_close.png"></Button>
+    <Control></Control>
+  </VerticalLayout>
+</Window>

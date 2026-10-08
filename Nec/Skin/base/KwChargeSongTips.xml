@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="388,60">
+	<VerticalLayout name="root"  bkimage="chargefloattipbk.png" width="388" height="50" >
+		<WebUI name="web" create="true" nav="$${netsong}ChargeSongTips.html">
+		</WebUI>
+	</VerticalLayout>
+</Window>

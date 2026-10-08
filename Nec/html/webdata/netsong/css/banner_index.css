@@ -1,0 +1,201 @@
+/*首页公用*/
+body,html{overflow:hidden;}
+.index_index{
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.banner_box{
+  position: relative;
+  padding-top: 18px;
+  width: 100%;
+  z-index: 99999;
+}
+
+/*轮播相关*/
+.carousel-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: auto; /* 高度会根据内容自动计算 */
+  overflow: hidden;
+  list-style: none;
+  z-index: 1;
+}
+
+.carousel-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  box-sizing: content-box;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  position: relative;
+  margin-right: 10px;
+  width: 33.333%;
+  aspect-ratio: 282/206; /* 设置图片的宽高比为282:206 */
+  transition-property: transform;
+  overflow: hidden;
+}
+.carousel-slide a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.carousel-slide .bottom_info{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 12px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 99.28%);
+  box-sizing: border-box;
+}
+.carousel-slide .bottom_info .info_box{
+  display:flex;
+  align-items: center;
+  max-width: 85%;
+  height: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+.carousel-slide .info_box .tips{
+  flex-shrink: 0;
+  display:inline-block;
+  margin-right: 6px;
+  padding: 0 5px;
+  max-width: 100%;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+  border-radius: 3px;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carousel-slide .info_box .text{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carousel-slide .play_btn{
+  display:none;
+  position:absolute;
+  right: 12px;
+  bottom:12px;
+  width:20px;
+  height:20px;
+  background:url(../img/i_play_focus.png) no-repeat;
+  background-size: 100%;
+  z-index:100;
+  cursor:pointer;
+}
+.carousel-slide .play_btn:hover {
+  background:url(../img/i_play_focus_h.png) no-repeat;
+  background-size: 100%;
+}
+
+/* 轮播导航按钮 */
+.carousel-button-prev,
+.carousel-button-next {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  margin-top: -19px;
+  z-index: 10;
+  cursor: pointer;
+}
+.carousel-button-prev:after,
+.carousel-button-next:after{
+  display: none;
+}
+.carousel-button-prev {
+  left: 5px;
+  background: url(../img/btn_prev.png) no-repeat 0 0;
+  background-size: 100%;
+}
+.carousel-button-next {
+  right: 5px;
+  background: url(../img/btn_next.png) no-repeat 0 0;
+  background-size: 100%;
+}
+
+/* 轮播分页器 */
+.carousel-pagination {
+  position: absolute;
+  left: 0;
+  bottom: 0px !important;
+  width: 100%;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+/* 轮播分页器样式 */
+.carousel-pagination-bullet {
+  display: inline-block;
+  margin: 0 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #E0E0E0;
+  cursor: pointer;
+}
+.carousel-pagination-bullet-active {
+  background: #999999;
+}
+
+.shallow .carousel-pagination-bullet {
+  background: rgba(255,255,255,0.2);
+}
+
+.shallow .carousel-pagination-bullet-active {
+  background: rgba(255,255,255,1);
+}
+
+/* 懒加载样式 */
+.carousel-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  transform-origin: 50%;
+  animation: carousel-preloader-spin 1s infinite linear;
+  box-sizing: border-box;
+  border: 4px solid #4c9de8;
+  border-radius: 50%;
+  border-top-color: transparent;
+}
+
+@keyframes carousel-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*轮播相关结束*/

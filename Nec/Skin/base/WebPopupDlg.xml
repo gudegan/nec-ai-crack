@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,50">
+	<EventHook event="OnSkinChange">
+		<!--<Attribute control="title" value="textcolor=&quot;Global.DarkGray&quot;" />-->		
+	</EventHook>
+	
+  <VerticalLayout name="root">
+    <HorizontalLayout name="PopUpTitleHor">
+      <Label name="title" theme="PopUpTitle"/>
+      <Control />
+      <Button name="close" theme="PopUpCloseBtn" />
+    </HorizontalLayout>
+    <Control theme="#Msg_SepLine" height="1"/>
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,44 @@
+﻿/*create by deng*/
+* {margin:0;padding:0;font-family: "微软雅黑";font-size:12px;color:#333333;}
+body {overflow: hidden}
+.checkbox {position: relative;float:left;width: 14px;height: 14px;margin:7px 10px 0 16px;}
+.checkbox label {cursor: pointer;position: absolute;width: 14px;height: 14px;top: 0;left: 0;background: #fff;border:1px solid #ccc;}
+.checkbox label:after {
+	opacity: 0;content: '';position: absolute;width: 10px;height: 4px;background: transparent;top: 3px;left: 1px;border: 2px solid #ca9d63;border-top: none;border-right: none;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-o-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);}
+.checkbox label.checked:after{opacity: 1;}
+.scrollBar::-webkit-scrollbar{width:15px;}
+.scrollBar::-webkit-scrollbar-track {background-color: #fafafa;} 
+.scrollBar::-webkit-scrollbar-thumb {border:1px solid #dbdfe2;background-color: #f3f3f3;}
+.scrollBar::-webkit-scrollbar-button {background:transparent;}
+.scrollBar::-webkit-scrollbar-button:start:decrement,
+.scrollBar::-webkit-scrollbar-button:end:increment {display: block;height:15px;}
+.scrollBar::-webkit-scrollbar-button:vertical:start:increment,
+.scrollBar::-webkit-scrollbar-button:vertical:end:decrement {display: none;}
+.scrollBar::-webkit-scrollbar-button:end:increment {background-image: url(../img/bar_down.jpg);margin-top:2px;}
+.scrollBar::-webkit-scrollbar-button:start:decrement {background-image: url(../img/bar_up.jpg);margin-bottom:2px;}
+.content {width:430px;margin:0 auto;}
+.topLine {width:100%;height:29px;line-height:29px;border-bottom:1px solid #e6e6e6;}
+.topLine span {color:#999;}
+.upgradeList {width:424px;height:216px;overflow: auto;border-bottom:1px solid #e6e6e6;}
+.item {width:100%;overflow: hidden;height:31px;line-height:27px;margin-top:5px;}
+.item .checkbox {margin-top:5px;}
+.name {float:left;width:205px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;margin-right: 10px;}
+.format,.size {float:left;width:60px;}
+.format {margin-right: 20px;text-align: center;}
+.upgradeList .size {text-indent: 10px;}
+.bottomLine a {display:block;color:#ca9d63;width:130px;height: 34px;border-radius: 19px;border:2px solid #ca9d63;text-decoration:none;font-size:18px;text-align: center;line-height: 34px;margin:0 auto;}
+.bottomLine a:hover {background:#f2f2f2;} 
+.bottomLine a.noChoose {border-color:#e5e5e5;color:#e5e5e5;}
+.bottomLine a.noChoose:hover {background:#fff;}
+.bottomLine .line {overflow: hidden;margin-bottom:15px;}
+.bottomLine span {color:#999;margin-top:6px;}
+.bottomLine span.num {float:left;margin-left:16px;}
+.bottomLine span.allSize {float:right;margin-right: 30px;}
+
+.unSelectedConTroll {float:left;width:100%;height:36px;background:#efefef;text-indent: 16px;cursor: pointer;}
+.unSelectedConTroll p {position:relative;color:#ca9d63;overflow: hidden;margin-top:9px;}
+.unSelectedConTroll span {color:#ca9d63;}
+.unSelectedConTroll label {position: absolute;margin-left:5px;}
+.unSelectedConTroll label:after {right:0;opacity: 1;content: '';position: absolute;width: 6px;height: 6px;background: transparent;top: 3px;left: 1px;border: 2px solid #ca9d63;border-top: none;border-right: none;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-o-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);}
+.unSelectedConTroll .down:after {border: 2px solid #ca9d63;border-bottom: none;border-left: none;top: 6px;}
+.unSelectedBox {display: none;background:#efefef;}

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,60" roundcorner="3,3" size="360,530">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;14&quot; textcolor=&quot;Global.MidGray&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;PopUpWndChkVir.png&quot; textpadding=&quot;16,0,0,0&quot; padding=&quot;36,6,0,0&quot; font=&quot;Default.List.Font&quot;" />
+
+  <VerticalLayout  name="logindlgexmain"  >
+    <HorizontalLayout height="63">
+      <Control />
+      <Button name="close"  height="30" width="30" float="true" pos="322,8,23,0" setcursor="true" statusimage="popupwndcloseVir.png" />
+      <Button name="codelogin" width="62" height="62"  float="true" statusimage="qr.png" pos="1,1" setcursor="true"/>
+    </HorizontalLayout>
+
+    <VerticalLayout name="login_suc_type">
+      <Label name="sep_login" height="24" ></Label>
+
+      <!--头像昵称开始-->
+      <HorizontalLayout height="157">
+        <Control />
+        <VerticalLayout width="286">
+          <HorizontalLayout height="110">
+            <Control />
+            <Label name="login_info_img" width="110" height="110" bkimage="def100.jpg" ></Label>
+            <Label width="110"  height="110" bkimage="alpha110.png" float="true" pos="88,0"/>
+            <Label name="login_type_mini" height="24" width="24" float="true" bkimage="" pos="166,82"></Label>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout height="30" padding="0,12" >
+            <Control />
+            <Button name="login_info_nick" text="" varwidth="true" maxwidth="260" endellipsis="true" font="Def.ListLabel.Bold" textcolor="#ff333333" />
+            <Button name="btn_clearinfo" visible="false" text="清除账号"  padding="0,0,0,0" textalign="center" width="64" font="Default.FontName" textcolor="#ff487BB6" setcursor="true"/>
+            <Button name="btn_his" padding="-1,7" width="16" height="16" statusimage="login_zhankai.png" setcursor="true"/>
+            <Control />
+          </HorizontalLayout>
+        </VerticalLayout>
+        <Control />
+      </HorizontalLayout>
+      <!--头像昵称结束-->
+
+      <TabLayout name="loginhislist">
+        <VerticalLayout name="loginvip">
+          <HorizontalLayout height="20">
+            <Control />
+            <Label name="viptype" width="20" height="20" bkimage=""/>
+            <Label name="vipdes" padding="2,0" varwidth="true" minwidth="40" maxwidth="120" font="Default.FontName" textcolor="#ff999999" text=""></Label>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout height="42" padding="49,29,49,0">
+            <Button name="login_Pre_loginNow" theme="ListBtnFocus" textcolor="List.Btn.TextColor" text="登录" font="Def.Label.NoSongs"/>
+          </HorizontalLayout>
+        </VerticalLayout>
+
+        <VerticalLayout name="hislist" padding="18,0,18,0" bkimage="login_hist_bk.png">
+          <List name="histinfolist" padding="10,7,10,10" bkcolor="#fff7f7f7" header="hidden" itemselectedbkcolor="#fff7f7f7" itemhotbkcolor="#fff7f7f7" itemshowhtml="false" passmousewheel ="true" showcheckbox="false">
+            <DefChildAttr height="62" expandheight="62"/>
+          </List>
+        </VerticalLayout>
+      </TabLayout>
+
+    </VerticalLayout>
+
+
+    <HorizontalLayout name="otherlogin" height="20" padding="0,0,0,16" >
+      <Control />
+      <Button name="btn_other" text="其它账号登录" varwidth="true" minwidth="60" textcolor="#cc000000" maxwidth="160" iconimage="login_other_login.png" icondest="126,6,138,18"/>
+      <Control />
+    </HorizontalLayout>
+    <VerticalLayout height="24"  padding="0,0,0,20">
+      <HorizontalLayout height="24" padding="50,0,35,0">
+        <CheckBox name="chk_license" width="50" text="同意"  selected="true" textpadding="18,0" padding="0,6" font="Default.FontSmall" />
+        <Button name="btn_user_poli" text="《酷我音乐用户服务协议》" setcursor="true" textcolor="#ff598ecd" padding="-6,0" varwidth="true" minwidth="40" maxwidth="160" font="Default.FontSmall" />
+        <Button name="btn_priv_poli" text="《隐私政策》" textcolor="#ff598ecd" setcursor="true" varwidth="true" padding="-8,0" minwidth="40" maxwidth="120" font="Default.FontSmall" />
+      </HorizontalLayout>
+    </VerticalLayout>
+
+  </VerticalLayout>
+</Window>

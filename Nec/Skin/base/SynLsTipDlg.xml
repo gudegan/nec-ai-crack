@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="269,171" roundcorner="5,5" caption="0,0,0,50" >
+<Default name="Option" value="setcursor=&quot;true&quot; normalimage=&quot;cfg_radio_1.png&quot; hotimage=&quot;cfg_radio_2.png&quot; selectedimage=&quot;cfg_radio_3.png&quot; disabledimage=&quot;cfg_radio_4.png&quot; height=&quot;15&quot; textpadding=&quot;16,1,1,0&quot; align=&quot;left&quot; " />
+	<VerticalLayout  inset="4,4,4,4" bkcolor="#00000000">
+		<HorizontalLayout height="22">
+			<Label text="您的列表中包含本地歌曲" width="160" padding="0,-2,0,0" font="Minisite.Title"/>
+			<Control />
+			<Button name="close" padding="0,10,10,0" width="19" height="20" statusimage="Config_CloseBtn.png"/>
+		</HorizontalLayout>
+		<Label text="同步后您可以随处收听他们，但是可能花费" padding="6,6,0,0" />
+    <Label text="较长时间，您是想：" padding="6,2,0,0" />
+		<Option height="15" width="120" padding="6,9,0,0" selected="true" name="AutoSynCloud" group="SynLocalTip_Group" text="同步到音乐云中"/>
+		<Option height="15" width="120" padding="6,9,0,0" name="NotSyn" group="SynLocalTip_Group" text="不同步"/>
+		<HorizontalLayout  height="33" padding="0,11,0,0">
+			<CheckBox name="Checkbox_notip" pos="8,12,100,28" float="true" text="不再提示" textcolor="#FF999999" checkinfo="dest='0,0,13,13'" statusimage="checkbox.png"/>
+			<Button name="button_OK" text="确定" padding="98,10,0,0" height="23" width="70" statusimage="mainbtn.png" />
+			<Button name="button_Cancel"   text="取消" padding="10,10,0,0" height="23" width="70" statusimage="mainbtn.png" />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

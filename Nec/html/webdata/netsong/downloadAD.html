@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>下载弹框广告</title>
+	<style>
+        body{overflow:hidden;}
+		*{margin:0; padding:0;}
+		img{border:none;max-width:100%;}
+
+	</style>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		function callClient(call){
+			try{
+				return window.external.callkwmusic(call);
+			}catch(e){
+				return "";
+			}
+		}
+		window.onload=function(){
+			$.getScript('http://topmusic.sycdn.kuwo.cn/today_recommend/adDown.js');
+		}
+		function handleSearchNoResult(data){
+			var pic = data.picPath;
+			var url = data.linkUrl;
+			if(!pic) pic = 'img/shoujiadimg.jpg';
+			if(!url) url = 'http://shouji.kuwo.cn';
+			var obj = '<a href="###" onclick="openUrl(\''+url+'\');" hidefocus><img src="'+pic+'" alt="" onerror="this.onerror=null;this.src=\'img/shoujiadimg.jpg\'" /></a>';
+			document.getElementsByTagName('body')[0].innerHTML = obj;
+			callClient('ShowWindow');
+		}
+		function openUrl(url){
+		    var backstr = callClient("OpenBrowser?browser=default&url=" + encodeURIComponent(url));
+		    if (backstr != 1) {
+		        //window.open(url);
+		    }
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

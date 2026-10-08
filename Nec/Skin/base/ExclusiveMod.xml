@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,30" size="320,430">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;14&quot; textcolor=&quot;Global.MidGray&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;PopUpWndChkVir.png&quot; textpadding=&quot;16,0,0,0&quot; font=&quot;Default.List.Font&quot;" />
+	<VerticalLayout bkimage="hifiOpenTipBg.png" >
+		<HorizontalLayout padding="263,15,0,0" height="18">
+			<Button name="Share" width="15" visible="false" height="15" statusimage="hifi_tip_share.png" setcursor="true"/>
+			<Button name="Close" padding="23,0,0,0" width="15" height="15" statusimage="hifi_tip_close.png" setcursor="true"/>
+		</HorizontalLayout>
+		<Button name="Help" padding="216,155,0,0" align="center" width="18" height="18" statusimage="help.png" setcursor="true"/>
+		<Button name="Open" padding="96,77,0,0" width="132" height="36" statusimage="hifi_tip_open_btn.png" setcursor="true"/>
+		<CheckBox name="no_tip_nexttime" padding="118,17,0,0" text="下次不再弹出" width="110"/>
+	</VerticalLayout>
+</Window>

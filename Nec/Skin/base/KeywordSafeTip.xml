@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,146" caption="0,0,0,128" roundcorner="10,10">
+<Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;PopUp.DefaultText&quot;" />
+<Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;YAHEI.N014&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="32">
+      <Label name="text_title" padding="7,2,0,0" width="240" textcolor="#ff000000" mouse="false" font="PopUp.Title" text="确认密码，账号更安全" />
+			<Control />
+			<Button name="close" width="19" height="20" padding="0,7,7,0" statusimage="Config_CloseBtn.png" />
+			<Control width="6"/>
+		</HorizontalLayout>
+		<Control />
+		<Edit name="UserLogin_Keyword" inset="0,0,0,5" textpadding="10,0,10,0" password="true" width="260" height="24" padding="15,4,0,0"/>
+		<Text name="UserLogin_Keyfault" text="密码不正确" padding="16,6,0,0" textcolor="#fff0a05a" visible="false"/>
+		<Control />
+		<HorizontalLayout name="layout_opbutton" height="40">
+			<Button name="UserLogin_KeySafeOK" text="确认" width="70"pos="202,0,273,30" float="true" focus="true"/>
+		</HorizontalLayout> 
+	</VerticalLayout>
+</Window>

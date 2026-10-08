@@ -1,0 +1,1070 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+	<include name="${base}skin-dark.xml"/>
+	
+	<Font>
+	<Font name="Default.FontName" fontname="微软雅黑" size="14"/>
+	<Font name="Default.FontName.Orign" fontname="雅黑" size="14"/>
+	<Font name="Default.FontName.UnderLine" fontname="微软雅黑" size="14" underline="true" />
+	<Font name="Default.FontName.Bold" fontname="微软雅黑" size="14" bold="true" />
+	<Font name="Default.FontName.UnderLineBold" fontname="微软雅黑" size="14" underline="true" bold="true" />
+    <Font name="MusictreeNumTip" fontname="微软雅黑" size="10"/>
+    <Font name="Default.FontSmall" fontname="微软雅黑" size="12"/>
+	<Font name="Default.FontSmall.Bold" fontname="微软雅黑" size="12" bold="true"/>
+    <Font name="Default.Font20" fontname="微软雅黑" size="20"/>
+	<Font name="Default.Font24" fontname="微软雅黑" size="24"/>
+	<Font name="Default.Font18" fontname="微软雅黑" size="18"/>
+	<Font name="Default.Font16" fontname="微软雅黑" size="16"/>
+    <Font name="Default.Font10" fontname="微软雅黑" size="10"/>
+	<!--组合框字体-->
+	<Font name="Default.Combo.FontName" fontname="微软雅黑" size="14"/>
+	
+    <!--曲库加载时的字段样式-->
+    <Font name="MainBody.NetLoading" fontname="微软雅黑" size="14"/>    
+    
+    <!--列表-->
+    <Font name="Default.List.Font" fontname="微软雅黑" size="14"/>
+    <Font name="Default.List.Font.UnderLine" fontname="微软雅黑" size="14" underline="true"/>
+    
+    <!--列表按钮-->
+    <Font name="Def.ListBtn" fontname="微软雅黑" size="14"/>
+    <Font name="Def.ListBtnGoSonglib" fontname="微软雅黑" size="14" underline="true"/>
+	
+    <!-- 列表的Label-->
+    <Font name="Def.ListLabel" fontname="微软雅黑" size="18"/>
+    <Font name="Def.ListLabel.Bold" fontname="微软雅黑" size="18" bold="true"/>
+    <Font name="Def.ListLabel.Space" fontname="微软雅黑" size="12" />
+    <Font name="Def.ListLabel.Space.UnderLine" fontname="微软雅黑" size="12" underline="true"/>    
+	<Font name="Def.Label.NoSongs" fontname="微软雅黑" size="16"/>  
+	<Font name="Def.Label.UpdateTitle" fontname="微软雅黑" size="30"/>	
+	
+    <Font name="Def.Label.ToastTip" fontname="微软雅黑" size="14"/>
+    <Font name="Def.Label.RstTip" fontname="微软雅黑" size="16"/>    
+    <Font name="Def.Label.InfoTip" fontname="微软雅黑" size="18"/>
+    <Font name="Def.Label.RstTip.Bold" fontname="微软雅黑" size="16" bold="true"/>
+
+    <Font name="Def.Label.KnowingSong" fontname="微软雅黑" size="20"/>
+    <Font name="Def.Label.KnowSong" fontname="微软雅黑" size="22"/>
+
+    <!--列表的Option-->
+    <Font name="Def.ListOption.Font" fontname="微软雅黑" size="28" />      
+	<Font name="Def.ListOption.Font.Bold" fontname="微软雅黑" size="28" bold="True"/>
+
+    <!--配置页面的字体-->
+    <!--目前大多数是一样的-->
+    <Font name="Config.DefaultText" fontname="微软雅黑" size="14"/>    
+    <Font name="Config.Button" fontname="微软雅黑" size="12"/>
+    <Font name="Config.Info" fontname="微软雅黑" size="18"/>
+    <Font name="Config.Lyric" fontname="微软雅黑" size="12"/>
+    
+	<!--菜单-->
+	<Font name="menu.DefaultText" fontname="微软雅黑" size="14"/>
+
+    <!--听歌识曲-->
+    <Font name="knowsong.DefaultText" fontname="微软雅黑" size="14"/>
+    <Font name="knowsong.title_label" fontname="微软雅黑" size="16"/>
+    <Font name="knowsong.tip_label" fontname="微软雅黑" size="16"/>
+    <Font name="knowsong.loading_label" fontname="微软雅黑" size="20"/>
+    <Font name="knowsong.song_name" fontname="微软雅黑" size="22"/>
+	
+	<!--我的收藏-->
+	<Font name="Fav.tab.text" fontname="微软雅黑" size="16"/>
+    
+    <!--MessageBox的字体开始-->
+    <Font name="MsgBox.Title" fontname="微软雅黑" size="16"/>
+    <Font name="MsgBox.InfoContent" fontname="微软雅黑" size="14" />
+    <Font name="MsgBox.ChkBoxTxt" fontname="微软雅黑" size="14" />
+    <Font name="MsgBox.BtnTxt" fontname="微软雅黑" size="16" />  
+
+	<Font name="PopUpWnd.Download.TitleBold" fontname="微软雅黑" size="18" bold="True"/>   
+	<Font name="PopUpWnd.Download.Title" fontname="微软雅黑" size="18"/> 	
+    <!--MessageBox的字体结束-->
+
+    <Font name="UpdataVerLabelTip" fontname="微软雅黑" size="30"/>
+    
+  </Font>
+	<BkImage>
+		<Default border="0,0,0,0" blurborder="0,0,0,0" transborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk"/>
+			<BkImage name="lyricbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="playlistborder.png"/>
+			<!--
+			<BkImage name="boder" inset="0,0,0,0" image="bk_main_boder.png"  border="true"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="bk_main_blurboder.png"  border="true"  blur="true"/>
+			<BkImage name="transboder_left" border="true"  blur="true"trans="true" direction="1" type="3" startxy="0,0" border="true"  blur="true"/>
+			<BkImage name="transboder_right" border="true"  blur="true"trans="true" direction="2" type="3" startxy="0,0" border="true"  blur="true"/>
+			-->
+		</Default>
+    <Main border="0,0,0,0" blurborder="0,0,0,0" transborder="12,12,12,12" nldrag="false">
+      <BkImage name="mainbk" inset="-12,-12,-12,-12" image="main_bk.png" condition="normal"/>
+      <BkImage name="mainbk2" inset="-12,-12,-12,-12" image="main_bk.png" condition="lyricmv"/>
+      <!--<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk"/>-->
+      <BkImage name="lyricbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+    </Main>
+		<ConfigMain border="0,0,0,0" blurborder="0,0,0,0" transborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk"/>
+			<BkImage name="lyricbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="playlistborder.png"/>
+		</ConfigMain>
+
+		<!--
+		<IrrPopWnd border="5,3,5,7" blurborder="5,3,5,7" transborder="130,80,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="5,5"/>
+			<BkImage name="bkimg" startxy="0,0" image="PopWnd_bk.xxx" delay="true" round="5,5"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false"/>
+			<BkImage name="bkborder" inset="0,0,0,0" border="true" blur="true" image="popwnd_border.png" delay="false"/>
+		  <BkImage name="transboder_left" image="notexist.png" border="true" blur="true" trans="true" direction="1" type="2" startxy="0,0"/>
+		</IrrPopWnd>
+    -->
+
+		<PopWnd border="0,0,0,0" transborder="10,10,10,10" nldrag="false" nlfixwndsize="true">
+      <!--<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>-->
+      <!--<BkImage name="bkimg" inset="1,1,1,1" image="PopWnd_bk.xxx" delay="true" round="1,1"/>-->
+      <!--<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>-->
+      <BkImage name="mainbk" inset="-10,-10,-10,-10" image="main_bk_tankuang2.png"/>
+    </PopWnd>
+		<PopWndConfig border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+			<BkImage name="bkimg" inset="0,0,0,0" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+		</PopWndConfig>
+		<PopWndAndroid border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+			<BkImage name="bkimg" inset="1,1,1,1" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask1.png" delay="false" round="1,1"/>
+		</PopWndAndroid>
+		<PopWndNoTrans border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+			<BkImage name="bkimg" inset="1,1,1,1" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+		</PopWndNoTrans>
+		<PopWndWhite border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="2,2"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+		</PopWndWhite>
+		<ConfigWnd blurborder="3,2,3,4">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="Config_Border.png" delay="true" border="true" blur="true"/>
+		</ConfigWnd>
+		<EmptyBK></EmptyBK>
+		<WebPopWnd border="1,1,1,1" blurborder="1,1,1,1">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="5,5"/>
+			<BkImage name="bkimg" startxy="0,0" image="PopWnd_bk.xxx" delay="true" round="5,5"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="webpopwnd_mask.png" delay="false"/>
+			<BkImage name="bkborder" inset="0,0,0,0" border="true" image="webpopwnd_border.png" delay="false"/>
+			<BkImage name="blurboder" inset="0,0,0,0" border="true" image="webpopwnd_border.png" blur="true" delay="false"/>
+		</WebPopWnd>
+		<ToolPopWnd blurborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="5,5"/>
+			<BkImage name="bkborder" inset="0,0,0,0" image="Config_Border.png" delay="false" border="true"/>
+		</ToolPopWnd>
+		<PathPopWnd blurborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="1,1"/>
+			<BkImage name="bkborder" inset="0,0,0,0" image="Config_Border.png" delay="false" border="true"/>
+		</PathPopWnd>
+		<VipOpenShowPage blurborder="0,0,0,0">
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk.png" delay="true"/>
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="5,5"/>
+			<BkImage name="bkboder" inset="0,0,0,0" border="true" image="Config_Border.png" delay="false"/>
+		</VipOpenShowPage>
+		<FullWnd>
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk" round="5,5"/>
+			<BkImage name="fullwndbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+		</FullWnd>
+		<MiniDlg blurborder="0,0,0,0">
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk_Mini.png" blur="true"/>
+		</MiniDlg>
+		<MiniPlayListDlg>
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk_Mini.png" delay="false"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="bkmask_Mini.png" delay="false"/>
+		</MiniPlayListDlg>
+		<StarGreetWnd>
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk_stargreetings.png" delay="false"/>
+		</StarGreetWnd>
+		<StartPageWnd>
+			<BkImage name="bkimg" inset="0,0,0,0" delay="false"/>
+		</StartPageWnd>
+		<SearchPopupDlg transborder="3,3,3,3" nldrag="false" nlfixwndsize="true">
+      <BkImage name="bkimg" inset="-3,-3,-3,-3" image="searchbk.png"/>
+    </SearchPopupDlg>
+		<MenuBk blurborder="5,5,5,6">
+			<BkImage name="bkimg" inset="-17,-17,-17,-17" image="menu_common_bk.png" round="false" />
+		</MenuBk>
+		<MenuBk2 blurborder="5,5,5,6">
+			<BkImage name="bkimg" inset="-5,-5,-5,-6" image="TanMuMenuBk.png" round="true" />
+		</MenuBk2>
+	</BkImage>
+	<ImageAttribute>
+		<Image name="Log.png" changecolor="false" />
+		<Image name="bk.png" changecolor="false" />
+	</ImageAttribute>
+
+	<Variable>
+		<var name="${LyricBkMask}" value="" />
+		<var name="${LyricBkMask-10}" value="LyricBkMask-10.png" />
+		<var name="${CommentBkMask}" value="CommentBkMask.png" />
+		<var name="${mylist_mask}" value="" />
+	</Variable>
+
+  <imagecompose>
+    <!--如果name和mask相同，则合成后的图会覆盖mask，少用点内存，但mask不可复用-->
+	<image name="btn_ListDefVir.png" count="4" mask="btn_ListDef.png" colors="Global.PlaylistGeneralIcon" />
+    <image name="btn_ListDefWhite.png" count="4" mask="btn_ListDef.png" colors="Global.White" />
+  	<image name="BtnListPlayVir.png" count="4" mask="btn_ListPlay.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|Topic.Normal" />  		
+  	<image name="btn_ListBorderLessVir.png" count="4" mask="btn_ListBorderLess.png" colors="Global.PlaylistGeneralIcon" />
+
+    <image name="logingetcodeVir.png" count="4" mask="login_get_code.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|Global.Black" />
+    <!--左侧导航 begin-->
+    <image name="netsong_recommend.png" count="4" mask="netsong_recommend.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="netsong_radio.png" count="4" mask="netsong_radio.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="netsong_video.png" count="4" mask="netsong_video.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="netsong_pretty.png" count="4" mask="netsong_pretty.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="netsong_hifi.png" count="4" mask="netsong_hifi.png" colors="Global.Golden|Global.Golden|Global.Golden|Global.Golden" />
+    <image name="mymusic_radio.png" count="4" mask="mymusic_radio.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="mymusic_download.png" count="4" mask="mymusic_download_mask.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="mymusic_local.png" count="4" mask="mymusic_local_mask.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="disknet_cloud.png" count="4" mask="disknet_cloud.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="historylist_play.png" count="4" mask="historylist_play.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="mylist_favorite.png" count="4" mask="mylist_favorite_mask.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="mylist_user_created.png" count="4" mask="mylist_user_created.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="mylist_defualtlist.png" count="4" mask="mylist_defualtlist_mask.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="mylist_createnew.png" count="4" mask="mylist_createnew.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="nav-toexpand.png" count="4" mask="nav-toexpand.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="nav-tofold.png" count="4" mask="nav-tofold.png" colors="Comp.Normal|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <image name="playinglist_playing_nav.png" count="4" mask="playinglist_playing_speaker.png" colors="Topic.LinkText|Comp.Normal|Comp.Normal|Comp.Normal" />
+    <!--左侧导航 end-->
+
+
+    <!--ls change-->
+    <image name="list_OptionTitleUnderliveVir2.png" count="1" mask="list_option_title_underline2.png" colors="Topic.Normal" />
+	<image name="list_OptionTitleUnderliveVir3.png" count="1" mask="list_option_title_underline3.png" colors="Topic.Normal" />
+	<image name="download_empty_bkVir.png" count="1" mask="download_empty_bk.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="list_search_empty_bkVir.png" count="1" mask="playingempty_list.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListLocalAddDirVir.png" count="4" mask="icon_localadddir.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListLocalAddSongVir.png" count="4" mask="icon_localaddsong.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListLocalAutoScanVir.png" count="4" mask="icon_localautoscan.png" colors="Global.PlaylistGeneralIcon" />	
+	
+    <!--播放列表相关-->
+	<image name="icon_ListPlayVir.png" count="4" mask="icon_ListPlay.png" colors="Text.UnderTopic|Text.UnderTopic|Text.UnderTopic|Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListDownVir.png" count="4" mask="icon_ListDown.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListBatchOperVir.png" count="4" mask="icon_ListBatchOper.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListAddVir.png" count="4" mask="icon_ListAdd.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListDelVir.png" count="4" mask="icon_ListDel.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListMoreOptionVir.png" count="4" mask="icon_ListMoreOption.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListDeleteVir.png" count="4" mask="icon_ListDelete.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListStartVir.png" count="4" mask="icon_ListPlay.png" colors="Global.PlaylistGeneralIcon" />		
+	<image name="icon_ListPauseVir.png" count="4" mask="icon_ListPause.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListDownloadSetVir.png" count="4" mask="icon_ListDownloadSet.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListDownloadShutdownVir.png" count="4" mask="icon_ListDownloadShutdown.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListDownloadFolderVir.png" count="4" mask="icon_ListDownloadFolder.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListDownloadExportVir.png" count="4" mask="icon_ListDownloadExport.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_UpqualitySongVir.png" count="4" mask="icon_list_upqualitysong.png" colors="Global.PlaylistGeneralIcon" />
+
+	<image name="icon_ListUploadVir.png" count="4" mask="icon_ListUpload.png" colors="Text.UnderTopic" />
+	<image name="icon_ListErrInfoVir.png" count="2" mask="icon_ListErrInfo.png" colors="Global.PlaylistGeneralIcon" />
+	
+	<image name="icon_list_loadinVir.png" count="4" mask="icon_list_loadin.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_list_NewVir.png" count="4" mask="icon_MyNewList.png" colors="Global.PlaylistGeneralIcon" />	
+    
+	<image name="icon_listCloud_defVir.png" count="4" mask="icon_listCloud_default.png" colors="Global.PlaylistGeneralIcon" />	
+			
+	<image name="icon_ListSortVir.png" count="4" mask="icon_ListSort.png" colors="Global.PlaylistGeneralIcon"/>	
+	<image name="icon_ListransferVir.png" count="4" mask="icon_Listransfer.png" colors="Global.PlaylistGeneralIcon"/>	
+	<image name="icon_LisEditVir.png" count="4" mask="icon_LisEdit.png" colors="Global.PlaylistGeneralIcon"/>
+	<image name="List_InstructDown_BtnVir.png" count="4" mask="List_InstructDown_Btn.png" colors="Global.PlaylistGeneralIcon"/>
+	<!--自建列表浮动相关的icon按钮 -->
+	<image name="list_DownLoadIconVir.png" count="4" mask="list_DownLoadIcon.png" colors="Global.PlaylistGeneralIcon|Topic.Alter|Topic.Alter|Global.PlaylistGeneralIcon"/>	
+	<image name="listLoveIconVir.png" count="4" mask="listLoveIcon.png" colors="Global.PlaylistGeneralIcon|Topic.Alter|Topic.Alter|Global.PlaylistGeneralIcon"/>
+	<image name="listCancleLoveIconVir.png" count="4" mask="listCancleLoveIcon.png" colors="Global.ErrRed"/>	
+	<image name="listMoreIconVir.png" count="4" mask="listMoreIcon.png" colors="Global.PlaylistGeneralIcon|Topic.Alter|Topic.Alter|Global.PlaylistGeneralIcon" />
+  <image name="ListDelIConVir.png" count="4" mask="ListDelIcon.png" colors="Global.PlaylistGeneralIcon|Topic.Alter|Topic.Alter|Global.PlaylistGeneralIcon" />
+
+	<image name="listCloud_workingVir.png" count="1" mask="listCloud_working.png" colors="Global.PlaylistGeneralIcon"/>
+
+	<!--自建列表 批量模式下的checkbox 复选框 and 弹框的 radio单选框 -->
+	<image name="list_edit_bkVir.png" count="1" mask="list_edit_bk.png" colors="Global.PlaylistGeneralIcon"/>
+	<image name="listCheckBoxVir.png" count="6" mask="listCheckBox.png" colors="CheckBox.Normal|Topic.Alter|Topic.Alter|Topic.Alter|Topic.Alter|Topic.Alter" />
+	<image name="Download_RadioVir.png" count="4" mask="Download_Radio.png" colors="Radio.Normal|Topic.Alter|Topic.Alter|Topic.Alter" />
+	<image name="PopUpWndChkVir.png" count="6" mask="listCheckBox.png" colors="Radio.Normal|Topic.Alter|Topic.Alter|Topic.Alter|Topic.Alter|Topic.Alter" />
+   
+  <image name="loginWndChkVir.png" count="6" mask="login_chkBox.png" colors="Radio.Normal|Topic.Alter|Topic.Alter|Topic.Alter|Topic.Alter|Topic.Alter" />
+
+    <image name="list_search_btnVir.png" count="2" mask="list_search_btn.png" colors="Global.PlaylistGeneralIcon"/>
+	
+	<image name="ListLocalLeftListArtistVir.png" count="4" mask="icon_local_list_artist.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="ListLocalLeftListFolderVir.png" count="4" mask="icon_local_list_folder.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="ListLocalLeftListArrowVir.png" count="1" mask="local_left_list_arrow.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="ListLocalLeftListTitleVir.png" count="3" mask="local_left_list_title.png" colors="Topic.Normal" />
+
+
+	<image name="list_sort_defVir.png" count="4" mask="list_sort_def.png" colors="Global.PlaylistGeneralIcon"/>	
+	<image name="list_sort_upVir.png" count="4" mask="list_sort_up.png" colors="Global.PlaylistGeneralIcon"/>
+	<image name="list_sort_downVir.png" count="4" mask="list_sort_down.png" colors="Global.PlaylistGeneralIcon"/>
+    <image name="mylist_auditionVir.png" count="1" mask="mylist_audition.png" colors="Topic.LinkText" />
+    	
+	<!-- 自建列表浮层图标-->
+	<image name="list_FloatIcon_bkVir.png" count="4" mask="list_FloatIcon_bk.png" colors="Global.PlaylistSpecialIcon|Topic.Normal|Topic.Normal|Global.PlaylistSpecialIcon" />
+	<image name="list_FloatIcon_UpHomeVir.png" count="4" mask="list_FloatIcon_UpHome.png" colors="Global.PlaylistGeneralIcon|Topic.Normal|Topic.Normal|Global.PlaylistGeneralIcon" />
+	<image name="list_FloatIcon_PlayingPosVir.png" count="4" mask="list_FloatIcon_PlayingPos.png" colors="Global.PlaylistGeneralIcon|Topic.Normal|Topic.Normal|Global.PlaylistGeneralIcon" />
+    
+	<image name="ListHeadBkVir.png" count="1" mask="ListHeadBk.png" colors="Topic.Normal" />
+	<image name="ListHeadLayoutVir.png" count="1" mask="ListHeadLayout.png" colors="List.TopAreaBkPICColor" />    
+    
+    <!--Cl 空列表的icon-->
+	<image name="icon_ListListenVir.png" count="4" mask="icon_ListListen.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListAddSongVir.png" count="4" mask="icon_ListAddSong.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="icon_ListSearchVir.png" count="4" mask="icon_ListSearch.png" colors="Global.PlaylistGeneralIcon" />	
+	<image name="icon_ListPlayRadioVir.png" count="4" mask="icon_ListPlayRadio.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="listHistry_empty_bkVir.png" count="1" mask="histlist_play.png" colors="Global.PlaylistGeneralIcon" />
+	
+    <!--云盘中格式的图片开始-->
+    <image name="list_NetDisk_format_MP3Vir.png" count="1" mask="list_NetDisk_format_mp3.png" colors="List.SubTextColor"/>
+    <image name="list_NetDisk_format_FLACVir.png" count="1" mask="list_NetDisk_format_flac.png" colors="List.SubTextColor"/>
+    <image name="list_NetDisk_format_AACVir.png" count="1" mask="list_NetDisk_format_aac.png" colors="List.SubTextColor"/>
+    <image name="list_NetDisk_format_WAVVir.png" count="1" mask="list_NetDisk_format_wav.png" colors="List.SubTextColor"/>
+    <image name="list_NetDisk_format_M4AVir.png" count="1" mask="list_NetDisk_format_m4a.png" colors="List.SubTextColor"/>
+    <image name="list_NetDisk_format_APEVir.png" count="1" mask="list_NetDisk_format_ape.png" colors="List.SubTextColor"/>
+    <image name="list_NetDisk_format_WMAVir.png" count="1" mask="list_NetDisk_format_wma.png" colors="List.SubTextColor"/>
+
+    <image name="list_NetDisk_status_uploadingVir.png" count="1" mask="list_NetDisk_uploading.png" colors="Topic.Normal"/>
+    <image name="list_NetDisk_status_PauseVir.png" count="1" mask="list_NetDisk_Pause.png" colors="Global.List.Pause"/>
+    <image name="list_NetDisk_status_WaitingVir.png" count="1" mask="list_NetDisk_Waiting.png" colors="Global.List.Waiting"/>
+    <image name="list_NetDisk_status_FailedVir.png" count="2" mask="list_NetDisk_Failed.png" colors="Global.ErrRed"/>
+    <image name="icon_ListStartAllVir.png" count="4" mask="icon_ListPlay.png" colors="Global.PlaylistGeneralIcon" />
+    <image name="icon_ListErrInfoVir.png" count="4" mask="icon_ListErrInfo.png" colors="Global.PlaylistGeneralIcon|Topic.Alter|Topic.Alter|Global.PlaylistGeneralIcon" />
+    <image name="icon_ExpandCapaVir.png" count="4" mask="expandto.png" colors="NetDisk_Capa_Exp"/>
+
+	<!--音质icon-->
+	<image name="list_hq_apeVir.png" count="4" mask="list_hq_ape.png" colors="Global.Golden"/> 
+	<image name="list_hq_superVir.png" count="4" mask="list_hq_super.png" colors="Global.PlaylistGeneralIcon"/>  
+	<image name="list_hq_highVir.png" count="4" mask="list_hq_high.png" colors="Global.PlaylistGeneralIcon"/>  
+	<image name="list_hq_generalVir.png" count="4" mask="list_hq_general.png" colors="Global.PlaylistGeneralIcon"/>
+
+	<image name="mylist_song_mvVir.png" count="4" mask="mylist_song_mv.png" colors="Topic.LinkText" />  
+	<image name="list_netsong_danmuVir.png" count="4" mask="list_netsong_danmu.png" colors="Topic.LinkText" /> 
+	<!--mini模式-->
+	<image name="triangleVir.png" count="1" mask="triangle.png" colors="Topic.Normal"/>
+	<image name="btn_MiniPlayVir.png" count="4" mask="btn_MiniPlay.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|Topic.Normal"/>
+	<image name="btn_MiniPauseVir.png" count="4" mask="btn_MiniPause.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|Topic.Normal"/>		
+	
+	<image name="PlayerProgress_thumb_miniVir.png" count="1" mask="PlayerProgress_thumb_mini.png" colors="Topic.Normal" />
+	<image name="PlayerProgress_bk_miniVir.png" count="1" mask="PlayerProgress_bk_mini.png" colors="playBar.PlayerProgressBk.Color" />
+	<image name="PlayerProgress_progress_no_miniVir.png" count="1" mask="PlayerProgress_progress_no_mini.png" colors="Topic.Normal" />
+	
+    <!--正在播放列表 begin-->
+    <image name="icon_ListAddVir-playing.png" count="4" mask="icon_ListAdd.png" colors="Global.Black" />
+    <image name="icon_ListDelVir-playing.png" count="4" mask="icon_ListDel.png" colors="Global.Black" />
+    <image name="playinglist_play.png" count="4" mask="listPlayIcon.png" colors="Global.Black"/>
+    <image name="playinglist_pause.png" count="4" mask="listPauseIcon.png" colors="Global.Black" />
+    <image name="playinglist_heart.png" count="4" mask="listLoveIcon.png" colors="Global.Black|Global.Black|#ffff6161|Global.Black"/>
+    <image name="playinglist_hearted.png" count="4" mask="listLovedIcon.png" colors="#ffff6161|#ffff6161|Global.Black|Global.Black"/>
+    <image name="playinglist_download.png" count="4" mask="list_DownLoadIcon.png" colors="Global.Black" />
+    <image name="playinglist_downloaded.png" count="4" mask="list_DownLoadIcon.png" colors="Global.Black" />
+    <image name="icon_auditionopenVir.png" count="4" mask="icon_auditionopen.png" colors="Global.White" />
+    <!--正在播放列表 end-->
+
+	<!--顶栏 begin-->
+    <image name="btn_main_back.png" count="4" mask="btn_main_back.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="btn_main_refresh.png" count="4" mask="btn_main_refresh.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="knowSong.png" count="4" mask="knowSong.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="game.png" count="4" mask="game.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="changeskin.png" count="4" mask="changeskin.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="fmradiovir.png" count="4" mask="icon_radio.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="changeskinnew.png" count="4" mask="changeskinnew.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="menu.png" count="4" mask="menu.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="show.png" count="4" mask="show.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="virerji.png" count="4" mask="erji.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="searchbtn.png" count="4" mask="searchbtn.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+	<image name="speed_close.png" count="4" mask="speed_close.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="speed_closeVir.png" count="4" mask="speed_closeVir.png" colors="Global.Black" />
+    
+	 <image name="speed_open.png" count="4" mask="speed_open.png" colors="Topic.LinkText" />
+    <image name="speed_openVir.png" count="4" mask="speed_open_menu.png" colors="Topic.LinkText" />
+    
+	<image name="newscomment.png" count="4" mask="newscomment.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+	<image name="newscomment_new.png" count="4" mask="newscomment_new.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="palylist_mini.png" count="4" mask="palylist_mini.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="restore.png" count="4" mask="restore.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="min.png" count="4" mask="min.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="maximize.png" count="4" mask="maximize.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+    <image name="close.png" count="4" mask="close.png" colors="Comp.Topbar.Normal|Topic.Alter|Topic.Alter|Comp.Topbar.Normal" />
+	<image name="edit_netsong_search.png" count="1" mask="edit_netsong_search.png" colors="topBar.search" />
+	
+    <!--顶栏 end-->
+
+    <!--播放栏 begin-->
+	<image name="playbtnVir.png" count="4" mask="playbtn.png" colors="Topic.Normal" />
+	<image name="pausebtnVir.png" count="4" mask="pausebtn.png" colors="Topic.Normal" />
+    <image name="prebtnVir.png" count="4" mask="prebtn.png" colors="Topic.Normal" />
+    <image name="nextbtnVir.png" count="4" mask="nextbtn.png" colors="Topic.Normal" />
+    <image name="deleteVir.png" count="4" mask="delete.png" colors="Topic.Normal" />
+    <image name="Vir_playcontrol_play_mode_order.png" count="4" mask="playcount_list.png" colors="Comp.Playbar.Normal" />
+	
+    <image name="pc.playcontrol_lyricVir.png" count="4" mask="playcontrol_lyric.png" colors="Comp.Playbar.Normal" />
+	<image name="npc.pc.playcontrol_lyricVir.png" count="4" mask="playcontrol_lyric.png" colors="Global.White" />
+	
+    <image name="pc.CasualListenWhiteHeart_PlayControlVir.png" count="4" mask="CasualListenWhiteHeart_PlayControl.png" colors="Comp.Playbar.Normal|Comp.Playbar.Normal|Global.ErrRed|Comp.Playbar.Normal" />
+	<image name="npc.pc.CasualListenWhiteHeart_PlayControlVir.png" count="4" mask="CasualListenWhiteHeart_PlayControl.png" colors="Global.White|Global.White|Global.ErrRed|Global.White" />
+    <image name="pc.playcontrol_downloadVir.png" count="4" mask="playcontrol_download.png" colors="Comp.Playbar.Normal" />
+	<image name="npc.pc.playcontrol_downloadVir.png" count="4" mask="playcontrol_download.png" colors="Global.White" />
+	
+    <image name="pc.hifi_close.png" count="4" mask="hifi_close.png" colors="Comp.Playbar.Normal" />
+	<image name="npc.pc.hifi_close.png" count="4" mask="hifi_close.png" colors="Global.White" />
+    <image name="hifi_open.png" count="4" mask="hifi_open.png" colors="Global.Golden" />
+    <image name="pc.playcount_listVir.png" count="4" mask="playcount_list.png" colors="Comp.Playbar.Normal" />
+	<image name="npc.pc.playcount_listVir.png" count="4" mask="playcount_list.png" colors="Global.White" />
+    <image name="pc.radio_list.png" count="4" mask="radio_list.png" colors="Comp.Playbar.Normal" />
+	<image name="npc.pc.radio_list.png" count="4" mask="radio_list.png" colors="Global.White" />
+	<image name="pc.commentVir.png" count="4" mask="comment.png" colors="Comp.Playbar.Normal" />
+	<image name="npc.pc.commentVir.png" count="4" mask="comment.png" colors="Global.White" />
+	<image name="pc.commentVir0.png" count="4" mask="comment0.png" colors="Comp.Playbar.Normal" />
+    <image name="npc.pc.commentVir0.png" count="4" mask="comment0.png" colors="Global.White" />
+    
+    <image name="pc.playcontrol_play_mode_singleonceVir.png" count="4" mask="playcontrol_play_mode_singleonce.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.playcontrol_play_mode_singleVir.png" count="4" mask="playcontrol_play_mode_single.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.playcontrol_play_mode_orderVir.png" count="4" mask="playcontrol_play_mode_order.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.playcontrol_play_mode_circleVir.png" count="4" mask="playcontrol_play_mode_circle.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.playcontrol_play_mode_randomVir.png" count="4" mask="playcontrol_play_mode_random.png" colors="Comp.Playbar.Normal" />
+    <image name="npc.pc.playcontrol_play_mode_singleonceVir.png" count="4" mask="playcontrol_play_mode_singleonce.png" colors="Global.White" />
+    <image name="npc.pc.playcontrol_play_mode_singleVir.png" count="4" mask="playcontrol_play_mode_single.png" colors="Global.White" />
+    <image name="npc.pc.playcontrol_play_mode_orderVir.png" count="4" mask="playcontrol_play_mode_order.png" colors="Global.White" />
+    <image name="npc.pc.playcontrol_play_mode_circleVir.png" count="4" mask="playcontrol_play_mode_circle.png" colors="Global.White" />
+    <image name="npc.pc.playcontrol_play_mode_randomVir.png" count="4" mask="playcontrol_play_mode_random.png" colors="Global.White" />
+	
+    <image name="pc.mutebtnVir.png" count="4" mask="mutebtn.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.mutedbtnVir.png" count="4" mask="mutedbtn.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.mutedbtnemptyVir.png" count="4" mask="mutedbtnempty.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.mutedbtnhalfVir.png" count="4" mask="mutedbtnhalf.png" colors="Comp.Playbar.Normal" />
+    <image name="pc.mutedbtnplusVir.png" count="4" mask="mutedbtnplus.png" colors="Comp.Playbar.Normal" />
+	<image name="pc.quality_btbkVir.png" count="4" mask="quality_btbk.png" colors="Comp.Playbar.Normal" />
+	
+	<image name="npc.pc.mutebtnVir.png" count="4" mask="mutebtn.png" colors="Global.White" />
+    <image name="npc.pc.mutedbtnVir.png" count="4" mask="mutedbtn.png" colors="Global.White" />
+    <image name="npc.pc.mutedbtnemptyVir.png" count="4" mask="mutedbtnempty.png" colors="Global.White" />
+    <image name="npc.pc.mutedbtnhalfVir.png" count="4" mask="mutedbtnhalf.png" colors="Global.White" />
+    <image name="npc.pc.mutedbtnplusVir.png" count="4" mask="mutedbtnplus.png" colors="Global.White" />
+	<image name="npc.pc.quality_btbkVir.png" count="4" mask="quality_btbk.png" colors="Global.White" />
+    <image name="quality_auditionVir.png" count="4" mask="quality_audition.png" colors="Topic.Normal"/>
+    
+    <image name="exclu_mutebtnVir.png" count="4" mask="mutebtn.png" colors="Global.Golden" />
+    <image name="exclu_mutedbtnVir.png" count="4" mask="mutedbtn.png" colors="Global.Golden" />
+    <image name="exclu_mutedbtnemptyVir.png" count="4" mask="mutedbtnempty.png" colors="Global.Golden" />
+    <image name="exclu_mutedbtnhalfVir.png" count="4" mask="mutedbtnhalf.png" colors="Global.Golden" />
+    <image name="exclu_mutedbtnplusVir.png" count="4" mask="mutedbtnplus.png" colors="Global.Golden" />
+	
+	<image name="PlayerProgress_thumbVir.png" count="4" mask="PlayerProgress_thumb.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|playBar.PlayerProgressThumb.Disabled" />
+	<image name="pc.PlayerProgress_bkVir.png" count="1" mask="PlayerProgress_bk.png" colors="playBar.PlayerProgressBk.Color" />
+	<image name="npc.pc.PlayerProgress_bkVir.png" count="1" mask="PlayerProgress_bk.png" colors="Global.White" />
+	
+	<image name="PlayerProgress_progress_noVir.png" count="1" mask="PlayerProgress_progress_no.png" colors="Topic.Normal" />
+	<image name="pc.PlayerProgress_downloadVir.png" count="1" mask="PlayerProgress_download.png" colors="playBar.PlayerProgressDownload.Color" />
+	<image name="npc.pc.PlayerProgress_downloadVir.png" count="1" mask="PlayerProgress_download.png" colors="Global.White" />
+	
+	<image name="pc.GoodSound_YXVir.png" count="4" mask="GoodSound_YX.png" colors="Comp.Playbar.Normal" />
+	<image name="pc.GoodSound_EJVir.png" count="4" mask="GoodSound_EJ.png" colors="Comp.Playbar.Normal" />
+	<image name="pc.GoodSound_JHQVir.png" count="4" mask="GoodSound_JHQ.png" colors="Comp.Playbar.Normal" />
+	<image name="GoodSound_JHQOpenVir.png" count="4" mask="GoodSound_JHQ_open.png" colors="Global.Golden" />
+	
+	<image name="npc.pc.GoodSound_YXVir.png" count="4" mask="GoodSound_YX.png" colors="Global.White" />
+	<image name="npc.pc.GoodSound_EJVir.png" count="4" mask="GoodSound_EJ.png" colors="Global.White" />
+	<image name="npc.pc.GoodSound_JHQVir.png" count="4" mask="GoodSound_JHQ.png" colors="Global.White" />
+    <!--播放栏 end-->
+    
+	<!--听歌识曲 begin-->
+	<image name="knowSong_playVir.png" count="4" mask="knowSong_play.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="knowSong_nofavVir.png" count="4" mask="knowSong_nofav.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="knowSong_downloadVir.png" count="4" mask="knowSong_download.png" colors="Global.PlaylistGeneralIcon" />
+	<image name="knowSong_storeVir.png" count="4" mask="knowSong_store.png" colors="Global.PlaylistGeneralIcon" />
+	<!--听歌识曲 end-->
+	
+	<!--传歌 begin-->
+	<image name="tran_pop.png" count="1" mask="tran_pop.png" colors="Topic.Normal" />
+	<image name="tran_Slide1.png" count="1" mask="tran_Slide1.png" colors="Topic.Normal" />
+	<image name="uploading_success.png" count="1" mask="uploading_success.png" colors="Topic.LinkText" />
+	<image name="tran_finish1.png" count="1" mask="tran_finish1.png" colors="Topic.Normal" />
+	<image name="tran_iphone_wifi1.png" count="1" mask="tran_iphone_wifi1.png" colors="Topic.Normal" />
+	<image name="tran_USB1.png" count="1" mask="tran_USB1.png" colors="Topic.Normal" />
+	<image name="tran_mymusic_download.png" count="4" mask="mymusic_download_mask.png" colors="Global.Black" />
+    <image name="tran_mymusic_local.png" count="4" mask="mymusic_local_mask.png" colors="Global.Black" />
+    <image name="tran_mylist_favorite.png" count="4" mask="mylist_favorite_mask.png" colors="Global.Black" />
+    <image name="tran_mylist_defualtlist.png" count="4" mask="mylist_defualtlist_mask.png" colors="Global.Black" />
+	<image name="tran_ListDelVir.png" count="4" mask="icon_ListDel.png" colors="Global.Black" />
+	<!--传歌 end-->
+	
+	<!--托盘菜单 begin-->
+	<image name="play_mode_singleonce.png" count="4" mask="playcontrol_play_mode_singleonce.png" colors="Global.Black" />
+    <image name="play_mode_single.png" count="4" mask="playcontrol_play_mode_single.png" colors="Global.Black" />
+    <image name="play_mode_order.png" count="4" mask="playcontrol_play_mode_order.png" colors="Global.Black" />
+    <image name="play_mode_circle.png" count="4" mask="playcontrol_play_mode_circle.png" colors="Global.Black" />
+    <image name="play_mode_random.png" count="4" mask="playcontrol_play_mode_random.png" colors="Global.Black" />
+	<image name="tray_menu_play.png" count="4" mask="tray_menu_play.png" colors="Global.Black" />
+	<image name="tray_menu_pause.png" count="4" mask="tray_menu_pause.png" colors="Global.Black" />
+	<image name="tray_menu_pre.png" count="4" mask="tray_menu_pre.png" colors="Global.Black" />
+	<image name="tray_menu_next.png" count="4" mask="tray_menu_next.png" colors="Global.Black" />
+	<image name="tray_menu_delete.png" count="4" mask="tray_menu_delete.png" colors="Global.Black" />
+	<image name="playcontrol_lyric.png" count="4" mask="playcontrol_lyric.png" colors="Global.Black" />
+	<image name="playcontrol_lyric_lock.png" count="4" mask="playcontrol_lyric_lock.png" colors="Global.Black" />
+	<image name="playcontrol_lyric_unlock.png" count="4" mask="playcontrol_lyric_unlock.png" colors="Global.Black" />
+	<image name="menu_more_config.png" count="4" mask="menu_more_config.png" colors="Global.Black" />
+	<image name="menu_more_exit.png" count="4" mask="menu_more_exit.png" colors="Global.Black" />
+	
+	<image name="mutedbtn_trayVir.png" count="4" mask="mutedbtn.png" colors="Global.Black" />
+	<image name="mutedbtnempty_trayVir.png" count="4" mask="mutedbtnempty.png" colors="Global.Black" />
+	<image name="mutedbtnhalf_trayVir.png" count="4" mask="mutedbtnhalf.png" colors="Global.Black" />
+	<image name="mutebtn_trayVir.png" count="4" mask="mutebtn.png" colors="Global.Black" />
+	<image name="mutebtn_addVir.png" count="4" mask="mutedplus.png" colors="Global.Black" />
+	<image name="tray_hifi.png" count="4" mask="tray_hifi.png" colors="Global.Black" />
+	
+	<image name="volumnbkVir.png" count="1" mask="volumnbk.png" colors="playBar.playcontrol.volumnbk" />
+	<image name="volumnfgVir.png" count="1" mask="volumnbk.png" colors="Topic.Normal" />
+	<image name="volumnthumb_tray.png" count="4" mask="volumnthumb_tray.png" colors="Topic.Normal" />
+	<!--托盘菜单 end-->
+	
+	<!-- 加载loading-->
+	<image name="WebLoading.png" count="1" mask="WebLoading.png" colors="Topic.Normal" />
+	
+    <!--播放模式弹框 begin-->
+    <image name="pop_singleonce.png" count="4" mask="playcontrol_play_mode_singleonce.png" colors="Global.Black" />
+    <image name="pop_single.png" count="4" mask="playcontrol_play_mode_single.png" colors="Global.Black" />
+    <image name="pop_order.png" count="4" mask="playcontrol_play_mode_order.png" colors="Global.Black" />
+    <image name="pop_circle.png" count="4" mask="playcontrol_play_mode_circle.png" colors="Global.Black" />
+    <image name="pop_random.png" count="4" mask="playcontrol_play_mode_random.png" colors="Global.Black" />
+	
+	<image name="Downlist_hq_apeVir.png" count="4" mask="list_hq_ape.png" colors="Global.Golden"/> 
+	<image name="Downlist_hq_superVir.png" count="4" mask="list_hq_super.png" colors="Radio.Normal"/>  
+	<image name="Downlist_hq_highVir.png" count="4" mask="list_hq_high.png" colors="Radio.Normal"/>  
+	<image name="Downlist_hq_generalVir.png" count="4" mask="list_hq_general.png" colors="Radio.Normal"/>
+    <!--播放模式弹框 end-->
+
+    <!--我的收藏 begin-->
+    <image name="my_fav_tabVir.png" count="1" mask="my_fav_tab.png" colors="Topic.Normal" />
+	<image name="FavEmptyImgVir.png" count="1" mask="FavEmptyImg.png" colors="Global.PlaylistGeneralIcon" />
+    <!--我的收藏 end-->
+    
+    <!--更多菜单 begin-->
+    <image name="playcontrol_download.png" count="4" mask="playcontrol_download.png" colors="Global.Black" />
+    <image name="MV.png" count="4" mask="MV.png" colors="Global.Black" />
+    <image name="playcontrol_KSong.png" count="4" mask="playcontrol_KSong.png" colors="Global.Black" />
+    <image name="playcontrol_share.png" count="4" mask="playcontrol_share.png" colors="Global.Black" />
+    <!--更多菜单 end-->
+	
+	<!--音量条 begin-->
+	<image name="playcontrol_volumnthumb2.png" count="4" mask="playcontrol_volumnthumb2.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|Topic.Normal" />
+	<image name="playcontrol_volumnbk2_bk.png" count="1" mask="playcontrol_volumnbk2.png" colors="playBar.playcontrol.volumnbk" />
+	<image name="playcontrol_volumnbk2_fg.png" count="1" mask="playcontrol_volumnbk2.png" colors="Topic.Normal" />
+	<!--音量条 end-->
+    
+	<!--播放全屏 begin-->
+	<image name="btn_fullplaycontrol_normal.png" count="4" mask="btn_fullplaycontrol_normal.png" colors="Global.White" />
+	<image name="playcontrol_volumnbk.png" count="2" mask="playcontrol_volumnbk.png" colors="playBar.PlayerProgressBk.Color|Topic.Normal" />
+	<image name="playcontrol_volumnthumb.png" count="4" mask="playcontrol_volumnthumb.png" colors="Topic.Normal" />
+	<!--播放全屏 end-->
+    
+    <!--MsgBox弹窗begin-->	
+	<image name="list_folderVir.png" count="4" mask="list_folder.png" colors="Global.Black"/>
+	<image name="btn_selectdownpathVir.png" count="4" mask="btn_selectdownpath.png" colors="Global.Black"/>	
+	<image name="download_iphoneVir.png" count="4" mask="download_iphone.png" colors="Global.Black"/>	
+	<image name="download_pcVir.png" count="4" mask="download_pc.png" colors="Text.UnderTopic"/>
+  <image name="popupwndcloseVir.png" count="4" mask="PopUpClose.png" colors="Radio.Normal|Topic.Alter|Topic.Alter|Topic.Alter"/>
+  <image name="popupwndcloseVirWhite.png" count="4" mask="PopUpClose.png" colors="Global.White|Topic.Alter|Topic.Alter|Topic.Alter"/>
+  <image name="PopUpWndEditVir.png" count="4" mask="PopUpWndEdit.png" colors="Global.Black"/>
+  <image name="PopUpWndEditVirErr.png" count="4" mask="PopUpWndEditErr.png" colors="Global.ErrRed"/>
+  <image name="PopUpWndProgress_fgVir.png" count="1" mask="lrc_PlayerProgress_fg.png" colors="Topic.Normal"/>
+    <!--MsgBox弹窗end-->
+
+    <!--音效开始-->
+    <image name="goodsoundbkVir.png" count="4" mask="GoodSound_Bk.png" colors="Topic.Normal"/>
+    
+    <image name="goodsoundbkVirsceneVir.png" count="4" mask="GoodSound_VirScene.png" colors="Topic.Alter"/>
+    <image name="goodsoundbkVirsceneVir_Hover.png" count="4" mask="GoodSound_VirScene.png" colors="List.Option.Title.BKG"/>
+
+    <image name="goodsoundbk3DVir.png" count="4" mask="GoodSound_3D.png" colors="Topic.Alter"/>
+    <image name="goodsoundbk3DVir_Hover.png" count="4" mask="GoodSound_3D.png" colors="List.Option.Title.BKG"/>
+
+    <image name="goodsoundbkbassVir.png" count="4" mask="GoodSound_Bass.png" colors="Topic.Alter"/>
+    <image name="goodsoundbkbassVir_Hover.png" count="4" mask="GoodSound_Bass.png" colors="List.Option.Title.BKG"/>
+
+    <image name="goodsoundbkClearvoiceVir.png" count="4" mask="GoodSound_ClearVoice.png" colors="Topic.Alter"/>
+    <image name="goodsoundbkClearvoiceVir_Hover.png" count="4" mask="GoodSound_ClearVoice.png" colors="List.Option.Title.BKG"/>
+
+    <image name="goodsoundbkHighProVir.png" count="4" mask="GoodSound_HighPro.png" colors="Topic.Alter"/>
+    <image name="goodsoundbkHighProVir_Hover.png" count="4" mask="GoodSound_HighPro.png" colors="List.Option.Title.BKG"/>
+
+    <image name="goodsoundbkVocalRemoveVir.png" count="4" mask="GoodSound_VocalRemove.png" colors="Topic.Alter"/>
+    <image name="goodsoundbkVocalRemoveVir_Hover.png" count="4" mask="GoodSound_VocalRemove.png" colors="List.Option.Title.BKG"/>
+
+    <image name="switch_bkgVir.png" count="1" mask="GoodSoundSwitchBkg.png" colors="Topic.Normal"/>
+    <image name="switch_bkgCloseVir.png" count="1" mask="GoodSoundSwitchCloseBkg.png" colors="#3F000000"/>
+    <image name="switch_CloseVir.png" count="1" mask="GoodSoundSwitchClose.png" colors="Global.White"/>
+    <image name="switch_OpenVir.png" count="1" mask="GoodSoundSwitchOpen.png" colors="Topic.Normal"/>
+    <image name="optionSelBkgVir.png" count="1" mask="eqselbk.png" colors="Topic.Normal"/>    
+    <!--音效结束-->
+    
+	  <image name="process_uidownload.png" count="2" mask="progress_uidownload_bk.png" colors="List.Progress.bkg|Topic.Normal" />
+    <image name="progress_PopupWnd.png" count="2" mask="process_popwndbk.png" colors="PopUpProgBkImg|Topic.Normal" />
+    <image name="progress_DiskSpaceProgBkVir.png" count="1" mask="NetDisk_Prog_Bk.png" colors="List.Progress.bkg" />
+    <image name="progress_DiskSpaceProgFgVir.png" count="1" mask="NetDisk_Prog_Fg.png" colors="Topic.Normal" />
+
+    <!--皮肤设置框-->
+    <image name="slider_skinwnd_thumb.png" count="4" mask="slider_skinwnd_thumb.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|pp.DisabledImage" />
+    <iamge name="slider_skinwnd_bk.png" count="1" mask="slider_skinwnd_bk.png" colors="Topic.Normal" />
+    <image name="progress_threshold_marker.png" count="1" mask="progress_threshold_marker.png" colors="Topic.Normal" />
+    <image name="skin_preview_bk.png" count="1" mask="skin_preview_bk.png" colors="Global.White" />
+    <image name="progress_SingleSkin-2.png" count="1" mask="progress_SingleSkin-2.png" colors="Topic.Normal" />
+    <image name="skintagbk.png" count="1" mask="skintagbk.png" colors="Topic.Normal" />
+    <!--皮肤设置框end-->
+
+    <!--滚动条-->
+    <image name="scrollbar_playlist_thumb_v.png" count="4" mask="scrollbar_general_thumb_v.png" colors="Scrollbar.Nav" />
+    <image name="scrollbar_thumb_v.png" count="4" mask="scrollbar_general_thumb_v.png" colors="Scrollbar.List" />
+    <image name="scrollbar_popup_thumb_v.png" count="4" mask="scrollbar_general_thumb_v.png" colors="Scrollbar.Popup" />
+    <image name="scrollbar_popup_thumbScrol_v.png" count="4" mask="PopUpWndScrollBar.png" colors="Global.Black" />
+    <!--滚动条end-->
+
+	<!--系统设置-->
+	<image name="config_popupwndcloseVir.png" count="4" mask="PopUpClose.png" colors="Global.Black"/>
+	<image name="config_checkVir.png" count="6" mask="listCheckBox.png" colors="Global.Black"/>
+	<image name="config_radioVir.png" count="4" mask="Download_Radio.png" colors="Global.Black"/>
+	<!--系统设置end-->
+
+    <!--频谱-->
+    <image name="spectrum_laser.png" count="1" mask="spectrum_laser_mask.png" colors="Topic.Normal"/>
+    <!--频谱end-->
+
+    <!--MV小窗口-->
+    <image name="mv_mini_play.png" count="4" mask="mv_mini_play_mask.png" colors="Topic.Normal"/>
+    <image name="mv_mini_pause.png" count="4" mask="mv_mini_pause_mask.png" colors="Topic.Normal"/>
+    <image name="mv_mini_restore.png" count="4" mask="mv_mini_restore_mask.png" colors="Topic.Normal"/>
+    <image name="mv_expand.png" count="4" mask="mv_expand_mask.png" colors="Topic.Normal"/>
+    <image name="mv_unexpand.png" count="4" mask="mv_unexpand_mask.png" colors="Topic.Normal"/>
+    <!--MV小窗口end-->
+	
+	<image name="menu_common_hstatusVir.png" count="4"  mask="menu_common_hstatus.png" colors="Topic.Normal|Topic.Normal|Topic.Normal|Topic.Normal" />
+  </imagecompose>
+  
+  <themes>
+    <!--theme 应用顺序: 类型主题 => 作用域类型主题"#containername type" => 作用域类型主题"#containername>type" => 命名主题 => #ID主题 -->
+    <!--当以上主题应用到同一控件时，同名属性后应用的覆盖先应用的-->
+    
+    <!--类型主题，格式type-->   
+
+    <theme name="#NetsongbkLayer" bkcolor="Body.Mask" bkimage="netsongbk.xxx" bkmodify="stretchmode='keepwhr'"/>
+    
+    <theme name="#TabMainBody ListUI" font="Default.List.Font" itemtextcolor="List.MajorTextColor" itemdisabledtextcolor="List.DisableBtnTextColor"  itemhottextcolor="Topic.LinkText" itemselectedtextcolor="List.SubTextColor" itemlinecolor="List.SplitLineColor" itemselectedbkcolor="List.SplitLineColor" itemhotbkcolor="List.SplitLineColor"/>
+    <theme name="#TabMainBody ListHeaderItemUI" dragable="false" font="Default.List.Font"  textcolor="List.SubTextColor" sepimage="" bkcolor="List.TableHeadBkColor" align="left"/>
+    
+    <!--TabMainBody 下面按钮的样式-->
+    <theme name="#TabMainBody ButtonUI" font="Def.ListBtn" setcursor="true" textcolor="List.MajorTextColor" disabledtextcolor="List.DisableBtnTextColor" hottextcolor="List.MajorTextColor" pushedtextcolor="List.MajorTextColor" pushdisabledtextcolor="List.DisableBtnTextColor" statusimage="btn_ListDefVir.png" borderround="4,4"/>
+
+    <!--TabMainBody 下面Option样式-->
+    <theme name="#TabMainBody OptionUI" setcursor="true" hottextcolor="List.HighLightTextColor"/>
+           
+
+	<!--ls change-->
+	<theme name="#LocalLeftList ListUI" font="Default.List.Font" itemtextcolor="List.MajorTextColor" itemdisabledtextcolor="List.DisableBtnTextColor"  itemhottextcolor="Topic.LinkText" itemselectedtextcolor="List.SubTextColor" itemlinecolor="0" itemselectedbkcolor="List.SplitLineColor" itemhotbkcolor="List.SplitLineColor"/>
+	
+	<!--本地左侧列表 表头部分-->
+	<theme name="ListLocalLeftTitleOp" statusimage="local_left_list_title.png"  selectedimage="local_left_list_title_3.png" selectedtextcolor="List.MajorTextColor" hottextcolor="List.MajorTextColor" textcolor="List.MajorTextColor"/>
+	
+	<theme name="ListOptionTitleBase" align="center" textcolor="List.SubTextColor" selectedtextcolor="List.HighLightTextColor" hottextcolor="List.HighLightTextColor" font="Def.ListOption.Font.Bold" />
+	<theme name="ListOptionTitle2" base="ListOptionTitleBase" selectedimage="list_OptionTitleUnderliveVir2.png"/>
+	<theme name="ListOptionTitle3" base="ListOptionTitleBase" selectedimage="list_OptionTitleUnderliveVir3.png"/>
+	
+	<theme name="FavOptionTitle" align="left" font="Fav.tab.text" selectedimage="my_fav_tabVir_1.png" base="ListOptionTitleBase"/>
+	
+	<!--ls change-->
+	<theme name="#DownloadPageTab ButtonUI" font="Def.ListBtn" textcolor="List.MajorTextColor" disabledtextcolor="List.DisableBtnTextColor" hottextcolor="List.MajorTextColor" pushedtextcolor="List.MajorTextColor" pushdisabledtextcolor="List.DisableBtnTextColor" statusimage="btn_ListBorderLessVir.png" borderround="4,4"/>
+	<theme name="UpQualityBtnOk" textcolor="#FF333333" hottextcolor="#FF333333" pushedtextcolor="#FF333333" font="Default.FontSmall" statusimage="btn_remindupq_yes.png"/>
+	<theme name="UpQualityBtnCancel" textcolor="#FF333333" hottextcolor="#FF333333" pushedtextcolor="#FF333333" font="Default.FontSmall" statusimage="btn_remindupq_no.png" />
+	<theme name="UpQualityDescription" font="Default.FontName" textcolor="#FFFFFFFF" />
+	<theme name="UpQualityStop" statusimage="btn_upquality_stop.png" textcolor="#FF333333" hottextcolor="#FF333333" pushedtextcolor="#FF333333" />
+	<theme name="LocalScanLoading" bkimage="loading.png" frametime="1200" framenum="12" />
+	<theme name="LocalScanStart" statusimage="icon_upgrade_start.png" />
+	<theme name="LocalScanPause" statusimage="icon_upgrade_suspend.png" />
+	<theme name="LocalScanStop" statusimage="icon_upgrade_stop.png" />
+	<theme name="LocalDescriptionSucIcon" bkimage="icon_upgrade_success.png"/>
+	<theme name="LocalDescriptionNormalIcon" bkimage="icon_upgrade_tips.png"/>	
+	<theme name="LocalDescriptionNormal" textcolor="#FF333333"/>  
+	<theme name="LocalDescriptionSuc" textcolor="#FFFFFFFF"/>  
+	<theme name="LocalDescriptionBkNormal" bkcolor="#99F6F6F6"/>  
+	<theme name="LocalDescriptionBkSuc" bkcolor="#FFD2AD73"/>  
+	<theme name="LocalLeftListSplitLine" bkcolor="List.SplitLineColor" />
+    <!--作用域类型主题, 格式#containername type: 应用到containername容器下的所有type，#containername>type: 应用到containername的一级子节点type -->
+    <!--<theme name="#HLPlayControl ButtonUI" font="" textcolor="#ffff0000"/> -->
+    <!--<theme name="#HL_Message>LabelUI" textcolor="#ff00ffff" /> -->
+    
+    <!--id主题，格式#name，应用到上name上-->
+    <!--<theme name="#xyz" textcolor="#ffffff00" hottextcolor="#ff00ffff" pushedtextcolor="#ffff0000"/>-->
+
+
+    <theme name="menuscrollbar"
+           vscrollbar="true"
+           hscrollbar="false"
+           vscrollbarstyle="overlay=&quot;true&quot; buttonlength=&quot;8&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_playlist_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_playlist_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_playlist_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_playlist_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;"
+           />
+
+    <theme name="#ListAera" bkcolor="ListAera.Mask" />
+    <theme name="NavList" font="Default.FontName" 
+                            itemtextpadding="0,20,20,0"
+                            itembkcolor="Global.None"
+                            itemhotbkcolor="Topic.Menu.Hot"
+                            itemselectedbkcolor="Topic.Menu.Selected"
+                            itemexpandbkcolor="Global.None"
+                            itemdisabledbkcolor="Global.None"
+                            vscrollbarstyle="overlay=&quot;true&quot; buttonlength=&quot;8&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_playlist_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_playlist_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_playlist_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_playlist_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;"
+    />
+    
+    <!--命名主题-->
+    <theme name="NavFolderNode" height="36"/>
+    <theme name="NavFolderMoreNode" height="36" />
+    <theme name="NavFolderText" endellipsis="true" align="left" font="Default.FontSmall" textcolor="Text.NavFld.Normal" hottextcolor="Text.NavFld.Normal" pushedtextcolor="Text.NavFld.Normal" selectedtextcolor="Text.NavFld.Normal" disabledtextcolor="Text.NavFld.Normal" />
+    
+	<!-- 左侧列表(正常模式和mini模式)-->
+    <theme name="NavChildNode" height="36" />
+	<theme name="NavChildNode.mini" height="42" />
+    <theme name="NavChildText" endellipsis="true" align="left" font="" textcolor="Text.Normal" hottextcolor="Text.Hot" pushedtextcolor="Text.Pushed" selectedtextcolor="Text.Selected" disabledtextcolor="Text.Disabled"/>
+    <theme name="NavChildText.mini" endellipsis="true" align="left" font="Default.FontSmall" textcolor="#CCFFFFFF" hottextcolor="#FFFFFFFF" selectedtextcolor="#FFFFFFFF" itemhotbkcolor="0" itemselectedbkcolor="0" />
+    <theme name="NavChildHIFIText" base="NavChildText" />
+    <theme name="NavChildPlayingText" base="NavChildText" textpadding="18,0,0,0" statusimage="miniplaylist_createnew.png" iconstatusimage="mini_list_playingVir.png" icondest="6,8,18,18" />
+    <theme name="NavChildPlayingText.mini" base="NavChildText.mini" />
+
+    <theme name="NavRIconCreateList" visible="true" setcursor="true" statusimage="mylist_createnew.png" padding="0,15,4,0" width="18" height="18" />
+    <theme name="NavRIconFold" visible="true" setcursor="true" padding="6,15,18,0" width="18" height="18" />
+    
+    <theme name="NavRIconHIFI" visible="true" icondest="3,3,18,18" float="true" textcolor="#ffffffff" pos="-31,3,-9,23" />
+    <theme name="NavRIconMyRadio" visible="true" setcursor="true" float="true" icondest="0,6,16,22" width="16" pos="126,10,142,26"  />
+    <theme name="NavRIconDownload" icondest="0,11,15,26" width="28" />
+    <theme name="NavRIconLocalMusic" visible="true" icondest="0,8,20,28" width="30" />
+    <theme name="NavRIconCloudDisk" visible="true" float="true" icondest="3,3,18,18" width="15" pos="113,3,128,18" />
+    <theme name="NavRIconPlayHist" visible="true" float="true" icondest="3,3,18,18" width="15" pos="113,3,128,18" />
+
+    <!---提取出列表公共的按钮样式-->
+    <theme name="ListBtnFocus" statusimage="BtnListPlayVir.png" textcolor="Text.UnderTopic" hottextcolor="Text.UnderTopic" pushedtextcolor="Text.UnderTopic" />
+
+    <!---默认的chanelName的主题-->
+    <theme name="ListLabelNormal" font="Def.ListLabel" textcolor="List.Label.Selected" disabledtextcolor="List.Label.Disabled" layertext="true" />
+    <theme name="SecondLabel" font="Default.FontName" textcolor="List.SubTextColor" disabledtextcolor="List.SubTextColor"/>
+    
+    <!---默认的列表名称的主题-->
+	<theme name="ListLabelSongList" base="ListLabelNormal" font="Def.ListOption.Font" textcolor="List.HighLightTextColor" />
+	<theme name="ListLabelNoSongListText" font="Def.ListBtn" textcolor="List.Label.Disabled" />	
+	<theme name="ListLabelSongListSmall" font="Def.Label.InfoTip" textcolor="List.SubTextColor" />
+	<theme name="ListEmptyDescText" font="Default.List.Font" textcolor="List.SubTextColor" />
+
+	<!--自建歌单编辑按钮-->	
+	<theme name="ListHeadUsrBtn" setcursor="false" normalimage="btn_ListBorderLessVir_1.png" hotimage="btn_ListBorderLessVir_1.png" pushedimage="btn_ListBorderLessVir_1.png" disabledimage="btn_ListBorderLessVir_1.png"/>		
+	<theme name="ListHeadUsrNameBtn" base="ListHeadUsrBtn" font="Default.List.Font" textcolor="List.HighLightTextColor" hottextcolor="List.HighLightTextColor" pushedtextcolor="List.HighLightTextColor"/>
+	<theme name="ListHeadTagBtn" base="ListHeadUsrBtn" font="Def.ListLabel.Space" textcolor="List.DisableBtnTextColor" hottextcolor="List.DisableBtnTextColor" pushedtextcolor="List.DisableBtnTextColor"/>
+	<theme name="ListHeadIntroducBtn" base="ListHeadUsrBtn" textcolor="List.MajorTextColor" font="Default.List.Font"/>
+	
+    <!--默认的列表的SearchEdit-->
+    <theme name="ListSearchEdit" font="Def.ListBtn" defaulttextcolor="List.DisableBtnTextColor" bkimage="list_edit_bkVir.png"/>
+    
+    <theme name="ListSearchEditRich" rich="false" autohscroll="true" multiline="false" font="Def.ListBtn" textcolor="topBar.search.textcolor" defaulttextcolor="List.DisableBtnTextColor" height="30" width="180" maxchar="20" wantreturn="true" wantctrlreturn="false" inset="16,4,25,3" disabledtextcolor="List.DisableBtnTextColor" bkimage="list_edit_bkVir.png"/>
+
+    <!--默认的搜索的放大镜按钮-->
+    <theme name="ListSrcBtn" statusimage="list_search_btnVir.png"/>
+    <theme name="ClearHistBtn" textcolor="pp.Text.Minor" hottextcolor="Topic.LinkText" pushedtextcolor="Topic.LinkText" />
+
+	<!--自建歌单头部Tab页面的背景色-->
+	<theme name="ListPageHeadBkImg" height="100" bkcolor="List.TopAreaBkColor" />
+	<theme name="SongSheetHeadBkImg" height="190" bkcolor="List.TopAreaBkColor" />
+	<!--列表类型的button-->
+	<theme name="List_Insert_mylist" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_list_loadinVir.png"/>
+	<theme name="List_cloud_default" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_listCloud_defVir.png"/>
+	<theme name="List_cloud_Working" statusimage="btn_ListBorderLessVir.png"/>
+	<theme name="List_TranSong_Btn" statusimage="btn_ListBorderLessVir.png"  iconstatusimage="icon_ListransferVir.png"/>
+	<theme name="List_LisEdit_Btn" statusimage="btn_ListBorderLessVir.png"  iconstatusimage="icon_LisEditVir.png"/>
+	<theme name="List_InstructDown_Btn" normalimage="btn_ListBorderLessVir_1.png" hotimage="btn_ListBorderLessVir_1.png" pushedimage="btn_ListBorderLessVir_1.png" disabledimage="btn_ListBorderLessVir_1.png"  iconstatusimage="List_InstructDown_BtnVir.png"/>
+	<theme name="List_cloud_space_full" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_listCloud_defVir.png"/>
+	<theme name="List_cloud_workingIcon" bkimage="listCloud_workingVir.png"/>	
+
+	<theme name="ListBtnSort" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_ListSortVir.png"/>
+	<theme name="ListBtnNoBkImgTranSong" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_ListransferVir.png"/>
+	
+    <theme name="ListBtnPlay" base="ListBtnFocus" iconstatusimage="icon_ListPlayVir.png"/>
+    <theme name="ListBtnDwonLoad" iconstatusimage="icon_ListDownVir.png"/>
+    <theme name="ListBtnBatchOper" iconstatusimage="icon_ListBatchOperVir.png"/>
+    <theme name="ListBtnAdd" iconstatusimage="icon_ListAddVir.png"/>
+    <theme name="ListBtnDel" iconstatusimage="icon_ListDelVir.png"/>
+	<theme name="ListMoreOpter" iconstatusimage="icon_ListMoreOptionVir.png"/>
+	
+	<theme name="ListBtnLocalAutoScan" iconstatusimage="icon_ListLocalAutoScanVir.png"/>
+	<theme name="ListBtnLocalAddSong" iconstatusimage="icon_ListLocalAddSongVir.png"/>
+	<theme name="ListBtnLocalAddDir" iconstatusimage="icon_ListLocalAddDirVir.png"/>
+	
+	<theme name="ListBtnIconSearch" iconstatusimage="icon_ListSearchVir.png"/>	
+	<theme name="ListBtnIconPlayRadio" iconstatusimage="icon_ListPlayRadioVir.png"/>
+	<theme name="ListBtnIconAddSong" iconstatusimage="icon_ListAddSongVir.png"/>
+	<theme name="ListBtnIconListen" iconstatusimage="icon_ListListenVir.png"/>
+	
+	
+    <!--ls change-->
+	<theme name="ListBtnStart" iconstatusimage="icon_ListStartVir.png"/>
+	<theme name="ListBtnPause" iconstatusimage="icon_ListPauseVir.png"/>
+	<theme name="ListBtnDownloadSet" iconstatusimage="icon_ListDownloadSetVir.png"/>
+	<theme name="ListBtnDownloadShutdown" iconstatusimage="icon_ListDownloadShutdownVir.png"/>
+	<theme name="ListBtnDownloadFolder" iconstatusimage="icon_ListDownloadFolderVir.png"/>
+	<theme name="ListBtnDownloadExport" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_ListDownloadExportVir.png"/>
+	<theme name="ListBtnTransfer" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_ListransferVir.png"/>
+	<theme name="ListBtnUpqualitySong" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_UpqualitySongVir.png"/>
+	<theme name="ListBtnLocalImport" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_list_loadinVir.png"/>
+	<theme name="ListDownloadEmptyBkImg" bkimage="download_empty_bkVir.png"/>
+	<theme name="ListSearchEmptyBkImg" bkimage="list_search_empty_bkVir.png"/> 
+
+    <theme name="MyListBtnCreatenew" statusimage="btn_ListBorderLessVir.png" iconstatusimage="icon_list_NewVir.png"/>
+  <theme name="ListBtnBorderLessSongCount" textcolor="List.SubTextColor" font="Default.FontSmall" hottextcolor="Topic.LinkText" pushedtextcolor="Topic.LinkText" normalimage="btn_ListBorderLessVir_1.png" hotimage="btn_ListBorderLessVir_1.png" pushedimage="btn_ListBorderLessVir_1.png" disabledimage="btn_ListBorderLessVir_4.png"  />
+  <theme name="ListBtnBorderLessListName" textcolor="List.MajorTextColor" font="Default.FontName"  hottextcolor="Topic.LinkText" pushedtextcolor="Topic.LinkText" normalimage="btn_ListBorderLessVir_1.png" hotimage="btn_ListBorderLessVir_1.png" pushedimage="btn_ListBorderLessVir_1.png" disabledimage="btn_ListBorderLessVir_4.png"/>
+  <theme name="ListBtnGrayMask" base="ListBtnBorderLessListName" bkimage="mylist_graymask.png"/>
+  <theme name="ListBtnPausePlay" base="ListBtnBorderLessListName" normalimage="i_play.png" hotimage="i_play_h.png" pushedimage="i_play_h.png"/>
+    
+	<!--CL 列表浮层的主题-->
+	<theme name="upHomeTheme" statusimage="list_FloatIcon_bkVir.png" iconstatusimage="list_FloatIcon_UpHomeVir.png"/>
+	<theme name="PlayingPosTheme" statusimage="list_FloatIcon_bkVir.png" iconstatusimage="list_FloatIcon_PlayingPosVir.png"/>
+	
+    <!-- 歌词写真页，设置字体的文字颜色-->
+	<theme name="LyricCtrl_lableText" textcolor="#FFFFFFFF" />
+	
+	<!-- 加载loading-->
+	<theme name="webloadingtext" textcolor="List.SubTextColor" />
+	
+    <!-- 顶栏-->
+	<theme name="topBarLoginTheme" textcolor="Text.Normal" />
+	<theme name="searchedit" bkimage="edit_netsong_search.png" rich="false" autohscroll="true" multiline="false" wantreturn="false" wantctrlreturn="false" textcolor="topBar.search.textcolor" defaulttextcolor="topBar.search.defaultcolor" />
+	<theme name="topLine" bkcolor="topBar.line" />
+	<theme name="speed_close" statusimage="speed_close.png" tooltip="开启极速模式" />
+	<theme name="speed_open" statusimage="speed_open.png" tooltip="关闭极速模式" />
+	<theme name="gbradio_open" statusimage="fmradiovir.png" tooltip="广播电台" setcursor="true" fadetime="0"/>   
+
+    <theme name="LoginBtnGetCode" statusimage="logingetcodeVir.png" textcolor="Text.UnderTopic" hottextcolor="Text.UnderTopic" pushedtextcolor="Text.UnderTopic" />
+  
+	<!--mini模式-->
+	<theme name="PlayContlProgress.mini" bkimage="PlayerProgress_bk_miniVir.png" fgimage="PlayerProgress_progress_no_miniVir.png" thumbimage="PlayerProgress_thumb_miniVir.png"/>
+	
+    <!-- 播放栏-->
+	<theme name="#Play_line" bkcolor="PlayBar.LineColor"/>
+	<theme name="#BT_PlayRate" base="PlayBarCommon" />
+    <theme name="PlayBarCommon" textcolor="pc.playBar.textcolor.normal" pushedtextcolor="pc.playBar.textcolor.hot" hottextcolor="pc.playBar.textcolor.push" disabledtextcolor="pc.playBar.textcolor.disable" font="Default.FontName" />
+    <theme name="PlayBarCommonMini" textcolor="pc.playBar.textcolor.normal" pushedtextcolor="pc.playBar.textcolor.hot" hottextcolor="pc.playBar.textcolor.push" disabledtextcolor="pc.playBar.textcolor.disable" font="Default.Font10" />
+	<theme name="PlayBarGoldenText" textcolor="Global.Golden" pushedtextcolor="Global.Golden" hottextcolor="Global.Golden" disabledtextcolor="Global.Golden" font="Default.FontSmall" />
+	<theme name="PlayBarCommonText" textcolor="Global.Golden" pushedtextcolor="Global.Golden" hottextcolor="Global.Golden" disabledtextcolor="pc.playBar.textcolor.disable" font="Default.FontName" />
+    <theme name="Message_Tip" textcolor="pc.playBar.textcolor.normal" font="Default.FontName"/>
+    <theme name="Total_Time" textcolor="pc.playBar.totaltime.normal" font="Default.FontSmall"/>
+	<theme name="PlayContlProgress" bkimage="pc.PlayerProgress_bkVir.png" fgimage="PlayerProgress_progress_noVir.png" thumbimage="PlayerProgress_thumbVir.png"/>
+    <theme name="#OP_DeskLyric" statusimage="pc.playcontrol_lyricVir.png" selectedimage="pc.playcontrol_lyricVir_3.png"/>
+	<theme name="#BT_Download" statusimage="pc.playcontrol_downloadVir.png"/>
+	<theme name="PlayerProgress" fbpadding="3,0,5,0" fgpadding="0,0,0,0" btnvisible="true" bkimage="pc.PlayerProgress_bkVir.png" breath="false" thumbimageoffset="0" fgimage="PlayerProgress_progress_noVir.png" downloadimage="pc.PlayerProgress_downloadVir.png" thumbimage="PlayerProgress_thumbVir.png" breathbk="PlayerProgressBar_breath.png" thumbsize="16,16" />
+	<theme name="BT_Playlist" iconstatusimage="pc.playcount_listVir.png" base="PlayBarCommon" />
+	<theme name="#BT_Comment0" iconstatusimage="pc.commentVir0.png" theme="PlayBarCommonMini"/>
+    <theme name="#BT_Comment" iconstatusimage="pc.commentVir.png" theme="PlayBarCommonMini"/>
+	<theme name="BT_Playlist_Radio" iconstatusimage="pc.radio_list.png" base="PlayBarCommon" />
+	<theme name="PL_BTN_Quality" statusimage="pc.quality_btbkVir.png" font="Default.FontSmall" width="50" height="18" base="PlayBarCommon" />
+    <theme name="PL_BTN_AudiQuality" normalimage="btn_golden_bk.png" hotimage="btn_golden_bk.png" pushedimage="btn_golden_bk.png" selectedimage="btn_golden_bk.png" disabledimage="btn_golden_bk.png" width="68" height="16" textpadding="2,1,0,0" font="Default.FontSmall" tooltip="会员可播完整版" textcolor="#FF64420F" hottextcolor="#FF64420F" pushedtextcolor="#FF64420F" disabledtextcolor="#FF64420F"/>
+	
+	<theme name="BT_Fav_normal" normalimage="pc.CasualListenWhiteHeart_PlayControlVir_1.png" hotimage="pc.CasualListenWhiteHeart_PlayControlVir_2.png" disabledimage="CasualListenWhiteHeart_PlayControlVir_4.png"/>
+	<theme name="BT_Fav_selected" normalimage="pc.CasualListenWhiteHeart_PlayControlVir_3.png" hotimage="pc.CasualListenWhiteHeart_PlayControlVir_3.png" disabledimage="pc.CasualListenWhiteHeart_PlayControlVir_4.png"/>
+	
+	<theme name="mutedbtnemptyVir" statusimage="pc.mutedbtnemptyVir.png" />
+	<theme name="mutebtnVir" statusimage="pc.mutebtnVir.png" />
+	<theme name="mutedbtnVir" statusimage="pc.mutedbtnVir.png" />
+	<theme name="mutedbtnhalfVir" statusimage="pc.mutedbtnhalfVir.png" />
+	<theme name="mutedbtnplusVir" statusimage="pc.mutedbtnplusVir.png" />
+	
+	<theme name="exclu_mutedbtnemptyVir" statusimage="exclu_mutedbtnemptyVir.png" />
+	<theme name="exclu_mutebtnVir" statusimage="exclu_mutebtnVir.png" />
+	<theme name="exclu_mutedbtnVir" statusimage="exclu_mutedbtnVir.png" />
+	<theme name="exclu_mutedbtnhalfVir" statusimage="exclu_mutedbtnhalfVir.png" />
+	<theme name="exclu_mutedbtnplusVir" statusimage="exclu_mutedbtnplusVir.png" />
+	
+	<theme name="hifi_close" statusimage="pc.hifi_close.png" />
+	<theme name="hifi_open" statusimage="hifi_open.png" />
+	
+	<theme name="playcontrol_play_mode_singleonceVir" statusimage="pc.playcontrol_play_mode_singleonceVir.png" />
+	<theme name="playcontrol_play_mode_singleVir" statusimage="pc.playcontrol_play_mode_singleVir.png" />
+	<theme name="playcontrol_play_mode_orderVir" statusimage="pc.playcontrol_play_mode_orderVir.png" />
+	<theme name="playcontrol_play_mode_circleVir" statusimage="pc.playcontrol_play_mode_circleVir.png" />
+	<theme name="playcontrol_play_mode_randomVir" statusimage="pc.playcontrol_play_mode_randomVir.png" />
+	
+	<theme name="GoodSound_YXVir" statusimage="pc.GoodSound_YXVir.png" base="PlayBarCommon" />
+	<theme name="GoodSound_EJVir" statusimage="pc.GoodSound_EJVir.png" base="PlayBarCommon" />
+	<theme name="GoodSound_JHQVir" statusimage="pc.GoodSound_JHQVir.png" base="PlayBarCommon" />
+	<theme name="GoodSound_JHQOpenVir" statusimage="GoodSound_JHQOpenVir.png" base="PlayBarCommon" />
+    
+  <theme name="GoosSound_title_Nor" width="90" height="24" setcursor="true" textalign="left" font="Default.Font18" textcolor="Global.DarkGray"/>
+  <theme name="GoodSound_Desc_Nor"  height="26" textalign="left" font="Default.FontSmall" textcolor="pp.Text.Minor"/>
+  <theme name="GoodSound_title_Sel" font="Default.Font18" textcolor="Global.Black"/>
+  <theme name="GoodSound_Desc_Sel" font="Default.FontSmall" textcolor="Global.Black"/>
+	
+    <!--对应的云盘的Id主题开始-->
+    <theme name="#clouddisk_login" base="ListBtnFocus" font="Def.Label.RstTip" textalign="center"/>
+    <theme name="#progress_label" font="Def.ListLabel.Space" textcolor="List.SubTextColor" />
+    <theme name="#upload_ime" base="#clouddisk_login" />
+
+    <theme name="#UpLoadSong" base="ListBtnFocus" iconstatusimage="icon_ListUploadVir.png"/>
+    <theme name="#Net_DownLoadAll" iconstatusimage="icon_ListDownVir.png"/>
+    <theme name="#Net_BatchOpen" iconstatusimage="icon_ListBatchOperVir.png"/>
+
+    <theme name="#Net_Play" base="ListBtnFocus" iconstatusimage="icon_ListPlayVir.png"/>
+    <theme name="#Net_AddTo" iconstatusimage="icon_ListAddVir.png"/>
+    <theme name="#Net_Del" iconstatusimage="icon_ListDelVir.png"/>
+    <theme name="#Net_DownLoad" iconstatusimage="icon_ListDownVir.png"/>
+    <theme name="#Net_BatchClose" textalign="center"/>
+
+    <theme name="#Net_Start" iconstatusimage="icon_ListStartAllVir.png"/>
+    <theme name="#Net_Pause" iconstatusimage="icon_ListPauseVir.png"/>
+
+    <theme name="#NetDiskUploadTip" font="Def.ListLabel" textcolor="List.HighLightTextColor" align="center"/>
+    <theme name="#NetDiskSaveTip" font="Default.List.Font" textcolor="List.Label.Disabled" align="center"/>
+    <theme name="label_nosong" font="Def.Label.NoSongs" textcolor="List.Label.Disabled"  align="center"/>    
+
+    <theme name="#list_height_set ListHeaderItemUI" textpadding="-2,0,0,0"/>
+    <theme name="#disk_no_song ListHeaderItemUI" base="#list_height_set ListHeaderItemUI"/>
+    <theme name="#disk_search_no_song ListHeaderItemUI" base="#list_height_set ListHeaderItemUI"/>
+    <theme name="#disk_no_login ListHeaderItemUI" base="#list_height_set ListHeaderItemUI"/>    
+    <theme name="#HeadItem_id_songcount" align="center"/>
+    <theme name="expandtobtn" font="Default.FontSmall" textcolor="#FFA54500" statusimage="icon_ExpandCapaVir.png"/>
+    <theme name="showvipbtn"  font="Default.FontSmall" textcolor="#FFA54500" statusimage="icon_ExpandCapaVir.png" setcursor="true"/>
+    <!--对应的云盘的Id主题结束-->
+
+    <!--Toast的样式开始-->
+    <theme name="ToastLabel" font="Def.Label.ToastTip" textcolor="Global.White" padding="0,-5,0,0"/>
+    <!--Toast的样式结束-->
+    
+    <!--MSGBox新式开始-->
+    <theme name="#MsgBox_PopWnd_New ButtonUI" setcursor="true" />    
+    <theme name="#Msg_Title_Btn_Control" base="ListBtnFocus"/>
+    <theme name="#MessageBox_Title" font="MsgBox.Title" textcolor="MsgBox.Title.txt"/>    
+    <theme name="#Msg_SepLine" bkcolor="MsgBox.SpeLine"/>
+    <theme name="#MessageBox_TXT_Msg" font="MsgBox.InfoContent" textcolor="MsgBox.InfoContent.txt"/>
+    <theme name="MsgBox_Btn_Focus" base="ListBtnFocus" setcursor="true" textcolor="Text.UnderTopic" font="Default.FontName"/>
+    <theme name="#MSG_ACTION_BTN_Close" statusimage="popupwndcloseVir.png"/>
+    <theme name="#MessageBox_TXT_Content TextUI" font="MsgBox.InfoContent" textcolor="MsgBox.InfoContent.txt"/>
+    
+    <theme name="PopUpDefBtn" font="Def.ListBtn" setcursor="true" textcolor="pp.Text.Normal" disabledtextcolor="pp.Text.Disabled" hottextcolor="pp.Text.Normal" pushedtextcolor="pp.Text.Normal" pushdisabledtextcolor="pp.Text.Minor" statusimage="btn_ListDef.png" borderround="4,4"/>
+    <theme name="PopUpDefBorderlessBtn" base="PopUpDefBtn" statusimage="btn_ListBorderLess.png"/>
+    <theme name="PopUpCloseBtn" height="30" width="30" padding="0,10,8,0" setcursor="true" statusimage="popupwndcloseVir.png"/>
+    <theme name="PopUpTitle" padding="20,4" varwidth="true" font="MsgBox.Title" textcolor="pp.Text.Normal"/>
+    <theme name="#PopUpTitleHor" height="48"/>
+    <theme name="PopUpSingleSel" setcursor="true" textcolor="Global.DarkGray" checkinfo="dest='0,0,0,0'" normalimage="Download_RadioVir_1.png" hotimage="Download_RadioVir_2.png" selectedimage="Download_RadioVir_3.png" textpadding="24,0,0,0" disabledimage="Download_RadioVir_4.png" height="14" align="left" font="Default.FontName"/>
+
+      <!--MSGBox新式结束-->   
+
+    <theme name="#logindlgmain ButtonUI" setcursor="true"/>
+    <theme name="#logindlgmain OptionUI" setcursor="true"/>    
+    <theme name="#logindlgexmain ButtonUI" setcursor="true" />
+    
+    
+    
+    <!--云盘删除文件开始确认框开始-->
+    <theme name="#label_del_confirm" font="Def.Label.RstTip.Bold" align="center" textcolor="Global.DarkGray"/>
+    <theme name="#label_del_confirm_tip" base="#label_del_confirm" font="Def.ListBtn" />
+    <theme name="#del_chk" base="#label_del_confirm_tip" textcolor="Global.LightGray"/>
+    
+    <theme name="#del_confirm" base="ListBtnFocus" />
+    <theme name="#del_cancel" borderround="4,4"/>
+    <!--云盘删除文件开始确认框结束-->
+
+    <!--均衡器相关开始-->
+    <theme name="#pageEqOptFull OptionUI" setcursor="true" font="Default.FontName" textcolor="List.Label.Selected"  hottextcolor="Text.UnderTopic" selectedtextcolor="Text.UnderTopic" bkimage="eq_btnbk.png" hotimage="optionSelBkgVir.png" selectedimage="optionSelBkgVir.png"/>
+    <theme name="pageEqOptOther" base="#pageEqOptFull OptionUI" setcursor="false" textcolor="List.Label.Selected"  hottextcolor="Text.UnderTopic" selectedtextcolor="Text.UnderTopic" bkimage="eq_btnbk.png" hotimage="eq_btnbk.png" selectedimage="eq_btnbk.png"/>
+    <theme name="#groupOpt OptionUI" setcursor="true"/>
+    <!--均衡器相关结束-->
+    
+
+    <theme name="#title" textcolor="Global.DarkGray" font="MsgBox.Title" />
+    <theme name="#sep_line" bkcolor="#ffececec" />
+	
+	<!-- 手机列表一些布局-->
+	<theme name="#ListLabelMoblieQRCode" bkimage="Mobile_TwodimensionCode.jpg"/>
+	<theme name="#ListLabelMoblieQRCode" bkimage="Mobile_TwodimensionCode.jpg"/>
+	
+	<!-- 最近播放列表的一些布局-->
+	<theme name="ListHistyPageListTipBkImg" bkimage="listHistry_empty_bkVir.png"/>
+
+    <!--正在播放-->
+    <theme name="#playinglistCaption ButtonUI" textcolor="pp.Text.Normal" hottextcolor="pp.Text.Normal" pushedtextcolor="pp.Text.Normal" disabledtextcolor="pp.Text.Normal"/>
+    <theme name="#playinglistWndTitle" font="Default.Font20" textcolor="pp.Text.Em"/>
+    <theme name="#songcount" textcolor="pp.Text.Minor" />
+    <!--theme name="#lblAuditionInfo" font="Default.FontSmall" textcolor="Global.LightWhite"/-->
+    <!--theme name="#btnAuditionOp"  font="Default.FontSmall.Bold" iconstatusimage="icon_auditionopenVir.png" textcolor="Global.LightWhite" hottextcolor="Global.White" pushedtextcolor="Global.White"/-->
+    <theme name="#playingList" font=""
+              itemtextcolor="pp.Text.Normal"
+              itemselectedtextcolor="pp.Text.Normal"
+              itemdisabledtextcolor="pp.Text.Minor"
+              itemhottextcolor="Topic.LinkText"
+              itemlinecolor="pp.ListItemLineColor"
+              itemselectedbkcolor="pp.ListItemSelectBkColor"
+              itemhotbkcolor="pp.ListItemSelectBkColor"
+         />
+
+
+	<!-- 我的收藏-->
+	<theme name="FavHeadBkImg" bkcolor="List.TopAreaBkColor" />
+	<theme name="FavEmptyImg" bkimage="FavEmptyImgVir.png"/>
+	
+	<!-- 听歌识曲-->
+	<theme name="ks_text" textcolor="List.SubTextColor" />
+	<theme name="ks_play" statusimage="knowSong_playVir.png" />
+	<theme name="ks_nofav" statusimage="knowSong_nofavVir.png" />
+	<theme name="ks_fav" statusimage="knowSong_fav.png" />
+	<theme name="ks_download" statusimage="knowSong_downloadVir.png" />
+	<theme name="ks_addtolist" statusimage="knowSong_storeVir.png" />
+	<theme name="ks_artist" textcolor="Topic.LinkText" hottextcolor="Topic.LinkText" selectedtextcolor="Topic.LinkText" font="knowsong.DefaultText" />
+	<theme name="tranDefBtn" setcursor="false" base="PopUpDefBtn" />
+	<theme name="#Ks_LyricListPanel" base="#TabMainBody ListUI" itemlinecolor="0" itemselectedbkcolor="#00000000" itemhotbkcolor="#00000000" />
+	<!-- <theme name="KnowSongBtn" textcolor="#ff333333" statusimage="know_song_btn.png" />-->
+
+
+    <!--皮肤设置-->
+    <theme name="Pop.Tab" 
+           font="Default.Font16"
+           setcursor="true"
+           selectedimage="my_fav_tabVir.png"
+           textcolor="pp.Text.Minor" 
+           hottextcolor="pp.Text.Em"
+           selectedtextcolor="pp.Text.Em"
+           />
+    <theme name="skingtagbar" padding="0,0,0,17" height="26" sendsizemsg="true" childpadding="8"/>
+    <theme name="skintag" varwidth="true" setcursor="true" font="Default.FontName" textpadding="10,0,10,0" textcolor="pp.Text.Normal" hottextcolor="Topic.Normal" selectedtextcolor="Text.UnderTopic" selectedimage="skintagbk.png"/>
+    
+	<!--设置-->
+	<theme name="config_PopUpCloseBtn" height="30" width="30" padding="0,10,8,0" setcursor="true" statusimage="config_popupwndcloseVir.png"/>
+
+    <!--自定义皮肤-->
+    <theme name="mks.navbk" bkcolor="mks.ListAera.Mask"/>
+    <theme name="mks.navlist" 
+           header="hidden"
+           itemtextpadding="0,20,20,0"
+           itembkcolor="Global.None"
+           itemhotbkcolor="mks.Topic.Menu.Hot"
+           itemselectedbkcolor="mks.Topic.Menu.Selected"
+           itemexpandbkcolor="Global.None"
+           itemdisabledbkcolor="Global.None"/>
+    <theme name="mks.NavChildText" endellipsis="true" align="left" font="Default.FontSmall" textcolor="mks.Text.Normal" hottextcolor="mks.Text.Hot" pushedtextcolor="mks.Text.Pushed" selectedtextcolor="mks.Text.Selected" disabledtextcolor="mks.Text.Disabled"/>
+    <theme name="mks.ListLabelSongList" textcolor="mks.List.HighLightTextColor" />
+    <theme name="mks.topBarLoginTheme" textcolor="mks.Text.Normal" />
+    <theme name="mks.ListBtnPlay" font="Default.FontSmall" statusimage="mks.BtnListPlayVir.png" textcolor="mks.Text.UnderTopic" hottextcolor="mks.Text.UnderTopic" pushedtextcolor="mks.Text.UnderTopic" iconimage="mks.icon_play.png"/>
+    <theme name="mks.ListHeader" textcolor="mks.List.SubTextColor" />
+    <theme name="mks.playcontrolbk" bkcolor="mks.PlayControlPanel.bkcolor.normal" />
+    <theme name="mks.colorbars" bkcolor="mks.MakeSkinBars" textcolor="mks.Text.Normal"/>
+
+    <!--2024-强化触达需求-->
+    <theme name="horizontal_list_tip" bkcolor="#FFFFF9E8" height="30"/>
+	<theme name="icon_vip_golden" width="20" height="16" bkimage="vip_golden.png" padding="10,7,5,0" />
+    <theme name="label_float_tip" textcolor="#B22D1D17" font="Default.FontSmall" varwidth="true"/>
+    <theme name="btn_float_tip" padding="20,5,0,0" width="72" height="20" statusimage="BtnListPlayVir.png" font="Default.FontSmall" textcolor="#FF2D1D17" hottextcolor="#FF2D1D17" pushedtextcolor="#FF2D1D17"/>
+    <theme name="open_vip_float_tip" padding="20,5,0,0" width="72" height="20" textcolor="#FF2D1D17" hottextcolor="#FF2D1D17" pushedtextcolor="#FF2D1D17" font="Default.FontSmall.Bold"  normalimage="btn_ListBorderLessVir_1.png" hotimage="btn_ListBorderLessVir_1.png" pushedimage="btn_ListBorderLessVir_1.png" disabledimage="btn_ListBorderLessVir_1.png"/>
+  
+	<!---云盘相关触达-->
+    <theme name="cloudNet_label_float_tip" textcolor="#B22D1D17"  align="left"  font="Default.FontSmall"/>
+    <theme name="cloudNet_btn_float_tip" padding="10,5,15,0" width="88" height="20" statusimage="BtnListPlayVir.png" font="Default.FontSmall" />
+    <theme name="cloudNet_open_vip_float_tip" padding="10,5,15,0" width="88" height="20" textcolor="#FF2D1D17" hottextcolor="#FF2D1D17" pushedtextcolor="#FF2D1D17" font="Default.FontSmall.Bold" normalimage="btn_ListBorderLessVir_1.png" hotimage="btn_ListBorderLessVir_1.png" pushedimage="btn_ListBorderLessVir_1.png" disabledimage="btn_ListBorderLessVir_1.png"/>
+	
+	<!--更多菜单-->
+	<theme name="more_kwVip_btn" height="21" width="72" statusimage="BtnListPlayVir.png" font="Default.FontSmall" setcursor="true"/>
+	
+	<!--左上角头像位置-->
+	<theme name="#mainvipBackGround" textpadding="10,0,0,0" textcolor="#FF8E6624" font="Default.FontSmall" />
+  </themes>
+  
+</Skin>

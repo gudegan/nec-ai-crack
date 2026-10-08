@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>音乐话题</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/to_top.css" rel="stylesheet" />
+	<link href="css/content.css" rel="stylesheet" type="text/css" />
+	<!--<link href="css/topic.css" rel="stylesheet" type="text/css" />-->
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/create_structure.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="js/content_topic.js"></script>-->
+</head>
+<body scroll="no">
+	<div class="channelContent" style="padding:0 24px 0 23px;">
+		<div id="content" class="max_content">
+			<!--音乐话题-->
+			<div class="topic_con" style="display:none;">
+				<!-- 焦点图留言 -->
+				<div class="top clearfix" id="top_obj" style="margin-top:20px; padding-bottom:20px;">
+					<div class="banner">
+						<span><img src="" width="450" height="120" alt="" style="display:none;"/></span>
+					</div>
+
+					<div class="sc_comm">
+						<a href="javascript:;" hidefocus="true" title="" class="playJx"></a>
+                        <a href="javascript:;" hidefocus="true" title="" class="share1 shareBtn"></a>
+					</div>
+				</div>
+				<!-- 焦点图留言结束 -->
+
+				<!-- 一句话提示 -->
+				<div class="line_box"></div>
+				<!-- 一句话提示 -->
+
+				<!-- 分享弹出 -->
+                <div class="comment clearfix sharePop" id="sharePop">
+                    <p class="txtTips"><span></span></p>
+                    <a href="javascript:;" hidefocus="true" title="" class="userInfo"><img src="img/listbgt.png" width="55" height="55" /></a>
+                    <div class="comm">
+                        <div class="top clearfix">
+                            <!-- 没有选择歌曲状态 -->
+                            <div class="music music1" id="dragMusicBox" data-musicId="" style="display:none;">
+								<p class="bg music_bg">请将播放列表的歌曲拖拽至到此添加</p>
+							</div>
+                            <!-- 没有选择歌曲状态 -->
+
+                            <!-- 没有选择歌曲状态 -->
+                            <div class="share_search" data-musicId="" style="display:none;">
+								<input type="text" class="search_topic" maxlength="24" value="搜索你要分享的歌曲..." data-val="搜索你要分享的歌曲..." />
+								<span class="bgceng"></span>
+								<a href="javascript:;" hidefocus="true" class="searchBtn"></a>
+								<ul class="searc_tips" style="display:none;"></ul>
+								<div class="search_wrap" id="search_wrap" style="display:none;">
+									<div class="search_close"><a href="javascript:;" hidefocus="true" title="关闭" class="close" onclick="closeSearchList(); return false;"></a><font></font></div>
+									<div class="search_cont">
+										<ul></ul>
+									</div>
+								</div>
+							</div>
+                            <!-- 没有选择歌曲状态 -->
+
+						   <div class="select clearfix">
+                                <p class="color"></p>
+                                <p class="tag">活力橙</p>
+                                <em class="bg icon" style="display:none;"></em>
+                                <div class="clear taglist" style="display:none;"></div>
+                            </div>
+                        </div>
+
+                        <textarea class="txt1" maxlength="120" style="overflow-y:hidden;" data-val="分享音乐点滴..."></textarea>
+                        <div class="share_bottom">
+							<div class="share_icon">
+								<font>同时分享到：</font>
+								<span><a href="###" hidefocus="true" class="sina"></a></span>
+								<span><a href="###" hidefocus="true" class="qw"></a></span>
+								<span><a href="###" hidefocus="true" class="qzone"></a></span>
+								<span><a href="###" hidefocus="true" class="ren"></a></span>
+							</div>
+							<p class="ts" style="display:none;">您还没有分享任何内容噢！</p>
+							<input hidefocus="true" type="button" class="bg submit" value="发表"/>
+						</div>
+                    </div>
+                </div>
+				<!-- 分享弹出结束 -->
+
+				<!-- 分享内容 -->
+                <div class="share_wrap clearfix" id="share_cont" style="position:relative;">
+					<div class="yindao">
+					    <div class="yindao_content"></div>
+					    <a href="javascript:;" hidefocus="true" title="关闭" class="close_yindao" onclick="closeYindao(); return false;">&nbsp;</a>
+					</div>
+                    <!-- 分享内容TAB -->
+                    <div class="tab_menu">
+                        <ul>
+							<li class="topic_info" style="float:right; width:auto; margin-right:0; cursor:default;">
+								<div class="songnum"><span></span><font></font></div>
+								<div class="topicnum"><span></span><font></font></div>
+							</li>
+                            <li data-node="1" class="tab_menu_1 current"><a href="javascript:;" hidefocus="true">全部分享</a></li>
+                            <li data-node="2" class="tab_menu_2"><a href="javascript:;" hidefocus="true">精选歌曲</a></li>
+                            <li data-node="3" class="tab_menu_3"><a href="javascript:;" hidefocus="true">我的分享</a><i class="new_like_icon" style="display:none;"><font></font><span></span></i></li>
+                            <li data-node="4" class="tab_menu_4"><a href="javascript:;" hidefocus="true">往期话题</a></li>
+                        </ul>
+                    </div>
+                    <!-- 分享内容TAB结束 -->
+
+                    <!-- 分享列表 -->
+                    <div class="share_list">
+                        <div class="tab_div">
+							<div class="menu_line">
+								<!-- 分享内容子页面TAB -->
+								<ul class="menu clearfix">
+									<li data-type="hot" class="hot"><a href="javascript:;" hidefocus="true">热门分享</a></li>
+									<li class="line">|</li>
+									<li data-type="new" class="new"><a href="javascript:;" hidefocus="true">最新分享</a></li>
+								</ul>
+								<!-- 分享内容子页面TAB -->
+								<div class="zan_tips">收获<span></span>个新的赞</div>
+								<div class="all_play" style="padding-left:0;"><a href="javascript:;" hidefocus="true" class="allPlayBg play_all">播放全部</a></div>
+							</div>
+
+                            <!-- 分享内容列表 -->
+                            <ul class="music_list" style="float:none;"></ul>
+                            <!-- 分享内容列表结束 -->
+
+                            <!-- 页码 -->
+                            <div class="page" style="display:none;"><p></p></div>
+                            <!-- 页码结束 -->
+                        </div>
+                    </div>
+                    <!-- 分享列表结束 -->
+
+
+                    <div class="nothing1" style="display:none;">
+                        <img src="img/topic/kuwobox.png" width="49" height="46" style="display:inline;margin:0 auto"/>
+                        <p>还没有分享歌曲噢，跟大家分享一下你的音乐吧！</p>
+                        <a href="javascript:;" hidefocus="true" title="我要分享" class="bg shareBtn">我要分享</a>
+                    </div>
+
+                </div>
+
+                <p class="p20"></p>
+			</div>
+            <!--音乐话题结束-->
+		</div>
+	</div>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+</body>
+</html>

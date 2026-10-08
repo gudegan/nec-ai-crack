@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* 公用 */
+p{color:#999999;}
+.headsetBox{position:relative; width:780px; height:495px; margin:0 auto;padding-top:27px;}
+#l_loadfail { width: 100%;background-color: #fafafa;z-index: 99999; display:none; position:absolute;padding-bottom: 5px;top:0px;}
+.w_index #l_loadfail{top:35px;}
+.loaderror { height:250px;position:relative;margin-top:-160px;top:50%;width:100%;}
+.loaderror img { display:block;margin:0 auto;}
+.loaderror p {color:#000; text-align:center;font-size:22px;}
+.loaderror p a { color:#46b4e6; text-decoration:underline;}
+/* 公用结束 */
+
+/* 耳机选择按钮区域css */
+.select_btnBox{position:absolute; z-index:998; left:17px; width:680px; height:42px; overflow:hidden; zoom:1;}
+.select_btnBoxActive{padding-top:1px; overflow:visible; height:auto;}
+.select_btnBox li{position:relative; float:left; width:96px; height:40px; line-height:40px; margin:0 -1px 0 0; text-align:center; cursor:pointer; border:1px solid rgba(241,200,76,0);border-radius: 2px}
+.select_btnBoxActive li{margin:-1px -1px 0 0;}
+.select_btnBox li.active p{color:rgb(241,200,76);}
+.select_btnBox li p{position:relative; top:0; left:0; opacity:0.5}
+.select_btnBox .active p{opacity:1}
+.select_btnBox li:hover p{color:rgb(241,200,76);}
+.select_btnBox li img{display:none;}
+.select_more{position:absolute; z-index:1000; right:17px; top:27px; width:96px; height:40px; line-height:40px; margin:-1px -1px 0 0; text-indent:24px; font-weight:500; color:#555555; border:1px solid rgba(241,200,76,0); border-left:none; opacity:0.5;border-radius: 2px;}
+.select_more:hover{color:rgb(241,200,76); opacity:1;}
+.select_more span{position:absolute; right:26px; top:14px; width:10px; height:10px; background:url(../img/headseteffects/down.png) no-repeat;}
+.select_more:hover span{background:url(../img/headseteffects/down_hover.png) no-repeat;}
+.select_more span.active{transform:rotate(180deg);}
+/* 耳机选择按钮区域css结束 */
+
+/* 耳机音效打开区域css开始 */
+.BigImgBox{position:relative; z-index:0; top:63px; width:260px; height:260px; margin:0 auto;}
+.BigImgBox .infoBox{position:absolute; bottom:-27px; width:100%; opacity:0.5;}
+.BigImgBox .infoBox .info{text-align:center;}
+.BigImgBox .info .impedance{display:inline-block; margin-left:15px;}
+.BigImgBox .info .price{display:inline-block; margin-left:-5px;}
+/* 耳机音效打开区域css结束 */
+
+/* 耳机滑动块区域css */
+.scrollBarBox{position:absolute; z-index:1; left:0; bottom:0; width:100%; height:95px;}
+.scrollBarBox .headsetListOverFlowBox{position:absolute; left:30px; right: 30px; top:0; width:720px; height:95px; overflow:hidden;}
+.scrollBarBox .headsetListBox{position:absolute;}
+.scrollBarBox .headsetListBox li{float:left; width:144px; height:95px;position: relative;cursor: pointer;}
+.scrollBarBox .headsetListBox li p{height:95px; line-height:95px; text-align:center; opacity:0.5;}
+.scrollBarBox .headsetListBox li i{width: 31px;height: 3px;position: absolute;left: 50%;margin-left: -15px;bottom: 1px;border-radius: 2px;background: rgb(241,200,76); display: none;}
+.scrollBarBox .headsetListBox li img{width: 83px;height: 83px; display:none; margin:10px auto 0;}
+.scrollBarBox .headsetListBox li:hover i,
+.scrollBarBox .headsetListBox li.active i{display: block;}
+.scrollBarBox .headsetListBox li.active{background:url(../img/headseteffects/headset_active.png) no-repeat;}
+
+.scrollBarBox .controlBtn{position:absolute; top:50%; width:30px;display:none;margin-top: -10px; font-size:25px; text-align:center; font-weight:600;font-family:simsun; color:#979797; opacity: 0.5; }
+.scrollBarBox .controlBtn:hover{opacity:1;}
+.scrollBarBox .prev{left: 2px;}
+.scrollBarBox .next{right: 2px;}
+
+.nextAnimate{transtion:1s ease; transform:translateX(-150px);}
+.prevAnimate{transtion:1s ease; transform:translateX(150px);}
+/* 耳机滑动块区域css结束 */
+
+/* 特殊选中耳机品牌区域css */
+.selectedVen{position:absolute; z-index:999; right:105px; top:27px; width:96px; height:40px; line-height:40px; text-align:center; cursor:pointer;background: #ffffff;}
+.selectedVenNocolor{border-color:rgba(241,200,76,0);}
+.selectedVen p{display:none; color:rgb(241,200,76);}
+.selectedVenNocolor p{color:#fff; opacity:0.4;}
+.selectedVenNocolor:hover{border-color:rgb(241,200,76);}
+.selectedVenNocolor:hover p{color:rgb(241,200,76); opacity:1;}
+/* 特殊选中耳机品牌区域css结束 */
+
+/* 耳机品牌弹层区域css */
+.layerShadow{position:absolute; z-index:1001; top:0; left:0; display:none; width:100%; height:100%;}
+.layerBox{position:absolute; left:50%; top:70px; z-index:1002; display:none; width:701px; height:322px; margin-left:-350px;box-shadow:0 4px 18px 0 rgba(0,0,0,0.05);border:1px solid rgba(235,235,235,1);background: #ffffff}
+.triangle {position: absolute;top: 62px;right: 70px;z-index: 1003;display: none}
+.triangle_border_up{width:0;height:0;border-width:0 8px 8px;border-style:solid;border-color:transparent transparent rgba(235,235,235,1);position: relative;top: 0;right: 0;box-shadow:0 4px 18px 0 rgba(0,0,0,0.05);}
+.triangle_border_up span{display:block;width:0;height:0;border-width:0 8px 8px;border-style:solid;border-color:transparent transparent #ffffff;position:absolute;top:2px;left:-8px;}
+.layerBox .titleBox{height:58px; line-height:56px;}
+.layerBox .titleBox p{float:left; height:58px; line-height:56px; font-size:16px; text-indent:20px; opacity:0.5;}
+.layerBox .titleBox .closeBtn{position:absolute; right:6px; top:20px; width:20px; height:20px; background:url(../img/headseteffects/close.png) no-repeat; opacity:0.5;}
+.layerBox .titleBox .closeBtn:hover{opacity:1;}
+.layerBox .layer_select_btnBox{height:320px;overflow-x:hidden; overflow-y:auto;padding:20px 0 0 10px}
+.layerBox .layer_select_btnBox li{position:relative; float:left; width:114px; height:40px; line-height:40px;text-align:center; cursor:pointer;margin-bottom: 20px}
+.layerBox .layer_select_btnBox li img{display:none;}
+.layerBox .layer_select_btnBox li p{color:#000000; opacity:0.4;}
+.layerBox .layer_select_btnBox li.active,.layerBox .layer_select_btnBox li:hover{position:relative; z-index:5;}
+.layerBox .layer_select_btnBox li.active p{color:rgb(241,200,76); opacity:1;}
+.layerBox .layer_select_btnBox li:hover p{color:rgb(241,200,76); opacity:1;}
+/* 耳机品牌弹层区域css结束 */
+
+.layer_select_btnBox::-webkit-scrollbar{width:6px;height: 100px;background: transparent; }
+.layer_select_btnBox::-webkit-scrollbar-thumb{border-radius: 16px;background-color: #d6d7d9;}
+.layer_select_btnBox::-webkit-scrollbar-thumb:hover{background-color: #c0c3c5;}
+.layer_select_btnBox::-webkit-scrollbar-thumb:active{background-color: #acafb2;}
+.layer_select_btnBox::-webkit-scrollbar-button{background: transparent;height: 2px;}

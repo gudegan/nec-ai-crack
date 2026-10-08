@@ -1,0 +1,188 @@
+* {box-sizing: content-box}
+html{height:100%;overflow: auto;overflow-x:hidden;}
+body{background: url('../img/cdpack/second/bodyBg.png');}
+body::-webkit-scrollbar{width: 10px;height: 10px;background:url(../img/cdpack/second/bodyBg.png);}
+body::-webkit-scrollbar-thumb{border-radius: 5px;background-color: #2e2e2e;}
+.main_body_div {width:990px;margin: 0 auto;}
+/*左侧的内容的样式*/
+.left_nav{float: left;width: 380px;margin-left: 60px;position: fixed;}
+
+/*左侧中部*/
+.left_nav .mid_info{margin-top: 19px;height: 50px;}
+
+.mid_info .btn_album_info{position: relative;float: left;margin-bottom: 20px;}
+.btn_album_info .band_tag_info{float: left;margin-right: 20px;width:58px;height:22px;margin-top: 2px;}
+.btn_album_info .bank_info{float: left;position: absolute;left: 12px;font-size: 13px;color: #fff;text-indent: 15px;line-height: 25px;}
+
+.tag_right_al_info{float: left;margin-bottom: 20px;display: block;max-width: 300px;}
+.tag_right_al_info .right_big_alname{height: 30px;display: block;}
+.tag_right_al_info .right_small_artname{height: 20px;width: 300px;display: block; margin-top:4px;}
+
+
+.band_album_info{float: left;position: relative;font-size: 24px; color: #dfdfdf;line-height: 24px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 100%;height: 30px;}
+#artist_info{float: left;position: relative;font-size: 14px;color: #9c9c9c;text-align: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 100%;padding-left:2px;}
+/*左侧中部*/
+
+/*左侧下部*/
+.left_nav .bottom_hz{height: 26px;}
+
+.bottom_hz{margin-top: 30px;}
+.bottom_hz a{float: left;background: #2a2a2a;color: #9c9c9c; width: 80px;height: 24px;font-size: 14px;text-align: center;margin-right: 20px;line-height: 22px;border-radius: 4px;cursor: default;}
+.bottom_hz a.format_k{margin-right: 0;}
+.bottom_hz a.active{background: #ca7145;}
+/*左侧下部*/
+/*左侧的内容的样式*/
+
+
+/*右侧的内容的样式*/
+#right_content{float: right;position: relative;margin-left: 106px;width:437px;padding-right: 50px}
+.disk_sep{height: 25px;}
+.disk_sep .disk_index{padding-top: 3px;color: rgba(255, 255, 255,0.5);line-height: 25px;}
+
+.right_list_cont{font-size: 18px;color: #dfdfdf;}
+
+.list_title{height: 22px;margin: 26px 0 18px 0;}
+.list_title .title_index_info{float: left;color: #9c9c9c;width: 30px;font-size: 14px;margin-right: 25px;}
+.list_title .title_name_time_info{float: left;color: #9c9c9c;font-size: 14px;}
+.list_title .title_name_time_info .title_sname_intro{float: left;width: 100%;}
+.list_title .m_title_r{float: right;margin-right: 8px;color: #9c9c9c;font-size: 14px;}
+
+#right_song_info{margin-top: 10px;}
+.cdmusic_wrap{height: 30px;line-height: 30px;margin-top: 6px;}
+.cdmusic_wrap:hover{background:#333;}
+.music_wrapClicked {background:#333;}
+
+.cdmusic_wrap .m_left_index{float: left;color: rgba(255,255,255,0.85);font-size: 14px;width: 30px;margin-right: 20px;margin-left: 7px;}
+.cdmusic_wrap .m_left_index .num_icon{float: left;width: 24px;height: 24px;background: url('../img/cdpack/second/disk_ani.png');margin-top: 5px;margin-left: -7px;animation: disk_rotate 2.5s steps(1, start) infinite;}
+
+.cdmusic_wrap .m_left_index .num_icon_failed{float: left;width: 17px;height: 16px;background:url("../img/cdlist_play_failed.png") no-repeat;margin-top: 9px;margin-left: -4;}
+
+.cdmusic_wrap .m_left_index .num_icon_pause{float: left;width: 24px;height: 24px;background: url('../img/cdpack/second/disk_pause.png');margin-top: 5px;margin-left: -7px;display: block;}
+
+.cdmusic_wrap .m_right_info{float: left;color: #dfdfdf;font-size: 14px;}
+.cdmusic_wrap .m_right_info .right_name_span{float: left;max-width: 275px;overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;font-size: 14px;color: rgba(255,255,255,0.85);}
+.cdmusic_wrap .m_right_info .right_name_span:hover{color: #ca9d63;}
+.cdmusic_wrap .m_right_info .right_name_span_playing{color: #ca9d63;}
+.cdmusic_wrap .m_right_info .right_name_span_failed{color: #c84141;}
+
+.cdmusic_wrap .right_time_span{float: right;color: rgba(255,255,255,0.85);font-size: 14px;}
+.cdmusic_wrap .right_time_span_playing{color: #ca9d63;}
+.cdmusic_wrap .right_time_span_failed{color: #c84141;}
+
+/*右侧的内容的样式*/
+
+/*评论样式修改开始*/
+#right_content #commentArea h4 {display: block;border: none;color: #999;}
+#right_content #commentArea .textBox{width:408px;height:70px;border:0;background: #313234;margin:10px 0 0 10px;border-radius: 2px;padding:5px}
+#right_content #commentArea #message{background: #2d2e30;width:438px;height: 130px;position: fixed;right: 0;bottom:-20px;border-radius:2px;z-index:3;display: none}
+#right_content #commentArea #messageCon{padding:0;background: none;color:rgba(255,255,255,0.6);height: 50px;}
+#right_content #commentArea .word {color:rgba(255,255,255,0.4);bottom: 0px;font-size: 12px;}
+#right_content #commentArea #messageBtn {border:0;background: #ca9d63 !important;color:rgba(255,255,255,1);width:80px;margin:0 10px 4px 0;}
+#right_content #commentArea #messageBtn:hover{background:#ca9d63;color:#fff;}
+#right_content #commentArea .user a:hover,.commentBox #commentArea .info_ a:hover,.commentBox #commentArea .info_ a:hover,.commentBox #commentArea .userComment a:hover{color:#c2ab8c;}
+#right_content #commentArea #list img{vertical-align:baseline;}
+#right_content #commentArea .title_ {font-size:18px; font-weight:500; color:rgba(255,255,255,0.8);}
+#right_content #commentArea .title_ span {color:rgba(255,255,255,0.6);}
+/*#right_content #commentArea .scrollBox::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);border-radius: 0px;background-color: #282828;}*/
+/*#right_content #commentArea .scrollBox::-webkit-scrollbar-thumb{border-radius: 5px;background-color: #2e2e2e;}*/
+#right_content #commentArea .user a,.commentBox #commentArea,.commentBox #commentArea .userComment,.commentBox #commentArea .userComment a,.commentBox #commentArea .time {color:rgba(255,255,255,0.8);}
+#right_content #commentArea .user .luxuryVip {color:#ff7725;}
+#right_content #commentArea #list.noComment,.commentBox #commentArea span.replyCon {color:rgba(255,255,255,0.8);}
+#right_content #commentArea .box {border-bottom:0px}
+#right_content #commentArea .hifi-expression-box {top: -79px;right: 98px;}
+#commentArea .hifi-info a{ color:rgba(255,255,255,0.4);}
+#right_content #commentArea .contentComment {border-bottom: 0 !important;}
+
+
+#right_content #commentArea .info_ span {background: rgba(255,255,255,0.4);}
+#right_content #commentArea .commentBox {background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.4);}
+#right_content .pageComment .current {background: #c2ab8c;opacity: 1;}
+#right_content .pageComment a {color:#fff;opacity: 0.4}
+#right_content .pageComment a:hover {color:#c2ab8c;opacity: 1}
+#right_content .pageComment .current:hover {color:#fff;}
+#right_content .pageComment a.nonext{color: #888999;opacity: 0.4}
+#right_content .pageComment a.noprev{color: #888999;opacity: 0.4}
+
+.commentBox .loaderror p{font-size: 15px;color: #9c9c9c;}
+.commentBox .loaderror a{color: #c2ab8c;opacity: 0.8;}
+
+
+#right_content #commentArea #list img, #right_content #commentArea #rec_list img {
+    vertical-align: baseline;
+}
+
+
+.closeCommentBtn {width:15px;height:16px;display: none;background: url(../img/cdpack/second/closeCommentIcon.png);position: fixed;right: 211px;bottom:9px;z-index:3;}
+.openCommentBtn {width:103px;height:33px;line-height: 33px;color:rgba(255,255,255,0.8) !important;background:#2d2e30;display: block;position: fixed;bottom:15px;right: 0;border-radius: 17px;}
+.openCommentBtn span {display: inline-block;width: 18px;height: 17px;background: url(../img/cdpack/second/openCommentIcon.png);vertical-align: middle;margin:0 8px 0 12px;}
+
+/*评论样式修改结束*/
+
+
+/*播放时的动画效果*/
+@keyframes disk_rotate{
+            0%{
+                background-position: 0 0;
+            }
+            5%{
+                background-position: -24px 0;
+            }
+            10%{
+                background-position: -48px 0 ;
+            }
+            15%{
+                background-position: -72px 0 ;
+            }
+            20%{
+                background-position: -96px 0 ;
+            }
+            25%{
+                background-position: -120px 0 ;
+            }
+            30%{
+                background-position: -144px 0 ;
+            }
+            35%{
+                background-position: -168px 0 ;
+            }
+            40%{
+                background-position: -192px 0 ;
+            }
+            45%{
+                background-position: -216px 0 ;
+            }
+            50%{
+                background-position: -240px 0 ;
+            }
+            55%{
+                background-position: -264px 0 ;
+            }
+            60%{
+                background-position: -288px 0 ;
+            }
+            65%{
+                background-position: -312px 0 ;
+            }
+            70%{
+                background-position: -336px 0 ;
+            }
+            75%{
+                background-position: -360px 0 ;
+            }
+            80%{
+                background-position: -384px 0 ;
+            }
+            85%{
+                background-position: -408px 0 ;
+            }
+            90%{
+                background-position: -432px 0 ;
+            }
+            95%{
+                background-position: -456px 0 ;
+            }
+            100%{
+                background-position: -480px 0 ;
+            }
+        }
+/*播放时的动画效果*/

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,60" size="360,580">
+	<EventHook event="OnSkinChange">
+		<!--<Attribute control="title" value="textcolor=&quot;Global.DarkGray&quot;" />-->		
+	</EventHook>
+	
+  <VerticalLayout name="root">
+    <HorizontalLayout name="PopUpTitleHor">
+      <Label name="title" text="新用户注册" padding="20,4" varwidth="true" font="Def.ListLabel.Bold" textcolor="#ff333333"/>
+      <Control />
+      <Button name="close" theme="PopUpCloseBtn" />
+    </HorizontalLayout>    
+  </VerticalLayout>
+</Window>

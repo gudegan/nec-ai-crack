@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+* {box-sizing: content-box}
+/*整体上部分*/
+.topArea{position:relative; width:814px; height:409px; margin:0 auto; background:url(../img/listening/bg_topArea.jpg) no-repeat;}
+.topArea2{background:url(../img/listening/bg_topArea2.jpg) no-repeat;}
+/*整体下部分*/
+.bottomArea{width:814px; height:146px; margin:0 auto;}
+
+/*整体公用部分*/
+.pt13{padding-top:13px;}
+.pt44{padding-top:44px;}
+.btn{display:block; width:220px; height:55px; line-height:55px; margin:0 auto; border-radius:5px; font-size:24px; text-align:center; color:#fff; background:#3799ed;}
+.btn:hover{background:#0e8de6;}
+.btn:active{background:#1f5b8e;}
+.emphasize{font-size:24px; color:#fff000;}
+.topArea .title{width:207px; height:54px; margin:0 auto; padding-top:20px; background:url(../img/listening/title_listening.png) no-repeat 0 20px;}
+.topArea .resultTitle{height:55px; line-height:55px; padding-top:30px; font-size:55px; text-align:center; color:#fff000; background:none;}
+.main{font-size:18px; text-align:center; color:#333;}
+.num{font-size:24px; color:#fff000;}
+.mask{position:absolute; z-index:3; width:100px; height:100px; background:#000; opacity:0.3;}
+.i_play{position:absolute; z-index:4; left:50%; top:50%; width:34px; height:34px; margin-left:-14px; margin-top:-14px; background:url(../img/listening/play.png) no-repeat; background-size:100%; opacity:0.8;}
+.i_play:hover{opacity:1;}
+.round{position:absolute; top:-2.5px; display:block; width:10px; height:10px; border-radius:50%; -webkit-box-shadow:1px 2px 5px #000; background:#fff;}
+.describe{position:absolute; height:12px; line-height:12px;  padding-top:15px; font-size:12px; color:#666; }
+.stamp{position:absolute; right:30px; top:30px; width:130px; height:130px; background:url(../img/listening/stamp.png) -17px -6px no-repeat; -webkit-transform:scale(5); opacity:0; -webkit-transition:.25s all ease;}
+.close{position:absolute; right:10px; top:10px; width:12px; height:12px; background:url(../img/listening/close.png) no-repeat;}
+
+/*page1部分css*/
+/*page1上部分css*/
+.t_page1,.t_page2,.t_page3{position:absolute; width:100%; height:335px; overflow:hidden;}
+.t_page1 .describe_1{height:16px; line-height:16px; margin-top:30px; font-size:16px; text-align:center; color:#fff;}
+.t_page1 .describe{position:absolute; left:50%; height:24px; margin:0 0 0 -304px; padding-top:16px; overflow:hidden; font-size:16px; text-align:center; color:#fff;}
+.t_page1 .describe span{float:left; height:24px; line-height:32px; }
+.t_page1 .describe span.emphasize{line-height:24px;}
+.t_page1 .head{position:absolute; left:50%; bottom:0; width:154px; height:238px; margin-left:-77px; background:url(../img/listening/page1_head.png) no-repeat -9px -5px;}
+.t_page1 .ring{position:absolute; left:29px; top:62px; width:52.5px; height:52.5px; border:10px solid #0096ff; border-radius:50%;
+	-webkit-animation:10s ringchange2 linear infinite;
+}
+.t_page1 .countdown{display:none; position:absolute; top:60px; left:28px; width:75px; height:75px; line-height:75px; font-size:45px; text-align:center; color:#666;}
+
+/*page1底部css*/
+.b_page1,.b_page2{padding-top:30px; height:116px;}
+.b_page1 .tips,.b_page2 .tips{margin-top:30px; text-align:center; color:#666;}
+/*page1部分结束*/
+
+/*page2部分css*/
+/*page2上部分css*/
+.t_page2 .cdBox{position:absolute; left:315px; top:6px; width:221px; height:251px;}
+.t_page2 .cd{width:190px; height:190px; margin-top:20px; background:url(../img/listening/ringcd.png) no-repeat;}
+.t_page2 .cdactive{-webkit-animation:2s cdringchange linear infinite;}
+.t_page2 .stylus{position:absolute; right:0; top:0; width:79px; height:103px; background:url(../img/listening/stylus.png) no-repeat;}
+.t_page2 .describe{width:185px; margin-top:15px; padding:0; text-align:center; color:#fff;}
+.t_page2 .btnBox{margin:256px 0 0 255px;}
+.t_page2 .btn{float:left; width:120px; height:40px; line-height:40px; margin:0; font-size:18px;}
+.t_page2 .j_prev{margin-left:60px;}
+/*page2下部分css*/
+.b_page2{height:106px; padding-top:40px;}
+.b_page2 .bigTips{width:622px; height:22px; line-height:22px; margin:0 auto; font-size:22px; text-align:center; background:url(../img/listening/line_left.png) left center no-repeat,url(../img/listening/line_right.png) no-repeat right center;}
+.b_page2 .tips{font-size:16px; color:#999;}
+/*page2部分结束*/
+
+/*page3部分css*/
+.t_page3{height:324px;}
+/*page3上部分css*/
+.t_page3 .resultTitleBox{position:relative; margin-top:45px;}
+.t_page3 .firest{position:absolute; left:50%;}
+.t_page3 .artistBox{height:78px; margin:30px 0 0 284px;}
+.t_page3 .artist{position:relative; float:left; width:100px; height:100px; margin-right:58px;}
+.t_page3 .artist img{position:absolute; z-index:2; width:100px; height:100px;}
+/*.t_page3 .artist:hover .i_play{opacity:1;}*/
+.t_page3 .pumpingcd{position:absolute; width:100px; height:100px; background:url(../img/listening/pumpingcd.png) no-repeat; background-size:100%;
+		-webkit-animation:1s pumpingcdringchange linear infinite alternate;
+}
+.t_page3 .info{height:50px; padding-top:25px; font-size:18px; color:#fff;}
+/*page3下部分css*/
+.b_page3{height:146px;}
+.b_page3 .colorBox{position:relative; height:47px;}
+.b_page3 .tipsTitle{position:absolute; z-index:10; font-size:18px; transform:translateX(0px) translateY(-28px);}
+.b_page3 .bg_line{height:2px; background:#a7b3be;}
+/*.b_page3 .color_line{position:absolute; height:5px; margin-top:-2.5px; background:-webkit-linear-gradient(left,blue,black,orange,green,pink,red);}*/
+.b_page3 .tips_line{position:absolute; z-index:7; width:1px; height:7px; background:#000; transform:translateX(10px) translateY(5px);}
+.b_page3 .color_line{position:absolute; z-index:5; width:100%; height:5px; margin-top:-2.5px; background:url(../img/listening/color_line.jpg) no-repeat;}
+.b_page3 .color_block{position:relative; height:44px; background:url(../img/listening/color_block.jpg) no-repeat;}
+.b_page3 .btnBox{margin:30px 0 0 255px;}
+.b_page3 .btn{float:left; width:116px; height:36px; line-height:36px; margin:0; font-size:18px; color:#0096ff; border:2px solid #0096ff; border-radius:5px; background:none;}
+.b_page3 .btn:hover{color:#077acb; border-color:#077acb;}
+.b_page3 .j_share{margin-left:60px;}
+/*动画*/
+@keyframes ringchange{
+	to{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes ringchange2{
+	12%{opacity:0.1}
+	23%{opacity:1; border-color:#61aa35;}
+	33%{opacity:0.1}
+	45%{opacity:1; border-color:#ffe700;}
+	56%{opacity:0.1}
+	68%{opacity:1; border-color:#ffa200;}
+	78%{opacity:0.1}
+	90%{opacity:1; border-color:#ff0018;}
+	to{opacity:0.1;}
+}
+
+@keyframes cdringchange{
+	to{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes pumpingcdringchange{
+	to{-webkit-transform:translateX(50px);}
+}

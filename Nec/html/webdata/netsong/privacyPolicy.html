@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>隐私页面前置</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js"></script>
+    <style>
+      .page-wrap{
+        margin-left: 56px;
+      }
+      .title{
+        margin-top: 40px;
+        height:34px;
+        font-size:24px;
+        font-weight:600;
+        color:rgba(51,51,51,1);
+        line-height:34px;
+      }
+      .subTitle{
+        font-size:18px;
+        margin-top: 28px;
+      }
+      .tips{
+        line-height: 30px;
+        margin-top: 20px;
+        font-weight: 500px;
+      }
+      .tips a {
+        color: rgba(62, 136, 189, 1);
+      }
+      .btn {
+        margin-top: 72px;
+        text-align: right;
+      }
+      .btn a {
+        display: inline-block;
+        width: 160px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        font-size:16px;
+        border-radius: 4px;
+      }
+      .btn .refuse{
+        background: rgba(244, 241, 242, 1);
+        color:rgba(51,51,51,1);
+        margin-right: 20px;
+      }
+      .btn .agree{
+        background: rgba(255, 222, 29, 1);
+        color:rgba(51,51,51,1);
+        margin-right: 48px;
+      }
+      .refuse:hover{
+        opacity: 0.8;
+      }
+      .agree:hover{
+        opacity: 0.8;
+      }
+    </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="right">
+      <div class="title">协议与政策</div>
+      <div class="subTitle">欢迎使用酷我音乐！</div>
+      <div class="tips">
+        在您使用酷我音乐服务前，请认真阅读<a href="javascript:;" id="jumpToUrl">《酷我音乐用户服务协议》</a>、<a href="javascript:;" id="jumpToUserUrl">《隐私政策》</a>
+        <br>
+        以了解用户权力义务和个人信息处理规则。
+        <br>
+        点击同意表示您已阅读并认可所有条款！
+      </div>
+      <div class="btn">
+        <a href="javascript:;" class="refuse" id="refuse">不同意并退出</a><a href="javascript:;" class="agree" id="agree">同意</a>
+      </div>
+    </div>
+  </div>
+<script>
+  $('#jumpToUrl').on('click', function() {
+    openUrlUseDefaultClient('http://www.kuwo.cn/static/page/license/license.html');
+  });
+  $('#jumpToUserUrl').on('click', function() {
+    openUrlUseDefaultClient('https://h5app.kuwo.cn/m/9c0092e0/privacyPolicypc.html');
+  });
+
+  $('#refuse').on('click', function() {
+    callClient('DisAgreePrivacy');
+  });
+  $('#agree').on('click', function() {
+    callClient('AgreePrivacy');
+  });
+  /**
+ * 默认浏览器打开外链
+ */
+  function openUrlUseDefaultClient(url) {
+    callClient(`OpenBrowser?browser=default&url=${encodeURIComponent(url)}`);
+  }
+</script>
+</body>
+</html>

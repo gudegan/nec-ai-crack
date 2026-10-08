@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="692,483" caption="50,0,0,90" roundcorner="5,5" >
+  <VerticalLayout >
+	<Button name="close" float="true" pos="-45, 10, -10,0" theme ="PopUpCloseBtn"/>
+  </VerticalLayout>
+</Window>

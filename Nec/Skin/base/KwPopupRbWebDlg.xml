@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,210" caption="0,0,0,0" roundcorner="2,2" >
+	<VerticalLayout  bkcolor="#00000000" >
+		<Control />
+	</VerticalLayout>
+</Window>

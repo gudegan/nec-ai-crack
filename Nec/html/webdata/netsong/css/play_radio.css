@@ -1,0 +1,176 @@
+body {background: url(../img/play_radio/bg.png) no-repeat;background-size:cover;}
+#wrap {width: 100%;height: 100%; position: relative;}
+.radioBox {position: absolute;left:50%;top:50%;margin:-210px 0 0 -320px}
+
+/*slideBox*/
+#slideBox {width:100%;height:214px;position: fixed;bottom:-214px;z-index:16;background:rgba(255,255,255,0.95);}
+#slideCon {height: 196px; position: relative;z-index:7;padding:21px 14px 0 14px;}
+#slideCon ul {float:left;width:9999em;}
+#radioNav {height:26px;overflow: hidden;}
+#radioChose {overflow: hidden;}
+#radioChose .left,#radioChose .right {width:40px;height:40px;position: absolute;top:105px;z-index:111;cursor: pointer;}
+#radioChose .left {background:url(../img/play_radio/radioLeft.png);left: 20px;}
+#radioChose .left:hover{background:url(../img/play_radio/radioLeft_h.png);}
+#radioChose .right {background:url(../img/play_radio/radioRight.png);right: 20px}
+#radioChose .right:hover {background:url(../img/play_radio/radioRight_h.png);}
+#slideCon ul.radioNav {width:100%;text-align: center}
+#slideCon ul.radioList {display:none; width:9999em;margin-top:11px;position: relative;}
+#slideCon ul li {display:inline-block;border-radius: 2px;overflow: hidden;}
+#slideCon ul.radioNav li {margin:0 0.13%;}
+#slideCon ul.radioList li {margin-right: 9px;}
+#slideCon ul.radioNav li {width:46px;height:26px;color:#555555;line-height: 25px;text-align:center;cursor:pointer;}
+#slideCon ul.radioNav li:hover,#slideCon ul.radioNav li.clicked {color:#ffffff;border-radius: 13px;}
+.default #slideCon ul.radioNav li:hover,.default #slideCon ul.radioNav li.clicked {color:#000000;border-radius: 13px;}
+#slideControll {width:100%;height: 18px;position: absolute;top: 0px;text-align: center;margin-top: -21px;}
+#slideControll .slideBtn {display:inline-block;width:82px;height:19px;background:url(../img/play_radio/new/bg_radioSwitch_hover.png);line-height: 19px;cursor: pointer;position: relative;text-align:left;text-indent: 22px;}
+#slideControll .slideBtn .arrow {width: 18px;height: 18px;overflow: hidden;position: absolute;right: 21px;top:1px;}
+#slideControll .slideBtn .arrow i {display:block;width: 36px;height: 18px;background: url(../img/play_radio/new/icon_arrow.png) no-repeat;-webkit-filter: drop-shadow(18px 0);margin-left: -18px;opacity: 0.2;}
+.shallow #slideControll .slideBtn .arrow i {-webkit-filter: drop-shadow(#ffffff 18px 0);}
+#slideControll .slideBtn:hover {background:url(../img/play_radio/new/bg_radioSwitch_hover.png);}
+#slideControll .slideBtn p {font-size:12px;opacity: 0.6; transform: scale(0.83);}
+#slideControll.up .slideBtn p {color: #000000;}
+#slideControll.up {margin-top: -3px;z-index: 8;}
+#slideControll.up .slideBtn {background:url(../img/play_radio/new/bg_radioSwitch_up.png)}
+#slideControll.up .slideBtn .arrow i {transform: rotate(180deg)}
+#slideControll.up .slideBtn:hover {background:url(../img/play_radio/new/bg_radioSwitch_up_hover.png)}
+#slideControll .slideBtn:hover p {opacity: 1;}
+#slideControll .slideBtn:hover i {opacity: 0.6 !important;}
+
+/*轮播选台*/
+#rotateBox {width: 640px;margin: 0 auto 10px;position: relative;}
+#rotateBox input {position: absolute;width:17px;height: 29px;background: none;border:0;cursor: pointer;top:127px;z-index:4;}
+#rotateBox #left {display:none; left:13px;background:url(../img/play_radio/leftBtn.png); opacity:0.8;}
+#rotateBox #left:hover{opacity:1;}
+#rotateBox #right {display:none; right:13px;background:url(../img/play_radio/right.png); opacity:0.8;}
+#rotateBox #right:hover{opacity:1;}
+#rotatePic {position: relative;height: 280px;}
+#rotatePic li { position: absolute; text-align: center; }
+#rotatePic li.active{cursor:pointer;}
+#rotatePic .box {position:relative; border-radius: 4px; overflow: hidden;}
+#rotatePic .box .bg_shadow {position:absolute; left:0; top:0; z-index:96; display:none; background:#000; opacity:0.35;}
+#rotatePic .boxActive:hover .bg_shadow{display:block;}
+#rotatePic img { position: relative;width: 100%;}
+#rotatePic li .shadow { z-index:0;width: 100%; height:40px;display: block; position: absolute; bottom:0px;left:0;}
+#rotatePic .pic1 { left: 0px;top:52px;z-index:1;}
+#rotatePic .pic1 img {width: 175px;}
+#rotatePic .pic2 { left: 88px;top:29px;z-index:2;}
+#rotatePic .pic2 img {width:220px;}
+#rotatePic .pic3 {left: 181px;top:0px;z-index:3;}
+#rotatePic .pic3 .br_pic .br_shade{width:280px; height:280px;}
+#rotatePic .pic3 img {width:280px;}
+#rotatePic .pic4 {top:29px;left:334px;z-index:2;}
+#rotatePic .pic4 img {width:220px;}
+#rotatePic .pic5 {left:465px;top:52px;z-index:1;}
+#rotatePic .pic5 img {width: 175px;}
+#rotatePic .unactive {filter: alpha(opacity=70); opacity: 0.7;}
+/*结束*/
+
+/*电台下的播控区域*/
+#controlBox{position:relative; z-index:11; width:286px; height:30px; margin:0 auto; margin-bottom:10px;padding-right: 38px;}
+#controlBox a {float:left;font-size: 24px;margin-left:37px;overflow: hidden;opacity: 0.8;}
+#controlBox a.icon-collection {color:#ff6161}
+#controlBox a:hover {opacity: 1;}
+
+/*结束*/
+
+/*歌曲信息展示区域*/
+#playingInfoBox{position:relative;margin-bottom:20px;text-align: center;}
+#playingInfoBox p{display:inline-block;vertical-align: top;font-size:14px;}
+#playingInfoBox p.now{display: none;}
+#playingInfoBox p.info{display: none;max-width:566px;overflow:hidden; white-space: nowrap;text-overflow: ellipsis;}
+
+#playingInfoBox .allowSelect {-webkit-user-select: initial;cursor: text;overflow: visible;}
+/*结束*/
+
+/*歌手电台相关展示*/
+#artistRadioBox{position:relative; width:230px; height:64px; margin:0 auto;}
+#artistRadioBox .bg_shadow{position:absolute; left:0; top:0; width:265px; height:56px; background:#000; opacity:0.08;border-radius: 28px;}
+.shallow #artistRadioBox .bg_shadow {background:#ffffff;}
+#artistRadioBox .artistpicbox{position:relative; float:left; margin:7px 0 0 8px;}
+#artistRadioBox .artistImg{float:left; border-radius:50%;width: 42px;height: 42px;;}
+.shallow .left_icon i {-webkit-filter: drop-shadow(#ffffff 18px 0) !important;}
+#artistRadioBox .radio_btn{position:relative; float:right; width:56px; height:20px; line-height:20px; margin-top:18px;text-align:center; border-radius:12px;opacity: 0.8;}
+#artistRadioBox .radio_btn .left_icon {float:left;width:18px; height:18px;overflow: hidden;margin-top: 1px;}
+#artistRadioBox .radio_btn .left_icon i {display: block;display: block;width:36px; height:18px;margin-left: -18px;-webkit-filter: drop-shadow(18px 0);background:url(../img/play_radio/new/icon_radio.png) no-repeat;-webkit-filter: drop-shadow(18px 0);}
+#artistRadioBox .radio_btn:hover,#artistRadioBox .artistRadio_likeActive {opacity: 1;}
+#artistRadioBox .content_name{position:absolute; right:9px; top:1px; line-height:22px; font-size:12px;}
+#artistRadioBox .artistRadio_like{position:relative; float:right; width:78px; height:20px; line-height:20px; margin-top:18px; margin-left:10px; margin-right:10px; text-align:center; border-radius:12px;opacity: 0.8;}
+#artistRadioBox .artistRadio_likeActive {width:68px;opacity: 1;}
+#artistRadioBox .artistRadio_likeActive .content_name {opacity: 0.8;}
+#artistRadioBox .artistRadio_likeActive:hover .content_name {opacity: 1;}
+#artistRadioBox .artistRadio_like:hover {opacity: 1;}
+#artistRadioBox .artistRadio_like .left_icon {float:left;width:18px; height:18px;overflow: hidden;margin-top: 2px;}
+#artistRadioBox .artistRadio_like .left_icon i {display: block;display: block;width:36px; height:18px;margin-left: -18px;-webkit-filter: drop-shadow(18px 0);background:url(../img/play_radio/new/icon_like_small.png) no-repeat;-webkit-filter: drop-shadow(18px 0);}
+#artistRadioBox .artistRadio_like:hover .left_icon i,#artistRadioBox .artistRadio_likeActive .left_icon i {background:url(../img/play_radio/new/icon_liked_small.png) no-repeat;-webkit-filter: drop-shadow(#FF6161 18px 0) !important;}
+#artistRadioBox .artistRadio_like .content_name{right:8px;}
+/*结束*/
+
+/*导航电台相关css*/
+/*电台*/
+.br_wrap { float:left; width:140px; height:auto;}
+.br_wrap .br_pic { display:block; position:relative; width:140px; height:140px; overflow:hidden; overflow: hidden;}
+.br_wrap .br_pic .br_shade { display:block; position:absolute; width:140px; height:140px; left:0; top:0; z-index:97;}
+.br_wrap .br_pic:hover .br_shade { background:#000; opacity:0.35;}
+.br_wrap .current_pic .br_shade { background:#000;  opacity:0.35;}
+.br_wrap .br_pic .i_play {  z-index:100;}
+.br_wrap .br_pic:hover .i_play { left:50%; top:50%; margin-left:-20px; margin-top:-20px;}
+.radio_con .br_pic:hover .i_play{left:50%; top:50%; margin-left: -20px;margin-top: -20px;}
+.br_wrap p { float:left; width:100%; padding-bottom: 14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.br_wrap .br_name a { font-size:14px; color:#000;font-weight:500;display:block;line-height:18px; overflow:hidden; white-space: nowrap;text-overflow: ellipsis;}
+.br_wrap .br_name a.br_info { font-size:12px; color:#888999;}
+.br_wrap .br_name a:hover,.br_wrap .br_info a:hover { color:#07b2e5;}
+.radio .br_wrap .br_name{padding-bottom:6px;}
+.br_wrap .br_info{color:#999;}
+.br_wrap .br_info:hover{color:#07b2e5;}
+.radio .br_wrap .br_info.active{color:#07b2e5;}
+.br_wrap .br_info a{font-size:12px; color:#999;}
+.br_wrap .br_name a:hover,.br_wrap .br_info a:hover { color:#07b2e5;}
+.br_wrap .br_pic span.br_name{position:absolute; left:10px; bottom:10px; z-index:96; max-width:136px; font-size:14px; color:#fff; overflow:hidden; white-space: nowrap;text-overflow: ellipsis;text-shadow:1px 1px 2px #000000 ;}
+/*关联电台清除无用css并添加新的css*/
+#rotatePic .br_pic{display:block; width:100%; height:100%;}
+#rotatePic .br_pic .radio_play {display: block; position: absolute; width: 50px; height: 50px; right: 0; top: 50%; left: 50%; margin: -25px 0 0 -25px; z-index: 9999;}
+#rotatePic .radio_stop,#rotatePic .radio_pause,#rotatePic .radio_start{width:50px; height:50px; margin:-25px 0 0 -25px; background-size:50px;}
+/*关联电台描述信息区域的css*/
+#rotatePic .infoBox{position:absolute; left:0; bottom:0px; width:100%; height:43px;z-index: 2;background:url(../img/play_radio/splice_43px.png);padding-top:17px;}
+#rotatePic .br_name{float:left; padding-left:10px; font-size:14px; color:#fff;text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);}
+#rotatePic .br_name:hover{opacity:1;}
+#rotatePic .br_name span {float:left;max-width: 50px;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden; }
+#rotatePic li.active .br_name span {max-width: 160px;}
+#rotatePic .lis_cnt{float:right; padding:4px 8px 0 19px; font-size:12px; color:#fff; background:url(../img/play_radio/listen.png) 0 2px no-repeat;background-size:20px 20px;text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);}
+
+/*#rotatePic .box .br_pic{width:100%; height:100%; margin:0;}*/
+
+/*焦点图等小按钮直接播放*/
+.i_play { display:block; position:absolute; width:34px; height:34px; right:-200px;margin-top: -20px;}
+.i_play { background:url(../img/i_play.png) no-repeat 0 0;}
+.i_play:hover { background:url(../img/i_play_h.png) no-repeat 0 0;}
+
+/*mv大按钮直接播放*/
+.i_play_big { display:block; position:absolute; width:40px; height:40px; right:-200px;margin-top: -20px;}
+.i_play_big { background:url(../img/i_play_big.png) no-repeat 0 0;}
+.i_play_big:hover { background:url(../img/i_play_h_big.png) no-repeat 0 0;}
+.br_wrap .br_pic .radio_play {display:block; position:absolute; width:40px; height:40px; right:0; top:50%; left:50%; margin:-20px 0 0 -20px; z-index:9999;}
+.radio_stop,.radio_pause,.radio_start{display:block; position:absolute; width:40px; height:40px; right:0; top:50%; left:50%; margin:-20px 0 0 -20px; z-index:9999;}
+.radio_stop { background:url(../img/playing_stop.png) no-repeat 0 0;}
+.radio_start { background:url(../img/i_play_h_big.png) no-repeat 0 0;}
+.radio_pause { background:url(../img/radio_pause_big.png) no-repeat 0 0;}
+.radio_pause:hover{background:url(../img/radio_pause_h_big.png) no-repeat;}
+#rotatePic .radio_pause {background:url(../img/play_radio/playing_radio_pause_big.png) no-repeat 0 0; background-size:50px;}
+#rotatePic .radio_pause:hover{background:url(../img/play_radio/playing_radio_pause_h_big.png) no-repeat;}
+#rotatePic .radio_start { background:url(../img/play_radio/i_play_h_radio.png) no-repeat 0 0;}
+/*结束*/
+
+/*公用*/
+.i_play_radio{position:absolute; z-index:97; left:50%; top:50%; display:none; width:50px; height:50px; background:url(../img/play_radio/i_play_radio.png) no-repeat; transform:translate(-25px,-5px);}
+#rotatePic .br_pic:hover .i_play_radio:hover{background:url(../img/play_radio/i_play_h_radio.png) no-repeat;}
+#rotatePic .boxActive .i_play_radio:hover{display:block; background:url(../img/play_radio/i_play_h_radio.png) no-repeat;}
+.i_play_radio:hover{display:block; background:url(../img/play_radio/i_play_h_radio.png) no-repeat;}
+/*结束*/
+
+/*左右区域向左向右*/
+.directionBtn_left1,.directionBtn_left2,.directionBtn_right1,.directionBtn_right2{position: absolute; z-index: 3;}
+.directionBtn_left1,.directionBtn_right1{width:88px; height:175px; top:52px;}
+.directionBtn_left2,.directionBtn_right2{width:110px; height:220px; top:29px;}
+.directionBtn_left2{left:88px;}
+.directionBtn_right2{right:88px;}
+.directionBtn_right1{right:0;}

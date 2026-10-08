@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,290" captimn="0,0,0,80" roundcorner="10,10">
+	<!--<Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+	<Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  -->
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;Config.DefaultText&quot;" />	
+	<VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="60">		
+			<Button name="button_kwlogo" width="40" height="40" padding="8,8,10,0" normalimage="icon_updatetipdlg_titlelogo.png"/>
+			<VerticalLayout name="layout_tiptextstatic">
+			  <HorizontalLayout>	
+					<Label name="text_titletext" textcolor="#FF333333" align="left" width="280" padding="0,15,0,0" font="UpgradeDlg.Title" text="酷我音乐有更新" />
+					<Control />
+					<Button name="button_Close" width="15" height="21" padding="0,3,10,0" statusimage="close.png"/>
+				</HorizontalLayout>
+ 
+				<HorizontalLayout>
+					<Label name="text_mboxversion" textcolor="#FF999999" padding="0,0,0,10" width="200" align="left" text="" font="UpgradeDlg.SubTitle" />
+					<Control />
+					<Label name="text_publicdate" textcolor="#FF999999" padding="0,0,0,10" width="77" lign="right" text="" font="UpgradeDlg.SubTitle" />
+				</HorizontalLayout>	
+			</VerticalLayout>										
+		</HorizontalLayout>
+
+      <Button name="list_left_line" height="1" normalimage="icon_updatetipdlg_line.png"/>
+      <VerticalLayout>
+        <Control name="flash_feture" padding="9,0,9,0"/>
+		<Button  name="button_back" statusimage="upgradedlg_btn_back.png" pos="10,63,34,119" float="true" />
+		<Button  name="button_next" statusimage="upgradedlg_btn_next.png" pos="366,63,390,119" float="true" />
+      </VerticalLayout>
+
+		<HorizontalLayout name="layout_opbutton" height="62"> 
+			<Button  name="button_ok" statusimage="upgradedlg_btn_ok.png" textcolor="#FFFFFFFF" text="立即更新" font="UpgradeDlg.Button" pos="130,15,271,49" float="true" />
+			<Button  name="button_cancel" statusimage="upgradedlg_btn_ok.png" textcolor="#FFFFFFFF" text="我知道了" font="UpgradeDlg.Button" pos="130,15,271,49" float="true" />
+		</HorizontalLayout> 
+	</VerticalLayout>
+</Window>

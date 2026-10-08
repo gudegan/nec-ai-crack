@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK"?> 
+<root>
+  <!--
+  <mod name="KwModPlaylist.dll"     type="data" start="2">  <obj name="modplaylist_1"/>  <obj name="modplaylsit_2"/> </mod>
+  -->
+  <mod name="KwModLyric.dll"        type="data" start="2">  <obj name="modlyric_1"/></mod>
+  <mod name="KwModLocalMusic.dll"   type="data" start="2">  <obj name="modlocalmusicdata"/> <obj name="modlocalscanmusic"/> <obj name="modlocalrecomusic"/>  </mod> 
+  <mod name="KwModLyricShow.dll"    type="data" start="2">  <obj name="modlyricshow_1"/> <obj name="moddesklyricshow_1"/> </mod>
+  <mod name="KwModDownload.dll"     type="data" start="2">  <obj name="moddownload"/> <obj name="moddownloadcd"/> </mod> 
+  <mod name="KwModAppStore.dll"     type="data" start="2">  <obj name="LayerAppStore"/><obj name="modappstore_1"/> </mod>
+  <mod name="KwModUpdateWeb.dll"	type="data" start="2">    <obj name="modUpdateWeb_1"/> </mod>
+  <mod name="KwModGameEntry.dll"	type="data" start="2">    <obj name="GameEntry_1"/> </mod>
+  <mod name="KwModAndroidMgr.dll"	type="data" start="2">  <obj name="modandroidmgr"/> </mod>
+  <mod name="UIDrawLyricMgr.dll"    type="UI" start="2">    <obj name="moddrawLyric_1"/> </mod>
+
+  <!--
+	<mod name="UIAvMgr.dll"			type="UI" start="1"/>
+  <mod name="UIPlaylistPanel.dll"	type="UI" start="0" >   <obj name="moduiplaylist_1"/> <obj name="moduiplaylist_2"/></mod>
+  <mod name="UINowPlaying.dll"		type="UI" start="1"/>
+  -->
+  <mod name="UIDownload.dll"		type="UI" start="2">
+    <obj name="uidownload"/>
+  </mod>
+  
+  
+  <!--
+  <mod name="UINowPlaying.dll"		type="UI" start="1"/>  
+  <mod name="UIPlaylist.dll"		type="UI" start="1"/>  
+  <mod name="UIPlayControl.dll"		type="UI" start="1"/> 
+  <mod name="UIDownload.dll"		type="UI" start="1"/>
+  <mod name="UIDeskLyric.dll"		type="UI" start="1"/> 
+  
+  -->
+  <mod name="KwModSkinManage.dll"		type="UI" start="0"/>  
+  <mod name="KwModAppStore.dll" type="UI" start="2" ><obj name="modappstore_1"/></mod>
+  <mod name="UIMiniPanel.dll"		type="UI" start="2"> <obj name="modmini_1"/> </mod>
+  <mod name="UIRadioPanel.dll"		type="UI" start="2"> <obj name="modradio_1"/> </mod>
+  <!--
+  <mod name="UIVIPMan.dll" 		 type="UI" start="1"/>
+  <mod name="UIPopupWnd.dll"		type="UI" start="1"/> 
+  -->
+  <mod name="UIAndroidUsbDevice.dll" type="UI" start="2">
+    <obj name="uiandroid"/>
+  </mod>
+  <mod name="UIDeskLyric.dll"		type="UI" start="3"/>
+  <mod name="UIMusicTree.dll" type="UI" start="2" ><obj name="modmusictree_1"/></mod>
+  
+</root>

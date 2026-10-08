@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>MV频道页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/to_top.css" rel="stylesheet" /> -->
+</head>
+<body>
+	<div class="allcontent">
+		<div id="content" class="content mv-content" style="margin-top: 10px;">
+			<div id="areaModel"></div>
+			<div class="areaModelItem kwShowArea">
+				<h2>
+					<span class="title">真人MV</span>
+					<span class="more">
+                        <a title="更多"
+                           href="javascript:;"
+                           onclick="callClientNoReturn('PageJump?param=ch:8;name:pretty&calljump=true');"><span>更多</span>
+                            <i class="iconfont icon-more"></i>
+                        </a>
+					</span>
+				</h2>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;"></a>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/comm2.js" type="text/javascript"></script>
+    <script src="js/create_structure.js" type="text/javascript"></script>
+    <script src="js/music.js" type="text/javascript"></script>
+    <script src="js/channel_area.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var mnShowLen = 0;
+        var mnShowPos = 2;
+        function getKwShowArea() {
+            $.ajax({
+                url:`https://jxm0.kuwo.cn/fx_flow_pc/category/cdn/getList?cid=8000&page=1&appid=0&platform=0&device=${getUserID('devid')}`,
+                type:"get",
+                dataType:"json",
+                timeout:5000,
+                success: function(data) {
+                    const resData = data.data || {}
+                    if(resData) {
+                        var roomlist = resData.list||[];
+                        mnShowLen = roomlist.length;
+                        if(mnShowLen > 0) {
+                            var roomListStr = "";
+                            for(var i=0;i<mnShowLen;i++){
+                                roomListStr+=createKwShowBlock(roomlist[i]);
+                            }
+                            $(".kwShowArea ul").html(roomListStr);
+                            setLen();
+                            areaLazyLoad();
+                        }
+                        setMnShowBoxPos();
+                    }
+                }
+            });
+        }
+        function setMnShowBoxPos() {
+            var top = $("#areaModel").offset().top + 20;
+            for(var i=0;i<mnShowPos;i++){
+                top += $(".areaModelItem").eq(i).height();
+            }
+            $(".kwShowArea").css("top",top).show();
+            $(".areaModelItem").eq(mnShowPos).css("margin-top",$(".kwShowArea").height() + 20);
+
+        }
+        // 设置适配尺寸
+        function setLen(){
+            var windowWidth = window.screen.width;
+            var num = 0;
+            var pnum = 0;
+            if (windowWidth<=1116) {
+                num = 3;
+                pnum = 9;
+            }else if(windowWidth>=1117&&windowWidth<=1430){
+                num = 3;
+                pnum = 11;
+            }else if(windowWidth>=1431){
+                num = 4;
+                pnum = 13;
+            }
+            $(".bmv_wrap").show();
+            for(var i=0 ;i < $(".areaModelItem").length; i++) {
+                $(".areaModelItem").eq(i).find(".bmv_wrap:gt("+num+")").css("display","none");
+            }
+            $(".b_wrap").show();
+            $(".b_wrap:gt("+pnum+")").show();
+        }
+    </script>
+</body>
+</html>

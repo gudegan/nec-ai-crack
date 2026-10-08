@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,80" roundcorner="3,3" size="410,225">
+	<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;14&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;PopUpWndChkVir.png&quot; textpadding=&quot;-1,-3,0,0&quot; padding=&quot;0,14,0,0&quot;" />
+
+	<VerticalLayout >    
+   <HorizontalLayout name="PopUpTitleHor" >
+      <Control />
+    	<Button name="close_tip" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+    <Control height="3"/>    
+    <VerticalLayout >
+      <Label name="label_del_confirm" text="确认删除云盘文件？" align="center"  />
+      <Label name="label_del_confirm_tip" text="删除后手机端也将无法找到此文件" padding="0,16,0,0" />
+      <CheckBox name="del_chk" float="true" pos="126,68,302,84" text="同时删除本地音乐文件" />
+    </VerticalLayout> 
+    
+	  <HorizontalLayout height="42" >
+	    <Button name="del_confirm" float="true" pos="75,0,195,40" text="确认" setcursor="true" height="40"  />
+	    <Button name="del_cancel" float="true" pos="215,0,335,40" text="取消" statusimage="btn_ListDef.png" setcursor="true" height="40" />	      
+	  </HorizontalLayout>	
+	   <Control height="41" />     
+  </VerticalLayout>
+</Window>

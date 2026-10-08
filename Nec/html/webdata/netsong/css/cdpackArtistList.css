@@ -1,0 +1,62 @@
+/*公用*/
+html{overflow:visible; overflow-x:hidden;}
+body {padding:0 25px;}
+.w_loading { position:fixed;right:0px; bottom:20px; z-index:99999;}
+#l_loadfail { width: 100%;background-color: #fafafa;z-index: 99999; display:none; position:absolute;padding-bottom: 5px;top:0px;}
+.loaderror { height:250px;position:relative;margin-top:-160px;top:50%;width:100%;}
+.loaderror img { display:block;margin:0 auto;}
+.loaderror p { text-align:center;font-size:22px;}
+.loaderror p a { color:#46b4e6; text-decoration:underline;}
+/*公用结束*/
+/*头部*/
+/*logo*/
+.logo {position: relative;width: 69px;height: 42px;}
+.logo_icon {width: 69px;height: 42px;overflow: hidden;}
+.logo_icon i {display:block;width: 138px;height: 42px;background: url(../img/cdpack/third/logo/logo.png) no-repeat;margin-left: -69px;}
+.logo_icon_splice {width: 28px;height: 28px;background: url(../img/cdpack/third/logo/logo_splice.png);position: absolute;left: 0;bottom: 0;}
+/*标题*/
+.navBox {display: flex;margin-bottom:5px;}
+.navBox h1 {font-size: 17px;font-weight: 500;margin: 17px 0 0 3px;}
+.nav {text-align: center;flex: 1;overflow: hidden;margin-left: -140px;}
+.nav a {position: relative;display: inline-block;font-size: 16px;margin: 19px 40px 0 0;}
+.nav a span {opacity: 0.6;}
+.nav a:hover span {opacity: 1;}
+.nav a.active span {opacity: 1;font-weight: 600}
+.nav a.jumpDown {margin-right: 0px;}
+.nav a label {width:5px;height: 5px;border-radius: 50%;display: block;background:#fc5457;position: absolute;top: 0px;right: -5px;display: none;}
+.nav a i {width: 18px;height: 3px;border-radius: 2px;display: block;margin: 4px 0 0 25px;}
+/*字母*/
+.sub_nav {display: flex;justify-content: space-between;padding-top:10px;}
+.sub_nav a {opacity: 0.8;width:24px;height:24px;line-height: 23px;margin-right: 3px;text-align: center;}
+.sub_nav a:first-child {width:43px;}
+.sub_nav a.current {opacity:1;border-radius: 12px;color:#ffffff}
+.default .sub_nav a.current {color:#000000}
+/*列表*/
+.cdArtistListBox {display: flex;flex-wrap: wrap;align-content: flex-start;justify-content: flex-start;margin:30px -13px 0;}
+.cdArtistListBox li {width:20%;padding:0 13px;text-align: center;margin-bottom: 10px}
+.cdArtistListBox li a.cover {width: 100%;height: 0;padding-bottom: 100%;display: block;position: relative;}
+.cdArtistListBox li a.cover .coverBox {position: absolute;width: 100%;height: 100%;left: 0;top: 0;border-radius: 50%;overflow: hidden;}
+.cdArtistListBox li img {width:100%;height:100%;}
+.cdArtistListBox li span {display: block;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;height: 22px;line-height: 22px;}
+.cdArtistListBox li span.artist {margin-top:8px;}
+.cdArtistListBox li span.artist a {opacity: 0.8}
+.cdArtistListBox li span.artist a:hover {opacity: 1}
+.cdArtistListBox li span.albumCnt {opacity: 0.6;font-size: 12px;}
+/*无数据部分css开始*/
+.nodataBox{display:none; margin-top:30px;}
+.nodataBox img{display:block; margin:0 auto; margin-bottom:12px;}
+.nodataBox p{line-height:24px; font-size:16px; text-align:center; color:#999;}
+/*无数据部分css结束*/
+
+@media screen and (min-width:1117px) and (max-width:1430px){
+    .cdArtistListBox li {
+        width: 16.66666667%;
+    }
+}
+@media screen and (min-width:1431px){
+	.cdArtistListBox li {
+        width: 14.28571429%;
+    }
+}
+
+

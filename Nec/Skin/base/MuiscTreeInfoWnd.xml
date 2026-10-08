@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="240,236" mininfo="240,100" maxinfo="240,300" caption="0,0,0,0" roundcorner="1,1" >
+  <Default name="Label" value="textcolor=&quot;#ff333333&quot;font=&quot;Default.FontSmall&quot;" />
+
+  <VerticalLayout bkcolor="#fff8f8f8" inset="1,1,1,1" bordercolor="#ff94a6b2" bkimage="musictreeinfobk.png">
+    <VerticalLayout height="128">
+      <HorizontalLayout name="titlepanel" height="30">
+        <Label name="title" align="top" padding="10,10,0,0" varwidth="true" text="酷我音乐树" />
+        <Control />
+        <Button name="close" width="22" height="22" padding="0,2,2,0" statusimage="Config_CloseBtn.png" />
+      </HorizontalLayout>
+      <Control height="8" />
+      <HorizontalLayout height="26">
+      	<Control width="12"/>
+      	<Label name="musictree_songinfo" inset="5,2,5,2" text="选一首歌开始播放吧！" align="center" height="26" font="Default.FontSmall.Bold" hscrolltype="1"/>
+      	<Control width="12"/>
+      </HorizontalLayout>      
+
+      <TabLayout name="step" height="50">
+        <VerticalLayout name="step0">
+          <HorizontalLayout height="28">
+            <Label align="center" textcolor="#ff3e8f02" font="Default.FontName" text="听够35首，让小树开花！"></Label>
+          </HorizontalLayout>
+          <HorizontalLayout height="22">
+            <Control></Control>
+            <Label varwidth="true" text="今天已听"></Label>
+            <Label name="num1" varwidth="true" textcolor="#ff3e8f02" font="Def.ListLabel.Bold" text="10"></Label>
+            <Label varwidth="true" text="首 离开花还有"></Label>
+            <Label name="num2" varwidth="true" textcolor="#ff3e8f02" font="Def.ListLabel.Bold" text="20"></Label>
+            <Label varwidth="true" text="首"></Label>
+            <Control></Control>
+          </HorizontalLayout>
+        </VerticalLayout>
+        
+        <VerticalLayout name="step1">
+          <HorizontalLayout height="28">
+            <Label align="center" textcolor="#ff3e8f02" font="Default.FontName" text="已听35首，小树开花了！"></Label>
+          </HorizontalLayout>
+          <HorizontalLayout height="22">
+            <Control></Control>
+            <Label varwidth="true" text="今天已听"></Label>
+            <Label name="totalnum" varwidth="true" textcolor="#ff3e8f02" font="Def.ListLabel.Bold" text="10"></Label>
+            <Label varwidth="true" text="首"></Label>
+            <Control></Control>
+          </HorizontalLayout>
+        </VerticalLayout>
+      </TabLayout>
+
+    </VerticalLayout>   
+      
+    
+    <Control height="1" bkcolor="#ffd9d9d9"></Control>
+
+    <TabLayout name="webmsg">
+      <Control name="webstub"></Control>
+      <VerticalLayout bkcolor="#ffffffff">
+        <Control></Control>
+        <HorizontalLayout>
+          <Control></Control>
+          <Button name="webrefresh" varwidth="true" height="25" setcursor="true" font="Default.List.Font.UnderLine" textcolor="#ff999999" hottextcolor="#ff0000ff" pushedtextcolor="#ff0000ff" text="网络不佳，点此刷新" />
+          <Control></Control>
+        </HorizontalLayout>
+        <Control></Control>
+      </VerticalLayout>
+    </TabLayout>
+
+  </VerticalLayout>
+</Window>

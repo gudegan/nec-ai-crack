@@ -1,0 +1,24 @@
+﻿<Window size="398,200" caption="0,0,0,60">
+  <VerticalLayout>
+    <HorizontalLayout name="PopUpTitleHor" >
+      <Label name="title" text="正在加载" theme="PopUpTitle"/>
+      <Control />
+      <Button name="close" theme="PopUpCloseBtn"/>
+    </HorizontalLayout>
+    <Control height="1" theme="#Msg_SepLine"/>
+    
+    <Control height="10"/>
+    <VerticalLayout inset="22,0,10,0">
+      <HorizontalLayout height="24">
+        <Label name="info" maxwidth="160" endellipsis="true" varwidth="true" text="正在读取文件"/>
+        <Label name="count" />
+      </HorizontalLayout>
+      <Progress name="progressbar" padding="6,10,0,0" mouse="false" max="100" height="8" bkimage="progress_PopupWnd_1.png" fgimage="progress_PopupWnd_2.png"/>
+      <HorizontalLayout padding="0,43,0,0" height="32">
+        <Control />
+        <Button name="cancel" text="取消" theme="PopUpDefBtn" width="104" height="32" />
+        <Control width="8"/>
+      </HorizontalLayout>
+    </VerticalLayout>
+   </VerticalLayout>
+</Window>

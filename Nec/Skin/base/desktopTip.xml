@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window caption="0,0,0,0" mininfo="64,64">
+  <VerticalLayout>
+    <TabLayout name="root">
+      <HorizontalLayout name="top_right" bkimage="SubscribeTip_2.png">
+        <Control></Control>
+        <VerticalLayout width="48">
+          <Control height="34"></Control>
+          <Button name="has_msg" width="34" height="24" statusimage="has_msg.png"></Button>
+          <Button name="close" float="true" width="11" height="11" pos="23,0,38,15" statusimage="subscribe_close.png"></Button>
+        </VerticalLayout>
+      </HorizontalLayout>
+      
+      <HorizontalLayout name="top_left" bkimage="SubscribeTip_1.png">
+        <Control></Control>
+        <VerticalLayout width="48">
+          <Control height="34"></Control>
+          <Button name="has_msg" width="34" height="24" statusimage="has_msg.png"></Button>
+          <Button name="close" float="true" width="11" height="11" pos="23,0,38,15" statusimage="subscribe_close.png"></Button>
+        </VerticalLayout>
+      </HorizontalLayout>
+
+      <HorizontalLayout name="bottom_right" bkimage="SubscribeTip_3.png">
+        <Control></Control>
+        <VerticalLayout width="48">
+          <Control height="34"></Control>
+          <Button name="has_msg" width="34" height="24" statusimage="has_msg.png"></Button>
+          <Button name="close" float="true" width="11" height="11" pos="23,0,38,15" statusimage="subscribe_close.png"></Button>
+        </VerticalLayout>
+      </HorizontalLayout>
+
+      <HorizontalLayout name="bottom_left" bkimage="SubscribeTip_4.png">
+        <Control></Control>
+        <VerticalLayout width="48">
+          <Control height="34"></Control>
+          <Button name="has_msg" width="34" height="24" statusimage="has_msg.png"></Button>
+          <Button name="close" float="true" width="11" height="11" pos="23,0,38,15" statusimage="subscribe_close.png"></Button>
+        </VerticalLayout>
+      </HorizontalLayout>
+      
+    </TabLayout>
+  </VerticalLayout>
+</Window>

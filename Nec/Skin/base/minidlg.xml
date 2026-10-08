@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="356,94" mininfo="356,94" bordersize="1">
+  <VerticalLayout name="root" height="472" bkimage="mini_bk.png" inset="13,13,13,13" userdata="noExpandMinHeight=94&expandMinHeight=472">
+    <HorizontalLayout name="mini_playcontrol" height="68" >
+      <MiniSongPhoto name="MiniSongPic" width="68" height="68"/>
+      <VerticalLayout >
+        <HorizontalLayout height="28">
+          <CSongTitleCtrl name="lab_SongName" hscrolltype="1" layertext="true" padding="12,8,12,0" textcolor="#FFFFFFFF"/>
+          <Button name="MiniFull" statusimage="btn_MiniFull.png" width="10" height="10" padding="0,13,15,0" tooltip="完整模式"/>
+          <Button name="MiniClose" statusimage="btn_MiniClose.png" width="10" height="10" padding="0,13,14,0" tooltip="关闭"/>
+        </HorizontalLayout>
+        <Container padding="10,1,0,0" height="36">
+          <HorizontalLayout name="BtnLayer">
+            <TabLayout name="prevtab" width="16" height="16" padding="2,10,0,10">
+              <Button name="MiniPre" width="16" height="16" statusimage="btn_MiniPre.png" tooltip="上一首"/>
+              <Button name="garbage" width="16" height="16" statusimage="mini_garbage.png" tooltip="不喜欢"/>
+            </TabLayout>
+            <TabLayout  name="Mini_Play_Pause" padding="8,0,8,0" width="36" height="36">
+              <Button name="MiniPause" statusimage="btn_MiniPauseVir.png" width="36" height="36" tooltip="暂停"/>
+              <Button name="MiniPlay" statusimage="btn_MiniPlayVir.png" width="36" height="36" tooltip="播放"/>
+            </TabLayout>
+            <Button name="MiniNext" statusimage="btn_MiniNext.png" padding="0,10,0,10" width="16" height="16" tooltip="下一首"/>
+            <TabLayout name="HiFi" padding="42,5,0,5" width="40" height="16" visible="false">
+              <Button name="HiFi_Turnon" width="40" height="16" statusimage="hifi_close_mini.png" tooltip="开启HiFi独占模式"/>
+              <Button name="HiFi_Turnoff" width="40" height="16" statusimage="hifi_open_mini.png" tooltip="关闭HiFi独占模式"/>
+            </TabLayout>
+		   <TabLayout name="Mini_VolLayout" padding="75,10,0,0" width="16" height="16">
+              <Button name="MiniVolumn" width="16" height="16" statusimage="btn_MiniVolumn.png" tooltip="静音"/>
+              <Button name="MiniSilent" width="16" height="16" statusimage="btn_MiniSilent.png" tooltip="取消静音"/>
+            </TabLayout>
+            <TabLayout name="Mini_SliderLayout">
+              <HorizontalLayout name="Mini_FavorAndFull">
+                <TabLayout  name="Mini_Tab_Favorate" width="16" height="16" padding="15,10,0,0">
+                  <Button name="MiniFavorate" width="16" height="16" statusimage="mini_love.png" tooltip="收藏"/>
+                  <Button name="MiniFavorated" width="16" height="16" statusimage="mini_cacleLove.png" tooltip="取消收藏"/>
+                </TabLayout>
+				<Button name="MiniList" statusimage="btn_MiniList.png" padding="15,10,10,5" width="16" height="16" tooltip="打开列表"/>
+              </HorizontalLayout>
+              <Slider name="PlayVolumn" step="5" value="80" padding="5,12,0,0" height="12" width="55"  thumbsize="8,8" theme="PlayContlProgress.mini"/>
+            </TabLayout>
+          </HorizontalLayout>
+          <VerticalLayout name="layout_SongInfo" >
+            <Control height="5"/>
+          </VerticalLayout>
+        </Container>
+		<Control />
+      </VerticalLayout>
+    </HorizontalLayout>
+    <VerticalLayout name="playlistrootpanel" >
+      <HorizontalLayout name="PlaylistBody">
+        <!--  sepwidth="-4" sepimm="true" -->
+        <HorizontalLayout name="ClassListSepline" minwidth="68" width="68">
+          <VerticalLayout name="BodyLeft" >
+            <Control height="2" visible="false" mouse="false"/>
+            <!--Button name="listAddNew" align="left" text="创建" layertext="true" textcolor="#FFFFFFFF" tooltip="创建列表" textpadding="26,0,0,0" statusimage="miniplaylist_createnew.png" iconimage="miniplaylist_createnew_icon.png" icondest="12,14,21,23" font="Default.FontName" height="37"/-->
+            <VerticalLayout>
+              <List name="BaseLeftList" 					
+                    bordersize="0" 
+                    header="hidden" 
+                    acceptdrag="true" 
+                    dragtarget="true" 
+                    draghovertype="color" 
+                    inertiascroll="true" 
+                    itemtextpadding="0,20,20,0" 
+                    usefadehotbkg="true" 
+                    padding="0,0,0,0" 
+                    itemshowhtml="false" 
+                    vscrollbar="true" 
+                    hscrollbar="false" 
+                    itemalign="center" 
+                    menu="true"
+                    checkboximage="playlist_editbk"  
+					theme="NavChildText.mini"
+                    vscrollbarstyle="overlay=&quot;true&quot; buttonlength=&quot;19&quot; width=&quot;10&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_thumb_mini_1.png&quot; thumbhotimage=&quot;scrollbar_thumb_mini_2.png&quot; thumbpushedimage=&quot;scrollbar_thumb_mini_3.png&quot; thumbdisabledimage=&quot;scrollbar_thumb_mini_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;"
+                    >
+                <ListHeader>
+                  <ListHeaderItem />
+                </ListHeader>
+                <DefChildAttr height="42" menu="true"/>
+              </List>
+              <LISTACCEPTTOPDRAG name="drag_BaseLeftList" height="1" enabled="true" mouse="true"/>
+            </VerticalLayout>
+          </VerticalLayout>
+        </HorizontalLayout>
+        <!--<Control width="1" bkcolor="#1A000000"/>-->
+        <TabLayout name="MusicPanel" minwidth="200">
+          <TabLayout name="MyListPage">
+            <CUItemBkColrExpandList name="ListPanel"
+				  header="hidden"
+                  acceptdrag="true" 
+                  dragtarget="true" 
+                  draghovertype="line" 
+                  rectangleselect="true" 
+                  itemtextcolor="#FFFFFFFF" 
+				  itemexpandtextcolor="#99FFFFFF" 
+				  itemevennumbkcolor="#08FFFFFF"
+				  itemoddnumbkcolor="#03FFFFFF"
+                  itemhotbkcolor="#0DFFFFFF"
+				  expandfont="Default.FontSmall"
+                  inertiascroll="true" 
+                  usefadehotbkg="true" 
+                  multiselecting="true" 
+                  itemshowhtml="false" 
+                  vscrollbar="true" 
+                  hscrollbar="false" 
+                  itemalign="left"
+                  menu="true"
+                  vscrollbarstyle="overlay=&quot;true&quot; buttonlength=&quot;19&quot; width=&quot;10&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_thumb_mini_1.png&quot; thumbhotimage=&quot;scrollbar_thumb_mini_2.png&quot; thumbpushedimage=&quot;scrollbar_thumb_mini_3.png&quot; thumbdisabledimage=&quot;scrollbar_thumb_mini_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;">
+              <DefChildAttr height="42" expandheight="42" menu="true"/>
+            </CUItemBkColrExpandList>
+            <HorizontalLayout name="DefaultBlankList" menu="true">
+              <!--默认列表没有歌曲时面板 -->
+              <PLACCEPTDRAG name="drag_DefaultBlankList" enabled="true" mouse="true">
+				<HorizontalLayout>
+				<Container />
+                <VerticalLayout name="MyLocalPageNoSongs" width="135">
+                  <Label text="列表为空,你可以..." align="center" textcolor="#8CFFFFFF" width="120" height="16" padding="0,90,0,0" />                 
+                    <Button name="MyLocalPageNoSongs_findbase" padding="0,18,0,0" text="浏览曲库好歌" textcolor="#80FFFFFF" width="129" height="30" setcursor="true" iconstatusimage="mini_icon_ListSearch.png" icondest="12,7,28,23" statusimage="mini_btnEmpty.png" textpadding="32,0,0,0"/>
+                    <Button name="MyLocalPageNoSongs_listenradio" padding="0,18,0,0" text="收听推荐内容" textcolor="#80FFFFFF" width="129" height="30" setcursor="true" iconstatusimage="mini_icon_ListPlayRadio.png" statusimage="mini_btnEmpty.png" icondest="12,7,28,23" textpadding="32,0,0,0"/>
+                    <Button name="MyLocalPageNoSongs_getfavorite" padding="0,18,0,0" text="添加本地歌曲" textcolor="#80FFFFFF" width="129" height="30" setcursor="true" iconstatusimage="mini_icon_ListAddSong.png" statusimage="mini_btnEmpty.png" icondest="12,7,28,23" textpadding="32,0,0,0"/>
+                    <Button name="MyLocalPageNoSongs_casulisten" padding="0,18,0,0" text="随便听听几首" textcolor="#80FFFFFF" width="129" height="30" setcursor="true"  iconstatusimage="mini_icon_ListListen.png" statusimage="mini_btnEmpty.png" icondest="12,7,28,23" textpadding="32,0,0,0"/>
+                </VerticalLayout>
+				<Container />
+				</HorizontalLayout>
+              </PLACCEPTDRAG>
+            </HorizontalLayout>
+            <HorizontalLayout name="MobileDefaultBlankList" menu="true">
+              <!--默认列表没有歌曲时面板 -->
+              <PLACCEPTDRAGMOBILE name="drag_MobileDefaultBlankList" enabled="true" mouse="true">
+                <VerticalLayout name="MyLocalPageNoSongs" >
+                  <HorizontalLayout  height="30">
+                  </HorizontalLayout>
+                  <HorizontalLayout  height="100">
+                    <Control />
+                    <Label width="168" bkimage="mobileblanklisthd.png" padding="0,0,0,0" />
+                    <Control />
+                  </HorizontalLayout>
+                  <Label width="220" height="14" padding="10,20,0,0" bkimage="mobileblanklisttext.png"/>
+
+                  <HorizontalLayout  height="20" padding="15,20,0,0">
+                    <Label height="18" width="18" padding="0,0,1,0" bkimage="downloadicon.png"/>
+                    <Button name="MyLocalPageNoSongs_DownloadiPhone" layertext="true" setlink="true" text="iPhone版" font="Main.ChannelTitle" linkfont="Default.FontName.UnderLine"  textcolor="#ff333333" height="17" varwidth="true" minwidth="82" maxwidth="100" setcursor="true" align="left"/>
+                  </HorizontalLayout>
+                  <HorizontalLayout  height="20" padding="15,20,0,0">
+                    <Label height="18" width="18" padding="0,0,0,0" bkimage="downloadicon.png" />
+                    <Button name="MyLocalPageNoSongs_DownloadiPad" layertext="true" setlink="true" text="iPad版" font="Main.ChannelTitle" linkfont="Default.FontName.UnderLine"  textcolor="#ff333333" height="17" varwidth="true" minwidth="82" maxwidth="100" setcursor="true" align="left"/>
+                  </HorizontalLayout>
+                  <HorizontalLayout  height="20" padding="15,20,0,0">
+                    <Label height="18" width="18" padding="0,0,1,0" bkimage="downloadicon.png"/>
+                    <Button name="MyLocalPageNoSongs_DownloadAndroid" layertext="true" setlink="true" text="Android版" font="Main.ChannelTitle" linkfont="Default.FontName.UnderLine"  textcolor="#ff333333" height="17" varwidth="true" minwidth="82" maxwidth="100" setcursor="true" align="left"/>
+                  </HorizontalLayout>
+                  <HorizontalLayout  height="20" padding="15,20,0,0">
+                    <Label height="18" width="18" padding="0,0,0,0" bkimage="downloadicon.png"/>
+                    <Button name="MyLocalPageNoSongs_DownloadAndroidPad" layertext="true" setlink="true" text="Android Pad版" font="Main.ChannelTitle" linkfont="Default.FontName.UnderLine" textcolor="#ff333333" height="17" varwidth="true" minwidth="82" maxwidth="150" setcursor="true" align="left"/>
+                  </HorizontalLayout>                 
+                </VerticalLayout>
+              </PLACCEPTDRAGMOBILE>
+            </HorizontalLayout>
+			<HorizontalLayout>
+				<Control />
+				<VerticalLayout name="HistBlankList" menu="true" width="200" >
+					<Control height="90"/>
+					<Control width="200" height="120" bkimage="mini_histlist_play.png"/>
+					<Label width="140" height="16" padding="40,18,0,0" textcolor="#80ffffff" text="播放列表没有歌曲"/>
+					<Button name="songlib" textcolor="#80ffffff" width="120" height="30" padding="40,18,0,0" text="去发现好音乐" setcursor="true" theme="ListBtnFocus"/>				  
+				</VerticalLayout>
+				<Control />
+			</HorizontalLayout>
+            <VerticalLayout name="searchResultEmpty" inset="0,50,0,0">
+              <Label align="center" font="Default.Font18" text="没有命中任何歌曲xxxx"></Label>
+            </VerticalLayout>
+          </TabLayout>
+          <VerticalLayout name="MusicRadioPanel" padding="0,0,0,0">
+            <CUItemBkColrExpandList name="MusicRadioList" 
+				acceptdrag="true" 
+				dragtarget="true" 
+				draghovertype="line" 
+				sendsizemsg="true" 
+				minwidth="10" 
+				header="hidden" 
+				multiexpanding="true" 
+				itemtextcolor="#FFFFFFFF"
+				itemevennumbkcolor="#08FFFFFF"
+				itemoddnumbkcolor="#03FFFFFF"
+                itemhotbkcolor="#0DFFFFFF"
+				inertiascroll="true" 
+				usefadehotbkg="true" 
+				itemshowhtml="false" 
+				vscrollbar="true" 
+				hscrollbar="false"
+				itemalign="left"			
+				menu="true"
+				vscrollbarstyle="overlay=&quot;true&quot; buttonlength=&quot;19&quot; width=&quot;10&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_thumb_mini_1.png&quot; thumbhotimage=&quot;scrollbar_thumb_mini_2.png&quot; thumbpushedimage=&quot;scrollbar_thumb_mini_3.png&quot; thumbdisabledimage=&quot;scrollbar_thumb_mini_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;">
+              <ListHeader>
+                <ListHeaderItem bkcolor="#ffff0000"/>
+              </ListHeader>
+              <DefChildAttr height="42" expandheight="42" menu="true"/>
+            </CUItemBkColrExpandList>
+          </VerticalLayout>
+        </TabLayout>
+      </HorizontalLayout>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="360,150" caption="0,0,0,48" roundcorner="10,10">
+<Default name="Button" value="setcursor=&quot;true&quot; height=&quot;24&quot; statusimage=&quot;Config.Button&quot; font=&quot;Config.Button&quot;" />
+	<VerticalLayout name="layout_clientrect">
+		<HorizontalLayout height="50">
+			<Label name="text_title" textpadding="15,0,0,0" width="200" textcolor="#ff000000" mouse="false" font="Playlist.newlist" text="多处登录管理" />
+			<Control />
+			<Button name="close" width="19" height="20" padding="0,6,0,0" statusimage="Config_CloseBtn.png" />
+			<Control width="6"/>
+		</HorizontalLayout>
+		<!--<List name="UserLoginBaseInfoList" header="hidden" itemhotbkcolor="#00000000" itemselectedbkcolor="#00000000" itemexpandbkcolor="#00000000" itemactivebkcolor="#00000000" inertiascroll="true" usefadehotbkg="true" multiselecting="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+			<ListHeader>
+				<ListHeaderItem />
+			</ListHeader>
+			<DefChildAttr height="50" menu="true"/>
+		</List>-->
+		<VerticalLayout name="MultiLogin_ShowLoginInfo" padding="15,10,0,0">
+		</VerticalLayout>
+		<Control bkimage="PopupwndLoginSepline.png" height="1" padding="5,4,0,0"/>
+		<HorizontalLayout height="40">
+			<Text name="MultiLogin_BaseInfo" padding="10,10,0,0"/>
+			<Option name="MultiLogin_ToolTip" pos="250,6,345,28" float="true" textcolor="#ff46b4e6" text="什么是多处登录" align="left" setcursor="true"/>
+		</HorizontalLayout> 
+	</VerticalLayout>
+</Window>
