@@ -1,0 +1,11 @@
+# 批处理必须是 Windows(CRLF) 行尾，按二进制原样保存，避免 git 把 CRLF 转成 LF
+# （LF 行尾的 .bat 在部分 Windows 环境下解析会出问题）
+*.bat binary
+
+# 纯文本说明保留原样（CRLF），方便记事本直接打开
+*.txt -text
+使用说明.txt -text
+
+# 其余文本按 git 默认处理
+*.py text
+*.md text
